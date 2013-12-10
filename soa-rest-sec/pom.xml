@@ -1,0 +1,461 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>infopro-rest-sec</artifactId>
+	<packaging>war</packaging>
+	<name>infopro-rest-sec</name>
+
+	<parent>
+		<groupId>my.com.infopro</groupId>
+		<artifactId>infopro-rest-parent</artifactId>
+		<version>0.11-SNAPSHOT</version>
+	</parent>
+	<properties>
+		<basedir>src/main</basedir>
+		<project.libdir>c:/google/ifx-framework/lib</project.libdir>
+		<lucene.version>3.6.0</lucene.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- internal -->
+
+		<dependency>
+			<groupId>my.com.infopro</groupId>
+			<artifactId>infopro-rest-common</artifactId>
+			<version>0.11-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>my.com.infopro</groupId>
+			<artifactId>infopro-rest-test</artifactId>
+			<version>0.11-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>my.com.infopro</groupId>
+			<artifactId>infopro-rest-api</artifactId>
+			<version>0.11-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>my.com.infopro</groupId>
+			<artifactId>infopro-ifx</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- <dependency> <groupId>my.com.infopro</groupId> <artifactId>infopro-rest-banking</artifactId> 
+			<version>0.11-SNAPSHOT</version> <exclusions> <exclusion> <groupId>commons-logging</groupId> 
+			<artifactId>commons-logging</artifactId> </exclusion> <exclusion> <groupId>org.codehaus.jackson</groupId> 
+			<artifactId>jackson-core-asl</artifactId> </exclusion> <exclusion> <groupId>org.codehaus.jackson</groupId> 
+			<artifactId>jackson-mapper-asl</artifactId> </exclusion> <exclusion> <groupId>org.codehaus.jackson</groupId> 
+			<artifactId>jackson-mapper-asl</artifactId> </exclusion> <exclusion> <groupId>org.slf4j</groupId> 
+			<artifactId>slf4j-log4j12</artifactId> </exclusion> <exclusion> <groupId>log4j</groupId> 
+			<artifactId>log4j</artifactId> </exclusion> <exclusion> <groupId>org.hibernate</groupId> 
+			<artifactId>hibernate-core</artifactId> </exclusion> <exclusion> <groupId>org.hibernate</groupId> 
+			<artifactId>hibernate-c3p0</artifactId> </exclusion> <exclusion> <groupId>org.hibernate</groupId> 
+			<artifactId>hibernate-envers</artifactId> </exclusion> <exclusion> <groupId>org.hibernate.javax.persistence</groupId> 
+			<artifactId>hibernate-jpa-2.0-api</artifactId> </exclusion> </exclusions> 
+			</dependency> -->
+		<!-- util -->
+		<dependency>
+			<groupId>xalan</groupId>
+			<artifactId>xalan</artifactId>
+			<version>2.7.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons-codec.version}</version>
+		</dependency>
+
+		<!-- web -->
+
+		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>javax.servlet-api</artifactId> 
+			<version>${javax.servlet-api.version}</version> <scope>provided</scope> </dependency> -->
+		<!-- <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-servlet-api</artifactId> 
+			<version>7.0.33</version> <scope>provided</scope> </dependency> -->
+		<dependency>
+			<groupId>org.jboss.as</groupId>
+			<artifactId>jboss-as-spec-api</artifactId>
+			<version>7.1.1.Final</version>
+			<scope>provided</scope>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.12</version>
+		</dependency>
+
+
+		<!-- test scoped -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit-dep</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>${org.hamcrest.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-library</artifactId>
+			<version>${org.hamcrest.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${rest-assured.version}</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.codehaus.groovy</groupId>
+					<artifactId>groovy</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy</artifactId>
+			<version>${groovy.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.8.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>${lucene.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-analyzers</artifactId>
+			<version>${lucene.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-misc</artifactId>
+			<version>${lucene.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-queries</artifactId>
+			<version>${lucene.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<!-- Json-path -->
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<version>0.8.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path-assert</artifactId>
+			<version>0.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security.extensions</groupId>
+			<artifactId>spring-security-kerberos-core</artifactId>
+			<version>1.0.0.M2</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.security</groupId>
+					<artifactId>spring-security-core</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- 
+		<dependency>
+		    <groupId>com.effectivsocial</groupId>
+        	<artifactId>restapi</artifactId>
+        	<packaging>war</packaging>
+        	<version>0.0.1</version>
+		</dependency>
+	
+		<dependency>
+		    <groupId>org.springframework</groupId>
+  			<artifactId>spring-security-jespa</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+
+       -->
+	</dependencies>
+
+	<build>
+		<finalName>rest-sec</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
+		<plugins>
+			<!-- <plugin> <groupId>org.jboss.as.plugins</groupId> <artifactId>jboss-as-maven-plugin</artifactId> 
+				<version>7.4.Final</version> <configuration> <hostname>10.10.0.242</hostname> 
+				<port>9999</port> <username>admin</username> <password>infopro</password> 
+				</configuration> <executions> <execution> <phase>install</phase> <goals> 
+				<goal>deploy</goal> </goals> </execution> </executions> </plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>**/*RestIntegrationTest.java</exclude>
+						<exclude>**/*RestLiveTest.java</exclude>
+					</excludes>
+					<systemPropertyVariables>
+						<persistenceTarget>oracle</persistenceTarget>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<version>${cargo-maven2-plugin.version}</version>
+				<!-- <configuration> <wait>false</wait> <container> <containerId>jetty8x</containerId> 
+					<type>embedded</type> <systemProperties> <envTarget>dev</envTarget> <persistenceTarget>cargo</persistenceTarget> 
+					</systemProperties> </container> <configuration> <properties> <cargo.servlet.port>8080</cargo.servlet.port> 
+					</properties> </configuration> </configuration> -->
+
+				<configuration>
+
+					<container>
+						<containerId>jboss71x</containerId>
+						<type>remote</type>
+						<systemProperties>
+							<envTarget>dev</envTarget>
+							<persistenceTarget>oracle</persistenceTarget>
+						</systemProperties>
+					</container>
+					<configuration>
+						<wait>false</wait>
+						<container>
+							<containerId>jetty6x</containerId>
+							<type>embedded</type>
+							<systemProperties>
+								<envTarget>dev</envTarget>
+								<persistenceTarget>cargo</persistenceTarget>
+							</systemProperties>
+						</container>
+						<configuration>
+							<properties>
+								<cargo.servlet.port>8081</cargo.servlet.port>
+							</properties>
+						</configuration>
+						<!-- <type>runtime</type> <properties> <cargo.hostname>10.10.0.242</cargo.hostname> 
+							<cargo.jboss.management.port>9999</cargo.jboss.management.port> <cargo.remote.username>admin</cargo.remote.username> 
+							<cargo.remote.password>infopro</cargo.remote.password> </properties> -->
+					</configuration>
+
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.jboss.as</groupId>
+						<artifactId>jboss-as-controller-client</artifactId>
+						<version>7.1.1.Final</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+
+
+	</build>
+	<repositories>
+		<repository>
+			<id>thirdparty-releases</id>
+			<name>JBoss Thirdparty Releases</name>
+			<url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
+		</repository>
+		
+	</repositories>
+
+	<profiles>
+		<profile>
+			<id>integration</id>
+			<build>
+				<plugins>
+
+					<plugin>
+						<groupId>org.codehaus.cargo</groupId>
+						<artifactId>cargo-maven2-plugin</artifactId>
+						<executions>
+						    <repository>
+								<id>springsource-repo</id>
+								<name>SpringSource Repository</name>
+								<url>http://repo.springsource.org/release</url>
+								<layout>default</layout>
+				                </repository>
+				
+				                <repository>
+				                        <id>springsource-repo-milestone</id>
+				                        <name>SpringSource Repository</name>
+				                        <url>http://repo.springsource.org/milestone</url>
+				                        <layout>default</layout>
+				                </repository>
+				
+				                <repository>
+				                        <id>repository.entral.org</id>
+				                        <url>http://repo1.maven.org/maven2</url>
+				                </repository>
+				
+				                <repository>
+				                        <id>prime-repo</id>
+				                        <name>Prime Technology Maven Repository</name>
+				                        <url>http://repository.primefaces.org</url>
+				                </repository>
+				
+				                <repository>
+				                        <id>jboss-public-repository-group</id>
+				                        <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+				                </repository>
+				
+				                <repository>
+				                        <id>java.net-maven</id>
+				                        <name>java.net-maven</name>
+				                        <url>http://download.java.net/maven/2</url>
+				                </repository>
+				
+				                <repository>
+				                        <id>spring-release-lib</id>
+				                        <name>Spring Maven Release Repository</name>
+				                        <url>http://repo.springsource.org/libs-release</url>
+				                </repository>
+							<execution>
+								<id>start-server</id>
+								<phase>pre-integration-test</phase>
+								<goals>
+									<goal>start</goal>
+									<goal>deploy</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>stop-server</id>
+								<phase>post-integration-test</phase>
+								<goals>
+									<goal>stop</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>integration-test</phase>
+								<goals>
+									<goal>test</goal>
+								</goals>
+								<configuration>
+									<excludes>
+										<exclude>none</exclude>
+									</excludes>
+									<includes>
+										<include>**/*RestIntegrationTest.java</include>
+										<include>**/*RestLiveTest.java</include>
+									</includes>
+									<systemPropertyVariables>
+										<webTarget>cargo</webTarget>
+									</systemPropertyVariables>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>smoke-read-only</id>
+			<build>
+				<plugins>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<excludes>
+								<exclude>**/*Test.java</exclude>
+							</excludes>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>integration-test</phase>
+								<goals>
+									<goal>test</goal>
+								</goals>
+								<configuration>
+									<excludes>
+										<exclude>**/*ProductionRestLiveTest.java</exclude>
+										<exclude>**/*ManualTest.java</exclude>
+									</excludes>
+									<includes>
+										<include>**/*ReadOnly*LiveTest.java</include>
+									</includes>
+									<!-- <systemPropertyVariables> <secWebTarget>smoke_staging</secWebTarget> 
+										</systemPropertyVariables> -->
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
+
+</project>

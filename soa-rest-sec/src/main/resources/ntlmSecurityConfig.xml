@@ -1,0 +1,31 @@
+<bean id="filterChainProxy" class="org.springframework.security.web.FilterChainProxy">
+   <security:filter-chain-map path-type="ant">
+   <security:filter-chain pattern="/**"
+     filters="securityContextPersistenceFilter,exceptionTranslationFilter,ntlmFilter,filterSecurityInterceptor" />
+   </security:filter-chain-map>
+</bean>
+
+<bean id="securityContextPersistenceFilter" class="org.springframework.security.web.context.SecurityContextPersistenceFilter">
+   <property name='securityContextRepository'>
+      <bean class='org.springframework.security.web.context.HttpSessionSecurityContextRepository'                p:allowSessionCreation="false" />
+   </property>
+</bean>
+
+<bean id="accessDeniedHandler" class="org.springframework.security.web.access.AccessDeniedHandlerImpl" />
+
+<bean id="exceptionTranslationFilter" class="org.springframework.security.web.access.ExceptionTranslationFilter">
+   <property name="authenticationEntryPoint" ref="ntlmEntryPoint" />
+   <property name="accessDeniedHandler" ref="accessDeniedHandler" />
+</bean>
+
+
+<bean id="ntlmEntryPoint" class="org.springframework.security.jespa.authentication.NtlmAuthenticationEntryPoint" />
+
+<bean id="ntlmFilter" class="org.springframework.security.jespa.filter.NtlmSecurityFilter" p:authenticationEntryPoint-ref="ntlmEntryPoint" p:authenticationManager-ref="authenticationManager" />
+
+<bean id="myUserDetailsService" class="ong.eu.soon.rest.sec.security.MyUserDetailsService" />
+	
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider user-service-ref="myUserDetailsService" />
+	</authentication-manager>
+	
