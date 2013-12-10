@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>infopro-rest-sec</artifactId>
+	<artifactId>soa-rest-sec</artifactId>
 	<packaging>war</packaging>
-	<name>infopro-rest-sec</name>
+	<name>soa-rest-sec</name>
 
 	<parent>
-		<groupId>my.com.infopro</groupId>
-		<artifactId>infopro-rest-parent</artifactId>
+		<groupId>ong.eu.soon</groupId>
+		<artifactId>soa-rest-parent</artifactId>
 		<version>0.11-SNAPSHOT</version>
 	</parent>
 	<properties>
@@ -21,26 +21,26 @@
 		<!-- internal -->
 
 		<dependency>
-			<groupId>my.com.infopro</groupId>
-			<artifactId>infopro-rest-common</artifactId>
+			<groupId>ong.eu.soon</groupId>
+			<artifactId>soa-rest-common</artifactId>
 			<version>0.11-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
-			<groupId>my.com.infopro</groupId>
-			<artifactId>infopro-rest-test</artifactId>
+			<groupId>ong.eu.soon</groupId>
+			<artifactId>soa-rest-test</artifactId>
 			<version>0.11-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>my.com.infopro</groupId>
-			<artifactId>infopro-rest-api</artifactId>
+			<groupId>ong.eu.soon</groupId>
+			<artifactId>soa-rest-api</artifactId>
 			<version>0.11-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>my.com.infopro</groupId>
-			<artifactId>infopro-ifx</artifactId>
+			<groupId>ong.eu.soon</groupId>
+			<artifactId>ifx-json</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- <dependency> <groupId>my.com.infopro</groupId> <artifactId>infopro-rest-banking</artifactId> 
