@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<name>infopro-rest-api</name>
-	<artifactId>infopro-rest-api</artifactId>
+	<name>soa-rest-api</name>
+	<artifactId>soa-rest-api</artifactId>
 
 	<parent>
-		<groupId>my.com.infopro</groupId>
-		<artifactId>infopro-rest-parent</artifactId>
+		<groupId>ong.eu.soon</groupId>
+		<artifactId>soa-rest-parent</artifactId>
 		<version>0.11-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
@@ -16,14 +16,14 @@
 		<!-- internal -->
 
 		<dependency>
-			<groupId>my.com.infopro</groupId>
-			<artifactId>infopro-rest-common</artifactId>
+			<groupId>ong.eu.soon</groupId>
+			<artifactId>soa-rest-common</artifactId>
 			<version>0.11-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
-			<groupId>my.com.infopro</groupId>
-			<artifactId>infopro-rest-test</artifactId>
+			<groupId>ong.eu.soon</groupId>
+			<artifactId>soa-rest-test</artifactId>
 			<version>0.11-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
