@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>my.com.infopro</groupId>
-	<artifactId>infopro-rest-parent</artifactId>
+	<groupId>ong.eu.soon</groupId>
+	<artifactId>soa-rest-parent</artifactId>
 	<version>0.11-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>rest-security</name>
+	<name>rest-parent</name>
 	<url>https://github.com/eugenp/REST</url>
 	<description>REST Security is a Proof of Concept implementation of a RESTful Service with Spring</description>
 
@@ -142,10 +142,10 @@
 
 	<modules>
 
-		<module>../infopro-rest-api</module>
-		<module>../infopro-rest-common</module>
-		<module>../infopro-rest-sec</module>
-		<module>../infopro-rest-test</module>
+		<module>../soa-rest-api</module>
+		<module>../soa-rest-common</module>
+		<module>../soa-rest-sec</module>
+		<module>../soa-rest-test</module>
 		<!-- 
 		<module>../infopro-gallery-api</module>
 		<module>../infopro-rest-gallery</module>
