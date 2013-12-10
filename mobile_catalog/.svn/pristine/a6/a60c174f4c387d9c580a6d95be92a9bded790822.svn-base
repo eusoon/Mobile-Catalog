@@ -1,0 +1,8 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class ExchRateInvertPrec extends Long {
+
+	protected ExchRateInvertPrec(){
+	}
+	
+}

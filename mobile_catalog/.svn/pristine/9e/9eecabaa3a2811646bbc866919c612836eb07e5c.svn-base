@@ -1,0 +1,34 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class BillerPayData extends IFXObject {
+	
+	protected BillerPayData(){	
+	}
+	public final native PmtOptions[] getPmtOptions()/*-{
+		return $wnd.cleanObject(pmtOptions);
+	}-*/;
+	public final native void setPmtOptions(PmtOptions[] pmtOptions)/*-{
+		this.pmtOptions = pmtOptions;
+	}-*/;
+	public final native DaysToEPost getDaysToEPost()/*-{
+		return $wnd.cleanObject(daysToEPost);
+	}-*/;
+	public final native void setDaysToEPost(DaysToEPost daysToEPost)/*-{
+		this.daysToEPost = daysToEPost;
+	}-*/;
+	public final native ValidateAcctInd getValidateAcctInd()/*-{
+		return $wnd.cleanObject(validateAcctInd);
+	}-*/;
+	public final native void setValidateAcctInd(ValidateAcctInd validateAcctInd)/*-{
+		this.validateAcctInd = validateAcctInd;
+	}-*/;
+	public final native ValidateAcctMthd getValidateAcctMthd()/*-{
+		return $wnd.cleanObject(validateAcctMthd);
+	}-*/;
+	public final native void setValidateAcctMthd(ValidateAcctMthd validateAcctMthd)/*-{
+		this.validateAcctMthd = validateAcctMthd;
+	}-*/;
+	
+}

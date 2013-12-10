@@ -1,0 +1,75 @@
+package my.com.infopro.ifx.client.model;
+
+public class BankAcctTrnImgRevRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setTerminalId(TerminalId terminalId)/*-{
+		this.terminalId = terminalId;
+	}-*/;
+
+	public final native TerminalId getTerminalId()/*-{
+		return $wnd.cleanObject(this.terminalId);
+
+	}-*/;
+
+	public final native void setRevReasonCode(RevReasonCode revReasonCode)/*-{
+		this.revReasonCode = revReasonCode;
+	}-*/;
+
+	public final native RevReasonCode getRevReasonCode()/*-{
+		return $wnd.cleanObject(this.revReasonCode);
+
+	}-*/;
+
+	public native void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+
+	public final native Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+
+	}-*/;
+
+	public native void setBankAcctTrnImgMsgRqInfo(
+			BankAcctTrnImgMsgRqInfo bankAcctTrnImgMsgRqInfo)/*-{
+		this.bankAcctTrnImgMsgRqInfo = bankAcctTrnImgMsgRqInfo;
+	}-*/;
+
+	public final native BankAcctTrnImgMsgRqInfo getBankAcctTrnImgMsgRqInfo()/*-{
+		return $wnd.cleanObject(this.bankAcctTrnImgMsgRqInfo);
+
+	}-*/;
+
+}

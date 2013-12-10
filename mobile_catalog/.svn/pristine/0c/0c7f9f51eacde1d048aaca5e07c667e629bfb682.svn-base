@@ -1,0 +1,104 @@
+package my.com.infopro.ifx.client.model;
+
+public class XferAudRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setRecCtrlOut(RecCtrlOut recCtrlOut)/*-{
+		this.recCtrlOut = recCtrlOut;
+	}-*/;
+
+	public final native RecCtrlOut getRecCtrlOut()/*-{
+		return $wnd.cleanObject(this.recCtrlOut);
+	}-*/;
+
+	public final native void setSelRangeDt(SelRangeDt selRangeDt)/*-{
+		this.selRangeDt = selRangeDt;
+	}-*/;
+
+	public final native SelRangeDt getSelRangeDt()/*-{
+		return $wnd.cleanObject(this.selRangeDt);
+
+	}-*/;
+
+	public final native void setMethod(Method method)/*-{
+		this.method = method;
+	}-*/;
+
+	public final native Method getMethod()/*-{
+		return $wnd.cleanObject(this.method);
+	}-*/;
+
+	public final native void setXferId(XferId[] xferId)/*-{
+		this.xferId = xferId;
+	}-*/;
+
+	public final native XferId[] getXferId()/*-{
+		return $wnd.cleanObject(this.xferId);
+	}-*/;
+
+	public final native void setRecXferId(RecXferId[] recXferId)/*-{
+		this.recXferId = recXferId;
+	}-*/;
+
+	public final native RecXferId[] getRecXferId()/*-{
+		return $wnd.cleanObject(this.recXferId);
+	}-*/;
+
+	public final native void setXferMsgRec(XferMsgRec xferMsgRec)/*-{
+		this.xferMsgRec = xferMsgRec;
+	}-*/;
+
+	public final native XferMsgRec getXferMsgRec()/*-{
+		return $wnd.cleanObject(this.xferMsgRec);
+	}-*/;
+
+}

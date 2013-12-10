@@ -1,0 +1,67 @@
+package my.com.infopro.mobile.client.phone;
+
+import com.google.gwt.core.shared.GWT;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.Command;
+import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.ResizeComposite;
+
+import my.com.infopro.mobile.client.app.MobileWebAppShell;
+import my.com.infopro.mobile.client.help.OrientationHelper;
+import my.com.infopro.mobile.client.help.WindowBasedOrientationHelper;
+
+
+public class SplashPhone  extends ResizeComposite {
+
+	private final static OrientationHelper orientationHelper = new WindowBasedOrientationHelper();
+
+	private static final SplashAppearance APPEARANCE = GWT
+			.create(SplashAppearance.class);
+
+	  
+	  @UiField(provided = true)
+	  protected final  SplashAppearance appearance;
+	  
+	  @UiField
+	   Label lblTitle;
+	  @UiField
+	   Label lblBriefDescription;
+	  @UiField
+	   Image logo;
+	  
+	  public SplashPhone() {
+			this(APPEARANCE,orientationHelper);
+		}
+
+		public SplashPhone(SplashAppearance appearance,OrientationHelper orientationHelper) {
+			this.appearance = appearance;
+			initWidget(appearance.uiBinder().createAndBindUi(this));
+			orientationHelper.setCommands(this, new Command() {
+				@Override
+				public void execute() {
+					onShiftToPortrait();
+				}
+			}, new Command() {
+				@Override
+				public void execute() {
+					onShiftToLandscape();
+				}
+
+			});
+
+		}
+
+		protected void onShiftToPortrait() {
+			lblTitle.setVisible(true);
+			lblBriefDescription.setVisible(false);
+			logo.setUrl("icons/accounts.png");
+		}
+
+		private void onShiftToLandscape() {
+			lblTitle.setVisible(false);
+			logo.setUrl("icons/hdpi/accounts.png");
+			lblBriefDescription.setVisible(true);
+		}
+		
+}

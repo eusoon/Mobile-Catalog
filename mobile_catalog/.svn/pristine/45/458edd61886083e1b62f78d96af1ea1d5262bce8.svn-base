@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class SvcAcctIdModRq extends SvcAcctIdModRq_Type {
+
+}

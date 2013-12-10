@@ -1,0 +1,16 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PartyAuth extends IFXObject {
+
+	public final native JsArray<SecToken> getSecToken() /*-{
+		return $wnd.cleanObject(secToken);
+	}-*/;
+
+	public final native void setSecToken(JsArray<SecToken> secToken) /*-{
+		this.secToken = secToken;
+	}-*/;
+}

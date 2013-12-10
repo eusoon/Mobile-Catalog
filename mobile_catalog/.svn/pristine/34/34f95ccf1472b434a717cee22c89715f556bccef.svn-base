@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum CardType {
+	ATM, Credit, Debit, Identification, Loyalty, Multifunction, Prepaid
+}

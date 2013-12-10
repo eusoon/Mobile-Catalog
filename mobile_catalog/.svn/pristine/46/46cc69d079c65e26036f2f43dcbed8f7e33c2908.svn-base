@@ -1,0 +1,55 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class CreditInfo extends IFXObject {
+	CreditType CreditType;//Open Enum	Optional The type of the credit transaction. Defined Values: UnverifiedCashDeposit, VerifiedCashDeposit, UnverifiedCheckDeposit, VerifiedCheckDeposit, EnvelopeDeposit, MultiDeposit, MerchandiseReturn, ChkPayment,ChkCash.
+	CompositeCurAmt compositeCurAmt;//Aggregate	Required Repeating The amounts of the credit transaction and appropriate fees.
+	AcctRef acctRef;//Aggregate	Optional Account Reference Aggregate
+	AthKeys AthKeys;//Aggregate	Optional Credit Authorization Identifier. Assigned by the server at the time the Credit Authorization is first added. This is used to relate a credit to a previously authorized credit authorization object
+	CreditId creditId;//Identifier	Optional Credit Identifier. If this credit is used for a split deposit transaction then this element will contain the credit identifier assigned by the server of the previous credit transaction to link the credit messages together.
+	ClientChgCode ClientChgCode;//Open Enum	Optional Client Change Code. This indicates the reason why a Credit was for a different amount from the original authorization for the credit. Defined Values: None, ConsumerCancelled, TerminalExceptionAmountKnown, TerminalExceptionAmountUnknown, ConsumerExceptionAmountKnown, ConsumerExceptionAmountUnknown, ConsumerDeclined, ConsumerTimeout
+	CreditMediaItem[] CreditMediaItem; //Aggregate	 Optional Repeating Credit Media Item aggregate. This aggregate contains details pertaining to the individual items in the deposit (e.g. check, cash).
+	public CreditType getCreditType() {
+		return CreditType;
+	}
+	public void setCreditType(CreditType creditType) {
+		CreditType = creditType;
+	}
+	public CompositeCurAmt getCompositeCurAmt() {
+		return compositeCurAmt;
+	}
+	public void setCompositeCurAmt(CompositeCurAmt compositeCurAmt) {
+		this.compositeCurAmt = compositeCurAmt;
+	}
+	public AcctRef getAcctRef() {
+		return acctRef;
+	}
+	public void setAcctRef(AcctRef acctRef) {
+		this.acctRef = acctRef;
+	}
+	public AthKeys getAthKeys() {
+		return AthKeys;
+	}
+	public void setAthKeys(AthKeys athKeys) {
+		AthKeys = athKeys;
+	}
+	public CreditId getCreditId() {
+		return creditId;
+	}
+	public void setCreditId(CreditId creditId) {
+		this.creditId = creditId;
+	}
+	public ClientChgCode getClientChgCode() {
+		return ClientChgCode;
+	}
+	public void setClientChgCode(ClientChgCode clientChgCode) {
+		ClientChgCode = clientChgCode;
+	}
+	public CreditMediaItem[] getCreditMediaItem() {
+		return CreditMediaItem;
+	}
+	public void setCreditMediaItem(CreditMediaItem[] creditMediaItem) {
+		CreditMediaItem = creditMediaItem;
+	}
+}

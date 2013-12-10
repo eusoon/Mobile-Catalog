@@ -1,0 +1,13 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class BillerSel extends IFXObject {
+	public final native  BillerKeys getBillerKeys()/*-{
+	return $wnd.cleanObject(this.billerKeys);
+	}-*/;
+	
+	public final native  void setBillerKeys(BillerKeys billerKeys)/*-{
+		this.billerKeys = billerKeys;
+	}-*/;
+}

@@ -1,0 +1,43 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class CreditBureauSummary extends IFXObject {
+	CreditBureau creditBureau;	 //	C-96	 Optional	 Credit Bureau
+	BureauScore bureauScore;	 //	Long	 Required	 Bureau Score
+	ReportRequestDt reportRequestDt;	 //	Date	 Optional	 Report Request Date
+	ScoreModel scoreModel;	 //	C-40	 Optional	 Score Model
+	UpDt upDt;	 //	Timestamp	 Optional	 Update Date Time
+	
+	public CreditBureau getCreditBureau() {
+		return creditBureau;
+	}
+	public void setCreditBureau(CreditBureau creditBureau) {
+		this.creditBureau = creditBureau;
+	}
+	public BureauScore getBureauScore() {
+		return bureauScore;
+	}
+	public void setBureauScore(BureauScore bureauScore) {
+		this.bureauScore = bureauScore;
+	}
+	public ReportRequestDt getReportRequestDt() {
+		return reportRequestDt;
+	}
+	public void setReportRequestDt(ReportRequestDt reportRequestDt) {
+		this.reportRequestDt = reportRequestDt;
+	}
+	public ScoreModel getScoreModel() {
+		return scoreModel;
+	}
+	public void setScoreModel(ScoreModel scoreModel) {
+		this.scoreModel = scoreModel;
+	}
+	public UpDt getUpDt() {
+		return upDt;
+	}
+	public void setUpDt(UpDt upDt) {
+		this.upDt = upDt;
+	}
+	
+}

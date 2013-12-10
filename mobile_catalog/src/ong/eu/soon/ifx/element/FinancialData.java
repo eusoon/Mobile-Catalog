@@ -1,0 +1,52 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class FinancialData extends IFXObject {
+	//begin Aggregate
+	FinancialType financialType;	 //	Open Enum	 Required	 Financial TypeValid values include: Asset, Expense, Income, Liability, Revenue, Sales
+	FinancialSubType financialSubType;	 //	Open Enum	 Optional	 Financial SubTypeValid values include: ContributionsToOverhead, Current, Depreciation, Disposable, Dividend, Gross, Investment, Net, Recurring, Tax, Turnover
+	Freq freq;	 //	Open Enum	 Optional	 FrequencyValid values include: Annually, BiMonthly, Biweekly, Daily, EndOfMonth, FourWeeks, Monthly, Quarterly, SemiAnnually, TwiceMonthly, Weekly
+	FinancialAmt financialAmt;	 //	Aggregate	 Required	 Financial Amount
+	UpDt upDt;	 //	Timestamp	 Required	 Update Date Time
+	Desc desc;	 //	C-80	 Optional	 Description
+	//end Aggregate
+	public FinancialType getFinancialType() {
+		return financialType;
+	}
+	public void setFinancialType(FinancialType financialType) {
+		this.financialType = financialType;
+	}
+	public FinancialSubType getFinancialSubType() {
+		return financialSubType;
+	}
+	public void setFinancialSubType(FinancialSubType financialSubType) {
+		this.financialSubType = financialSubType;
+	}
+	public Freq getFreq() {
+		return freq;
+	}
+	public void setFreq(Freq freq) {
+		this.freq = freq;
+	}
+	public FinancialAmt getFinancialAmt() {
+		return financialAmt;
+	}
+	public void setFinancialAmt(FinancialAmt financialAmt) {
+		this.financialAmt = financialAmt;
+	}
+	public UpDt getUpDt() {
+		return upDt;
+	}
+	public void setUpDt(UpDt upDt) {
+		this.upDt = upDt;
+	}
+	public Desc getDesc() {
+		return desc;
+	}
+	public void setDesc(Desc desc) {
+		this.desc = desc;
+	}
+	
+	
+}

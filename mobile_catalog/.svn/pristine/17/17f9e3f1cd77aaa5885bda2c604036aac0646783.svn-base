@@ -1,0 +1,27 @@
+package my.com.infopro.ifx.client.model;
+
+public class StmtSummAmt_Type extends IFXObject {
+	public final native void setStmtSummType(StmtSummType stmtSummType)/*-{
+		this.stmtSummType = stmtSummType;
+	}-*/;
+
+	public final native StmtSummType getStmtSummType()/*-{
+		return $wnd.cleanObject(this.stmtSummType);
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setCount(Count count)/*-{
+		this.count = count;
+	}-*/;
+
+	public final native Count getCount()/*-{
+		return $wnd.cleanObject(this.count);
+	}-*/;
+}

@@ -1,0 +1,49 @@
+package my.com.infopro.mobile.client.utils;
+
+import com.google.gwt.http.client.RequestBuilder;
+import com.googlecode.cryptogwt.emul.java.security.GeneralSecurityException;
+import com.googlecode.cryptogwt.emul.java.security.InvalidKeyException;
+import com.googlecode.cryptogwt.emul.java.security.NoSuchAlgorithmException;
+import com.googlecode.cryptogwt.emul.javax.crypto.Mac;
+import com.googlecode.cryptogwt.emul.javax.crypto.spec.SecretKeySpec;
+
+
+public class SignatureHelper {
+
+	public static final String APIKEY = "api-1234";
+	public static final String APIKEY_HEADER = "apikey";
+	public static final String SALT_HEADER = "salt";
+	public static final String SALT = "hmaciscool";
+	public static final String SIGNATURE_HEADER = "signature";
+	public static String createSignature() {
+		 String generateHmacSHA256Signature = null;
+         try {
+			generateHmacSHA256Signature = generateHmacSHA256Signature(SALT, APIKEY);
+		} catch (GeneralSecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+         return generateHmacSHA256Signature;
+	}
+	private static String generateHmacSHA256Signature(String data,
+			String key) throws GeneralSecurityException  {
+		byte[] hmacData = null;
+		 
+        try {
+            SecretKeySpec secretKey = new SecretKeySpec(key.getBytes("UTF-8"), "HmacSHA256");
+            Mac mac = Mac.getInstance("HmacSHA256");
+            mac.init(secretKey);
+            hmacData = mac.doFinal(data.getBytes("UTF-8"));
+            return new String(Base64.encode(hmacData.toString()).getBytes(), "UTF-8");
+        } catch (java.io.UnsupportedEncodingException e) {
+        	throw new GeneralSecurityException(e);
+		} catch (NoSuchAlgorithmException e) {
+			throw new GeneralSecurityException(e);
+		} catch (InvalidKeyException e) {
+			throw new GeneralSecurityException(e);
+		}
+		
+	}
+
+}

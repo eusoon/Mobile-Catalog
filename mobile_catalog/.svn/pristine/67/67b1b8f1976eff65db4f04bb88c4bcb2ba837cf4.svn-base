@@ -1,0 +1,9 @@
+package my.com.infopro.ifx.client.model;
+
+public class IFXBase64Binary extends IFXObject {
+
+	public final native byte[] getBytes() /*-{
+		return $wnd.cleanObject(this.bytes);
+
+	}-*/;
+}

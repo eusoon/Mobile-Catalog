@@ -1,0 +1,32 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public  class CardChipData extends IFXObject {
+
+	public final native  AppPan getAppPan()/*-{
+		return $wnd.cleanObject(this.appPan);
+	}-*/;
+	public final native  void setAppPan(AppPan appPan)/*-{
+		this.appPan = appPan;
+	}-*/;
+	public final native  AppPanSeq getAppPanSeq()/*-{
+		return $wnd.cleanObject(this.appPanSeq);
+	}-*/;
+	public final native  void setAppPanSeq(AppPanSeq appPanSeq)/*-{
+		this.appPanSeq = appPanSeq;
+	}-*/;
+	public final native  AppIdent getAppIdent()/*-{
+		return $wnd.cleanObject(this.appIdent);
+	}-*/;
+	public final native  void setAppIdent(AppIdent appIdent)/*-{
+		this.appIdent = appIdent;
+	}-*/;
+	public final native  Trk2EquivData getTrk2EquivData()/*-{
+		return $wnd.cleanObject(this.trk2EquivData);
+	}-*/;
+	public final native  void setTrk2EquivData(Trk2EquivData trk2EquivData)/*-{
+		this.trk2EquivData = trk2EquivData;
+	}-*/;
+
+}

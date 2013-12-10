@@ -1,0 +1,68 @@
+package my.com.infopro.ifx.client.model;
+
+public class RecPmtModRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecPmtId(RecPmtId recPmtId)/*-{
+		this.recPmtId = recPmtId;
+	}-*/;
+
+	public final native RecPmtId getRecPmtId()/*-{
+		return $wnd.cleanObject(this.recPmtId);
+	}-*/;
+
+	public final native void setPmtInfo(PmtInfo pmtInfo)/*-{
+		this.pmtInfo = pmtInfo;
+	}-*/;
+
+	public final native PmtInfo getPmtInfo()/*-{
+		return $wnd.cleanObject(this.pmtInfo);
+	}-*/;
+
+	public final native void setRecModelInfo(RecModelInfo recModelInfo)/*-{
+		this.recModelInfo = recModelInfo;
+	}-*/;
+
+	public final native RecModelInfo getRecModelInfo()/*-{
+		return $wnd.cleanObject(this.recModelInfo);
+	}-*/;
+
+	public final native void setModPending(ModPending modPending)/*-{
+		this.modPending = modPending;
+	}-*/;
+
+	public final native ModPending getModPending()/*-{
+		return $wnd.cleanObject(this.modPending);
+	}-*/;
+}

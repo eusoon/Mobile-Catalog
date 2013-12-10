@@ -1,0 +1,21 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class CorrespondDelivery extends IFXObject {
+	CorrespondType correspondType;//Open Enum	Optional Correspondence Type Valid values include: Letters, PINs, Plastic, Statements
+	DeliveryInstruction deliveryInstruction;//Aggregate Optiona Delivery Instruction
+	public CorrespondType getCorrespondType() {
+		return correspondType;
+	}
+	public void setCorrespondType(CorrespondType correspondType) {
+		this.correspondType = correspondType;
+	}
+	public DeliveryInstruction getDeliveryInstruction() {
+		return deliveryInstruction;
+	}
+	public void setDeliveryInstruction(DeliveryInstruction deliveryInstruction) {
+		this.deliveryInstruction = deliveryInstruction;
+	}
+
+}

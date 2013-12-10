@@ -1,0 +1,260 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtInqRq_Type extends IFXObject {
+	
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn)/*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+
+	public final native RecCtrlIn getRecCtrlIn()/*-{
+		return $wnd.cleanObject(this.recCtrlIn);
+
+	}-*/;
+
+	public final native void setPmtType(PmtType[] pmtType)/*-{
+		this.pmtType = pmtType;
+	}-*/;
+
+	public final native PmtType[] getPmtType()/*-{
+		return $wnd.cleanObject(this.pmtType);
+
+	}-*/;
+
+	public final native void setPmtId(PmtId pmtId)/*-{
+		this.pmtId = pmtId;
+	}-*/;
+
+	public final native PmtId getPmtId()/*-{
+		return $wnd.cleanObject(this.pmtId);
+
+	}-*/;
+
+	public final native void setRecPmtId(RecPmtId recPmtId)/*-{
+		this.recPmtId = recPmtId;
+	}-*/;
+
+	public final native RecPmtId getRecPmtId()/*-{
+		return $wnd.cleanObject(this.recPmtId);
+
+	}-*/;
+
+	public final native void setDepAcctIdFrom(DepAcctIdFrom depAcctIdFrom)/*-{
+		this.depAcctIdFrom = depAcctIdFrom;
+	}-*/;
+
+	public final native DepAcctIdFrom getDepAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.depAcctIdFrom);
+	}-*/;
+
+	public final native void setCardAcctIdFrom(CardAcctIdFrom cardAcctIdFrom)/*-{
+		this.cardAcctIdFrom = cardAcctIdFrom;
+	}-*/;
+
+	public final native CardAcctIdFrom getCardAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.cardAcctIdFrom);
+	}-*/;
+
+	public final native void setCategory(Category[] category)/*-{
+		this.category = category;
+	}-*/;
+
+	public final native Category[] getCategory()/*-{
+		return $wnd.cleanObject(this.category);
+	}-*/;
+
+	public final native void setMemo(Memo memo) /*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo getMemo() /*-{
+		return $wnd.cleanObject(this.memo);
+	}-*/;
+
+	public final native void setChkNum(ChkNum chkNum) /*-{
+		this.chkNum = chkNum;
+	}-*/;
+
+	public final native ChkNum getChkNum() /*-{
+		return $wnd.cleanObject(this.chkNum);
+	}-*/;
+
+	public final native void setChkClrDt(ChkClrDt[] chkClrDt)/*-{
+		this.chkClrDt = chkClrDt;
+	}-*/;
+
+	public final native ChkClrDt[] getChkClrDt()/*-{
+		return $wnd.cleanObject(this.chkClrDt);
+	}-*/;
+
+	public final native void setFIDebitTrcNum(FIDebitTrcNum fIDebitTrcNum)/*-{
+		this.fIDebitTrcNum = fIDebitTrcNum;
+	}-*/;
+
+	public final native FIDebitTrcNum getFIDebitTrcNum()/*-{
+		return $wnd.cleanObject(this.fIDebitTrcNum);
+
+	}-*/;
+
+	public final native void setFICreditTrcNum(FICreditTrcNum fICreditTrcNum)/*-{
+		this.fICreditTrcNum = fICreditTrcNum;
+	}-*/;
+
+	public final native FICreditTrcNum getFICreditTrcNum()/*-{
+		return $wnd.cleanObject(this.fICreditTrcNum);
+
+	}-*/;
+
+	public final native void setPmtMethod(PmtMethod pmtMethod) /*-{
+		this.pmtMethod = pmtMethod;
+	}-*/;
+
+	public final native PmtMethod getPmtMethod() /*-{
+		return $wnd.cleanObject(this.pmtMethod);
+	}-*/;
+
+	public final native void setCustPayeeId(CustPayeeId[] custPayeeId)/*-{
+		this.custPayeeId = custPayeeId;
+	}-*/;
+
+	public final native CustPayeeId[] getCustPayeeId()/*-{
+		return $wnd.cleanObject(this.custPayeeId);
+	}-*/;
+
+	public final native void setBillingAcct(BillingAcct[] billingAcct)/*-{
+		this.billingAcct = billingAcct;
+	}-*/;
+
+	public final native BillingAcct[] getBillingAcct()/*-{
+		return $wnd.cleanObject(this.billingAcct);
+	}-*/;
+
+	public final native void setName(Name[] name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name[] getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setStdPayeeId(StdPayeeId[] stdPayeeId)/*-{
+		this.stdPayeeId = stdPayeeId;
+	}-*/;
+
+	public final native StdPayeeId[] getStdPayeeId()/*-{
+		return $wnd.cleanObject(this.stdPayeeId);
+	}-*/;
+
+	public final native void setNickname(Nickname[] nickname)/*-{
+		this.nickname = nickname;
+	}-*/;
+
+	public final native Nickname[] getNickname()/*-{
+		return $wnd.cleanObject(this.nickname);
+	}-*/;
+
+	public final native void setPmtStatusCode(PmtStatusCode pmtStatusCode) /*-{
+		this.pmtStatusCode = pmtStatusCode;
+	}-*/;
+
+	public final native PmtStatusCode getPmtStatusCode()/*-{
+		return $wnd.cleanObject(this.pmtStatusCode);
+	}-*/;
+
+	public final native void setSelRangeDueDt(SelRangeDueDt[] selRangeDueDt)/*-{
+		this.selRangeDueDt = selRangeDueDt;
+	}-*/;
+
+	public final native SelRangeDueDt[] getSelRangeDueDt()/*-{
+		return $wnd.cleanObject(this.selRangeDueDt);
+	}-*/;
+
+	public final native void setSelRangePrcDt(SelRangePrcDt[] selRangePrcDt)/*-{
+		this.selRangePrcDt = selRangePrcDt;
+	}-*/;
+
+	public final native SelRangePrcDt[] getSelRangePrcDt()/*-{
+		return $wnd.cleanObject(this.selRangePrcDt);
+	}-*/;
+
+	public final native SelRangeCurAmt[] getSelRangeCurAmt()/*-{
+		return $wnd.cleanObject(this.selRangeCurAmt);
+	}-*/;
+
+	public final native void setSelRangeDt(SelRangeDt selRangeDt)/*-{
+		this.selRangeDt = selRangeDt;
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod getDeliveryMethod() /*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+
+	}-*/;
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+
+	}-*/;
+
+	public final native void setIncToken(IncToken[] incToken)/*-{
+		this.incToken = incToken;
+	}-*/;
+
+	public final native IncToken[] getIncToken()/*-{
+		return $wnd.cleanObject(this.incToken);
+	}-*/;
+
+	public final native void setIncHistory(IncHistory[] incHistory)/*-{
+		this.incHistory = incHistory;
+	}-*/;
+
+	public final native IncHistory[] getIncHistory()/*-{
+		return $wnd.cleanObject(this.incHistory);
+	}-*/;
+}

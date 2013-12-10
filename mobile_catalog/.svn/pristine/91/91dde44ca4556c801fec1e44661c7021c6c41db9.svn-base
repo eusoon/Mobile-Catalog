@@ -1,0 +1,116 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillInfo_Type extends IFXObject {
+
+	public final native void setBillType(BillType[] billType)/*-{
+		this.billType = billType;
+	}-*/;
+
+	public final native BillType[] getBillType()/*-{
+		return $wnd.cleanObject(this.billType);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setPresAcctId(PresAcctId presAcctId)/*-{
+		this.presAcctId = presAcctId;
+	}-*/;
+
+	public final native PresAcctId getPresAcctId()/*-{
+		return $wnd.cleanObject(this.presAcctId);
+	}-*/;
+
+	public final native void setMemo(Memo memo)/*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo getMemo()/*-{
+		return $wnd.cleanObject(this.memo);
+	}-*/;
+
+	public final native void setBillSummAmt(BillSummAmt[] billSummAmt)/*-{
+		this.billSummAmt = billSummAmt;
+	}-*/;
+
+	public final native BillSummAmt[] getBillSummAmt()/*-{
+		return $wnd.cleanObject(this.billSummAmt);
+	}-*/;
+
+	public final native void setDueDt(DueDt[] dueDt)/*-{
+		this.dueDt = dueDt;
+	}-*/;
+
+	public final native DueDt[] getDueDt()/*-{
+		return $wnd.cleanObject(this.dueDt);
+	}-*/;
+
+	public final native void setBillDt(BillDt[] billDt)/*-{
+		this.billDt = billDt;
+	}-*/;
+
+	public final native BillDt[] getBillDt()/*-{
+		return $wnd.cleanObject(this.billDt);
+	}-*/;
+
+	public final native void setOpenDt(OpenDt[] openDt)/*-{
+		this.openDt = openDt;
+	}-*/;
+
+	public final native OpenDt[] getOpenDt()/*-{
+		return $wnd.cleanObject(this.openDt);
+	}-*/;
+
+	public final native void setCloseDt(CloseDt[] closeDt)/*-{
+		this.closeDt = closeDt;
+	}-*/;
+
+	public final native CloseDt[] getCloseDt()/*-{
+		return $wnd.cleanObject(this.closeDt);
+	}-*/;
+
+	public final native void setPmtInst(PmtInst[] pmtInst)/*-{
+		this.pmtInst = pmtInst;
+	}-*/;
+
+	public final native PmtInst[] getPmtInst()/*-{
+		return $wnd.cleanObject(this.pmtInst);
+	}-*/;
+
+	public final native void setNotifyReqd(NotifyReqd[] notifyReqd)/*-{
+		this.notifyReqd = notifyReqd;
+	}-*/;
+
+	public final native NotifyReqd[] getNotifyReqd()/*-{
+		return $wnd.cleanObject(this.notifyReqd);
+	}-*/;
+
+	public final native void setViewDtlPref(ViewDtlPref[] viewDtlPref)/*-{
+		this.viewDtlPref = viewDtlPref;
+	}-*/;
+
+	public final native ViewDtlPref[] getViewDtlPref()/*-{
+		return $wnd.cleanObject(this.viewDtlPref);
+	}-*/;
+
+	public final native void setStmtImage(StmtImage[] stmtImage)/*-{
+		this.stmtImage = stmtImage;
+	}-*/;
+
+	public final native StmtImage[] getStmtImage()/*-{
+		return $wnd.cleanObject(this.stmtImage);
+	}-*/;
+
+	public final native void setBillRefInfo(BillRefInfo[] billRefInfo)/*-{
+		this.billRefInfo = billRefInfo;
+	}-*/;
+
+	public final native BillRefInfo[] getBillRefInfo()/*-{
+		return $wnd.cleanObject(this.billRefInfo);
+	}-*/;
+}

@@ -1,0 +1,49 @@
+package my.com.infopro.ifx.client.model;
+
+public class DepAcctId_Type extends IFXObject {
+	public final native void setAcctId(AcctId acctId)/*-{
+		this.acctId = acctId;
+	}-*/;
+
+	public final native AcctId getAcctId() /*-{
+		return $wnd.cleanObject(this.acctId);
+
+	}-*/;
+
+	public final native void setAcctType(AcctType acctType)/*-{
+		this.acctType = acctType;
+	}-*/;
+
+	public final native AcctType getAcctType() /*-{
+		return $wnd.cleanObject(this.acctType);
+
+	}-*/;
+
+	public final native void setAcctKey(AcctKey acctKey)/*-{
+		this.acctKey = acctKey;
+	}-*/;
+
+	public final native AcctKey getAcctKey() /*-{
+		return $wnd.cleanObject(this.acctKey);
+
+	}-*/;
+
+	public final native void setAcctCur(AcctCur acctCur)/*-{
+		this.acctCur = acctCur;
+	}-*/;
+
+	public final native AcctCur getAcctCur() /*-{
+		return $wnd.cleanObject(this.acctCur);
+
+	}-*/;
+
+	public final native void setBankInfo(BankInfo bankInfo)/*-{
+		this.bankInfo = bankInfo;
+	}-*/;
+
+	public final native BankInfo getBankInfo() /*-{
+		return $wnd.cleanObject(this.bankInfo);
+
+	}-*/;
+
+}

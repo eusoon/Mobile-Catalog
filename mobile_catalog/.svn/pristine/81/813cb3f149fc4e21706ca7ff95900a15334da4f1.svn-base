@@ -1,0 +1,12 @@
+package my.com.infopro.mobile.client.services;
+
+import my.com.infopro.mobile.client.model.Parameters;
+import my.com.infopro.mobile.json.ifx.service.SvcInqRs;
+
+import com.google.gwt.user.client.rpc.AsyncCallback;
+
+public interface SvcService {
+
+	public void getServices(Parameters params, AsyncCallback<SvcInqRs> callback1) ;
+
+}

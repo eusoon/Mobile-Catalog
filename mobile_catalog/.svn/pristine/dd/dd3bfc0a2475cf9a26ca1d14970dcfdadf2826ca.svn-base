@@ -1,0 +1,68 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PmtCreditDetail extends IFXObject {
+	
+	public final native DebtorCurAmt getDebtorCurAmt() /*-{
+		return $wnd.cleanObject(debtorCurAmt);
+	}-*/;
+	public final native void setDebtorCurAmt(DebtorCurAmt debtorCurAmt) /*-{
+		this.debtorCurAmt = debtorCurAmt;
+	}-*/;
+	public final native CreditorCurAmt getCreditorCurAmt() /*-{
+		return $wnd.cleanObject(creditorCurAmt);
+	}-*/;
+	public final native void setCreditorCurAmt(CreditorCurAmt creditorCurAmt) /*-{
+		this.creditorCurAmt = creditorCurAmt;
+	}-*/;
+	public final native UltimateDebtorData getUltimateDebtorData() /*-{
+		return $wnd.cleanObject(ultimateDebtorData);
+	}-*/;
+	public final native void setUltimateDebtorData(UltimateDebtorData ultimateDebtorData) /*-{
+		this.ultimateDebtorData = ultimateDebtorData;
+	}-*/;
+	public final native CreditorData getCreditorData() /*-{
+		return $wnd.cleanObject(creditorData);
+	}-*/;
+	public final native void setCreditorData(CreditorData creditorData) /*-{
+		this.creditorData = creditorData;
+	}-*/;
+	public final native UltimateCreditorData getUltimateCreditorData() /*-{
+		return $wnd.cleanObject(ultimateCreditorData);
+	}-*/;
+	public final native void setUltimateCreditorData(UltimateCreditorData ultimateCreditorData) /*-{
+		this.ultimateCreditorData = ultimateCreditorData;
+	}-*/;
+	public final native ToAcctKeys getToAcctKeys() /*-{
+		return $wnd.cleanObject(toAcctKeys);
+	}-*/;
+	public final native void setToAcctKeys(ToAcctKeys toAcctKeys) /*-{
+		this.toAcctKeys = toAcctKeys;
+	}-*/;
+	public final native RemitRef getRemitRef() /*-{
+		return $wnd.cleanObject(remitRef);
+	}-*/;
+	public final native void setRemitRef(RemitRef remitRef) /*-{
+		this.remitRef = remitRef;
+	}-*/;
+	public final native Category getCategory() /*-{
+		return $wnd.cleanObject(category);
+	}-*/;
+	public final native void setCategory(Category category) /*-{
+		this.category = category;
+	}-*/;
+	public final native ForExDealKeys getForExDealKeys() /*-{
+		return $wnd.cleanObject(forExDealKeys);
+	}-*/;
+	public final native void setForExDealKeys(ForExDealKeys forExDealKeys) /*-{
+		this.forExDealKeys = forExDealKeys;
+	}-*/;
+	public final native PmtRefIdent getPmtRefIdent() /*-{
+		return $wnd.cleanObject(pmtRefIdent);
+	}-*/;
+	public final native void setPmtRefIdent(PmtRefIdent pmtRefIdent) /*-{
+		this.pmtRefIdent = pmtRefIdent;
+	}-*/;
+	
+}

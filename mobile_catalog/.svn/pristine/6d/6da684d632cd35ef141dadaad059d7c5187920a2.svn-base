@@ -1,0 +1,8 @@
+package my.com.infopro.mobile.client.app;
+
+public interface MobileWebAppShellClientFactory {
+
+	MobileWebAppShell getShell();
+
+
+}

@@ -1,0 +1,102 @@
+package my.com.infopro.ifx.client.model;
+
+public class CompRemitStmtAddRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public final native void setCompRemitStmtInfo(
+			CompRemitStmtInfo compRemitStmtInfo)/*-{
+		this.compRemitStmtInfo = compRemitStmtInfo;
+	}-*/;
+
+	public final native CompRemitStmtInfo getCompRemitStmtInfo()/*-{
+		return $wnd.cleanObject(this.compRemitStmtInfo);
+	}-*/;
+
+	public final native void setDupChkOverride(DupChkOverride dupChkOverride)/*-{
+		this.dupChkOverride = dupChkOverride;
+	}-*/;
+
+	public final native DupChkOverride getDupChkOverride()/*-{
+		return $wnd.cleanObject(this.dupChkOverride);
+	}-*/;
+
+	public final native void setCompRemitStmtRec(CompRemitStmtRec compRemitStmtRec)/*-{
+		this.compRemitStmtRec = compRemitStmtRec;
+	}-*/;
+
+	public final native CompRemitStmtRec getCompRemitStmtRec()/*-{
+		return $wnd.cleanObject(this.compRemitStmtRec);
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+	}-*/;
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+	}-*/;
+
+}

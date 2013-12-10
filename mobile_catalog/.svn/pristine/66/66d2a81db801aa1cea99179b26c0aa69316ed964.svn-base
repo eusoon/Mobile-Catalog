@@ -1,0 +1,42 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class ForExQuoteRec extends IFXObject {
+	SvcIdent svcIdent;//Aggregate	Optional Service Identifier
+	ForExQuoteId forExQuoteId; //Identifier	Required Foreign Exchange Quote Identifier
+	ForExQuoteInfo forExQuoteInfo; //Aggregate	Required Foreign Exchange Quote Information
+	ForExQuoteEnvr forExQuoteEnvr;//Aggregate	Optional Foreign Exchange Quote Envrironment
+	ForExQuoteStatus forExQuoteStatus;//Aggregate	Required Foreign Exchange Quote Status
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public ForExQuoteId getForExQuoteId() {
+		return forExQuoteId;
+	}
+	public void setForExQuoteId(ForExQuoteId forExQuoteId) {
+		this.forExQuoteId = forExQuoteId;
+	}
+	public ForExQuoteInfo getForExQuoteInfo() {
+		return forExQuoteInfo;
+	}
+	public void setForExQuoteInfo(ForExQuoteInfo forExQuoteInfo) {
+		this.forExQuoteInfo = forExQuoteInfo;
+	}
+	public ForExQuoteEnvr getForExQuoteEnvr() {
+		return forExQuoteEnvr;
+	}
+	public void setForExQuoteEnvr(ForExQuoteEnvr forExQuoteEnvr) {
+		this.forExQuoteEnvr = forExQuoteEnvr;
+	}
+	public ForExQuoteStatus getForExQuoteStatus() {
+		return forExQuoteStatus;
+	}
+	public void setForExQuoteStatus(ForExQuoteStatus forExQuoteStatus) {
+		this.forExQuoteStatus = forExQuoteStatus;
+	}
+
+}

@@ -1,0 +1,21 @@
+package my.com.infopro.ifx.client.model;
+
+public class ACHTrnInfo_Type extends IFXObject {
+
+	public final native void setOriginatorName(OriginatorName originatorName)/*-{
+		this.originatorName = originatorName;
+	}-*/;
+
+	public final native OriginatorName getOriginatorName()/*-{
+		return $wnd.cleanObject(this.originatorName);
+	}-*/;
+
+	public final native void setUSA_RTN(USA_RTN uSA_RTN)/*-{
+		this.uSA_RTN = uSA_RTN;
+	}-*/;
+
+	public final native USA_RTN getUSA_RTN()/*-{
+		return $wnd.cleanObject(this.uSA_RTN);
+	}-*/;
+
+}

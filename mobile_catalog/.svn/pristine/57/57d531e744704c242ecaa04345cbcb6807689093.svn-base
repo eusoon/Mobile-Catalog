@@ -1,0 +1,10 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class CryptType extends IFXObject {
+	
+	public final native  String getCryptType()/*-{
+		return $wnd.cleanString(this.cryptTyp);
+	}-*/;	
+}

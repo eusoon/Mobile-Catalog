@@ -1,0 +1,69 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtModRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setPmtId(PmtId pmtId)/*-{
+		this.pmtId = pmtId;
+	}-*/;
+
+	public final native PmtId getPmtId()/*-{
+		return $wnd.cleanObject(this.pmtId);
+
+	}-*/;
+
+	public final native void setPmtInfo(PmtInfo pmtInfo)/*-{
+		this.pmtInfo = pmtInfo;
+	}-*/;
+
+	public final native PmtInfo getPmtInfo() /*-{
+		return $wnd.cleanObject(this.pmtInfo);
+	}-*/;
+
+	public final native void setUpPayee(UpPayee upPayee)/*-{
+		this.upPayee = upPayee;
+	}-*/;
+
+	public final native UpPayee getUpPayee()/*-{
+		return $wnd.cleanObject(this.upPayee);
+	}-*/;
+
+	public final native void setDupChkOverride(DupChkOverride dupChkOverride)/*-{
+		this.dupChkOverride = dupChkOverride;
+	}-*/;
+
+	public final native DupChkOverride getDupChkOverride()/*-{
+		return $wnd.cleanObject(this.dupChkOverride);
+	}-*/;
+
+}

@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public enum RefType {
+	APAccountNum, ARAccountNum, BankSpecific, CountrySpecific, CustomerNum, OrgSpecific, VendorNum
+}

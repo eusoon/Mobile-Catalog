@@ -1,0 +1,34 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+
+import my.com.infopro.mobile.client.ifx.element.AcctTrnInfo;
+import my.com.infopro.mobile.client.ifx.element.AcctTrnKeys;
+import my.com.infopro.mobile.client.ifx.element.AcctTrnRec;
+
+public class AcctTrnRef extends TrnRef {
+
+	//begin-xor	Required
+	AcctTrnKeys acctTrnKeys; //Aggregate	Required	Account Transaction Keys Aggregate
+	AcctTrnRec acctTrnRec; //Aggregate	Required	Account Transaction Record
+	AcctTrnInfo acctTrnInfo; //Aggregate	Required	Account Transaction Information Aggregate
+	//end-xor
+	
+	public AcctTrnKeys getAcctTrnKeys() {
+		return acctTrnKeys;
+	}
+	public void setAcctTrnKeys(AcctTrnKeys acctTrnKeys) {
+		this.acctTrnKeys = acctTrnKeys;
+	}
+	public AcctTrnRec getAcctTrnRec() {
+		return acctTrnRec;
+	}
+	public void setAcctTrnRec(AcctTrnRec acctTrnRec) {
+		this.acctTrnRec = acctTrnRec;
+	}
+	public AcctTrnInfo getAcctTrnInfo() {
+		return acctTrnInfo;
+	}
+	public void setAcctTrnInfo(AcctTrnInfo acctTrnInfo) {
+		this.acctTrnInfo = acctTrnInfo;
+	}	
+}

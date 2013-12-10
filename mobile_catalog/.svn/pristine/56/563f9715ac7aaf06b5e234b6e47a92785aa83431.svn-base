@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.element;
+
+
+public class InitialAmount extends CurAmt {
+
+}

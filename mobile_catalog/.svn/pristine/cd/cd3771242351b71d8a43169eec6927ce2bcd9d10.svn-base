@@ -1,0 +1,45 @@
+package my.com.infopro.ifx.client.model;
+
+public class PassbkItemStatus_Type extends IFXObject {
+
+	public final native void setPassbkItemStatusCode(PassbkItemStatusCode passbkItemStatusCode)/*-{
+		this.passbkItemStatusCode = passbkItemStatusCode;
+	}-*/;
+
+	public final native PassbkItemStatusCode getPassbkItemStatusCode()/*-{
+		return $wnd.cleanObject(this.passbkItemStatusCode);
+	}-*/;
+
+	public final native void setStatusDesc(StatusDesc statusDesc)/*-{
+		this.statusDesc = statusDesc;
+	}-*/;
+
+	public final native StatusDesc getStatusDesc()/*-{
+		return $wnd.cleanObject(this.statusDesc);
+	}-*/;
+
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public final native void setApprovalId(ApprovalId approvalId)/*-{
+		this.approvalId = approvalId;
+	}-*/;
+
+	public final native ApprovalId getApprovalId()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setStatusModBy(StatusModBy _statusModBy)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native StatusModBy getStatusModBy()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+}

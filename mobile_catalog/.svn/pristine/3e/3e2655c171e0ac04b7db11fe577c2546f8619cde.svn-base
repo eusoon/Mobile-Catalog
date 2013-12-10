@@ -1,0 +1,22 @@
+package my.com.infopro.ifx.client.model;
+
+public class IssScriptResultData_Type extends IFXObject {
+
+	public native void setIssScriptResult(IssScriptResult issScriptResult)/*-{
+		this.issScriptResult = issScriptResult;
+	}-*/;
+
+	public final native IssScriptResult getIssScriptResult()/*-{
+		return $wnd.cleanObject(this.issScriptResult);
+
+	}-*/;
+
+	public native  void setIssScriptId(IssScriptId issScriptId)/*-{
+		this.issScriptId = issScriptId;
+	}-*/;
+
+	public final native IssScriptId getIssScriptId()/*-{
+		return $wnd.cleanObject(this.issScriptId);
+
+	}-*/;
+}

@@ -1,0 +1,91 @@
+package my.com.infopro.ifx.client.model;
+
+public class CardPrefInqRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setCardPrefId(CardPrefId cardPrefId)/*-{
+		this.cardPrefId = cardPrefId;
+	}-*/;
+
+	public final native CardPrefId getCardPrefId() /*-{
+		return $wnd.cleanObject(this.cardPrefId);
+
+	}-*/;
+
+	public native void setCardLogicalData(CardLogicalData cardLogicalData)/*-{
+		this.cardLogicalData = cardLogicalData;
+	}-*/;
+
+	public final native CardLogicalData getCardLogicalData()/*-{
+		return $wnd.cleanObject(this.cardLogicalData);
+
+	}-*/;
+
+	public native void setCardPrefType(CardPrefType cardPrefType)/*-{
+		this.cardPrefType = cardPrefType;
+	}-*/;
+
+	public final native CardPrefType getCardPrefType()/*-{
+		return $wnd.cleanObject(this.cardPrefType);
+
+	}-*/;
+
+	public native void setCardPrefRec(CardPrefRec cardPrefRec)/*-{
+		this.cardPrefRec = cardPrefRec;
+	}-*/;
+
+	public final native CardPrefRec getCardPrefRec() /*-{
+		return $wnd.cleanObject(this.cardPrefRec);
+
+	}-*/;
+
+}

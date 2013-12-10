@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class Trk2EquivData extends Trk2EquivData_Type {
+
+}

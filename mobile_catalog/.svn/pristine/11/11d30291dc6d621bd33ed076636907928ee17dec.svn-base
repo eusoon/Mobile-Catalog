@@ -1,0 +1,33 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class OrgCategoryCode extends IFXObject {
+	
+	public final native JsArray<MCC> getmCC() /*-{
+		return $wnd.cleanObject(mCC);
+	}-*/;
+	public final native void setmCC(JsArray<MCC> mCC) /*-{
+		this.mCC = mCC;
+	}-*/;
+	public final native JsArray<NAICS> getnAICS() /*-{
+		return $wnd.cleanObject(nAICS);
+	}-*/;
+	public final native void setnAICS(JsArray<NAICS> nAICS) /*-{
+		this.nAICS = nAICS;
+	}-*/;
+	public final native JsArray<SIC> getsIC() /*-{
+		return $wnd.cleanObject(sIC);
+	}-*/;
+	public final native void setsIC(JsArray<SIC> sIC) /*-{
+		this.sIC = sIC;
+	}-*/;
+	public final native JsArray<OrgCatIdent> getOrgCatIdent() /*-{
+		return $wnd.cleanObject(orgCatIdent);
+	}-*/;
+	public final native void setOrgCatIdent(JsArray<OrgCatIdent> orgCatIdent) /*-{
+		this.orgCatIdent = orgCatIdent;
+	}-*/;
+}

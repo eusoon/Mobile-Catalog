@@ -1,0 +1,44 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class ForExRateSheetRec extends IFXObject {
+
+	SvcIdent svcIdent; //Aggregate	Optional	Service Identifier
+	ForExRateSheetId forExRateSheetId; //Identifier	Required	Foreign Exchange Rate Sheet Identifier
+	ForExRateSheetInfo forExRateSheetInfo; //Aggregate	Required	Foreign Exchange Rate Sheet Information
+	ForExRateSheetEnvr forExRateSheetEnvr; //Aggregate	Optional	Foreign Exchange Rate Sheet Environment
+	ForExRateSheetStatus forExRateSheetStatus; //Aggregate	Required	Foreign Exchange Rate Sheet Status
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public ForExRateSheetId getForExRateSheetId() {
+		return forExRateSheetId;
+	}
+	public void setForExRateSheetId(ForExRateSheetId forExRateSheetId) {
+		this.forExRateSheetId = forExRateSheetId;
+	}
+	public ForExRateSheetInfo getForExRateSheetInfo() {
+		return forExRateSheetInfo;
+	}
+	public void setForExRateSheetInfo(ForExRateSheetInfo forExRateSheetInfo) {
+		this.forExRateSheetInfo = forExRateSheetInfo;
+	}
+	public ForExRateSheetEnvr getForExRateSheetEnvr() {
+		return forExRateSheetEnvr;
+	}
+	public void setForExRateSheetEnvr(ForExRateSheetEnvr forExRateSheetEnvr) {
+		this.forExRateSheetEnvr = forExRateSheetEnvr;
+	}
+	public ForExRateSheetStatus getForExRateSheetStatus() {
+		return forExRateSheetStatus;
+	}
+	public void setForExRateSheetStatus(ForExRateSheetStatus forExRateSheetStatus) {
+		this.forExRateSheetStatus = forExRateSheetStatus;
+	}
+	
+}

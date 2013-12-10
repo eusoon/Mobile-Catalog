@@ -1,0 +1,87 @@
+package my.com.infopro.ifx.client.model;
+
+public class PassbkItemInqRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn)/*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+
+	public final native RecCtrlIn getRecCtrlIn()/*-{
+		return $wnd.cleanObject(this.recCtrlIn);
+	}-*/;
+
+	public final native void setRelatedItemInqRqUID(
+			RelatedItemInqRqUID relatedItemInqRqUID)/*-{
+		this.relatedItemInqRqUID = relatedItemInqRqUID;
+	}-*/;
+
+	public final native RelatedItemInqRqUID getRelatedItemInqRqUID()/*-{
+		return $wnd.cleanObject(this.relatedItemInqRqUID);
+	}-*/;
+
+	public final native void setPassbkItemId(PassbkItemId[] passbkItemId)/*-{
+		this.passbkItemId = passbkItemId;
+	}-*/;
+
+	public final native PassbkItemId[] getPassbkItemId()/*-{
+		return $wnd.cleanObject(this.passbkItemId);
+	}-*/;
+
+	public final native void setPassbkId(PassbkId[] passbkId)/*-{
+		this.passbkId = passbkId;
+	}-*/;
+
+	public final native PassbkId[] getPassbkId()/*-{
+		return $wnd.cleanObject(this.passbkId);
+	}-*/;
+
+	public final native void setPassbkItemStatusCode(
+			PassbkItemStatusCode[] passbkItemStatusCode)/*-{
+		this.passbkItemStatusCode = passbkItemStatusCode;
+	}-*/;
+
+	public final native PassbkItemStatusCode[] getPassbkItemStatusCode()/*-{
+		return $wnd.cleanObject(this.passbkItemStatusCode);
+	}-*/;
+
+	public final native void setSelRangeDt(SelRangeDt[] selRangeDt)/*-{
+		this.selRangeDt = selRangeDt;
+	}-*/;
+
+	public final native SelRangeDt[] getSelRangeDt()/*-{
+		return $wnd.cleanObject(this.selRangeDt);
+	}-*/;
+
+}

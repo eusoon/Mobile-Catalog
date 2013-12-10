@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+        xmlns:g="urn:import:com.google.gwt.user.client.ui">
+        <ui:with field="appearance" type="my.com.infopro.mobile.client.tablet.SplashAppearance"></ui:with>
+		<g:SimplePanel ui:field="main" styleName="{appearance.css.main}">
+			<g:Label ui:field="lblTitle" />
+            <g:SimplePanel ui:field="menu" styleName="{appearance.css.menu}"></g:SimplePanel>
+                <g:SimplePanel ui:field="content" styleName="{appearance.css.content}">  
+                	<g:Image ui:field="logo" url="logo.png"></g:Image>
+                    <g:Label ui:field="lblBriefDescription" />
+                </g:SimplePanel>
+        </g:SimplePanel>
+</ui:UiBinder> 

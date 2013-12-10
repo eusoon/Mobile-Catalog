@@ -1,0 +1,9 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class LOCLimit extends CurAmt {
+	protected LOCLimit(){	
+	}
+	protected LOCLimit(){
+	}
+	
+}

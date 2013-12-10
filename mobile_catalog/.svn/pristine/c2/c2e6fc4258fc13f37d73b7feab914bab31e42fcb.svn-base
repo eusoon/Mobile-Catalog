@@ -1,0 +1,54 @@
+package my.com.infopro.ifx.client.model;
+
+public class PartyAcctRelDelRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public final native void setPartyAcctRelId(PartyAcctRelId partyAcctRelId)/*-{
+		this.partyAcctRelId = partyAcctRelId;
+	}-*/;
+
+	public final native PartyAcctRelId getPartyAcctRelId()/*-{
+		return $wnd.cleanObject(this.partyAcctRelId);
+	}-*/;
+
+}

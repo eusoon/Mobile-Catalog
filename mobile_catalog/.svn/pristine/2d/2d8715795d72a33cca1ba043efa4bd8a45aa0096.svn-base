@@ -1,0 +1,45 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class DebitInfo extends IFXObject {
+	
+	public final native  DebitType getDebitType()/*-{
+		return $wnd.cleanObject(this.debitType);
+	}-*/;
+	public final native  void setDebitType(DebitType debitType)/*-{
+		this.debitType = debitType;
+	}-*/;
+	public final native  JsArray<CompositeCurAmt> getCompositeCurAmt()/*-{
+		return $wnd.cleanObject(this.compositeCurAmt);
+	}-*/;
+	public final native  void setCompositeCurAmt(JsArray<CompositeCurAmt> compositeCurAmt)/*-{
+		this.compositeCurAmt = compositeCurAmt;
+	}-*/;
+	public final native  AcctRef getAcctRef()/*-{
+		return $wnd.cleanObject(this.acctRef);
+	}-*/;
+	public final native  void setAcctRef(AcctRef acctRef)/*-{
+		this.acctRef = acctRef;
+	}-*/;
+	public final native  AthKeys getAthKeys()/*-{
+		return $wnd.cleanObject(this.athKeys);
+	}-*/;
+	public final native  void setAthKeys(AthKeys athKeys)/*-{
+		this.athKeys = athKeys;
+	}-*/;
+	public final native  TrnRqUID getTrnRqUID()/*-{
+		return $wnd.cleanObject(this.trnRqUID);
+	}-*/;
+	public final native  void setTrnRqUID(TrnRqUID trnRqUID)/*-{
+		this.trnRqUID = trnRqUID;
+	}-*/;
+	public final native  ClientChgCode getClientChgCode()/*-{
+		return $wnd.cleanObject(this.clientChgCode);
+	}-*/;
+	public final native  void setClientChgCode(ClientChgCode clientChgCode)/*-{
+		this.clientChgCode = clientChgCode;
+	}-*/;
+}

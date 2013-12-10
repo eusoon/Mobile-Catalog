@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.element;
+
+public enum OnError {
+	Abort, Continue, ReverseAll, ReverseProcessed
+}

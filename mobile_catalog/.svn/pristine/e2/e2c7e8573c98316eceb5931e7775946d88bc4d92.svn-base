@@ -1,0 +1,165 @@
+package my.com.infopro.ifx.client.model;
+
+public class BankAcctTrnRec_Type extends IFXObject {
+
+	public final native void setTrnType(TrnType trnType)/*-{
+		this.trnType = trnType;
+	}-*/;
+
+	public final native TrnType getTrnType()/*-{
+		return $wnd.cleanObject(this.trnType);
+	}-*/;
+
+	public final native void setTrnSrc(TrnSrc trnSrc)/*-{
+		this.trnSrc = trnSrc;
+	}-*/;
+
+	public final native TrnSrc getTrnSrc()/*-{
+		return $wnd.cleanObject(this.trnSrc);
+	}-*/;
+
+	public final native void setPostedDt(PostedDt postedDt)/*-{
+		this.postedDt = postedDt;
+	}-*/;
+
+	public final native PostedDt getPostedDt()/*-{
+		return $wnd.cleanObject(this.postedDt);
+	}-*/;
+
+	public final native void setOrigDt(OrigDt origDt)/*-{
+		this.origDt = origDt;
+	}-*/;
+
+	public final native OrigDt getOrigDt()/*-{
+		return $wnd.cleanObject(this.origDt);
+	}-*/;
+
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setOrigCurAmt(OrigCurAmt origCurAmt)/*-{
+		this.origCurAmt = origCurAmt;
+	}-*/;
+
+	public final native OrigCurAmt getOrigCurAmt()/*-{
+		return $wnd.cleanObject(this.origCurAmt);
+	}-*/;
+
+	public final native void setCompositeCurAmt(CompositeCurAmt[] compositeCurAmt)/*-{
+		this.compositeCurAmt = compositeCurAmt;
+	}-*/;
+
+	public final native CompositeCurAmt[] getCompositeCurAmt()/*-{
+		return $wnd.cleanObject(this.compositeCurAmt);
+	}-*/;
+
+	public final native void setIndustId(IndustId[] industId)/*-{
+		this.industId = industId;
+	}-*/;
+
+	public final native IndustId[] getIndustId()/*-{
+		return $wnd.cleanObject(this.industId);
+	}-*/;
+
+	public final native void setMemo(Memo[] memo)/*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo[] getMemo()/*-{
+		return $wnd.cleanObject(this.memo);
+	}-*/;
+
+	public final native void setName(Name[] name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name[] getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setCounterpartyInfo(CounterpartyInfo[] counterpartyInfo)/*-{
+		this.counterpartyInfo = counterpartyInfo;
+	}-*/;
+
+	public final native CounterpartyInfo[] getCounterpartyInfo()/*-{
+		return $wnd.cleanObject(this.counterpartyInfo);
+	}-*/;
+
+	public final native void setRefInfo(RefInfo[] refInfo)/*-{
+		this.refInfo = refInfo;
+	}-*/;
+
+	public final native RefInfo[] getRefInfo()/*-{
+		return $wnd.cleanObject(this.refInfo);
+	}-*/;
+
+	public final native void setBillRefInfo(BillRefInfo[] billRefInfo)/*-{
+		this.billRefInfo = billRefInfo;
+	}-*/;
+
+	public final native BillRefInfo[] getBillRefInfo()/*-{
+		return $wnd.cleanObject(this.billRefInfo);
+	}-*/;
+
+	public final native void setRemitAdviceRefId(RemitAdviceRefId[] remitAdviceRefId)/*-{
+		this.remitAdviceRefId = remitAdviceRefId;
+	}-*/;
+
+	public final native RemitAdviceRefId[] getRemitAdviceRefId()/*-{
+		return $wnd.cleanObject(this.remitAdviceRefId);
+	}-*/;
+
+	public final native void setCustPayeeInfo(CustPayeeInfo[] custPayeeInfo)/*-{
+		this.custPayeeInfo = custPayeeInfo;
+	}-*/;
+
+	public final native CustPayeeInfo[] getCustPayeeInfo()/*-{
+		return $wnd.cleanObject(this.custPayeeInfo);
+	}-*/;
+
+	public final native void setInvoiceInfo(InvoiceInfo[] invoiceInfo)/*-{
+		this.invoiceInfo = invoiceInfo;
+	}-*/;
+
+	public final native InvoiceInfo[] getInvoiceInfo()/*-{
+		return $wnd.cleanObject(this.invoiceInfo);
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId[] cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId[] getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+	}-*/;
+
+	public final native void setSPRefId(SPRefId[] sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId[] getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+	}-*/;
+
+	public final native void setSPRefIdCorrect(SPRefIdCorrect[] sPRefIdCorrect)/*-{
+		this.sPRefIdCorrect = sPRefIdCorrect;
+	}-*/;
+
+	public final native SPRefIdCorrect[] getSPRefIdCorrect()/*-{
+		return $wnd.cleanObject(this.sPRefIdCorrect);
+	}-*/;
+
+}

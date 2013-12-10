@@ -1,0 +1,86 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class IntRateData extends IFXObject {
+
+	public final native  IntRateCategory getIntRateCategory()/*-{
+		return $wnd.cleanObject(this.intRateCategory);
+	}-*/;
+	public final native  void setIntRateCategory(IntRateCategory intRateCategory)/*-{
+		this.intRateCategory = intRateCategory;
+	}-*/;
+	public final native  Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+	}-*/;
+	public final native  void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+	public final native  BasedOnCode getBasedOnCode()/*-{
+		return $wnd.cleanObject(this.basedOnCode);
+	}-*/;
+	public final native  void setBasedOnCode(BasedOnCode basedOnCode)/*-{
+		this.basedOnCode = basedOnCode;
+	}-*/;
+	public final native  BasedOnValue getBasedOnValue()/*-{
+		return $wnd.cleanObject(this.basedOnValue);
+	}-*/;
+	public final native  void setBasedOnValue(BasedOnValue basedOnValue)/*-{
+		this.basedOnValue = basedOnValue;
+	}-*/;
+	public final native  AccrualFrequency getAccrualFrequency()/*-{
+		return $wnd.cleanObject(this.accrualFrequency);
+	}-*/;
+	public final native  void setAccrualFrequency(AccrualFrequency accrualFrequency)/*-{
+		this.accrualFrequency = accrualFrequency;
+	}-*/;
+	public final native  AccrualMethod getAccrualMethod()/*-{
+		return $wnd.cleanObject(this.accrualMethod);
+	}-*/;
+	public final native  void setAccrualMethod(AccrualMethod accrualMethod)/*-{
+		this.accrualMethod = accrualMethod;
+	}-*/;
+	public final native  DailyAccrual getDailyAccrual()/*-{
+		return $wnd.cleanObject(this.dailyAccrual);
+	}-*/;
+	public final native  void setDailyAccrual(DailyAccrual dailyAccrual)/*-{
+		this.dailyAccrual = dailyAccrual;
+	}-*/;
+	public final native  CapFrequency getCapFrequency()/*-{
+		return $wnd.cleanObject(this.capFrequency);
+	}-*/;
+	public final native  void setCapFrequency(CapFrequency capFrequency)/*-{
+		this.capFrequency = capFrequency;
+	}-*/;
+	public final native  IntRateType getIntRateType()/*-{
+		return $wnd.cleanObject(this.intRateType);
+	}-*/;
+	public final native  void setIntRateType(IntRateType intRateType)/*-{
+		this.intRateType = intRateType;
+	}-*/;
+	public final native  CompoundInd getCompoundInd()/*-{
+		return $wnd.cleanObject(this.compoundInd);
+	}-*/;
+	public final native  void setCompoundInd(CompoundInd compoundInd)/*-{
+		this.compoundInd = compoundInd;
+	}-*/;
+	public final native  EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+	public final native  void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+	public final native  ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.ExpDt);
+	}-*/;
+	public final native  void setExpDt(ExpDt expDt)/*-{
+		ExpDt = expDt;
+	}-*/;
+	public final native  TierAmtType getTierAmtType()/*-{
+		return $wnd.cleanObject(this.tierAmtType);
+	}-*/;
+	public final native  void setTierAmtType(TierAmtType tierAmtType)/*-{
+		this.tierAmtType = tierAmtType;
+	}-*/;
+
+}

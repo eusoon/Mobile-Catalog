@@ -1,0 +1,13 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class XferSel extends IFXObject {
+	public final native  XferKeys getXferKeys()/*-{
+		return $wnd.cleanObject(this.xferKeys);
+	}-*/;
+
+	public final native  void setXferKeys(XferKeys xferKeys)/*-{
+		this.xferKeys = xferKeys;
+	}-*/;
+}

@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public enum ImmigrationStat {
+	Citizen, National, NonResidentAlien, ResidentAlien
+}

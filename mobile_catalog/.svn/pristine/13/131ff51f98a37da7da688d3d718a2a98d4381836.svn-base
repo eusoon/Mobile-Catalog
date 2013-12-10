@@ -1,0 +1,39 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class MsgRsHdr extends IFXObject {
+
+	public final native AsyncRsData getAsyncRsData() /*-{
+		return $wnd.cleanObject(asyncRsData);
+	}-*/;
+	public final native void setAsyncRsData(AsyncRsData asyncRsData) /*-{
+		this.asyncRsData = asyncRsData;
+	}-*/;
+	public final native CredentialsRsHdr[] getCredentialsRsHdr() /*-{
+		return $wnd.cleanObject(credentialsRsHdr);
+	}-*/;
+	public final native void setCredentialsRsHdr(CredentialsRsHdr[] credentialsRsHdr_) /*-{
+		this.credentialsRsHdr = credentialsRsHdr_;
+	}-*/;
+	public final native ContextRsHdr getContextRsHdr() /*-{
+		return $wnd.cleanObject(contextRsHdr);
+	}-*/;
+	public final native void setContextRsHdr(ContextRsHdr contextRsHdr) /*-{
+		this.contextRsHdr = contextRsHdr;
+	}-*/;
+	public final native FeeRsHdr[] getFeeRsHdr() /*-{
+		return $wnd.cleanObject(feeRsHdr);
+	}-*/;
+	public final native void setFeeRsHdr(FeeRsHdr[] feeRsHdr) /*-{
+		this.feeRsHdr = feeRsHdr;
+	}-*/;
+	public final native CardUpdateRsHdr getCardUpdateRsHdr() /*-{
+		return $wnd.cleanObject(cardUpdateRsHdr);
+	}-*/;
+	public final native void setCardUpdateRsHdr(CardUpdateRsHdr cardUpdateRsHdr) /*-{
+		this.cardUpdateRsHdr = cardUpdateRsHdr;
+	}-*/;
+
+
+}

@@ -1,0 +1,16 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class StdPayeeSel extends IFXObject {
+	StdPayeeKeys stdPayeeKeys;//Aggregate	Required Standard Payee Keys Aggregate
+
+	public StdPayeeKeys getStdPayeeKeys() {
+		return stdPayeeKeys;
+	}
+
+	public void setStdPayeeKeys(StdPayeeKeys stdPayeeKeys) {
+		this.stdPayeeKeys = stdPayeeKeys;
+	}
+
+}

@@ -1,0 +1,31 @@
+package my.com.infopro.ifx.client.model;
+
+public class PrcSched_Type extends IFXObject {
+	public final native void setPrcDaysOff(PrcDaysOff[] prcDaysOff)/*-{
+		this.prcDaysOff = prcDaysOff;
+	}-*/;
+
+	public final native PrcDaysOff[] getPrcDaysOff()/*-{
+		return $wnd.cleanObject(this.prcDaysOff);
+
+	}-*/;
+
+	public final native void setCutoffTm(CutoffTm[] cutoffTm)/*-{
+		this.cutoffTm = cutoffTm;
+	}-*/;
+
+	public final native CutoffTm[] getCutoffTm()/*-{
+		return $wnd.cleanObject(this.cutoffTm);
+
+	}-*/;
+
+	public final native void setPrcDtAdj(PrcDtAdj[] prcDtAdj)/*-{
+		this.prcDtAdj = prcDtAdj;
+	}-*/;
+
+	public final native PrcDtAdj[] getPrcDtAdj()/*-{
+		return $wnd.cleanObject(this.prcDtAdj);
+
+	}-*/;
+
+}

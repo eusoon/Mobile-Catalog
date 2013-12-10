@@ -1,0 +1,66 @@
+package my.com.infopro.ifx.client.model;
+
+public class EmploymentHistory_Type extends IFXObject {
+	public final native void setEmploymentStatus(
+			EmploymentStatus employmentStatus)/*-{
+		this.employmentStatus = employmentStatus;
+	}-*/;
+
+	public final native EmploymentStatus getEmploymentStatus()/*-{
+		return $wnd.cleanObject(this.employmentStatus);
+
+	}-*/;
+
+	public final native void setOrgInfo(OrgInfo orgInfo)/*-{
+		this.orgInfo = orgInfo;
+	}-*/;
+
+	public final native OrgInfo getOrgInfo()/*-{
+		return $wnd.cleanObject(this.orgInfo);
+
+	}-*/;
+
+	public final native void setOccupation(Occupation occupation)/*-{
+		this.occupation = occupation;
+	}-*/;
+
+	public final native Occupation getOccupation()/*-{
+		return $wnd.cleanObject(this.occupation);
+
+	}-*/;
+
+	public final native void setIncome(Income income)/*-{
+		this.income = income;
+	}-*/;
+
+	public final native Income getIncome()/*-{
+		return $wnd.cleanObject(this.income);
+
+	}-*/;
+
+	public final native void setJobTitle(JobTitle jobTitle)/*-{
+		this.jobTitle = jobTitle;
+	}-*/;
+
+	public final native JobTitle getJobTitle()/*-{
+		return $wnd.cleanObject(this.jobTitle);
+
+	}-*/;
+
+	public final native void setStartDt(StartDt startDt)/*-{
+		this.startDt = startDt;
+	}-*/;
+
+	public final native StartDt getStartDt()/*-{
+		return $wnd.cleanObject(this.startDt);
+
+	}-*/;
+
+	public final native void setEndDt(EndDt endDt)/*-{
+		this.endDt = endDt;
+	}-*/;
+
+	public final native EndDt getEndDt() /*-{
+		return $wnd.cleanObject(this.endDt);
+	}-*/;
+}

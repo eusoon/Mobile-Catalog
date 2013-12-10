@@ -1,0 +1,39 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class RecurException extends IFXObject {
+	protected RecurException(){	
+	}
+	public final native RecurExceptionType getRecurExceptionType() /*-{
+		return $wnd.cleanObject(recurExceptionType);
+	}-*/;
+	public final native void setRecurExceptionType(RecurExceptionType recurExceptionType) /*-{
+		this.recurExceptionType = recurExceptionType;
+	}-*/;
+	public final native SkipNextN getSkipNextN() /*-{
+		return $wnd.cleanObject(skipNextN);
+	}-*/;
+	public final native void setSkipNextN(SkipNextN skipNextN) /*-{
+		this.skipNextN = skipNextN;
+	}-*/;
+	public final native StartDt getStartDt() /*-{
+		return $wnd.cleanObject(startDt);
+	}-*/;
+	public final native void setStartDt(StartDt startDt) /*-{
+		this.startDt = startDt;
+	}-*/;
+	public final native EndDt getEndDt() /*-{
+		return $wnd.cleanObject(endDt);
+	}-*/;
+	public final native void setEndDt(EndDt endDt) /*-{
+		this.endDt = endDt;
+	}-*/;
+	public final native Duration getDuration() /*-{
+		return $wnd.cleanObject(duration);
+	}-*/;
+	public final native void setDuration(Duration duration) /*-{
+		this.duration = duration;
+	}-*/;
+
+}

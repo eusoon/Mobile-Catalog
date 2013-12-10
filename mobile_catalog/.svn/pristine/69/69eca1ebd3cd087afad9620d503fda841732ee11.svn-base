@@ -1,0 +1,12 @@
+package my.com.infopro.ifx.client.model;
+
+public class BalMsgRqInfo_Type extends IFXObject {
+	public final native void setBalInqRq(BalInqRq balInqRq)/*-{
+		this.balInqRq = balInqRq;
+	}-*/;
+
+	public final native BalInqRq getBalInqRq()/*-{
+		return $wnd.cleanObject(this.balInqRq);
+
+	}-*/;
+}

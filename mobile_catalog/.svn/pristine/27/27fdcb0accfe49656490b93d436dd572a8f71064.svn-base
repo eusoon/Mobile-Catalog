@@ -1,0 +1,69 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PartySel extends IFXObject {
+	
+	public final native PartyKeys[] getPartyKeys() /*-{
+		return $wnd.cleanObject(partyKeys);
+	}-*/;
+	public final native void setPartyKeys(PartyKeys[] partyKeys) /*-{
+		this.partyKeys = partyKeys;
+	}-*/;
+	public final native PersonIndicator[] getPersonIndicator() /*-{
+		return $wnd.cleanObject(personIndicator);
+	}-*/;
+	public final native void setPersonIndicator(PersonIndicator[] personIndicator) /*-{
+		this.personIndicator = personIndicator;
+	}-*/;
+	public final native IssuedIdentValue[] getIssuedIdentValue() /*-{
+		return $wnd.cleanObject(issuedIdentValue);
+	}-*/;
+	public final native void setIssuedIdentValue(IssuedIdentValue[] issuedIdentValue) /*-{
+		this.issuedIdentValue = issuedIdentValue;
+	}-*/;
+	public final native IssuedIdentType[] getIssuedIdentType() /*-{
+		return $wnd.cleanObject(issuedIdentType);
+	}-*/;
+	public final native void setIssuedIdentType(IssuedIdentType[] issuedIdentType) /*-{
+		this.issuedIdentType = issuedIdentType;
+	}-*/;
+	public final native FullName[] getFullName() /*-{
+		return $wnd.cleanObject(fullName);
+	}-*/;
+	public final native void setFullName(FullName[] fullName) /*-{
+		this.fullName = fullName;
+	}-*/;
+	public final native Addr1[] getAddr1() /*-{
+		return $wnd.cleanObject(addr1);
+	}-*/;
+	public final native void setAddr1(Addr1[] addr1) /*-{
+		this.addr1 = addr1;
+	}-*/;
+	public final native PostalCode[] getPostalCode() /*-{
+		return $wnd.cleanObject(postalCode);
+	}-*/;
+	public final native void setPostalCode(PostalCode[] postalCode) /*-{
+		this.postalCode = postalCode;
+	}-*/;
+	public final native BirthDt[] getBirthDt() /*-{
+		return $wnd.cleanObject(birthDt);
+	}-*/;
+	public final native void setBirthDt(BirthDt[] birthDt) /*-{
+		this.birthDt = birthDt;
+	}-*/;
+	public final native Phone[] getPhone() /*-{
+		return $wnd.cleanObject(phone);
+	}-*/;
+	public final native void setPhone(Phone[] phone) /*-{
+		this.phone = phone;
+	}-*/;
+	public final native EmailAddr[] getEmailAddr() /*-{
+		return $wnd.cleanObject(emailAddr);
+	}-*/;
+	public final native void setEmailAddr(EmailAddr[] emailAddr) /*-{
+		this.emailAddr = emailAddr;
+	}-*/;
+	
+	
+}

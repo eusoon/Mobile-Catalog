@@ -1,0 +1,20 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class ForExDealSel extends IFXObject {
+	
+	protected ForExDealSel(){
+	}
+	
+	public final native  JsArray<ForExDealKeys> getForExDealKeys()/*-{
+		return $wnd.cleanObject(this.forExDealKeys);
+	}-*/;
+
+	public final native  void setForExDealKeys(JsArray<ForExDealKeys> forExDealKeys)/*-{
+		this.forExDealKeys = forExDealKeys;
+	}-*/;
+		
+}

@@ -1,0 +1,27 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class SecTokenLogin extends SecToken {
+
+	protected SecTokenLogin(){	
+	}
+	
+	public final native LoginName getLoginName() /*-{
+		return $wnd.cleanObject(LoginName);
+	}-*/;
+	public final native void setLoginName(LoginName loginName) /*-{
+		LoginName = loginName;
+	}-*/;
+	public final native SubjectPswd getSubjectPswd() /*-{
+		return $wnd.cleanObject(SubjectPswd);
+	}-*/;
+	public final native void setSubjectPswd(SubjectPswd subjectPswd) /*-{
+		SubjectPswd = subjectPswd;
+	}-*/;
+	public final native SubjectPassCode getSubjectPassCode() /*-{
+		return $wnd.cleanObject(SubjectPassCode);
+	}-*/;
+	public final native void setSubjectPassCode(SubjectPassCode subjectPassCode) /*-{
+		SubjectPassCode = subjectPassCode;
+	}-*/;
+
+}

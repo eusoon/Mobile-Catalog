@@ -1,0 +1,118 @@
+package my.com.infopro.ifx.client.model;
+
+import my.com.infopro.ifx.client.model.IFXObject;
+
+public class SignonRs_Type extends IFXObject {
+	public final native  void setId(IFXString id)/*-{
+	this.id = id;
+}-*/;
+
+	public final native  IFXString getId()/*-{
+	return $wnd.cleanObject(this.id);
+
+}-*/;
+	public final native  void setStatus(Status status)/*-{
+	this.status = status;
+}-*/;
+
+	public final native  Status getStatus()/*-{
+	return $wnd.cleanObject(this.status);
+
+}-*/;
+	public final native  void setSignonRole(SignonRole signonRole)/*-{
+	this.signonRole = signonRole;
+}-*/;
+
+	public final native  SignonRole getSignonRole()/*-{
+	return $wnd.cleanObject(this.signonRole);
+
+}-*/;
+	public final native  void setCustId(CustId custId)/*-{
+	this.custId = custId;
+}-*/;
+
+	public final native  CustId getCustId()/*-{
+	return $wnd.cleanObject(this.custId);
+
+}-*/;
+	public final native  void setGenSessKey(GenSessKey genSessKey)/*-{
+	this.genSessKey = genSessKey;
+}-*/;
+
+	public final native  GenSessKey getGenSessKey()/*-{
+	return $wnd.cleanObject(this.genSessKey);
+
+}-*/;
+	public final native  void setClientDt(ClientDt clientDt)/*-{
+	this.clientDt = clientDt;
+}-*/;
+
+	public final native  ClientDt getClientDt()/*-{
+	return $wnd.cleanObject(this.clientDt);
+
+}-*/;
+	public final native  void setCustLangPref(CustLangPref custLangPref)/*-{
+	this.custLangPref = custLangPref;
+}-*/;
+
+	public final native  CustLangPref getCustLangPref()/*-{
+	return $wnd.cleanObject(this.custLangPref);
+
+}-*/;
+	public final native  void setClientApp(ClientApp clientApp)/*-{
+	this.clientApp = clientApp;
+}-*/;
+
+	public final native  ClientApp getClientApp()/*-{
+	return $wnd.cleanObject(this.clientApp);
+
+}-*/;
+	public final native  void setProxyClient(ProxyClient proxyClient)/*-{
+	this.proxyClient = proxyClient;
+}-*/;
+
+	public final native  ProxyClient getProxyClient()/*-{
+	return $wnd.cleanObject(this.proxyClient);
+
+}-*/;
+	public final native  void setEU_Cur(EU_Cur eU_Cur)/*-{
+	this.eU_Cur = eU_Cur;
+}-*/;
+
+	public final native  EU_Cur getEU_Cur()/*-{
+	return $wnd.cleanObject(this.eU_Cur);
+
+}-*/;
+	public final native  void setServerDt(ServerDt serverDt)/*-{
+	this.serverDt = serverDt;
+}-*/;
+
+	public final native  ServerDt getServerDt()/*-{
+	return $wnd.cleanObject(this.serverDt);
+
+}-*/;
+	public final native  void setSessKey(SessKey sessKey)/*-{
+	this.sessKey = sessKey;
+}-*/;
+
+	public final native  SessKey getSessKey()/*-{
+	return $wnd.cleanObject(this.sessKey);
+
+}-*/;
+	public final native  void setExpDt(ExpDt expDt)/*-{
+	this.expDt = expDt;
+}-*/;
+
+	public final native  ExpDt getExpDt()/*-{
+	return $wnd.cleanObject(this.expDt);
+
+}-*/;
+	public final native  void setLanguage(Language language)/*-{
+	this.language = language;
+}-*/;
+
+	public final native  Language getLanguage()/*-{
+	return $wnd.cleanObject(this.language);
+
+}-*/;
+}

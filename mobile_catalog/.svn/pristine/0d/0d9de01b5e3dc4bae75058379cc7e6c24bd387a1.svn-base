@@ -1,0 +1,41 @@
+package my.com.infopro.mobile.client.app;
+import my.com.infopro.mobile.client.phone.MobileWebAppShellPhone;
+import my.com.infopro.mobile.client.phone.SplashPhone;
+
+public class MobileWebAppShellPhoneImpl implements MobileWebAppShellClientFactory {
+	
+	private MobileWebAppShell shell;
+	
+	private Splash splash;
+
+	@Override
+	public MobileWebAppShell getShell() {
+		 if (shell == null) {
+		      shell = createShell();
+		    }
+		    return shell;
+
+	}
+	@Override
+	public Splash getSplash() {
+		 if (splash == null) {
+			 splash = createSplash();
+		    }
+		    return splash;
+
+	}
+	
+	 /**
+	   * Create the application UI shell.
+	   * 
+	   * @return the UI shell
+	   */
+	  protected MobileWebAppShell createShell() {
+	    
+	    return new MobileWebAppShellPhone();
+	  }
+	  protected Splash createSplash() {
+		    
+		    return new SplashPhone();
+	  }
+}

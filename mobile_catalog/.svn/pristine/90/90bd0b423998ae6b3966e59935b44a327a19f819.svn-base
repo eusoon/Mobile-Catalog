@@ -1,0 +1,57 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class ForExQuoteEnvr extends BaseEnvr {
+		
+	protected ForExQuoteEnvr(){
+	}
+	
+	public final native  ForExQuoteIdent getForExQuoteIdent()/*-{
+		return $wnd.cleanObject(this.forExQuoteIdent);
+	}-*/;
+	public final native  void setForExQuoteIdent(ForExQuoteIdent forExQuoteIdent)/*-{
+		this.forExQuoteIdent = forExQuoteIdent;
+	}-*/;
+	public final native  NewForExRate getNewForExRate()/*-{
+		return $wnd.cleanObject(this.newForExRate);
+	}-*/;
+	public final native  void setNewForExRate(NewForExRate newForExRate)/*-{
+		this.newForExRate = newForExRate;
+	}-*/;
+	public final native  ForExHomeRate getForExHomeRate()/*-{
+		return $wnd.cleanObject(this.forExHomeRate);
+	}-*/;
+	public final native  void setForExHomeRate(ForExHomeRate forExHomeRate)/*-{
+		this.forExHomeRate = forExHomeRate;
+	}-*/;
+	public final native  ForwardPts getForwardPts()/*-{
+		return $wnd.cleanObject(this.forwardPts);
+	}-*/;
+	public final native  void setForwardPts(ForwardPts forwardPts)/*-{
+		this.forwardPts = forwardPts;
+	}-*/;
+	public final native  EffTimeFrame getEffTimeFrame()/*-{
+		return $wnd.cleanObject(this.effTimeFrame);
+	}-*/;
+	public final native  void setEffTimeFrame(EffTimeFrame effTimeFrame)/*-{
+		this.effTimeFrame = effTimeFrame;
+	}-*/;
+	public final native  FixingDt getFixingDt()/*-{
+		return $wnd.cleanObject(this.fixingDt);
+	}-*/;
+	public final native  void setFixingDt(FixingDt fixingDt)/*-{
+		this.fixingDt = fixingDt;
+	}-*/;
+	public final native  SmallBankNoteDenom getSmallBankNoteDenom()/*-{
+		return $wnd.cleanObject(this.smallBankNoteDenom);
+	}-*/;
+	public final native  void setSmallBankNoteDenom(SmallBankNoteDenom smallBankNoteDenom)/*-{
+		this.smallBankNoteDenom = smallBankNoteDenom;
+	}-*/;
+	public final native  FundingDueDt getFundingDueDt()/*-{
+		return $wnd.cleanObject(this.FundingDueDt);
+	}-*/;
+	public final native  void setFundingDueDt(FundingDueDt fundingDueDt)/*-{
+		FundingDueDt = fundingDueDt;
+	}-*/;
+
+}

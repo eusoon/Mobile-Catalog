@@ -1,0 +1,30 @@
+package my.com.infopro.ifx.client.model;
+
+public class MsgAuthCode_Type extends IFXObject {
+	public final native void setMacValue(MacValue macValue)/*-{
+		this.macValue = macValue;
+	}-*/;
+
+	public final native MacValue getMacValue()/*-{
+		return $wnd.cleanObject(this.macValue);
+
+	}-*/;
+
+	public final native void setMacVariant(MacVariant macVariant)/*-{
+		this.macVariant = macVariant;
+	}-*/;
+
+	public final native MacVariant getMacVariant()/*-{
+		return $wnd.cleanObject(this.macVariant);
+
+	}-*/;
+
+	public final native void setSecObjId(SecObjId secObjId)/*-{
+		this.secObjId = secObjId;
+	}-*/;
+
+	public final native SecObjId getSecObjId()/*-{
+		return $wnd.cleanObject(this.secObjId);
+
+	}-*/;
+}

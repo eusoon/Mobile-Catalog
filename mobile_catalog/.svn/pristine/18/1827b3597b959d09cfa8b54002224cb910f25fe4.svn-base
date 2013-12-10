@@ -1,0 +1,46 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class FinancialData extends IFXObject {
+	
+	protected FinancialData(){
+	}
+	
+	public final native  FinancialType getFinancialType()/*-{
+		return $wnd.cleanObject(this.financialType);
+	}-*/;
+	public final native  void setFinancialType(FinancialType financialType)/*-{
+		this.financialType = financialType;
+	}-*/;
+	public final native  FinancialSubType getFinancialSubType()/*-{
+		return $wnd.cleanObject(this.financialSubType);
+	}-*/;
+	public final native  void setFinancialSubType(FinancialSubType financialSubType)/*-{
+		this.financialSubType = financialSubType;
+	}-*/;
+	public final native  Freq getFreq()/*-{
+		return $wnd.cleanObject(this.freq);
+	}-*/;
+	public final native  void setFreq(Freq freq)/*-{
+		this.freq = freq;
+	}-*/;
+	public final native  FinancialAmt getFinancialAmt()/*-{
+		return $wnd.cleanObject(this.financialAmt);
+	}-*/;
+	public final native  void setFinancialAmt(FinancialAmt financialAmt)/*-{
+		this.financialAmt = financialAmt;
+	}-*/;
+	public final native  UpDt getUpDt()/*-{
+		return $wnd.cleanObject(this.upDt);
+	}-*/;
+	public final native  void setUpDt(UpDt upDt)/*-{
+		this.upDt = upDt;
+	}-*/;
+	public final native  Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+	}-*/;
+	public final native  void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+}

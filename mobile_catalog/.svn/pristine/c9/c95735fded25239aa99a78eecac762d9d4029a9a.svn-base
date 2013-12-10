@@ -1,0 +1,8 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXDate;
+
+public class ImportDt extends IFXDate {
+	protected ImportDt(){	
+	}
+}

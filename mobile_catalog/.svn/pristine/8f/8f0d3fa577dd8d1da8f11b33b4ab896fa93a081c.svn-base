@@ -1,0 +1,40 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public  class AcctStatus extends IFXObject {
+	
+	protected AcctStatus(){	
+	}
+	
+	public final native  AcctStatusCode getAcctStatusCode()/*-{
+		return $wnd.cleanObject(this.acctStatusCode);
+	}-*/;
+	public final native  void setAcctStatusCode(AcctStatusCode acctStatusCode)/*-{
+		this.acctStatusCode = acctStatusCode;
+	}-*/;
+	public final native  StatusDesc getStatusDesc()/*-{
+		return $wnd.cleanObject(this.statusDesc);
+	}-*/;
+	public final native  void setStatusDesc(StatusDesc statusDesc)/*-{
+		this.statusDesc = statusDesc;
+	}-*/;
+	public final native  EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+	public final native  void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+	public final native  ApprovalIdent getQpprovalIdent()/*-{
+		return $wnd.cleanObject(this.qpprovalIdent);
+	}-*/;
+	public final native  void setQpprovalIdent(ApprovalIdent qpprovalIdent)/*-{
+		this.qpprovalIdent = qpprovalIdent;
+	}-*/;
+	public final native  StatusModBy getStatusModBy()/*-{
+		return $wnd.cleanObject(this.statusModBy);
+	}-*/;
+	public final native  void setStatusModBy(StatusModBy statusModBy)/*-{
+		this.statusModBy = statusModBy;
+	}-*/;
+}

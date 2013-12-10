@@ -1,0 +1,98 @@
+package my.com.infopro.ifx.client.model;
+
+public class XferAdviseRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setXferRec(XferRec xferRec)/*-{
+		this.xferRec = xferRec;
+	}-*/;
+
+	public final native XferRec getXferRec() /*-{
+		return $wnd.cleanObject(this.xferRec);
+	}-*/;
+
+	public final native void setXferId(XferId[] xferId)/*-{
+		this.xferId = xferId;
+	}-*/;
+
+	public final native XferId[] getXferId()/*-{
+		return $wnd.cleanObject(this.xferId);
+	}-*/;
+
+	public native void setXferStatus(XferStatus xferStatus)/*-{
+		this.xferStatus = xferStatus;
+	}-*/;
+
+	public final native XferStatus getXferStatus() /*-{
+		return $wnd.cleanObject(this.xferStatus);
+
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+
+	}-*/;
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+
+	}-*/;
+
+}

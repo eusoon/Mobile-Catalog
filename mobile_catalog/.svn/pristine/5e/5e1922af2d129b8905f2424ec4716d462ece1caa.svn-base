@@ -1,0 +1,35 @@
+package my.com.infopro.ifx.client.model;
+
+public class Term_Type extends IFXObject {
+	public final native void setCount(Count count)/*-{
+		this.count = count;
+	}-*/;
+
+	public final native Count getCount()/*-{
+		return $wnd.cleanObject(this.count);
+	}-*/;
+
+	public final native void setTermUnits(TermUnits termUnits)/*-{
+		this.termUnits = termUnits;
+	}-*/;
+
+	public final native TermUnits getTermUnits()/*-{
+		return $wnd.cleanObject(this.termUnits);
+	}-*/;
+
+	public final native void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+
+	public final native Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+	}-*/;
+
+	public final native void setDaysCall(DaysCall daysCall)/*-{
+		this.daysCall = daysCall;
+	}-*/;
+
+	public final native DaysCall getDaysCall()/*-{
+		return $wnd.cleanObject(this.daysCall);
+	}-*/;
+}

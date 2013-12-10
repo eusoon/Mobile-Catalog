@@ -1,0 +1,7 @@
+package my.com.infopro.ifx.payee;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class CustPayeeRqMsg extends IFXObject {
+
+}

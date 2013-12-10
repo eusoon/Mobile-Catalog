@@ -1,0 +1,39 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+
+public class BillerAcctIdSpec extends IFXObject {
+
+	public final native  AcctFormat getAcctFormat()/*-{
+		return $wnd.cleanObject(acctFormat);
+	}-*/;
+	public final native  void setAcctFormat(AcctFormat acctFormat)/*-{
+		this.acctFormat = acctFormat;
+	}-*/;
+	public final native  AcctMask[] getAcctMask()/*-{
+		return $wnd.cleanObject(acctMask);
+	}-*/;
+	public final native  void setAcctMask(AcctMask[] acctMask)/*-{
+		this.acctMask = acctMask;
+	}-*/;
+	public final native  AcctHelpMsg getAcctHelpMsg()/*-{
+		return $wnd.cleanObject(acctHelpMsg);
+	}-*/;
+	public final native  void setAcctHelpMsg(AcctHelpMsg acctHelpMsg)/*-{
+		this.acctHelpMsg = acctHelpMsg;
+	}-*/;
+	public final native  AcctRestrictMsg getAcctRestrictMsg()/*-{
+		return $wnd.cleanObject(acctRestrictMsg);
+	}-*/;
+	public final native  void setAcctRestrictMsg(AcctRestrictMsg acctRestrictMsg)/*-{
+		this.acctRestrictMsg = acctRestrictMsg;
+	}-*/;
+	public final native  AcctValidateURL getAcctValidateURL()/*-{
+		return $wnd.cleanObject(acctValidateURL);
+	}-*/;
+	public final native  void setAcctValidateURL(AcctValidateURL acctValidateURL)/*-{
+		this.acctValidateURL = acctValidateURL;
+	}-*/;
+	
+}

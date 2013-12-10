@@ -1,0 +1,176 @@
+/*
+    This file is part of Cyclos (www.cyclos.org).
+    A project of the Social Trade Organisation (www.socialtrade.org).
+
+    Cyclos is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    Cyclos is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Cyclos; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+ */
+package my.com.infopro.mobile.client.accounts;
+
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import my.com.infopro.ifx.acct.AcctTrnInqRq;
+import my.com.infopro.ifx.element.AcctId;
+import my.com.infopro.ifx.element.AcctKeys;
+import my.com.infopro.ifx.element.AcctTrnSel;
+import my.com.infopro.mobile.client.IFX;
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.Notification;
+import my.com.infopro.mobile.client.callback.AcctTrnInqRsCallbackWrapper;
+import my.com.infopro.mobile.client.model.Parameters;
+import my.com.infopro.mobile.client.model.Transfer;
+import my.com.infopro.mobile.client.services.AccountService;
+import my.com.infopro.mobile.client.ui.Page;
+import my.com.infopro.mobile.client.ui.panels.SquarePanel;
+import my.com.infopro.mobile.client.ui.widgets.FormField;
+import my.com.infopro.mobile.client.utils.BaseAsyncCallback;
+import my.com.infopro.mobile.client.utils.PageAction;
+import my.com.infopro.mobile.client.utils.ParameterKey;
+import my.com.infopro.mobile.client.utils.ResultPage;
+import my.com.infopro.mobile.json.ifx.acct.AcctTrnInqRs;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Widget;
+
+/**
+ * A {@link Page} used to display payment details.
+ */
+public class TransactionDetailsPage extends Page {
+    
+   
+    private AccountService accountService = GWT.create(AccountService.class);
+    
+    private FormField form;
+    private SquarePanel container;    
+    private ResultPage<Transfer> data;
+
+	private long accountId;
+
+    @Override
+    public String getHeading() {
+        return messages.paymentDetailsHeading();
+    }
+      
+    @Override
+    public Widget initialize() {
+        
+        container = new SquarePanel(true);
+        container.setVisible(false);
+        
+        // Create form and sets labels
+        form = new FormField();            
+        LoggedUser loggerUser=LoggedUser.get();
+        final Long transferId = getParameters().getRequiredLong(ParameterKey.ID); 
+        Boolean pendingPayment = getParameters().getBoolean(ParameterKey.PAYMENT_PENDING);
+        Boolean paymentDone = getParameters().getBoolean(ParameterKey.PAYMENT_DONE);
+        final Parameters parameters = new Parameters();
+        AcctTrnInqRq acctTrnInqRq=new AcctTrnInqRq();
+    	acctTrnInqRq.setRqUID(IFX.getRqUID("ACCT"));
+    	acctTrnInqRq.setMsgRqHdr(IFX.getMsgRqHdr(loggerUser, "acctTrnInq"));
+    	
+    	AcctTrnSel[] acctTrnSel=new AcctTrnSel[1];
+    	AcctKeys acctKeys=new AcctKeys();
+    	AcctId acctId=new AcctId();
+    	acctId.setString(java.lang.Long.toString(accountId));
+		acctKeys.setAcctId(acctId);
+		acctTrnSel[0].setAcctKeys(acctKeys);
+		acctTrnInqRq.setAcctTrnSel(acctTrnSel);
+		parameters.add("acctTrnInqRq", acctTrnInqRq);
+		
+        if(paymentDone != null && paymentDone) {
+            Notification.get().success(messages.paymentPerformedSuccessfully());
+        } else if(pendingPayment != null && pendingPayment) {
+            Notification.get().information(messages.paymentRequireAuthorization());
+        }
+        final AsyncCallback<ResultPage<Transfer>> callback = new BaseAsyncCallback<ResultPage<Transfer>>(){
+
+			@Override
+			public void onSuccess(ResultPage<Transfer> result) {
+				 if(result != null) {
+	                    data = result;
+	                    
+	                    // Load data into form
+	                    renderTransferData();                                                   
+	            }       
+				
+			}
+        	
+        };
+        new AcctTrnInqRsCallbackWrapper(){
+
+			@Override
+			protected void onFailure(Throwable throwable) {
+				callback.onFailure(throwable);
+			}
+
+			@Override
+			protected void onSuccess(ResultPage<Transfer> result) {
+				callback.onSuccess(result);				
+			}
+
+			@Override
+			protected void onCall(AsyncCallback<AcctTrnInqRs> callback) {
+				accountService.getTransactionData(transferId, parameters, callback);	
+			}
+        };
+              
+        
+        container.add(form);                
+        
+        return container;
+    }
+    
+    @Override
+    public List<PageAction> getPageActions() {
+        return null;
+    }
+    
+    /**
+     * Renders the form with the given data
+     */
+    private void renderTransferData() {
+        
+        Transfer transfer = data.getElements().get(0);        
+        
+        String loggedName =  LoggedUser.get().getInitialData().getProfile().getName();
+        String transferName = transfer.getBasicMember() == null ? transfer.getSystemAccountName() : transfer.getBasicMember().getName();
+
+        // Set from and to
+        String from = transfer.getAmount() > 0 ? transferName : loggedName;
+        String to = transfer.getAmount() > 0 ? loggedName : transferName;
+        
+        Map<String, String> formData = new LinkedHashMap<String, String>();
+        
+        // Add transfer properties
+        formData.put(messages.date(), transfer.getFormattedProcessDate());
+        formData.put(messages.paymentNumber(), transfer.getTransactionNumber());
+        formData.put(messages.from(), from);
+        formData.put(messages.to(), to);
+        formData.put(messages.type(), transfer.getTransferType().getName());
+        formData.put(messages.amount(), transfer.getFormattedAmount());
+        formData.put(messages.description(), transfer.getDescription()); 
+        
+        
+        form.setData(formData);
+        
+        
+        
+        // Display loaded data
+        container.setVisible(true);
+    }
+
+}

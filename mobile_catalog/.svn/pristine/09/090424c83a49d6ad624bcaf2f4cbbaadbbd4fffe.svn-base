@@ -1,0 +1,21 @@
+package my.com.infopro.mobile.json.ifx.basetypes;
+
+
+/**
+ * The IFXDecimal class provides a wrapper for the xsd:decimal type.
+ * @author Ong Eu Soon (eusoob@gmail.com)
+ * @version $Revision: 2.3 $
+ */
+public class IFXDecimal extends IFXObject implements IBaseType {
+	protected IFXDecimal(){	
+	}
+	@Override
+	public final native  void setString(String s) /*-{
+		this.string = string;
+	}-*/;
+
+	@Override
+	public  final native String getString() /*-{
+    	return $wnd.cleanString(this.string);
+	}-*/;
+}

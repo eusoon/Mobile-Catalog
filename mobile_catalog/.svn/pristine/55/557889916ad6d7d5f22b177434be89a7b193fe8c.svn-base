@@ -1,0 +1,519 @@
+package my.com.infopro.mobile.client.transfer;
+
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JsArray;
+import com.google.gwt.json.client.JSONArray;
+import com.google.gwt.json.client.JSONNull;
+import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.json.client.JSONString;
+import com.google.gwt.json.client.JSONValue;
+
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.ListBox;
+import com.google.gwt.user.client.ui.Widget;
+
+import my.com.infopro.ifx.acct.AcctInqRq;
+
+import my.com.infopro.ifx.element.AcctIdentType;
+import my.com.infopro.ifx.element.BalTypeValues;
+import my.com.infopro.ifx.element.RecSelect;
+import my.com.infopro.ifx.payee.CustPayeeInqRq;
+import my.com.infopro.mobile.client.IFX;
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.Navigation;
+import my.com.infopro.mobile.client.Notification;
+import my.com.infopro.mobile.client.model.Account;
+
+import my.com.infopro.mobile.client.model.AccountData;
+import my.com.infopro.mobile.client.model.AccountStatus;
+import my.com.infopro.mobile.client.model.InitialData;
+import my.com.infopro.mobile.client.model.Parameters;
+import my.com.infopro.mobile.client.model.PaymentData;
+import my.com.infopro.mobile.client.model.PaymentPreview;
+
+import my.com.infopro.mobile.client.services.AccountService;
+import my.com.infopro.mobile.client.services.ContactService;
+
+import my.com.infopro.mobile.client.ui.Page;
+import my.com.infopro.mobile.client.ui.PageAnchor;
+import my.com.infopro.mobile.client.ui.panels.SquarePanel;
+
+import my.com.infopro.mobile.client.ui.widgets.FormField;
+import my.com.infopro.mobile.client.ui.widgets.NumberField;
+import my.com.infopro.mobile.client.ui.widgets.SelectionField;
+import my.com.infopro.mobile.client.ui.widgets.TextAreaField;
+import my.com.infopro.mobile.client.utils.AmountHelper;
+
+import my.com.infopro.mobile.client.utils.PageAction;
+import my.com.infopro.mobile.client.utils.ParameterKey;
+import my.com.infopro.mobile.client.utils.StringHelper;
+import my.com.infopro.mobile.json.ifx.acct.AcctInqRs;
+import my.com.infopro.mobile.json.ifx.element.AcctBal;
+import my.com.infopro.mobile.json.ifx.element.AcctId;
+import my.com.infopro.mobile.json.ifx.element.AcctIdent;
+import my.com.infopro.mobile.json.ifx.element.AcctInfo;
+import my.com.infopro.mobile.json.ifx.element.AcctRec;
+import my.com.infopro.mobile.json.ifx.element.Contact;
+import my.com.infopro.mobile.json.ifx.element.CustPayeeInfo;
+import my.com.infopro.mobile.json.ifx.element.CustPayeeRec;
+import my.com.infopro.mobile.json.ifx.element.Email;
+import my.com.infopro.mobile.json.ifx.element.Locator;
+import my.com.infopro.mobile.json.ifx.element.Name;
+import my.com.infopro.mobile.json.ifx.element.OrgData;
+import my.com.infopro.mobile.json.ifx.element.PartyData;
+import my.com.infopro.mobile.json.ifx.element.PersonData;
+import my.com.infopro.mobile.json.ifx.payee.CustPayeeInqRs;
+
+public class FundTransferPage extends Page {
+	private InitialData data;
+	private FormField fields;
+	private SquarePanel container;
+	private NumberField amount;
+	private TextAreaField description;
+	private SelectionField<AccountData> fromAccount;
+	private SelectionField<AccountData> toAccount;
+	// private SelectionField<TransferTypeDetailed> transferTypes;
+	final ListBox fromBox = new ListBox(false);
+	final ListBox toBox = new ListBox(false);
+
+	private AccountService accountService = GWT.create(AccountService.class);
+	private ContactService payeeService = GWT.create(ContactService.class);
+
+	private LoggedUser loggedUser = LoggedUser.get();
+	private boolean isSystem;
+	private String unitsPattern;
+	private JSONArray accountDataList;
+	private JSONArray ownAccountDataList;
+
+	@Override
+	public String getHeading() {
+		return messages.fundTransferHeading();
+	}
+
+	@Override
+	public Widget initialize() {
+		container = new SquarePanel();
+		container.setVisible(false);
+
+		data = LoggedUser.get().getInitialData();
+
+		fromAccount = new SelectionField<AccountData>() {
+			@Override
+			protected String getDisplayName(AccountData item) {
+				return item.getAccount().getAccountNo();
+			}
+
+			@Override
+			protected void onItemSelected(AccountData item) {
+				renderData(item, messages.from(), "MYR");
+			}
+		};
+		toAccount = new SelectionField<AccountData>() {
+			@Override
+			protected String getDisplayName(AccountData item) {
+				return item.getAccount().getAccountNo();
+			}
+
+			@Override
+			protected void onItemSelected(AccountData item) {
+				renderData(item, messages.to(), "MYR");
+			}
+		};
+
+		amount = new NumberField(data.getDecimalCount(),
+				data.getDecimalSeparator(), messages.amount());
+		amount.setOnlyPositive(true);
+
+		description = new TextAreaField(messages.description());
+
+		container.add(fromBox);
+		container.add(toBox);
+		container.add(amount);
+		container.add(description);
+		getAccountData();
+		return container;
+	}
+
+	
+
+	private void getBeneficiaryAccountData(Long memberId){
+		final Parameters params=new Parameters();
+		params.set(ParameterKey.DESTINATION, "SYSTEM");
+		CustPayeeInqRq custPayeeInqRq=new CustPayeeInqRq();
+		custPayeeInqRq.setRqUID(IFX.getRqUID("PAYEE"));
+		custPayeeInqRq.setMsgRqHdr(IFX.getMsgRqHdr(loggedUser));
+		
+		RecSelect[] recSelect=new RecSelect[1];
+		recSelect[0].setString("$custPayeeInqRs.custPayeeRec.custPayeeEnvr.partyKeys[partyId='"+memberId+"']");
+		custPayeeInqRq.setRecSelect(recSelect);
+		
+		params.setObject("custPayeeInqRq", custPayeeInqRq);
+		AsyncCallback<CustPayeeInqRs> callback=new AsyncCallback<CustPayeeInqRs>(){
+			@Override
+			public void onFailure(Throwable caught) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void onSuccess(CustPayeeInqRs custPayeeInqRs) {
+				JsArray<CustPayeeRec> custPayeeRecs=custPayeeInqRs.getCustPayeeRec();
+		
+				for(int i=0; i<custPayeeRecs.length();i++){
+					CustPayeeRec custPayeeRec=custPayeeRecs.get(i);
+					String memberId=custPayeeRec.getCustPayeeId().getString();
+					AcctRec toAcctRec=custPayeeRec.getCustPayeeInfo().getXferPayee().getToAcctRef().getAcctRec();
+					AcctInfo acctInfo=toAcctRec.getAcctInfo();
+					JsArray<AcctBal> acctBals=acctInfo.getAcctBal();
+					JSONObject account=new JSONObject();
+					JSONObject  accountType=new JSONObject();
+					JSONObject  currency=new JSONObject();
+					String currencyName=acctInfo.getCurCode().getCurCodeValue().getString();
+					currency.put("name",getAsJSONString(currencyName));
+					String currencySymbol=acctInfo.getCurCode().getCurCodeValue().getString();
+					currency.put("symbol", getAsJSONString(currencySymbol));
+					accountType.put("currency", currency);
+					String accountType1=acctInfo.getAcctType().getAcctTypeValue().getString();
+					accountType.put("name", getAsJSONString(accountType1));
+					AcctId acctId=toAcctRec.getAcctId();
+					String accountId=acctId.getString();
+					JsArray<AcctIdent> acctIdents=acctInfo.getAcctIdent();
+					String accountNo="";
+					String payeeUsername="";
+					for(int x=0; x<acctIdents.length();x++){
+						AcctIdent acctIdent=acctIdents.get(x);
+						if(acctIdent.getAcctIdentType().getString().equalsIgnoreCase(AcctIdentType.AcctNum.name())){
+							accountNo=acctIdent.getAcctIdentValue().getString();
+						}else if(acctIdent.getAcctIdentType().getString().equalsIgnoreCase(AcctIdentType.Username.name())){
+							payeeUsername=acctIdent.getAcctIdentValue().getString();
+						}
+					}
+					account.put("id", getAsJSONString(accountId));
+					account.put("type", accountType);
+					account.put("accountNo", getAsJSONString(accountNo));
+					
+					JSONObject accountData=new JSONObject();
+					accountData.put("account", account);
+				
+					
+					JSONObject accountsStatus1= new JSONObject();
+					for(int k=0;k<acctBals.length();k++){
+						AcctBal acctBal=acctBals.get(k);
+						
+						if(acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.Avail)){
+							String availableBalance = acctBal.getCurAmt().getAmt().getString();
+							accountsStatus1.put("availableBalance", getAsJSONString(availableBalance));
+							String formattedAvailableBalance = AmountHelper.getFormattedAmount(Double.valueOf(availableBalance), getUnitsPattern());
+							accountsStatus1.put("formattedAvailableBalance", getAsJSONString(formattedAvailableBalance));
+							String html = accountNo + "<br><i>" + 
+				                      messages.balance() + ": " +
+				                      formattedAvailableBalance + "</i>";
+							fromBox.addItem(html);
+							toBox.addItem(html);
+						}else if(acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.Current)){
+							String balance =  acctBal.getCurAmt().getAmt().getString();
+							accountsStatus1.put("balance", getAsJSONString(balance));
+							String formattedBalance  = AmountHelper.getFormattedAmount(Double.valueOf(balance), getUnitsPattern());
+							accountsStatus1.put("formattedBalance", getAsJSONString(formattedBalance));
+						}else if(acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.CreditLimit)){
+							String creditLimit =  acctBal.getCurAmt().getAmt().getString();
+							accountsStatus1.put("creditLimit", getAsJSONString(creditLimit));
+							String formattedCreditLimit = AmountHelper.getFormattedAmount(Double.valueOf(creditLimit), getUnitsPattern());
+							accountsStatus1.put("formattedCreditLimit", getAsJSONString(formattedCreditLimit));
+						}else if(acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.Outstanding)){
+							String balance =  acctBal.getCurAmt().getAmt().getString();
+							accountsStatus1.put("balance", getAsJSONString(balance));
+							String formattedBalance  = AmountHelper.getFormattedAmount(Double.valueOf(balance), getUnitsPattern());
+							accountsStatus1.put("formattedBalance", getAsJSONString(formattedBalance));
+						}
+						accountData.put("accountsStatus", accountsStatus1);
+						
+						
+							CustPayeeInfo custPayeeInfo=custPayeeRec.getCustPayeeInfo();
+							
+							PartyData partyData=custPayeeRec.getCustPayeeInfo().getStdPayeeRef().getStdPayeeInfo().getPartyData();
+							JSONObject member=new JSONObject();
+							JsArray<Contact> contacts=partyData.getContact();
+							for(int x=0;x<contacts.length();x++){
+								Contact contact=contacts.get(x);
+								Locator locator=contact.getLocator();
+								if(locator instanceof Email){
+									Email email=(Email) locator;
+									member.put("email", getAsJSONString(email.getEmailAddr().getString()));
+								}
+								
+								member.put("id", getAsJSONString(memberId));
+								
+								Name name=custPayeeInfo.getName();		
+								member.put("username", getAsJSONString(payeeUsername));
+								member.put("name", getAsJSONString(name.getString()));
+								accountData.put("member", member);
+							}
+							accountDataList.set(i, accountData)	;	
+					}
+					
+				}	
+				
+			}
+		};
+		payeeService.doCustPayeeInq(memberId, params, callback); 
+	}
+
+	private JsArray<AccountData> getOwnAccountData() {
+		
+		return loggedUser.getInitialData().getAccountDatas();
+		
+	}
+
+	private void getAccountData() {
+
+		Boolean isSystem = getParameters().getBoolean(
+				ParameterKey.IS_SYSTEM_ACCOUNT);
+
+		InitialData initialData = loggedUser.getInitialData();
+
+		Long memberId = initialData.getProfile().getId();
+
+		if (isSystem != null && isSystem) {
+			// To beneficiary account
+			this.isSystem = true;
+			this.getBeneficiaryAccountData(memberId);
+
+		} else {
+			// To own account
+			this.isSystem = false;
+			
+		}
+
+		JsArray<AccountData> beneficiaryAccounts = accountDataList
+				.getJavaScriptObject().cast();
+		JsArray<AccountData> ownAccounts = this.getOwnAccountData();
+
+		if (ownAccounts != null && ownAccounts.length() > 0) {
+			fromAccount.setItems(ownAccounts);
+			fromAccount.selectFirst();
+			if (ownAccounts.length() == 1) {
+				fromAccount.setVisible(false);
+			}
+			renderData(ownAccounts.get(0), messages.from(), "MYR");
+		}
+		if (isSystem != null && isSystem) {
+			if (beneficiaryAccounts != null && beneficiaryAccounts.length() > 0) {
+
+				// Populate selection options and preselect the first item
+
+				toAccount.setItems(beneficiaryAccounts);
+				toAccount.selectFirst();
+
+				// If only exists a transfer type, hide selection field
+				if (beneficiaryAccounts.length() == 1) {
+					toAccount.setVisible(false);
+				}
+
+				// Display data for the first transfer type retrieved
+
+				renderData(beneficiaryAccounts.get(0), messages.to(), "MYR");
+				// Display loaded data
+				container.setVisible(true);
+			}
+		} else {
+			if (ownAccounts != null && ownAccounts.length() > 0) {
+
+				// Populate selection options and preselect the first item
+
+				toAccount.setItems(ownAccounts);
+				toAccount.selectFirst();
+
+				// If only exists a transfer type, hide selection field
+				if (ownAccounts.length() == 1) {
+					toAccount.setVisible(false);
+				}
+
+				// Display data for the first transfer type retrieved
+
+				renderData(ownAccounts.get(0), messages.to(), "MYR");
+				// Display loaded data
+				container.setVisible(true);
+			}
+		}
+
+	}
+
+	/**
+	 * Renders page data according to the given transfer type
+	 * 
+	 * @param title
+	 * @param currencyCode
+	 */
+	private void renderData(AccountData item, String title, String currencyCode) {
+		Map<String, String> formData = new LinkedHashMap<String, String>();
+
+		AccountStatus status = item.getStatus();
+
+		// Display account from and balance
+		String html = item.getAccount().getAccountNo() + "<br><i>"
+				+ messages.balance() + ": " + status.getFormattedBalance()
+				+ "</i>";
+
+		formData.put(title, html);
+
+		fields.setData(formData);
+
+		// Update amount place holder with currency name
+		amount.setPlaceHolder(messages.amountIn(currencyCode));
+
+	}
+
+	public String getUnitsPattern() {
+		return this.unitsPattern;
+	}
+
+	public void setUnitsPattern(String unitsPattern) {
+		this.unitsPattern = unitsPattern;
+	}
+
+	@Override
+	public List<PageAction> getPageActions() {
+		return Arrays.asList(getCancelAction(), getMakePaymentAction());
+	}
+
+	/**
+	 * Returns make payment's action
+	 */
+	private PageAction getMakePaymentAction() {
+		return new PageAction() {
+			@Override
+			public void run() {
+				if (validatePayment()) {
+					setPageParameters();
+				}
+			}
+
+			@Override
+			public String getLabel() {
+				return messages.makePayment();
+			}
+		};
+	}
+
+	/**
+	 * Sets the parameters to be used in payment preview and confirmation page
+	 */
+	private void setPageParameters() {
+		Parameters params = new Parameters();
+		params.set(ParameterKey.CURRENCY_CODE, toAccount.getSelectedItem()
+				.getAccount().getType().getCurrency().getName());
+		params.set(ParameterKey.TO_ACCOUNT_ID, toAccount.getSelectedItem()
+				.getId());
+		params.setObject(ParameterKey.TO_ACCOUNT_NO, toAccount
+				.getSelectedItem().getAccount());
+		params.set(ParameterKey.FROM_ACCOUNT_ID, fromAccount.getSelectedItem()
+				.getId());
+		params.setObject(ParameterKey.FROM_ACCOUNT_NO, fromAccount
+				.getSelectedItem().getAccount());
+		params.set(ParameterKey.AMOUNT, amount.getValue());
+		params.set(ParameterKey.DESCRIPTION, description.getValue());
+		params.set(ParameterKey.MEMBER_TO_ID, paymentData.getMemberTo().getId());
+
+		// Get data and go to payment preview page
+		getPaymentPreviewData(params);
+	}
+
+	/**
+	 * Returns the payment preview data
+	 */
+	private void getPaymentPreviewData(final Parameters params) {
+		JSONObject transferPreview = new JSONObject();
+
+		JSONObject fromMember = new JSONObject();
+		String fromUsername = null;
+		fromMember.put("username", getAsJSONString(fromUsername));
+		String fromMemberName = null;
+		fromMember.put("name", getAsJSONString(fromMemberName));
+		String fromMemberEmail = null;
+		fromMember.put("email", getAsJSONString(fromMemberEmail));
+
+		JSONObject toMember = new JSONObject();
+		String toUsername = null;
+		toMember.put("username", getAsJSONString(toUsername));
+		String toMemberName = null;
+		toMember.put("name", getAsJSONString(toMemberName));
+		String toMemberEmail = null;
+		toMember.put("email", getAsJSONString(toMemberEmail));
+
+		transferPreview.put("from", fromMember);
+		transferPreview.put("to", toMember);
+		String finalAmount = params.getRequiredString(ParameterKey.AMOUNT);
+		transferPreview.put("finalAmount", getAsJSONString(finalAmount));
+
+		JSONObject transferType = new JSONObject();
+		JSONObject fromAccount = new JSONObject();
+		JSONObject toAccount = new JSONObject();
+		JSONObject currency = new JSONObject();
+
+		Account fromAccount1 = (Account) params
+				.getObject(ParameterKey.FROM_ACCOUNT_NO);
+		String fromAccountName = fromAccount1.getAccountNo();
+		fromAccount.put("name", getAsJSONString(fromAccountName));
+		Account toAccount1 = (Account) params
+				.getObject(ParameterKey.TO_ACCOUNT_NO);
+		String toAccountName = toAccount1.getAccountNo();
+		toAccount.put("name", getAsJSONString(toAccountName));
+		String currencyCode = params.getString(ParameterKey.CURRENCY_CODE);
+		currency.put("sysmbol", getAsJSONString(currencyCode));
+		fromAccount.put("currency", currency);
+		toAccount.put("currency", currency);
+
+		transferType.put("from", fromAccount);
+		transferType.put("to", toAccount);
+		transferType.put("name", getAsJSONString("Fund Transfer"));
+		transferPreview.put("transferType", transferType);
+
+		PaymentPreview preview = transferPreview.getJavaScriptObject().cast();
+		params.setObject(ParameterKey.TRANSFER_PREVIEW, preview);
+		Navigation.get().goNoHistory(PageAnchor.TRANSFER_PREVIEW, params);
+
+	}
+
+	private JSONValue getAsJSONString(String value) {
+		if (value == null) {
+			return JSONNull.getInstance();
+		}
+
+		return new JSONString(value);
+	}
+
+	/**
+	 * Returns cancel's page action
+	 */
+	private PageAction getCancelAction() {
+		return new PageAction() {
+			@Override
+			public void run() {
+				Navigation.get().go(PageAnchor.SERVICE);
+			}
+
+			@Override
+			public String getLabel() {
+				return messages.cancel();
+			}
+		};
+	}
+
+	/**
+	 * Client side validation before make a payment
+	 */
+	private boolean validatePayment() {
+		if (StringHelper.isEmpty(amount.getValue())) {
+			Notification.get().error(messages.amountIsRequired());
+			return false;
+		}
+		return true;
+	}
+
+}

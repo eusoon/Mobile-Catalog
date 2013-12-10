@@ -1,0 +1,71 @@
+package my.com.infopro.ifx.client.model;
+
+public class DepAcctStmtRevRq_Type extends IFXObject {
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setTerminalId(TerminalId terminalId)/*-{
+		this.terminalId = terminalId;
+	}-*/;
+
+	public final native TerminalId getTerminalId()/*-{
+		return $wnd.cleanObject(this.terminalId);
+	}-*/;
+
+	public final native void setRevReasonCode(RevReasonCode revReasonCode)/*-{
+		this.revReasonCode = revReasonCode;
+	}-*/;
+
+	public final native RevReasonCode getRevReasonCode()/*-{
+		return $wnd.cleanObject(this.revReasonCode);
+	}-*/;
+
+	public final native void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+
+	public final native Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+	}-*/;
+
+	public final native void setDepAcctStmtMsgRqInfo(
+			DepAcctStmtMsgRqInfo depAcctStmtMsgRqInfo)/*-{
+		this.depAcctStmtMsgRqInfo = depAcctStmtMsgRqInfo;
+	}-*/;
+
+	public final native DepAcctStmtMsgRqInfo getDepAcctStmtMsgRqInfo()/*-{
+		return $wnd.cleanObject(this.depAcctStmtMsgRqInfo);
+	}-*/;
+}

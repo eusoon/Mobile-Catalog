@@ -1,0 +1,52 @@
+package my.com.infopro.ifx.client.model;
+
+public class TerminalObjInqRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public final native void setTerminalObjId(TerminalObjId terminalObjId)/*-{
+		this.terminalObjId = terminalObjId;
+	}-*/;
+
+	public final native TerminalObjId getTerminalObjId()/*-{
+		return $wnd.cleanObject(this.terminalObjId);
+	}-*/;
+
+	public final native void setTerminalObjRec(TerminalObjRec[] terminalObjRec)/*-{
+		this.terminalObjRec = terminalObjRec;
+	}-*/;
+
+	public final native TerminalObjRec[] getTerminalObjRec()/*-{
+		return $wnd.cleanObject(this.terminalObjRec);
+	}-*/;
+}

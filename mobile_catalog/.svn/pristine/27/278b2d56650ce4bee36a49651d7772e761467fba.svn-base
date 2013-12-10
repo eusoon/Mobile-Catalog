@@ -1,0 +1,20 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public  class AirlineCharge extends IFXObject {
+
+	public final native  AirlineChargeType getAirlineChargeType()/*-{
+		return $wnd.cleanObject(this.airlineChargeType);
+	}-*/;
+	public final native  void setAirlineChargeType(AirlineChargeType airlineChargeType)/*-{
+		this.airlineChargeType = airlineChargeType;
+	}-*/;
+	public final native  CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+	public final native  void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+}

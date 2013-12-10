@@ -1,0 +1,17 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class OrgData extends PartyData {
+	
+	public final native OrgName[] getOrgName() /*-{
+		return $wnd.cleanObject(orgName);
+	}-*/;
+	public final native void setOrgName(OrgName[] orgName) /*-{
+		this.orgName = orgName;
+	}-*/;
+	public final native OrgCategory getOrgCategory() /*-{
+		return $wnd.cleanObject(orgCategory);
+	}-*/;
+	public final native void setOrgCategory(OrgCategory orgCategory) /*-{
+		this.orgCategory = orgCategory;
+	}-*/;
+}

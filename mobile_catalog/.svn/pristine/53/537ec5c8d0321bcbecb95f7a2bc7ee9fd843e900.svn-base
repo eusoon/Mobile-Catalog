@@ -1,0 +1,39 @@
+package my.com.infopro.ifx.client.model;
+
+public class SignonOverride_Type extends IFXObject {
+	public final native void setOverrideType(OverrideType overrideType)/*-{
+		this.overrideType = overrideType;
+	}-*/;
+
+	public final native OverrideType getOverrideType()/*-{
+		return $wnd.cleanObject(this.overrideType);
+
+	}-*/;
+
+	public final native void setSignonPswd(SignonPswd signonPswd)/*-{
+		this.signonPswd = signonPswd;
+	}-*/;
+
+	public final native SignonPswd getSignonPswd()/*-{
+		return $wnd.cleanObject(this.signonPswd);
+
+	}-*/;
+
+	public final native void setSignonCert(SignonCert signonCert)/*-{
+		this.signonCert = signonCert;
+	}-*/;
+
+	public final native SignonCert getSignonCert()/*-{
+		return $wnd.cleanObject(this.signonCert);
+
+	}-*/;
+
+	public final native void setSignonMagPIN(SignonMagPIN signonMagPIN)/*-{
+		this.signonMagPIN = signonMagPIN;
+	}-*/;
+
+	public final native SignonMagPIN getSignonMagPIN()/*-{
+		return $wnd.cleanObject(this.signonMagPIN);
+
+	}-*/;
+}

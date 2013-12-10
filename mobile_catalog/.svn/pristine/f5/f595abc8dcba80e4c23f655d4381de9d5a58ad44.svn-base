@@ -1,0 +1,29 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtRemitDetail_Type extends IFXObject {
+	
+	public final native void setPmtRemitRefId(PmtRemitRefId pmtRemitRefId)/*-{
+		this.pmtRemitRefId = pmtRemitRefId;
+	}-*/;
+
+	public final native PmtRemitRefId getPmtRemitRefId()/*-{
+		return $wnd.cleanObject(this.pmtRemitRefId);
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setPmtRemitStatus(PmtRemitStatus pmtRemitStatus)/*-{
+		this.pmtRemitStatus = pmtRemitStatus;
+	}-*/;
+
+	public final native PmtRemitStatus getPmtRemitStatus()/*-{
+		return $wnd.cleanObject(this.pmtRemitStatus);
+	}-*/;
+
+}

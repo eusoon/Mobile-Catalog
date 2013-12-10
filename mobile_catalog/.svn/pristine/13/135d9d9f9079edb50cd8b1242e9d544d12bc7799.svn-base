@@ -1,0 +1,141 @@
+package my.com.infopro.ifx.client.model;
+
+public class SvcProfInqRs_Type extends IFXObject {
+	
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr _msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod getDeliveryMethod() /*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+
+	}-*/;
+
+	public final native void setUpDt(UpDt upDt)/*-{
+		this.upDt = upDt;
+	}-*/;
+
+	public final native UpDt getUpDt()/*-{
+		return $wnd.cleanObject(this.upDt);
+
+	}-*/;
+
+	public final native void setNewUpDt(NewUpDt newUpDt)/*-{
+		this.newUpDt = newUpDt;
+	}-*/;
+
+	public final native NewUpDt getNewUpDt()/*-{
+		return $wnd.cleanObject(this.newUpDt);
+
+	}-*/;
+
+	public final native void setBaseSvcProfInfo(
+			BaseSvcProfInfo[] baseSvcProfInfo)/*-{
+		this.baseSvcProfInfo = baseSvcProfInfo;
+	}-*/;
+
+	public final native BaseSvcProfInfo[] getBaseSvcProfInfo()/*-{
+		return $wnd.cleanObject(this.baseSvcProfInfo);
+
+	}-*/;
+
+	public final native void setBankSvcProfInfo(
+			BankSvcProfInfo[] bankSvcProfInfo)/*-{
+		this.bankSvcProfInfo = bankSvcProfInfo;
+	}-*/;
+
+	public final native BankSvcProfInfo[] getBankSvcProfInfo()/*-{
+		return $wnd.cleanObject(this.bankSvcProfInfo);
+
+	}-*/;
+
+	public final native void setPaySvcProfInfo(PaySvcProfInfo[] paySvcProfInfo)/*-{
+		this.paySvcProfInfo = paySvcProfInfo;
+	}-*/;
+
+	public final native PaySvcProfInfo[] getPaySvcProfInfo()/*-{
+		return $wnd.cleanObject(this.paySvcProfInfo);
+
+	}-*/;
+
+	public final native void setPresSvcProfInfo(
+			PresSvcProfInfo[] presSvcProfInfo)/*-{
+		this.presSvcProfInfo = presSvcProfInfo;
+	}-*/;
+
+	public final native PresSvcProfInfo[] getPresSvcProfInfo()/*-{
+		return $wnd.cleanObject(this.presSvcProfInfo);
+
+	}-*/;
+
+	public final native void setMediaSvcProfInfo(
+			MediaSvcProfInfo[] mediaSvcProfInfo)/*-{
+		this.mediaSvcProfInfo = mediaSvcProfInfo;
+	}-*/;
+
+	public final native MediaSvcProfInfo[] getMediaSvcProfInfo()/*-{
+		return $wnd.cleanObject(this.mediaSvcProfInfo);
+
+	}-*/;
+
+	public final native void setRootSvcProfInfo(
+			RootSvcProfInfo[] rootSvcProfInfo)/*-{
+		this.rootSvcProfInfo = rootSvcProfInfo;
+	}-*/;
+
+	public final native RootSvcProfInfo[] getRootSvcProfInfo()/*-{
+	return $wnd.cleanObject(this.rootSvcProfInfo);
+
+	}-*/;
+}

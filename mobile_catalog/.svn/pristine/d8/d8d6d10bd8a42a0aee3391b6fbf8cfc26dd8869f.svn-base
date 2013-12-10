@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class TCHash_Type extends HexBinary {
+
+}

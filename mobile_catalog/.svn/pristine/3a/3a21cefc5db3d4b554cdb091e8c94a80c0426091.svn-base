@@ -1,0 +1,46 @@
+package my.com.infopro.ifx.client.model;
+
+public class OrgContact_Type extends IFXObject {
+	public final native  void setContactType(ContactType contactType)/*-{
+	this.contactType = contactType;
+}-*/;
+	public final native  ContactType getContactType()/*-{
+	return $wnd.cleanObject(this.contactType);
+
+}-*/;
+	public final native  void setDesc(Desc desc)/*-{
+	this.desc = desc;
+}-*/;
+	public final native  Desc getDesc()/*-{
+	return $wnd.cleanObject(this.desc);
+
+}-*/;
+	public final native  void setPhone(Phone phone)/*-{
+	this.phone = phone;
+}-*/;
+	public final native  Phone getPhone()/*-{
+	return $wnd.cleanObject(this.phone);
+
+}-*/;
+	public final native  void setFax(Fax fax)/*-{
+	this.fax = fax;
+}-*/;
+	public final native  Fax getFax()/*-{
+	return $wnd.cleanObject(this.fax);
+
+}-*/;
+	public final native  void setEmailAddr(EmailAddr emailAddr)/*-{
+	this.emailAddr = emailAddr;
+}-*/;
+	public final native  EmailAddr getEmailAddr()/*-{
+	return $wnd.cleanObject(this.emailAddr);
+
+}-*/;
+	public final native  void setURL(URL uRL)/*-{
+	this.uRL = uRL;
+}-*/;
+	public final native  URL getURL()/*-{
+	return $wnd.cleanObject(this.uRL);
+
+}-*/;
+}

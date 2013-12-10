@@ -1,0 +1,32 @@
+package my.com.infopro.ifx.client.model;
+
+public class CVMList_Type extends IFXObject {
+
+	public native void setAmtX(AmtX amtX)/*-{
+	this.amtX = amtX;
+}-*/;
+	
+	public final native AmtX getAmtX()/*-{
+	return $wnd.cleanObject(this.amtX);
+
+}-*/;
+	
+	public native void setAmtY(AmtY amtY)/*-{
+	this.amtY = amtY;
+}-*/;
+	
+	public final native AmtY getAmtY()/*-{
+	return $wnd.cleanObject(this.amtY);
+
+}-*/;
+	
+	public native  void setCVMRule(CVMRule[] cVMRule)/*-{
+	this.cVMRule = cVMRule;
+}-*/;
+	
+	public final native CVMRule[] getCVMRule()/*-{
+	return $wnd.cleanObject(this.cVMRule);
+
+}-*/;
+	
+}

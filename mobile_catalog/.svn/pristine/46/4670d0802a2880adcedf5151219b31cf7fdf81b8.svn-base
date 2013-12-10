@@ -1,0 +1,56 @@
+package my.com.infopro.ifx.client.model;
+
+public class SignonMagPIN_Type extends IFXObject {
+	public final native void setSignonRole(SignonRole signonRole)/*-{
+		this.signonRole = signonRole;
+	}-*/;
+
+	public final native SignonRole getSignonRole()/*-{
+		return $wnd.cleanObject(this.signonRole);
+
+	}-*/;
+
+	public final native void setCardMagData(CardMagData cardMagData)/*-{
+		this.cardMagData = cardMagData;
+	}-*/;
+
+	public final native CardMagData getCardMagData()/*-{
+		return $wnd.cleanObject(this.cardMagData);
+	}-*/;
+
+	public final native void setCryptType(CryptType cryptType)/*-{
+		this.cryptType = cryptType;
+	}-*/;
+
+	public final native CryptType getCryptType()/*-{
+		return $wnd.cleanObject(this.cryptType);
+
+	}-*/;
+
+	public final native void setPINBlock(PINBlock pINBlock)/*-{
+		this.pINBlock = pINBlock;
+	}-*/;
+
+	public final native PINBlock getPINBlock()/*-{
+		return $wnd.cleanObject(this.pINBlock);
+
+	}-*/;
+
+	public final native void setSecObjId(SecObjId secObjId)/*-{
+		this.secObjId = secObjId;
+	}-*/;
+
+	public final native SecObjId getSecObjId()/*-{
+		return $wnd.cleanObject(this.secObjId);
+
+	}-*/;
+
+	public final native void setGenSessKey(GenSessKey genSessKey)/*-{
+		this.genSessKey = genSessKey;
+	}-*/;
+
+	public final native GenSessKey getGenSessKey()/*-{
+		return $wnd.cleanObject(this.genSessKey);
+
+	}-*/;
+}

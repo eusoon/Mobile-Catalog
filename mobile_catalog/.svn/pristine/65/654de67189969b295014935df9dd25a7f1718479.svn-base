@@ -1,0 +1,9 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXString;
+
+public class StatusDesc extends IFXString {
+
+	protected StatusDesc(){
+	}
+}

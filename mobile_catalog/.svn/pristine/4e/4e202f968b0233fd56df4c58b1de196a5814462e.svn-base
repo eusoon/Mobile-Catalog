@@ -1,0 +1,44 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class PmtBatchRec extends IFXObject {
+
+	SvcIdent svcIdent;	 //	Aggregate	 Optional	 Service Identifier
+	PmtBatchId pmtBatchId;	 //	Identifier	 Required	 Payment Batch Identifier
+	PmtBatchInfo pmtBatchInfo;	 //	Aggregate	 Required	 Payment Batch Information Aggregate
+	PmtBatchEnvr pmtBatchEnvr;	 //	Aggregate	 Optional	 Payment Batch Environment Aggregate
+	PmtBatchStatus pmtBatchStatus;	 //	Aggregate	 Required	 Payment Batch Status Aggregate
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public PmtBatchId getPmtBatchId() {
+		return pmtBatchId;
+	}
+	public void setPmtBatchId(PmtBatchId pmtBatchId) {
+		this.pmtBatchId = pmtBatchId;
+	}
+	public PmtBatchInfo getPmtBatchInfo() {
+		return pmtBatchInfo;
+	}
+	public void setPmtBatchInfo(PmtBatchInfo pmtBatchInfo) {
+		this.pmtBatchInfo = pmtBatchInfo;
+	}
+	public PmtBatchEnvr getPmtBatchEnvr() {
+		return pmtBatchEnvr;
+	}
+	public void setPmtBatchEnvr(PmtBatchEnvr pmtBatchEnvr) {
+		this.pmtBatchEnvr = pmtBatchEnvr;
+	}
+	public PmtBatchStatus getPmtBatchStatus() {
+		return pmtBatchStatus;
+	}
+	public void setPmtBatchStatus(PmtBatchStatus pmtBatchStatus) {
+		this.pmtBatchStatus = pmtBatchStatus;
+	}
+	
+}

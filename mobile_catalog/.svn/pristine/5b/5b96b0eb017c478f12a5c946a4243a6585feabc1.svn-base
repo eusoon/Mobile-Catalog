@@ -1,0 +1,20 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public  class CreditorData extends IFXObject {
+	
+	public final native  PartyData[] getPartyData()/*-{
+		return $wnd.cleanObject(this.partyData);
+	}-*/;
+	public final native  void setPartyData(PartyData[] partyData)/*-{
+		this.partyData = partyData;
+	}-*/;
+	public final native  CreditorAcctNumWithDebtor getCreditorAcctNumWithDebtor()/*-{
+		return $wnd.cleanObject(this.creditorAcctNumWithDebtor);
+	}-*/;
+	public final native  void setCreditorAcctNumWithDebtor(
+			CreditorAcctNumWithDebtor creditorAcctNumWithDebtor)/*-{
+		this.creditorAcctNumWithDebtor = creditorAcctNumWithDebtor;
+	}-*/;
+}

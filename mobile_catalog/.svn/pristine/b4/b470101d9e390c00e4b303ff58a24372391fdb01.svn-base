@@ -1,0 +1,7 @@
+package my.com.infopro.ifx.client.model;
+
+
+
+public class DeliveryMethod extends DeliveryMethod_Type {
+
+}

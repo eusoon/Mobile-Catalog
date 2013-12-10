@@ -1,0 +1,65 @@
+package my.com.infopro.mobile.client.ifx.transfer;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+import my.com.infopro.mobile.client.ifx.element.MsgRecDt;
+
+public class XferRsMsg extends IFXObject {
+	MsgRecDt MsgRecDt;//Timestamp	Optional Audit Record Creation Date
+	//begin-xor Required
+	XferAddRs xferAddRs;//Aggregate	Required Funds Transfer Add Response
+	XferModRs xferModRs;//	Aggregate		Required	Funds Transfer Modify Response
+	XferCanRs xferCanRs;//	Aggregate		Required	Funds Transfer Cancel Response
+	XferRevRs xferRevRs;//	Aggregate		Required	Funds Transfer Reversal Response
+	XferInqRs xferInqRs;//	Aggregate		Required	Funds Transfer Inquiry Response
+	XferAdviseRs xferAdviseRs;//	Aggregate		Required	Funds Transfer Advise Response
+	XferStatusModRs xferStatusModRs;//	Aggregate		Required	Funds Transfer Status Modify Response
+	public MsgRecDt getMsgRecDt() {
+		return MsgRecDt;
+	}
+	public void setMsgRecDt(MsgRecDt msgRecDt) {
+		MsgRecDt = msgRecDt;
+	}
+	public XferAddRs getXferAddRs() {
+		return xferAddRs;
+	}
+	public void setXferAddRs(XferAddRs xferAddRs) {
+		this.xferAddRs = xferAddRs;
+	}
+	public XferModRs getXferModRs() {
+		return xferModRs;
+	}
+	public void setXferModRs(XferModRs xferModRs) {
+		this.xferModRs = xferModRs;
+	}
+	public XferCanRs getXferCanRs() {
+		return xferCanRs;
+	}
+	public void setXferCanRs(XferCanRs xferCanRs) {
+		this.xferCanRs = xferCanRs;
+	}
+	public XferRevRs getXferRevRs() {
+		return xferRevRs;
+	}
+	public void setXferRevRs(XferRevRs xferRevRs) {
+		this.xferRevRs = xferRevRs;
+	}
+	public XferInqRs getXferInqRs() {
+		return xferInqRs;
+	}
+	public void setXferInqRs(XferInqRs xferInqRs) {
+		this.xferInqRs = xferInqRs;
+	}
+	public XferAdviseRs getXferAdviseRs() {
+		return xferAdviseRs;
+	}
+	public void setXferAdviseRs(XferAdviseRs xferAdviseRs) {
+		this.xferAdviseRs = xferAdviseRs;
+	}
+	public XferStatusModRs getXferStatusModRs() {
+		return xferStatusModRs;
+	}
+	public void setXferStatusModRs(XferStatusModRs xferStatusModRs) {
+		this.xferStatusModRs = xferStatusModRs;
+	}
+
+}

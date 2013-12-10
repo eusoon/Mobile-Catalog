@@ -1,0 +1,25 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+import my.com.infopro.mobile.client.ifx.element.Amt;
+import my.com.infopro.mobile.client.ifx.element.CurCode;
+
+public class LowCurAmt extends IFXObject {
+	
+	Amt amt; //Decimal	Optional	Amount.
+	CurCode curCode; //Aggregate	Optional	Currency Code
+	
+	public Amt getAmt() {
+		return amt;
+	}
+	public void setAmt(Amt amt) {
+		this.amt = amt;
+	}
+	public CurCode getCurCode() {
+		return curCode;
+	}
+	public void setCurCode(CurCode curCode) {
+		this.curCode = curCode;
+	}
+	
+}

@@ -1,0 +1,48 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class PartyDelRs extends IFXObject {
+
+	//begin-block	Required
+	Status status;	 //	Aggregate	 Optional	 Response Status
+	RqUID rqUID;	 //	UUID	 Required	 Request Identifier
+	MsgRsHdr msgRsHdr;	 //	Aggregate	 Optional	 Message Response Header
+	//end-block
+	//begin-block	Optional	required if message is successful
+	//begin-xor	Required
+	PartyRec partyRec;	 //	Aggregate	 Required	 Party Record Aggregate
+	PartyStatusRec partyStatusRec;	 //	Aggregate	 Required	 Party Status Record Aggregate
+	//end-xor
+	
+	public Status getStatus() {
+		return status;
+	}
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRsHdr getMsgRsHdr() {
+		return msgRsHdr;
+	}
+	public void setMsgRsHdr(MsgRsHdr msgRsHdr) {
+		this.msgRsHdr = msgRsHdr;
+	}
+	public PartyRec getPartyRec() {
+		return partyRec;
+	}
+	public void setPartyRec(PartyRec partyRec) {
+		this.partyRec = partyRec;
+	}
+	public PartyStatusRec getPartyStatusRec() {
+		return partyStatusRec;
+	}
+	public void setPartyStatusRec(PartyStatusRec partyStatusRec) {
+		this.partyStatusRec = partyStatusRec;
+	}
+}

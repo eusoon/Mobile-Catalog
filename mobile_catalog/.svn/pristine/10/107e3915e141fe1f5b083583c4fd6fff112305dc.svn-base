@@ -1,0 +1,143 @@
+/*
+    This file is part of Cyclos (www.cyclos.org).
+    A project of the Social Trade Organisation (www.socialtrade.org).
+
+    Cyclos is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    Cyclos is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Cyclos; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+ */
+package my.com.infopro.mobile.client.accounts;
+
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.Notification;
+
+import my.com.infopro.mobile.client.model.CustomFieldValue;
+
+import my.com.infopro.mobile.client.model.Transfer;
+import my.com.infopro.mobile.client.model.TransferData;
+import my.com.infopro.mobile.client.services.PaymentService;
+import my.com.infopro.mobile.client.ui.Page;
+
+import my.com.infopro.mobile.client.ui.panels.SquarePanel;
+import my.com.infopro.mobile.client.ui.widgets.FormField;
+import my.com.infopro.mobile.client.utils.BaseAsyncCallback;
+import my.com.infopro.mobile.client.utils.PageAction;
+import my.com.infopro.mobile.client.utils.ParameterKey;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JsArray;
+import com.google.gwt.user.client.ui.Widget;
+
+/**
+ * A {@link Page} used to display payment details.
+ */
+public class TransactionDetailsPage extends Page {
+    
+    private PaymentService paymentService = GWT.create(PaymentService.class);
+ 
+    
+    private FormField form;
+    private SquarePanel container;    
+    private TransferData data;
+
+    @Override
+    public String getHeading() {
+        return messages.paymentDetailsHeading();
+    }
+      
+    @Override
+    public Widget initialize() {
+        
+        container = new SquarePanel(true);
+        container.setVisible(false);
+        
+        // Create form and sets labels
+        form = new FormField();            
+        
+        Long transferId = getParameters().getRequiredLong(ParameterKey.ID); 
+        Boolean pendingPayment = getParameters().getBoolean(ParameterKey.PAYMENT_PENDING);
+        Boolean paymentDone = getParameters().getBoolean(ParameterKey.PAYMENT_DONE);
+
+        if(paymentDone != null && paymentDone) {
+            Notification.get().success(messages.paymentPerformedSuccessfully());
+        } else if(pendingPayment != null && pendingPayment) {
+            Notification.get().information(messages.paymentRequireAuthorization());
+        }
+        
+        // Fetch transfer data
+        paymentService.getTransferData(transferId, new BaseAsyncCallback<TransferData>() {
+            @Override
+            public void onSuccess(TransferData result) {
+                if(result != null) {
+                    data = result;
+                    
+                    // Load data into form
+                    renderTransferData();   
+                }                                                    
+            }            
+        });        
+        
+        container.add(form);                
+        
+        return container;
+    }
+    
+    @Override
+    public List<PageAction> getPageActions() {
+        return null;
+    }
+    
+    
+
+    
+    /**
+     * Renders the form with the given data
+     */
+    private void renderTransferData() {
+        
+        Transfer transfer = data.getTransfer();;        
+        JsArray<CustomFieldValue> customFieldValues = transfer.getCustomValues();
+        
+        String loggedName =  LoggedUser.get().getInitialData().getProfile().getName();
+        String transferName = transfer.getBasicMember() == null ? transfer.getSystemAccountName() : transfer.getBasicMember().getName();
+
+        // Set from and to
+        String from = transfer.getAmount() > 0 ? transferName : loggedName;
+        String to = transfer.getAmount() > 0 ? loggedName : transferName;
+        
+        Map<String, String> formData = new LinkedHashMap<String, String>();
+        
+        // Add transfer properties
+        formData.put(messages.date(), transfer.getFormattedProcessDate());
+        formData.put(messages.paymentNumber(), transfer.getTransactionNumber());
+        formData.put(messages.from(), from);
+        formData.put(messages.to(), to);
+        formData.put(messages.type(), transfer.getTransferType().getName());
+        formData.put(messages.amount(), transfer.getFormattedAmount());
+        formData.put(messages.description(), transfer.getDescription()); 
+        
+        
+        form.setData(formData);
+        
+        
+        
+        // Display loaded data
+        container.setVisible(true);
+    }
+
+}

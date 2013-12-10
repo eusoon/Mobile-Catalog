@@ -1,0 +1,26 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+public   class CreditRef extends TrnRef {
+	
+	protected CreditRef(){	
+	}
+	
+	public final native  CreditKeys getCreditKeys()/*-{
+		return $wnd.cleanObject(this.CreditKeys);
+	}-*/;
+	public final native  void setCreditKeys(CreditKeys creditKeys)/*-{
+		CreditKeys = creditKeys;
+	}-*/;
+	public final native  CreditRec getCreditRec()/*-{
+		return $wnd.cleanObject(this.CreditRec);
+	}-*/;
+	public final native  void setCreditRec(CreditRec creditRec)/*-{
+		CreditRec = creditRec;
+	}-*/;
+	public final native  CreditInfo getCreditInfo()/*-{
+		return $wnd.cleanObject(this.CreditInfo);
+	}-*/;
+	public final native  void setCreditInfo(CreditInfo creditInfo)/*-{
+		CreditInfo = creditInfo;
+	}-*/;
+}

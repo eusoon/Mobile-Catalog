@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum Brand {
+	AmEx, CarteBancaire, Discover, JCB, MasterCard, PrivateLabel, VISA
+}

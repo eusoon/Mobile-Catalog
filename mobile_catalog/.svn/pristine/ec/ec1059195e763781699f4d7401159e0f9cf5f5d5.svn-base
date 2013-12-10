@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class CCAcctTrnRevRq extends CCAcctTrnRevRq_Type {
+
+}

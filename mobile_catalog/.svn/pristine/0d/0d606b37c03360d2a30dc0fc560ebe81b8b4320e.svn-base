@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class DriversLicense extends DriversLicense_Type {
+
+}

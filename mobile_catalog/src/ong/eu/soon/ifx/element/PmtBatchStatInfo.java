@@ -1,0 +1,14 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class PmtBatchStatInfo extends IFXObject {
+
+	//begin-xor	Required
+	//pain.002.001.01 pain.002.001.01;	 //	External Aggregate	 Required	 ISO 20022 Payment Status Report Version 1.
+	//pain.002.001.02 pain.002.001.02;	 //	External Aggregate	 Required	 ISO 20022 Payment Status Report Version 2.
+	//pain.002.001.03 pain.002.001.03;	 //	External Aggregate	 Required	 ISO 20022 Payment Status Report Version 3.
+	//end-xor
+	
+	
+}

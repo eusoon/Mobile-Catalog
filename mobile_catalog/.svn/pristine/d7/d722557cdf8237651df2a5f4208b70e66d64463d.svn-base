@@ -1,0 +1,20 @@
+package my.com.infopro.ifx.client.model;
+
+public class OrgId_Type extends IFXObject {
+	public final native void setOrgIdType(OrgIdType orgIdType)/*-{
+		this.orgIdType = orgIdType;
+	}-*/;
+
+	public final native OrgIdType getOrgIdType()/*-{
+		return $wnd.cleanObject(this.orgIdType);
+	}-*/;
+
+	public final native void setOrgIdNum(OrgIdNum orgIdNum)/*-{
+		this.orgIdNum = orgIdNum;
+	}-*/;
+
+	public final native OrgIdNum getOrgIdNum()/*-{
+		return $wnd.cleanObject(this.orgIdNum);
+	}-*/;
+
+}

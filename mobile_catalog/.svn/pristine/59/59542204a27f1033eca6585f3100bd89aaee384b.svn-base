@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtEnclAdviseRs extends PmtEnclAdviseRs_Type {
+
+}

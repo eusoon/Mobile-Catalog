@@ -1,0 +1,95 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+import ong.eu.soon.mobile.json.ifx.element.USA.TaxIdCert;
+
+public class IssuedIdent extends IFXObject {
+	protected IssuedIdent(){	
+	}
+	
+	public final native  IssuedIdentType getIssuedIdentType()/*-{
+		cleanObject(this.issuedIdentType);
+	}-*/;
+	public final native  void setIssuedIdentType(IssuedIdentType issuedIdentType)/*-{
+		this.issuedIdentType = issuedIdentType;
+	}-*/;
+	public final native  IssuedIdentValue getIssuedIdentValue()/*-{
+		cleanObject(this.issuedIdentValue);
+	}-*/;
+	public final native  void setIssuedIdentValue(IssuedIdentValue issuedIdentValue)/*-{
+		this.issuedIdentValue = issuedIdentValue;
+	}-*/;
+	public final native  Issuer getIssuer()/*-{
+		cleanObject(this.issuer);
+	}-*/;
+	public final native  void setIssuer(Issuer issuer)/*-{
+		this.issuer = issuer;
+	}-*/;
+	public final native  IssueDt getIssueDt()/*-{
+		cleanObject(this.issueDt);
+	}-*/;
+	public final native  void setIssueDt(IssueDt issueDt)/*-{
+		this.issueDt = issueDt;
+	}-*/;
+	public final native  ExpDt getExpDt()/*-{
+		cleanObject(this.expDt);
+	}-*/;
+	public final native  void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+	public final native  Desc getDesc()/*-{
+		cleanObject(this.desc);
+	}-*/;
+	public final native  void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+	public final native  IdentImg getIdentImg()/*-{
+		cleanObject(this.identImg);
+	}-*/;
+	public final native  void setIdentImg(IdentImg identImg)/*-{
+		this.identImg = identImg;
+	}-*/;
+	public final native  IdentReadMethod getIdentReadMethod()/*-{
+		cleanObject(this.identReadMethod);
+	}-*/;
+	public final native  void setIdentReadMethod(IdentReadMethod identReadMethod)/*-{
+		this.identReadMethod = identReadMethod;
+	}-*/;
+	public final native  IdentVerifyMethod getIdentVerifyMethod()/*-{
+		cleanObject(this.identVerifyMethod);
+	}-*/;
+	public final native  void setIdentVerifyMethod(IdentVerifyMethod identVerifyMethod)/*-{
+		this.identVerifyMethod = identVerifyMethod;
+	}-*/;
+	public final native  IdentVerifyResults getIdentVerifyResults()/*-{
+		cleanObject(this.identVerifyResults);
+	}-*/;
+	public final native  void setIdentVerifyResults(IdentVerifyResults identVerifyResults)/*-{
+		this.identVerifyResults = identVerifyResults;
+	}-*/;
+	public final native  IssuedLoc getIssuedLoc()/*-{
+		cleanObject(this.issuedLoc);
+	}-*/;
+	public final native  void setIssuedLoc(IssuedLoc issuedLoc)/*-{
+		this.issuedLoc = issuedLoc;
+	}-*/;
+	public final native  GovIssuedIdent getGovIssuedIdent()/*-{
+		cleanObject(this.govIssuedIdent);
+	}-*/;
+	public final native  void setGovIssuedIdent(GovIssuedIdent govIssuedIdent)/*-{
+		this.govIssuedIdent = govIssuedIdent;
+	}-*/;
+	public final native  TaxIdCert getTaxIdCert()/*-{
+		cleanObject(this.taxIdCert);
+	}-*/;
+	public final native  void setTaxIdCert(TaxIdCert taxIdCert)/*-{
+		this.taxIdCert = taxIdCert;
+	}-*/;
+	public final native  UpDt getUpDt()/*-{
+		cleanObject(this.upDt);
+	}-*/;
+	public final native  void setUpDt(UpDt upDt)/*-{
+		this.upDt = upDt;
+	}-*/;
+
+}

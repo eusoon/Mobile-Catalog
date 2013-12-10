@@ -1,0 +1,20 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class CountryCode extends IFXObject {
+	CountryCodeSource countryCodeSource;
+	CountryCodeValue countryCodeValue;
+	public CountryCodeSource getCountryCodeSource() {
+		return countryCodeSource;
+	}
+	public void setCountryCodeSource(CountryCodeSource countryCodeSource) {
+		this.countryCodeSource = countryCodeSource;
+	}
+	public CountryCodeValue getCountryCodeValue() {
+		return countryCodeValue;
+	}
+	public void setCountryCodeValue(CountryCodeValue countryCodeValue) {
+		this.countryCodeValue = countryCodeValue;
+	}
+}

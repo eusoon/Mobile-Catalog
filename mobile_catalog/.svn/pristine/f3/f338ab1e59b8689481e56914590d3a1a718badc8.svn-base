@@ -1,0 +1,28 @@
+package my.com.infopro.ifx.client.model;
+
+public class CustPswd_Type extends IFXObject {
+	public final native  void setCryptType(CryptType cryptType)/*-{
+	this.cryptType = cryptType;
+}-*/;
+	public final native  CryptType getCryptType()/*-{
+	return $wnd.cleanObject(this.cryptType);
+}-*/;
+	public final native  void setSecObjId(SecObjId secObjId)/*-{
+	this.secObjId = secObjId;
+}-*/;
+	public final native  SecObjId secObjId()/*-{
+	return $wnd.cleanObject(this.pSSNetworkType);
+}-*/;
+	public final native  void setPswd(Pswd pswd)/*-{
+	this.pswd = pswd;
+}-*/;
+	public final native  Pswd getPswd()/*-{
+	return $wnd.cleanObject(this.pswd);
+}-*/;
+	public final native  void setCryptPswd(CryptPswd cryptPswd)/*-{
+	this.cryptPswd = cryptPswd;
+}-*/;
+	public final native  CryptPswd getCryptPswd()/*-{
+	return $wnd.cleanObject(this.cryptPswd);
+}-*/;
+}

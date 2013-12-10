@@ -1,0 +1,21 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class AcctType extends IFXObject {
+	AcctTypeValue acctTypeValue;//Open Enum	Required Account Type Value Valid values include: CCA, CDA, CLA, CMA, DDA, EQU, GLA, ILA, INV, IRA, IRL, LOC, MLA, MMA, PBA, PPA, RWD, SDA
+	AcctTypeSource acctTypeSource;
+	public AcctTypeValue getAcctTypeValue() {
+		return acctTypeValue;//Open Enum	Optional Account Type Source Valid values include: APACS, IFX, ISO15022, ISO20022, ISO8583:1993, ISO8583:2003, OFXDefault Value: IFX
+	}
+	public void setAcctTypeValue(AcctTypeValue acctTypeValue) {
+		this.acctTypeValue = acctTypeValue;
+	}
+	public AcctTypeSource getAcctTypeSource() {
+		return acctTypeSource;
+	}
+	public void setAcctTypeSource(AcctTypeSource acctTypeSource) {
+		this.acctTypeSource = acctTypeSource;
+	}
+
+}

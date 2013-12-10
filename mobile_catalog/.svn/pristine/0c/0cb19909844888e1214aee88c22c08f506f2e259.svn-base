@@ -1,0 +1,78 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class ForExRateSheetKeys extends IFXObject {
+
+	SvcIdent svcIdent; //Aggregate	Optional	Service Identifier
+	//begin-xor	Required
+	ForExRateSheetId forExRateSheetId; //Identifier	Required	Foreign Exchange Rate Sheet Identifier
+	//begin-block	Required
+	//begin-xor	Optional
+	ForExRateType[] forExRateType; //Closed Enum	Required Repeating	Foreign Exchange Rate Type	Valid values are limited to: Commited, Future, Indicated, Spot	Default Value: Indicated
+	FixingDateStartDt fixingDateStartDt; //DateTime	Required	Fixing Date Start Date
+	FixingDateEndDt fixingDateEndDt; //DateTime	Required	Fixing Date End Date
+	ReceivingMethod[] receivingMethod; //Open Enum	Required Repeating	Receiving Method	Valid values include: Account, BankNotes, Draft, EFT, SSI
+	ForExValDtType forExValDtType; //Closed Enum	Required	Foreign Exchange Value Date Type	Valid values are limited to: Cash, Forward, Spot, Tomorrow, Window
+	ForExValDt forExValDt; //DateTime	Required	Foreign Exchange Value Date
+	//end-xor
+	ForExRateSheetIdent forExRateSheetIdent; //NC-250	Optional	Foreign Exchange Rate Sheet Identifier
+	//end-block
+	//end-xor
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public ForExRateSheetId getForExRateSheetId() {
+		return forExRateSheetId;
+	}
+	public void setForExRateSheetId(ForExRateSheetId forExRateSheetId) {
+		this.forExRateSheetId = forExRateSheetId;
+	}
+	public ForExRateType[] getForExRateType() {
+		return forExRateType;
+	}
+	public void setForExRateType(ForExRateType[] forExRateType) {
+		this.forExRateType = forExRateType;
+	}
+	public FixingDateStartDt getFixingDateStartDt() {
+		return fixingDateStartDt;
+	}
+	public void setFixingDateStartDt(FixingDateStartDt fixingDateStartDt) {
+		this.fixingDateStartDt = fixingDateStartDt;
+	}
+	public FixingDateEndDt getFixingDateEndDt() {
+		return fixingDateEndDt;
+	}
+	public void setFixingDateEndDt(FixingDateEndDt fixingDateEndDt) {
+		this.fixingDateEndDt = fixingDateEndDt;
+	}
+	public ReceivingMethod[] getReceivingMethod() {
+		return receivingMethod;
+	}
+	public void setReceivingMethod(ReceivingMethod[] receivingMethod) {
+		this.receivingMethod = receivingMethod;
+	}
+	public ForExValDtType getForExValDtType() {
+		return forExValDtType;
+	}
+	public void setForExValDtType(ForExValDtType forExValDtType) {
+		this.forExValDtType = forExValDtType;
+	}
+	public ForExValDt getForExValDt() {
+		return forExValDt;
+	}
+	public void setForExValDt(ForExValDt forExValDt) {
+		this.forExValDt = forExValDt;
+	}
+	public ForExRateSheetIdent getForExRateSheetIdent() {
+		return forExRateSheetIdent;
+	}
+	public void setForExRateSheetIdent(ForExRateSheetIdent forExRateSheetIdent) {
+		this.forExRateSheetIdent = forExRateSheetIdent;
+	}
+
+}

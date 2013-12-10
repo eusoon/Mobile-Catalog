@@ -1,0 +1,8 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXTimestamp;
+
+
+public class UpDt extends IFXTimestamp {
+
+}

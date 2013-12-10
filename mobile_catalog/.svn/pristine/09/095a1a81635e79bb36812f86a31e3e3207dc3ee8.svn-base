@@ -1,0 +1,329 @@
+/*
+   This file is part of Cyclos.
+
+   Cyclos is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+
+   Cyclos is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with Cyclos; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+ */
+package my.com.infopro.mobile.client.accounts;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+
+import my.com.infopro.ifx.acct.AcctInqRq;
+import my.com.infopro.mobile.client.Configuration;
+import my.com.infopro.mobile.client.InfoproMobile;
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.Navigation;
+import my.com.infopro.mobile.client.Notification;
+import my.com.infopro.mobile.client.Notification.NotificationLayout;
+import my.com.infopro.mobile.client.model.Account;
+import my.com.infopro.mobile.client.model.AccountData;
+import my.com.infopro.mobile.client.model.GeneralData;
+import my.com.infopro.mobile.client.model.InitialData;
+import my.com.infopro.mobile.client.model.MyProfile;
+import my.com.infopro.mobile.client.model.Parameters;
+import my.com.infopro.mobile.client.services.AccountService;
+import my.com.infopro.mobile.client.ui.Page;
+import my.com.infopro.mobile.client.ui.PageAnchor;
+import my.com.infopro.mobile.client.ui.widgets.AccountRow;
+import my.com.infopro.mobile.client.ui.widgets.SimpleDataList;
+import my.com.infopro.mobile.client.utils.ParameterKey;
+import my.com.infopro.mobile.json.ifx.acct.AcctInqRs;
+import my.com.infopro.mobile.json.ifx.element.AcctBal;
+import my.com.infopro.mobile.json.ifx.element.AcctRec;
+import my.com.infopro.ifx.element.AcctType;
+import my.com.infopro.ifx.element.AcctTypeValue;
+import my.com.infopro.ifx.element.BalType;
+import my.com.infopro.ifx.element.BalTypeValues;
+import my.com.infopro.ifx.element.BinData;
+import my.com.infopro.ifx.element.BinLength;
+import my.com.infopro.ifx.element.ClientApp;
+import my.com.infopro.ifx.element.ClientDt;
+import my.com.infopro.ifx.element.ContextRqHdr;
+import my.com.infopro.ifx.element.CredentialsRqHdr;
+import my.com.infopro.ifx.element.CryptPswd;
+import my.com.infopro.ifx.element.CryptType;
+import my.com.infopro.ifx.element.Environment;
+import my.com.infopro.ifx.element.LoginName;
+import my.com.infopro.ifx.element.MsgRqHdr;
+import my.com.infopro.ifx.element.Name;
+import my.com.infopro.ifx.element.Org;
+import my.com.infopro.ifx.element.POSLocation;
+import my.com.infopro.ifx.element.PointOfServiceData;
+import my.com.infopro.ifx.element.Pswd;
+import my.com.infopro.ifx.element.RecSelect;
+import my.com.infopro.ifx.element.RqUID;
+import my.com.infopro.ifx.element.SecToken;
+import my.com.infopro.ifx.element.SecTokenLogin;
+import my.com.infopro.ifx.element.SubjectPswd;
+import my.com.infopro.ifx.element.SubjectRole;
+import my.com.infopro.ifx.element.SvcIdent;
+import my.com.infopro.ifx.element.SvcName;
+import my.com.infopro.ifx.element.SvcProviderName;
+import my.com.infopro.ifx.element.Version;
+
+import com.google.gwt.cell.client.Cell.Context;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
+import com.google.gwt.core.client.JsArrayString;
+import com.google.gwt.json.client.JSONArray;
+import com.google.gwt.json.client.JSONNull;
+import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.json.client.JSONString;
+import com.google.gwt.json.client.JSONValue;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Widget;
+
+/**
+ * A {@link Page} used to display accounts.
+ * 
+ * @author luis
+ */
+public class AccountsPage extends Page {
+    
+    private AccountService accountService = GWT.create(AccountService.class);
+    private JsArray<Account> accounts;
+  
+    @Override
+    public String getHeading() {
+        accounts = LoggedUser.get().getInitialData().getAccounts();
+        
+        // If exists only an account display details title
+        if(accounts.length() == 1) {
+            return messages.accountDetailsHeading();
+        } 
+        return messages.accountsHeading();
+    }
+
+    @Override
+    public boolean hasCustomScroll() {
+        return true;
+    }
+    
+    @Override
+    public Widget initialize() {                           
+        
+        if(accounts.length() == 1) {
+            // If exists only an account display details page
+            final Account account = accounts.get(0);
+            
+            Parameters params = new Parameters();
+            params.add(ParameterKey.ID, account.getId());   
+            
+            Page page = new AccountDetailsPage();
+            page.setParameters(params);
+
+            return page.initialize();
+        }
+        
+        // List pages uses fixed notification layout
+        Notification.get().setLayout(NotificationLayout.FIXED);
+        
+        // If there are multiple accounts, display it
+        SimpleDataList<AccountData> dataList = new SimpleDataList<AccountData>() {
+       
+            @Override
+            protected Widget onRender(Context context, AccountData data) {                
+                
+                // Value can be null
+                if (data == null) {
+                  return null;
+                }
+                
+                // Create row widget
+                AccountRow row = new AccountRow();
+                row.setHeading(data.getAccount().getType().getName());
+ //               row.setSub(LoggedUser.get().getInitialData().getProfile().getName());
+                row.setSub(data.getAccount().getAccountNo());
+                row.setValue(data.getStatus().getFormattedBalance(), data.getStatus().getBalance() > 0d);
+                
+                return row;
+            }
+
+            private MsgRqHdr getMsgRqHdr(LoggedUser loggedUser){
+            	GeneralData generalData=InfoproMobile.get().getGeneralData();
+            	MsgRqHdr msgRqHdr = new MsgRqHdr();
+            	InitialData initialData=loggedUser.getInitialData();
+            	
+            	String username=loggedUser.getPrincipal();
+            	String svcProviderURL=initialData.getSvcProviderName();
+            	
+        		SvcIdent svcIdent = new SvcIdent();
+        		SvcProviderName svcProviderName = new SvcProviderName();
+        		svcProviderName.setString(svcProviderURL);
+        		svcIdent.setSvcProviderName(svcProviderName);
+        		msgRqHdr.setSvcIdent(svcIdent);
+
+        		CredentialsRqHdr[] credentialsRqHdr = new CredentialsRqHdr[1];
+
+        		SubjectRole subjectRole = SubjectRole.Party;
+
+        		SecTokenLogin secToken1 = new SecTokenLogin();
+        		LoginName loginName = new LoginName();
+        		loginName.setString(username);
+        		
+        		secToken1.setLoginName(loginName);
+        		SubjectPswd subjectPswd = new SubjectPswd();
+        		String password=loggedUser.getPassword();
+				if (initialData.getCryptType().equals(CryptType.None)) {
+        			Pswd pswd = new Pswd();
+        			pswd.setString(password);
+        			subjectPswd.setPswd(pswd);
+        		} else {
+        			CryptPswd cryptPswd = new CryptPswd();
+        			BinData binData=new BinData();
+        			binData.setString(password);
+					cryptPswd.setBinData(binData);
+					BinLength binLength=new BinLength();
+					binLength.setString(Integer.toString(password.length()));
+					cryptPswd.setBinLength(binLength);
+        			subjectPswd.setCryptPswd(cryptPswd);
+        		}
+        		secToken1.setSubjectPswd(subjectPswd);
+
+        		SecToken[] secTokens = new SecToken[1];
+        		secTokens[0] = secToken1;
+        		credentialsRqHdr[0].setSubjectRole(subjectRole);
+        		credentialsRqHdr[0].setSecToken(secTokens);
+        		msgRqHdr.setCredentialsRqHdr(credentialsRqHdr);
+
+        		ContextRqHdr contextRqHdr = new ContextRqHdr();
+        		PointOfServiceData pointOfServiceData = new PointOfServiceData();
+        		pointOfServiceData.setEnvironment(Environment.MCommerce);
+        		pointOfServiceData.setPOSLocation(POSLocation.Customer);
+        		contextRqHdr.setPointOfServiceData(pointOfServiceData);
+        		ClientDt clientDt = new ClientDt();
+        		DateFormat df = new SimpleDateFormat(initialData.getDateFormat());//"yyyy-mm-ddThh:mm:ss"
+        		// formatted as per ISO 8601
+        		String strDate = df.format(new Date());
+        		clientDt.setString(strDate);
+        		contextRqHdr.setClientDt(clientDt);
+        		
+   
+        		ClientApp clientApp = new ClientApp();
+        		Name name = new Name();
+        		name.setString(generalData.getApplicationName());
+        		clientApp.setName(name);
+        		Org org = new Org();
+        		org.setString(Configuration.ORG_NAME);
+        		clientApp.setOrg(org);
+        		Version version = new Version();
+        		version.setString(generalData.getApplicationVersion());
+        		clientApp.setVersion(version);
+        		contextRqHdr.setClientApp(clientApp);
+        		msgRqHdr.setContextRqHdr(contextRqHdr);
+        		return msgRqHdr;
+            }
+            @Override
+            protected void onSearchData(final AsyncCallback<JsArray<AccountData>> callback) {
+            	LoggedUser loggerUser=LoggedUser.get();
+            	Parameters params=new Parameters();
+            	AcctInqRq acctInqRq=new AcctInqRq();
+            	RqUID rqUID=new RqUID();
+            	rqUID.setString(UUID.randomUUID().toString());
+				acctInqRq.setRqUID(rqUID);
+				acctInqRq.setMsgRqHdr(getMsgRqHdr(loggerUser));
+				AcctType[] acctTypes = new AcctType[2];
+				acctTypes[0].setAcctTypeValue(AcctTypeValue.SDA);
+				acctTypes[1].setAcctTypeValue(AcctTypeValue.CCA);
+				RecSelect[] recSelect = new RecSelect[acctTypes.length];
+				int i = 0;
+				for (AcctType acctType : acctTypes) {
+					recSelect[i++]
+							.setString("/AcctRec/AcctInfo/AcctType[AcctTypeValue='"
+									+ acctType.getAcctTypeValue().name() + "']");
+				}
+				acctInqRq.setRecSelect(recSelect);
+				params.add("accInqRq", acctInqRq);
+				
+            	AsyncCallback<AcctInqRs> callback1 = new AsyncCallback<AcctInqRs>() {
+            	      public void onFailure(Throwable caught) {
+            	        callback.onFailure(caught);
+            	      }
+
+            	      public void onSuccess(AcctInqRs result) {
+            	    	  AcctRec[] acctRecs=result.getAcctRec();
+            	    	  JSONArray arr = new JSONArray();
+            	    	  int i = 0;
+            	    	  for(AcctRec acctRec: acctRecs){
+            	    		  JSONObject accountData = new JSONObject();
+            	    		JSONObject account= new JSONObject();
+            	    		String id=acctRec.getAcctId().getString();
+            	            account.put("accountNo", getAsJSONString(id));
+            	    		String type=acctRec.getAcctInfo().getAcctType().getAcctTypeValue().name();
+            	    		account.put("type", getAsJSONString(type));
+							accountData.put("account", account);
+							JSONObject accountStatus= new JSONObject();
+							
+							AcctBal[] acctBals=acctRec.getAcctInfo().getAcctBal();
+							for(AcctBal acctBal:acctBals){
+								if(acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.Current)|| acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.Outstanding)){
+									String balance=acctBal.getCurAmt().getAmt().getString();
+									accountStatus.put("balance", getAsJSONString(balance));
+									//accountStatus.put("formattedBalance", jsonValue);
+								}else if(acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.CreditLimit)){
+									String creditLimit=acctBal.getCurAmt().getAmt().getString();
+									accountStatus.put("creditLimit", getAsJSONString(creditLimit));
+									//accountStatus.put("formattedCreditLimit", jsonValue);
+								}else if(acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.Avail)){
+									String availableBalance=acctBal.getCurAmt().getAmt().getString();
+									accountStatus.put("availableBalance",getAsJSONString(availableBalance));
+									//accountStatus.put("formattedAvailableBalance", jsonValue);
+								}
+								accountData.put("accountStatus", accountStatus);
+							}
+							arr.set(i++,accountData);
+							
+            	    	  }
+            	    	 JsArray<AccountData> result1= arr.getJavaScriptObject().cast();
+            	    	  callback.onSuccess(result1);
+            	        ;
+            	      }
+            	    };
+                // Fetch account data
+                accountService.getAccountsData(params,callback1);
+            }     
+            private JSONValue getAsJSONString(String value) {
+        		if (value == null) {
+        			return JSONNull.getInstance();
+        		}
+
+        		return new JSONString(value);
+        	}
+            
+            @Override
+            protected void onRowSelected(AccountData value) { 
+                // Go to account details
+                navigateToAccountDetails(value.getAccount());
+            }
+        };
+
+        return dataList;
+    }
+    
+    /**
+     * Navigates to account details sending according parameters     
+     */
+    private void navigateToAccountDetails(Account account) {
+        Parameters params = new Parameters();
+        params.add(ParameterKey.ID, account.getId());   
+        Navigation.get().go(PageAnchor.ACCOUNT_DETAILS, params);      
+    }
+
+}

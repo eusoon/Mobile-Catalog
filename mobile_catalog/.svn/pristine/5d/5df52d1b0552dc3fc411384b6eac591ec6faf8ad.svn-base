@@ -1,0 +1,45 @@
+package my.com.infopro.ifx.client.model;
+
+public class CounterpartyInfo_Type extends IFXObject {
+
+	public final native void setLegalName(LegalName legalName)/*-{
+		this.legalName = legalName;
+	}-*/;
+
+	public final native LegalName getLegalName()/*-{
+		return $wnd.cleanObject(this.legalName);
+	}-*/;
+
+	public final native void setRefInfo(RefInfo[] refInfo)/*-{
+		this.refInfo = refInfo;
+	}-*/;
+
+	public final native RefInfo[] getRefInfo()/*-{
+		return $wnd.cleanObject(this.refInfo);
+	}-*/;
+
+	public final native void setDepAcctId(DepAcctId[] depAcctId)/*-{
+		this.depAcctId = depAcctId;
+	}-*/;
+
+	public final native DepAcctId[] getDepAcctId()/*-{
+		return $wnd.cleanObject(this.depAcctId);
+	}-*/;
+
+	public final native void setCardAcctId(CardAcctId[] cardAcctId)/*-{
+		this.cardAcctId = cardAcctId;
+	}-*/;
+
+	public final native CardAcctId[] cardAcctId()/*-{
+		return $wnd.cleanObject(this.optSupt);
+	}-*/;
+
+	public final native void setLoanAcctId(LoanAcctId[] loanAcctId)/*-{
+		this.loanAcctId = loanAcctId;
+	}-*/;
+
+	public final native LoanAcctId[] getLoanAcctId()/*-{
+		return $wnd.cleanObject(this.loanAcctId);
+	}-*/;
+
+}

@@ -1,0 +1,62 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.AcctKeys;
+import my.com.infopro.ifx.element.PartyKeys;
+import my.com.infopro.ifx.element.SvcIdent;
+import my.com.infopro.ifx.element.StmtDt;
+import my.com.infopro.ifx.element.StmtGroup;
+
+public class AcctStmtKeys extends IFXObject {
+
+	SvcIdent svcIdent; //Aggregate	Optional	Service Identifier
+	//begin-xor	Required
+	 
+	AcctStmtId acctStmtId; //Identifier	Required	Account Statement Identifier
+	//begin-block	Required
+	 
+	StmtDt stmtDt; //Date	Required	Statement Date
+	AcctKeys acctKeys; //Aggregate	Required	Account Keys Aggregate
+	PartyKeys partyKeys; //Aggregate	Optional	Party Keys Aggregate
+	StmtGroup stmtGroup; //C-25	Required	Statement Group
+	//end-block
+	//end-xor
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public AcctStmtId getAcctStmtId() {
+		return acctStmtId;
+	}
+	public void setAcctStmtId(AcctStmtId acctStmtId) {
+		this.acctStmtId = acctStmtId;
+	}
+	public StmtDt getStmtDt() {
+		return stmtDt;
+	}
+	public void setStmtDt(StmtDt stmtDt) {
+		this.stmtDt = stmtDt;
+	}
+	public AcctKeys getAcctKeys() {
+		return acctKeys;
+	}
+	public void setAcctKeys(AcctKeys acctKeys) {
+		this.acctKeys = acctKeys;
+	}
+	public PartyKeys getPartyKeys() {
+		return partyKeys;
+	}
+	public void setPartyKeys(PartyKeys partyKeys) {
+		this.partyKeys = partyKeys;
+	}
+	public StmtGroup getStmtGroup() {
+		return stmtGroup;
+	}
+	public void setStmtGroup(StmtGroup stmtGroup) {
+		this.stmtGroup = stmtGroup;
+	}
+
+}

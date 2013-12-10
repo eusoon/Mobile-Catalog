@@ -1,0 +1,37 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillRec_Type extends IFXObject {
+
+	public final native void setBillId(BillId billId)/*-{
+		this.billId = billId;
+	}-*/;
+
+	public final native BillId getBillId()/*-{
+		return $wnd.cleanObject(this.billId);
+	}-*/;
+
+	public final native void setBillInfo(BillInfo billInfo)/*-{
+		this.billInfo = billInfo;
+	}-*/;
+
+	public final native BillInfo getBillInfo()/*-{
+		return $wnd.cleanObject(this.billInfo);
+	}-*/;
+
+	public final native void setBillStatus(BillStatus billStatus)/*-{
+		this.billStatus = billStatus;
+	}-*/;
+
+	public final native BillStatus getBillStatus()/*-{
+		return $wnd.cleanObject(this.billStatus);
+	}-*/;
+
+	public final native void setBillPmtStatus(BillPmtStatus billPmtStatus)/*-{
+		this.billPmtStatus = billPmtStatus;
+	}-*/;
+
+	public final native BillPmtStatus getBillPmtStatus()/*-{
+		return $wnd.cleanObject(this.billPmtStatus);
+	}-*/;
+
+}

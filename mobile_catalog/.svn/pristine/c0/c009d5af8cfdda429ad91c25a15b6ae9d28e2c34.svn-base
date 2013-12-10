@@ -1,0 +1,32 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class SecTokenMagCard extends SecToken {
+	
+	protected SecTokenMagCard(){	
+	}
+	
+	public final native CardMagData getCardMagData() /*-{
+		return $wnd.cleanObject(cardMagData);
+	}-*/;
+	public final native void setCardMagData(CardMagData cardMagData) /*-{
+		this.cardMagData = cardMagData;
+	}-*/;
+	public final native PINBlock getpINBlock() /*-{
+		return $wnd.cleanObject(pINBlock);
+	}-*/;
+	public final native void setpINBlock(PINBlock pINBlock) /*-{
+		this.pINBlock = pINBlock;
+	}-*/;
+	public final native CryptType getCryptType() /*-{
+		return $wnd.cleanObject(cryptType);
+	}-*/;
+	public final native void setCryptType(CryptType cryptType) /*-{
+		this.cryptType = cryptType;
+	}-*/;
+	public final native SecObjId getSecObjId() /*-{
+		return $wnd.cleanObject(secObjId);
+	}-*/;
+	public final native void setSecObjId(SecObjId secObjId) /*-{
+		this.secObjId = secObjId;
+	}-*/;
+}

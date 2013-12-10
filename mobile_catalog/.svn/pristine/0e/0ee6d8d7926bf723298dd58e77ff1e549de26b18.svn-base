@@ -1,0 +1,65 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtStatusRec_Type extends IFXObject {
+	public final native void setPmtId(PmtId pmtId)/*-{
+		this.pmtId = pmtId;
+	}-*/;
+
+	public final native PmtId getPmtId()/*-{
+		return $wnd.cleanObject(this.pmtId);
+	}-*/;
+
+	public final native void setPmtStatus(PmtStatus pmtStatus)/*-{
+		this.pmtStatus = pmtStatus;
+	}-*/;
+
+	public final native PmtStatus getPmtStatus()/*-{
+		return $wnd.cleanObject(this.pmtStatus);
+
+	}-*/;
+
+	public final native void setPmtRefId(PmtRefId pmtRefId)/*-{
+		this.pmtRefId = pmtRefId;
+	}-*/;
+
+	public final native PmtRefId getPmtRefId()/*-{
+		return $wnd.cleanObject(this.pmtRefId);
+	}-*/;
+
+	public final native void setSvcRqUID(SvcRqUID svcRqUID)/*-{
+		this.svcRqUID = svcRqUID;
+	}-*/;
+
+	public final native SvcRqUID getSvcRqUID()/*-{
+		return $wnd.cleanObject(this.svcRqUID);
+
+	}-*/;
+
+	public native void setNetworkTrnInfo(NetworkTrnInfo networkTrnInfo)/*-{
+		this.networkTrnInfo = networkTrnInfo;
+	}-*/;
+
+	public final native NetworkTrnInfo getNetworkTrnInfo()/*-{
+		return $wnd.cleanObject(this.networkTrnInfo);
+
+	}-*/;
+
+	public final native void setCompositeContactInfo(
+			CompositeContactInfo compositeContactInfo)/*-{
+		this.compositeContactInfo = compositeContactInfo;
+	}-*/;
+
+	public final native CompositeContactInfo getCompositeContactInfo()/*-{
+		return $wnd.cleanObject(this.compositeContactInfo);
+	}-*/;
+
+	public final native void setPmtRemitAck(PmtRemitAck[] pmtRemitAck)/*-{
+		this.pmtRemitAck = pmtRemitAck;
+	}-*/;
+
+	public final native PmtRemitAck[] getPmtRemitAck()/*-{
+		return $wnd.cleanObject(this.pmtRemitAck);
+
+	}-*/;
+
+}

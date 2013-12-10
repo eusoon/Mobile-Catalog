@@ -1,0 +1,52 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class ForExRateSheetInfo extends IFXObject {
+
+	EffTimeFrame effTimeFrame; //Aggregate	Required	The start and end date and time for which the currency rate is effective.After the end date/time indicated in this aggregate the currency rate is no longer valid or guaranteed by the rate issuer.
+	MinCurAmt minCurAmt; //Aggregate	Optional	Minimum Amount
+	MaxCurAmt maxCurAmt; //Aggregate	Optional	Maximum Currency Amount
+	FixingDt fixingDt; //DateTime	Optional	Fixing Date
+	ForExRateType forExRateType; //Closed Enum	Optional	Foreign Exchange Rate Type	Valid values are limited to: Commited, Future, Indicated, Spot	Default Value: Indicated
+	ForExRateSheetCurRate[] forExRateSheetCurRate; //Aggregate	Required Repeating	Foreign Exchange Rate Sheet Currency Rate
+	
+	public EffTimeFrame getEffTimeFrame() {
+		return effTimeFrame;
+	}
+	public void setEffTimeFrame(EffTimeFrame effTimeFrame) {
+		this.effTimeFrame = effTimeFrame;
+	}
+	public MinCurAmt getMinCurAmt() {
+		return minCurAmt;
+	}
+	public void setMinCurAmt(MinCurAmt minCurAmt) {
+		this.minCurAmt = minCurAmt;
+	}
+	public MaxCurAmt getMaxCurAmt() {
+		return maxCurAmt;
+	}
+	public void setMaxCurAmt(MaxCurAmt maxCurAmt) {
+		this.maxCurAmt = maxCurAmt;
+	}
+	public FixingDt getFixingDt() {
+		return fixingDt;
+	}
+	public void setFixingDt(FixingDt fixingDt) {
+		this.fixingDt = fixingDt;
+	}
+	public ForExRateType getForExRateType() {
+		return forExRateType;
+	}
+	public void setForExRateType(ForExRateType forExRateType) {
+		this.forExRateType = forExRateType;
+	}
+	public ForExRateSheetCurRate[] getForExRateSheetCurRate() {
+		return forExRateSheetCurRate;
+	}
+	public void setForExRateSheetCurRate(
+			ForExRateSheetCurRate[] forExRateSheetCurRate) {
+		this.forExRateSheetCurRate = forExRateSheetCurRate;
+	}
+	
+}

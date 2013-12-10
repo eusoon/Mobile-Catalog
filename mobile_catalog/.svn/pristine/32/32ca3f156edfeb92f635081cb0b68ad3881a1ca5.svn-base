@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum Environment {
+	Unknown, Mail, Telephone, ECommerce, MCommerce, Recurring, StoredData, POS, CAT, ATM, Deferred, Installment
+}

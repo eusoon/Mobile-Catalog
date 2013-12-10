@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillStatusCounts extends BillStatusCounts_Type {
+
+}

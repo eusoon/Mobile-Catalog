@@ -1,0 +1,8 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class CardOrderEnvr extends BaseEnvr {
+
+	protected CardOrderEnvr(){
+	}
+	
+}

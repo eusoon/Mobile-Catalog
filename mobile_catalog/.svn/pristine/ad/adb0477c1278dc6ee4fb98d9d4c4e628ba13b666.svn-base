@@ -1,0 +1,32 @@
+package my.com.infopro.mobile.client.ifx.payment;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+import my.com.infopro.mobile.client.ifx.element.MsgRqHdr;
+import my.com.infopro.mobile.client.ifx.element.PmtInfo;
+import my.com.infopro.mobile.client.ifx.element.RqUID;
+
+
+public class PmtAddRq extends IFXObject {
+	RqUID rqUID;	 //	UUID	 Required	 Request Identifier
+	MsgRqHdr msgRqHdr;	 //	Aggregate	 Optional	 Message Request Header
+	PmtInfo pmtInfo;	 //	Aggregate	 Required	 Payment Information Aggregate
+	
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRqHdr getMsgRqHdr() {
+		return msgRqHdr;
+	}
+	public void setMsgRqHdr(MsgRqHdr msgRqHdr) {
+		this.msgRqHdr = msgRqHdr;
+	}
+	public PmtInfo getPmtInfo() {
+		return pmtInfo;
+	}
+	public void setPmtInfo(PmtInfo pmtInfo) {
+		this.pmtInfo = pmtInfo;
+	}
+}

@@ -1,0 +1,11 @@
+package my.com.infopro.ifx.client.model;
+
+public class DevInfo extends IFXObject {
+	public final native void setDevName(DevName devName)/*-{
+		this.devName = devName;
+	}-*/;
+
+	public final native DevName getDevName()/*-{
+		return $wnd.cleanObject(this.devName);
+	}-*/;
+}

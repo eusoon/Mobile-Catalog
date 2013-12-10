@@ -1,0 +1,56 @@
+package my.com.infopro.mobile.json.ifx.rate;
+
+import my.com.infopro.mobile.json.ifx.element.DelElements;
+import my.com.infopro.mobile.json.ifx.element.ForExDealInfo;
+import my.com.infopro.mobile.json.ifx.element.ForExDealKeys;
+import my.com.infopro.mobile.json.ifx.element.MsgRqHdr;
+import my.com.infopro.mobile.json.ifx.element.NewElements;
+import my.com.infopro.mobile.json.ifx.element.RqUID;
+import my.com.infopro.mobile.json.ifx.element.UpdElements;
+
+public class ForExDealModRq {
+	
+	public final native RqUID getRqUID() /*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+	public final native void setRqUID(RqUID rqUID) /*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+	public final native ForExDealKeys getForExDealKeys() /*-{
+		return $wnd.cleanObject(this.forExDealKeys);
+	}-*/;
+	public final native void setForExDealKeys(ForExDealKeys forExDealKeys) /*-{
+		this.forExDealKeys = forExDealKeys;
+	}-*/;
+	public final native ForExDealInfo[] getForExDealInfo() /*-{
+		return $wnd.cleanObject(this.forExDealInfo);
+	}-*/;
+	public final native void setForExDealInfo(ForExDealInfo[] forExDealInfo) /*-{
+		this.forExDealInfo = forExDealInfo;
+	}-*/;
+	public final native DelElements[] getDelElements() /*-{
+		return $wnd.cleanObject(this.delElements);
+	}-*/;
+	public final native void setDelElements(DelElements[] delElements) /*-{
+		this.delElements = delElements;
+	}-*/;
+	public final native UpdElements[] getUpdElements() /*-{
+		return $wnd.cleanObject(this.updElements);
+	}-*/;
+	public final native void setUpdElements(UpdElements[] updElements) /*-{
+		this.updElements = updElements;
+	}-*/;
+	public final native NewElements[] getNewElements() /*-{
+		return $wnd.cleanObject(this.newElements);
+	}-*/;
+	public final native void setNewElements(NewElements[] newElements) /*-{
+		this.newElements = newElements;
+	}-*/;
+	
+}

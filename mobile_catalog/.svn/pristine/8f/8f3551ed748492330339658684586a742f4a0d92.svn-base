@@ -1,0 +1,31 @@
+package my.com.infopro.ifx.client.model;
+
+public class ClientApp_Type extends IFXObject {
+	public final native void setOrg(Org org)/*-{
+		this.org = org;
+	}-*/;
+
+	public final native Org getOrg()/*-{
+		return $wnd.cleanObject(this.org);
+
+	}-*/;
+
+	public final native void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+
+	}-*/;
+
+	public final native void setVersion(Version version)/*-{
+		this.version = version;
+	}-*/;
+
+	public final native Version getVersion()/*-{
+		return $wnd.cleanObject(this.version);
+
+	}-*/;
+
+}

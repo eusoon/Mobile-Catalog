@@ -1,0 +1,79 @@
+package my.com.infopro.ifx.client.model;
+
+public class BaseEnvr_Type extends IFXObject {
+
+	public final native void setCreatedDt(CreatedDt createdDt)/*-{
+		this.createdDt = createdDt;
+	}-*/;
+
+	public final native CreatedDt getCreatedDt()/*-{
+		return $wnd.cleanObject(this.createdDt);
+	}-*/;
+
+	public final native void setCreateRefId(CreateRefId createRefId)/*-{
+		this.createRefId = createRefId;
+	}-*/;
+
+	public final native CreateRefId getCreateRefId()/*-{
+		return $wnd.cleanObject(this.createRefId);
+	}-*/;
+
+	public final native void setClientCreateDt(ClientCreateDt clientCreateDt)/*-{
+		this.clientCreateDt = clientCreateDt;
+	}-*/;
+
+	public final native ClientCreateDt getClientCreateDt()/*-{
+		return $wnd.cleanObject(this.clientCreateDt);
+	}-*/;
+
+	public final native void setClientBusinessDt(ClientBusinessDt clientBusinessDt)/*-{
+		this.clientBusinessDt = clientBusinessDt;
+	}-*/;
+
+	public final native ClientBusinessDt getClientBusinessDt()/*-{
+		return $wnd.cleanObject(this.clientBusinessDt);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setNetworkTrnInfo(NetworkTrnInfo networkTrnInfo)/*-{
+		this.networkTrnInfo = networkTrnInfo;
+	}-*/;
+
+	public final native NetworkTrnInfo getNetworkTrnInfo()/*-{
+		return $wnd.cleanObject(this.networkTrnInfo);
+	}-*/;
+
+	public final native void setServerTerminalSeqId(
+			ServerTerminalSeqId serverTerminalSeqId)/*-{
+		this.serverTerminalSeqId = serverTerminalSeqId;
+	}-*/;
+
+	public final native ServerTerminalSeqId getServerTerminalSeqId()/*-{
+		return $wnd.cleanObject(this.serverTerminalSeqId);
+	}-*/;
+
+	public final native void setPointOfServiceData(
+			PointOfServiceData pointOfServiceData)/*-{
+		this.pointOfServiceData = pointOfServiceData;
+	}-*/;
+
+	public final native PointOfServiceData getPointOfServiceData()/*-{
+		return $wnd.cleanObject(this.pointOfServiceData);
+	}-*/;
+
+	public final native void setClientTerminalSeqId(
+			ClientTerminalSeqId clientTerminalSeqId)/*-{
+		this.clientTerminalSeqId = clientTerminalSeqId;
+	}-*/;
+
+	public final native ClientTerminalSeqId getClientTerminalSeqId()/*-{
+		return $wnd.cleanObject(this.clientTerminalSeqId);
+	}-*/;
+}

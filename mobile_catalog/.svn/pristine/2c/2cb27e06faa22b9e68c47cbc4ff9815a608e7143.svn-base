@@ -1,0 +1,77 @@
+package my.com.infopro.ifx.client.model;
+
+public class RemitDelRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRemitId(RemitId remitId)/*-{
+		this.remitId = remitId;
+	}-*/;
+
+	public final native RemitId getRemitId()/*-{
+		return $wnd.cleanObject(this.remitId);
+	}-*/;
+
+	public final native void setRemitRec(RemitRec remitRec)/*-{
+		this.remitRec = remitRec;
+	}-*/;
+
+	public final native RemitRec getRemitRec()/*-{
+		return $wnd.cleanObject(this.remitRec);
+	}-*/;
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+	}-*/;
+
+}

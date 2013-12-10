@@ -1,0 +1,27 @@
+package my.com.infopro.ifx.client.model;
+
+public class TINInfo_Type extends IFXObject {
+	public final native void setTINType(TINType tINType)/*-{
+		this.tINType = tINType;
+	}-*/;
+
+	public final native TINType getTINType()/*-{
+		return $wnd.cleanObject(this.tINType);
+	}-*/;
+
+	public final native void setTaxId(TaxId taxId)/*-{
+		this.taxId = taxId;
+	}-*/;
+
+	public final native TaxId getTaxId()/*-{
+		return $wnd.cleanObject(this.taxId);
+	}-*/;
+
+	public final native void setCertCode(CertCode certCode)/*-{
+		this.certCode = certCode;
+	}-*/;
+
+	public final native CertCode getCertCode()/*-{
+		return $wnd.cleanObject(this.certCode);
+	}-*/;
+}

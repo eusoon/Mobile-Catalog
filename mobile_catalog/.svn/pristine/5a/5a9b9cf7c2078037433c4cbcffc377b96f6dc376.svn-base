@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class CustPayeeTypeModRq extends CustPayeeTypeModRq_Type {
+
+}

@@ -1,0 +1,24 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class DebitRef extends TrnRef {
+
+	public final native  DebitKeys getDebitKeys()/*-{
+		return $wnd.cleanObject(this.debitKeys);
+	}-*/;
+	public final native  void setDebitKeys(DebitKeys debitKeys)/*-{
+		this.debitKeys = debitKeys;
+	}-*/;
+	public final native  DebitRec getDebitRec()/*-{
+		return $wnd.cleanObject(this.debitRec);
+	}-*/;
+	public final native  void setDebitRec(DebitRec debitRec)/*-{
+		this.debitRec = debitRec;
+	}-*/;
+	public final native  DebitInfo getDebitInfo()/*-{
+		return $wnd.cleanObject(this.debitInfo);
+	}-*/;
+	public final native  void setDebitInfo(DebitInfo debitInfo)/*-{
+		this.debitInfo = debitInfo;
+	}-*/;
+
+}

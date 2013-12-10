@@ -1,0 +1,22 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PartyData extends IFXObject {
+
+	public final native JsArray<Contact> getContact() /*-{
+		return $wnd.cleanObject(contact);
+	}-*/;
+	public final native void setContact(JsArray<Contact> contact) /*-{
+		this.contact = contact;
+	}-*/;
+	public final native JsArray<IssuedIdent> getIssuedIdent() /*-{
+		return $wnd.cleanObject(issuedIdent);
+	}-*/;
+	public final native void setIssuedIdent(JsArray<IssuedIdent> issuedIdent) /*-{
+		this.issuedIdent = issuedIdent;
+	}-*/;
+
+}

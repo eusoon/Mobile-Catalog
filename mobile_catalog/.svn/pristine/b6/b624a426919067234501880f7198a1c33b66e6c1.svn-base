@@ -1,0 +1,19 @@
+package my.com.infopro.ifx.client.model;
+
+public class AsyncRsInfo_Type extends IFXObject {
+	public final native void setAvailDt(AvailDt _availDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+
+	public final native AvailDt getAvailDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+
+	public native void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+
+	public final native ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+}

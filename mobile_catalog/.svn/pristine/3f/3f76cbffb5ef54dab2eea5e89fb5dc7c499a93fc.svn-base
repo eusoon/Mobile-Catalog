@@ -1,0 +1,109 @@
+package my.com.infopro.ifx.client.model;
+
+public class LoanInfoCommon_Type extends IFXObject {
+	public final native void setOrigDt(OrigDt origDt)/*-{
+		this.origDt = origDt;
+	}-*/;
+
+	public final native OrigDt getOrigDt()/*-{
+		return $wnd.cleanObject(this.origDt);
+	}-*/;
+
+	public final native void setFreq(Freq freq)/*-{
+		this.freq = freq;
+	}-*/;
+
+	public final native Freq getFreq()/*-{
+		return $wnd.cleanObject(this.freq);
+	}-*/;
+
+	public final native void setRemainingPmtCount(
+			RemainingPmtCount remainingPmtCount)/*-{
+		this.remainingPmtCount = remainingPmtCount;
+	}-*/;
+
+	public final native RemainingPmtCount getRemainingPmtCount()/*-{
+		return $wnd.cleanObject(this.remainingPmtCount);
+	}-*/;
+
+	public final native void setPurposeDesc(PurposeDesc purposeDesc)/*-{
+		this.purposeDesc = purposeDesc;
+	}-*/;
+
+	public final native PurposeDesc getPurposeDesc()/*-{
+		return $wnd.cleanObject(this.purposeDesc);
+	}-*/;
+
+	public final native void setCollateralDesc(CollateralDesc collateralDesc)/*-{
+		this.collateralDesc = collateralDesc;
+	}-*/;
+
+	public final native CollateralDesc getCollateralDesc()/*-{
+		return $wnd.cleanObject(this.collateralDesc);
+	}-*/;
+
+	public final native void setCompletedPmtCount(
+			CompletedPmtCount completedPmtCount)/*-{
+		this.completedPmtCount = completedPmtCount;
+	}-*/;
+
+	public final native CompletedPmtCount getCompletedPmtCount()/*-{
+		return $wnd.cleanObject(this.completedPmtCount);
+	}-*/;
+
+	public final native void setRegPmtCurAmt(RegPmtCurAmt regPmtCurAmt)/*-{
+		this.regPmtCurAmt = regPmtCurAmt;
+	}-*/;
+
+	public final native RegPmtCurAmt getRegPmtCurAmt()/*-{
+		return $wnd.cleanObject(this.regPmtCurAmt);
+	}-*/;
+
+	public final native void setDueDt(DueDt dueDt)/*-{
+		this.dueDt = dueDt;
+	}-*/;
+
+	public final native DueDt getDueDt()/*-{
+		return $wnd.cleanObject(this.dueDt);
+	}-*/;
+
+	public final native void setNextPmtCurAmt(NextPmtCurAmt nextPmtCurAmt)/*-{
+		this.nextPmtCurAmt = nextPmtCurAmt;
+	}-*/;
+
+	public final native NextPmtCurAmt getNextPmtCurAmt()/*-{
+		return $wnd.cleanObject(this.nextPmtCurAmt);
+	}-*/;
+
+	public final native void setLastPmtDt(LastPmtDt lastPmtDt)/*-{
+		this.lastPmtDt = lastPmtDt;
+	}-*/;
+
+	public final native LastPmtDt getLastPmtDt()/*-{
+		return $wnd.cleanObject(this.lastPmtDt);
+	}-*/;
+
+	public final native void setLastPmtCurAmt(LastPmtCurAmt lastPmtCurAmt)/*-{
+		this.lastPmtCurAmt = lastPmtCurAmt;
+	}-*/;
+
+	public final native LastPmtCurAmt getLastPmtCurAmt()/*-{
+		return $wnd.cleanObject(this.lastPmtCurAmt);
+	}-*/;
+
+	public final native void setPastDuePmtCount(PastDuePmtCount pastDuePmtCount)/*-{
+		this.pastDuePmtCount = pastDuePmtCount;
+	}-*/;
+
+	public final native PastDuePmtCount getPastDuePmtCount()/*-{
+		return $wnd.cleanObject(this.pastDuePmtCount);
+	}-*/;
+
+	public final native void setPrepayPenalty(PrepayPenalty prepayPenalty)/*-{
+		this.prepayPenalty = prepayPenalty;
+	}-*/;
+
+	public final native PrepayPenalty getPrepayPenalty()/*-{
+		return $wnd.cleanObject(this.prepayPenalty);
+	}-*/;
+}

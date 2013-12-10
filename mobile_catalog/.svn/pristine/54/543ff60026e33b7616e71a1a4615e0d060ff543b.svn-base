@@ -1,0 +1,64 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class Contact extends IFXObject {
+	
+	protected Contact(){
+	}
+	
+	public final native  Language getLanguage()/*-{
+		return $wnd.cleanObject(this.language);
+	}-*/;
+	public final native  void setLanguage(Language language)/*-{
+		this.language = language;
+	}-*/;
+	public final native  Locator getLocator()/*-{
+		return $wnd.cleanObject(this.locator);
+	}-*/;
+	public final native  void setLocator(Locator locator)/*-{
+		this.locator = locator;
+	}-*/;
+	public final native  ResourceLocator getResourceLocator()/*-{
+		return $wnd.cleanObject(this.resourceLocator);
+	}-*/;
+	public final native  void setResourceLocator(ResourceLocator resourceLocator)/*-{
+		this.resourceLocator = resourceLocator;
+	}-*/;
+	public final native  ContactType getContactType()/*-{
+		return $wnd.cleanObject(this.contactType);
+	}-*/;
+	public final native  void setContactType(ContactType contactType)/*-{
+		this.contactType = contactType;
+	}-*/;
+	public final native  PreferredInd getPreferredInd()/*-{
+		return $wnd.cleanObject(this.preferredInd);
+	}-*/;
+	public final native  void setPreferredInd(PreferredInd preferredInd)/*-{
+		this.preferredInd = preferredInd;
+	}-*/;
+	public final native  ContactName getContactName()/*-{
+		return $wnd.cleanObject(this.contactName);
+	}-*/;
+	public final native  void setContactName(ContactName contactName)/*-{
+		this.contactName = contactName;
+	}-*/;
+	public final native  TimeFrame getTimeFrame()/*-{
+		return $wnd.cleanObject(this.timeFrame);
+	}-*/;
+	public final native  void setTimeFrame(TimeFrame timeFrame)/*-{
+		this.timeFrame = timeFrame;
+	}-*/;
+	public final native  JobTitle getJobTitle()/*-{
+		return $wnd.cleanObject(this.jobTitle);
+	}-*/;
+	public final native  void setJobTitle(JobTitle jobTitle)/*-{
+		this.jobTitle = jobTitle;
+	}-*/;
+	public final native  DoNotSolicitInd getDoNotSolicitInd()/*-{
+		return $wnd.cleanObject(this.doNotSolicitInd);
+	}-*/;
+	public final native  void setDoNotSolicitInd(DoNotSolicitInd doNotSolicitInd)/*-{
+		this.doNotSolicitInd = doNotSolicitInd;
+	}-*/;
+}

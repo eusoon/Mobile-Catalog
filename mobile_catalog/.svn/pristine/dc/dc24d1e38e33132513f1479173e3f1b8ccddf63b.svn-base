@@ -1,0 +1,107 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class InvoiceData extends IFXObject {
+
+	InvoiceType invoiceType; //Open Enum	Optional	Invoice Type	Defined values:Invoice, CreditMemo
+	InvoiceNum invoiceNum; //C-32	Required	Invoice Number. The client enters this identifier since it does not serve as a database key on the server.
+	RefData[] refData; //Aggregate	Optional Repeating	Reference Information. Additional Invoice reference. Used to unique identify an invoice for either country-specific or company-specific system tracking and reconciliation.
+	TotalCurAmt totalCurAmt; //Aggregate	Required	Invoice Due Currency Amount.
+	PaidCurAmt paidCurAmt; //Aggregate	Optional	Invoice Paid Currency Amount.
+	BillInvoiceDt billInvoiceDt; //Date	Required	Invoice Date.
+	Desc desc; //C-80	Optional	Invoice Description.
+	InvoiceVouchNum invoiceVouchNum; //C-80	Optional	Invoice Voucher Number. The invoice recipient's internal voucher number confirming receipt of the goods listed on the invoice.
+	Fee[] fee; //Aggregate	Optional Repeating	Invoice Fee(s), such as late fees, etc.
+	InvoicePremium invoicePremium; //Aggregate	Optional	Invoice Premium.
+	Discount discount; //Aggregate	Optional	Discount Information Aggregate.
+	TaxData taxData; //Aggregate	Optional	Tax Aggregate.
+	InvoiceAdj invoiceAdj; //Aggregate	Optional	Adjustment Aggregate.
+	InvoiceLineItem[] invoiceLineItem; //Aggregate	Optional Repeating	Invoice Line Item Aggregate.
+	
+	public InvoiceType getInvoiceType() {
+		return invoiceType;
+	}
+	public void setInvoiceType(InvoiceType invoiceType) {
+		this.invoiceType = invoiceType;
+	}
+	public InvoiceNum getInvoiceNum() {
+		return invoiceNum;
+	}
+	public void setInvoiceNum(InvoiceNum invoiceNum) {
+		this.invoiceNum = invoiceNum;
+	}
+	public RefData[] getRefData() {
+		return refData;
+	}
+	public void setRefData(RefData[] refData) {
+		this.refData = refData;
+	}
+	public TotalCurAmt getTotalCurAmt() {
+		return totalCurAmt;
+	}
+	public void setTotalCurAmt(TotalCurAmt totalCurAmt) {
+		this.totalCurAmt = totalCurAmt;
+	}
+	public PaidCurAmt getPaidCurAmt() {
+		return paidCurAmt;
+	}
+	public void setPaidCurAmt(PaidCurAmt paidCurAmt) {
+		this.paidCurAmt = paidCurAmt;
+	}
+	public BillInvoiceDt getBillInvoiceDt() {
+		return billInvoiceDt;
+	}
+	public void setBillInvoiceDt(BillInvoiceDt billInvoiceDt) {
+		this.billInvoiceDt = billInvoiceDt;
+	}
+	public Desc getDesc() {
+		return desc;
+	}
+	public void setDesc(Desc desc) {
+		this.desc = desc;
+	}
+	public InvoiceVouchNum getInvoiceVouchNum() {
+		return invoiceVouchNum;
+	}
+	public void setInvoiceVouchNum(InvoiceVouchNum invoiceVouchNum) {
+		this.invoiceVouchNum = invoiceVouchNum;
+	}
+	public Fee[] getFee() {
+		return fee;
+	}
+	public void setFee(Fee[] fee) {
+		this.fee = fee;
+	}
+	public InvoicePremium getInvoicePremium() {
+		return invoicePremium;
+	}
+	public void setInvoicePremium(InvoicePremium invoicePremium) {
+		this.invoicePremium = invoicePremium;
+	}
+	public Discount getDiscount() {
+		return discount;
+	}
+	public void setDiscount(Discount discount) {
+		this.discount = discount;
+	}
+	public TaxData getTaxData() {
+		return taxData;
+	}
+	public void setTaxData(TaxData taxData) {
+		this.taxData = taxData;
+	}
+	public InvoiceAdj getInvoiceAdj() {
+		return invoiceAdj;
+	}
+	public void setInvoiceAdj(InvoiceAdj invoiceAdj) {
+		this.invoiceAdj = invoiceAdj;
+	}
+	public InvoiceLineItem[] getInvoiceLineItem() {
+		return invoiceLineItem;
+	}
+	public void setInvoiceLineItem(InvoiceLineItem[] invoiceLineItem) {
+		this.invoiceLineItem = invoiceLineItem;
+	}
+	
+}

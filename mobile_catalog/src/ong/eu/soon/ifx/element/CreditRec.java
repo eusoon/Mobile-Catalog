@@ -1,0 +1,43 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class CreditRec extends IFXObject {
+	SvcIdent svcIdent;//Aggregate	Optional Service Identifier
+	CreditId creditId;//Identifier	RequiredCredit Identifier
+	CreditInfo creditInfo;//Aggregate	RequiredCredit Information Aggregate
+	CreditEnvr creditEnvr;//Aggregate	Optional Credit Environment Aggregate
+	CreditStatus creditStatus;//Aggregate	Required Credit Status Aggregate
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public CreditId getCreditId() {
+		return creditId;
+	}
+	public void setCreditId(CreditId creditId) {
+		this.creditId = creditId;
+	}
+	public CreditInfo getCreditInfo() {
+		return creditInfo;
+	}
+	public void setCreditInfo(CreditInfo creditInfo) {
+		this.creditInfo = creditInfo;
+	}
+	public CreditEnvr getCreditEnvr() {
+		return creditEnvr;
+	}
+	public void setCreditEnvr(CreditEnvr creditEnvr) {
+		this.creditEnvr = creditEnvr;
+	}
+	public CreditStatus getCreditStatus() {
+		return creditStatus;
+	}
+	public void setCreditStatus(CreditStatus creditStatus) {
+		this.creditStatus = creditStatus;
+	}
+
+
+}

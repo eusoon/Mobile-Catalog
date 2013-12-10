@@ -1,0 +1,101 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class AcctHoldInfo extends IFXObject {
+	
+	protected AcctHoldInfo(){	
+	}
+	
+	public final native AcctRef getAcctRef()/*-{
+		return $wnd.cleanObject(this.acctRef);
+	}-*/;
+	public final native void setAcctRef(AcctRef acctRef)/*-{
+		this.acctRef = acctRef;
+	}-*/;
+	public final native HoldType getHoldType()/*-{
+		return $wnd.cleanObject(this.holdType);
+	}-*/;
+	public final native void setHoldType(HoldType holdType)/*-{
+		this.holdType = holdType;
+	}-*/;
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+	public final native HoldPercent getHoldPercent()/*-{
+		return $wnd.cleanObject(this.holdPercent);
+	}-*/;
+	public final native void setHoldPercent(HoldPercent holdPercent)/*-{
+		this.holdPercent = holdPercent;
+	}-*/;
+	public final native PercentBalType getPercentBalType()/*-{
+		return $wnd.cleanObject(this.percentBalType);
+	}-*/;
+	public final native void setPercentBalType(PercentBalType percentBalType)/*-{
+		this.percentBalType = percentBalType;
+	}-*/;
+	public final native SecuredAcctRef getSecuredAcctRef()/*-{
+		return $wnd.cleanObject(this.securedAcctRef);
+	}-*/;
+	public final native void setSecuredAcctRef(SecuredAcctRef securedAcctRef)/*-{
+		this.securedAcctRef = securedAcctRef;
+	}-*/;
+	public final native HoldReason getHoldReason()/*-{
+		return $wnd.cleanObject(this.holdReason);
+	}-*/;
+	public final native void setHoldReason(HoldReason holdReason)/*-{
+		this.holdReason = holdReason;
+	}-*/;
+	public final native ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+	public final native void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+	public final native Term getTerm()/*-{
+		return $wnd.cleanObject(this.term);
+	}-*/;
+	public final native void setTerm(Term term)/*-{
+		this.term = term;
+	}-*/;
+	public final native ChkNum getChkNum()/*-{
+		return $wnd.cleanObject(this.chkNum);
+	}-*/;
+	public final native void setChkNum(ChkNum chkNum)/*-{
+		this.chkNum = chkNum;
+	}-*/;
+	public final native EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+	public final native ReviewFrequency getReviewFrequency()/*-{
+		return $wnd.cleanObject(this.reviewFrequency);
+	}-*/;
+	public final native void setReviewFrequency(ReviewFrequency reviewFrequency)/*-{
+		this.reviewFrequency = reviewFrequency;
+	}-*/;
+	public final native LastReviewDt getLastReviewDt()/*-{
+		return $wnd.cleanObject(this.lastReviewDt);
+	}-*/;
+	public final native void setLastReviewDt(LastReviewDt lastReviewDt)/*-{
+		this.lastReviewDt = lastReviewDt;
+	}-*/;
+	public final native Memo getMemo()/*-{
+		return $wnd.cleanObject(this.memo);
+	}-*/;
+	public final native void setMemo(Memo memo)/*-{
+		this.memo = memo;
+	}-*/;
+	public final native AcctHoldIdent getAcctHoldIdent()/*-{
+		return $wnd.cleanObject(this.acctHoldIdent);
+	}-*/;
+	public final native void setAcctHoldIdent(AcctHoldIdent acctHoldIdent)/*-{
+		this.acctHoldIdent = acctHoldIdent;
+	}-*/;
+
+}

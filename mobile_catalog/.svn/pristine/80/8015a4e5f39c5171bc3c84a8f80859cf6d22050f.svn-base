@@ -1,0 +1,37 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PartyStatusInqRq extends IFXObject {
+	
+	public final native RqUID getRqUID() /*-{
+		return $wnd.cleanObject(rqUID);
+	}-*/;
+	public final native void setRqUID(RqUID rqUID) /*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(msgRqHdr);
+	}-*/;
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+	public final native RecCtrlIn getRecCtrlIn() /*-{
+		return $wnd.cleanObject(recCtrlIn);
+	}-*/;
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn) /*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+	public final native PartySel[] getPartySel() /*-{
+		return $wnd.cleanObject(partySel);
+	}-*/;
+	public final native void setPartySel(PartySel[] partySel) /*-{
+		this.partySel = partySel;
+	}-*/;
+	public final native RecSelect[] getRecSelect() /*-{
+		return $wnd.cleanObject(recSelect);
+	}-*/;
+	public final native void setRecSelect(RecSelect[] recSelect) /*-{
+		this.recSelect = recSelect;
+	}-*/;
+}

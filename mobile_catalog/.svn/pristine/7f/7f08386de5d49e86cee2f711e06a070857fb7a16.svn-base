@@ -1,0 +1,7 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class AcctId extends AcctId_Type {
+
+
+}

@@ -1,0 +1,22 @@
+package my.com.infopro.ifx.client.model;
+
+public class CompositePmtRemitInfo_Type extends IFXObject {
+	
+	public final native void setPmtRemitChksum(PmtRemitChksum pmtRemitChksum)/*-{
+		this.pmtRemitChksum = pmtRemitChksum;
+	}-*/;
+
+	public final native PmtRemitChksum getPmtRemitChksum()/*-{
+		return $wnd.cleanObject(this.pmtRemitChksum);
+
+	}-*/;
+
+	public final native void setPmtRemitDetail(PmtRemitDetail[] pmtRemitDetail)/*-{
+		this.pmtRemitDetail = pmtRemitDetail;
+	}-*/;
+
+	public final native PmtRemitDetail[] getPmtRemitDetail()/*-{
+		return $wnd.cleanObject(this.pmtRemitDetail);
+
+	}-*/;
+}

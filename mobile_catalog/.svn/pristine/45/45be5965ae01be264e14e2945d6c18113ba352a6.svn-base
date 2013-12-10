@@ -1,0 +1,86 @@
+package my.com.infopro.ifx.client.model;
+
+public class BankSvcProfInfo extends BankSvcProfInfo_Type {
+	public final native void setSvcCore(SvcCore svcCore)/*-{
+		this.svcCore = svcCore;
+	}-*/;
+
+	public final native SvcCore getSvcCore()/*-{
+		return $wnd.cleanObject(this.svcCore);
+
+	}-*/;
+
+	public final native void setMsgSupt(MsgSupt[] msgSupt)/*-{
+		this.msgSupt = msgSupt;
+	}-*/;
+
+	public final native MsgSupt[] getMsgSupt()/*-{
+		return $wnd.cleanObject(this.msgSupt);
+
+	}-*/;
+
+	public final native void setRevOptSupt(RevOptSupt[] revOptSupt)/*-{
+		this.revOptSupt = revOptSupt;
+	}-*/;
+
+	public final native RevOptSupt[] getRevOptSupt()/*-{
+		return $wnd.cleanObject(this.revOptSupt);
+
+	}-*/;
+
+	public final native void setOptSupt(OptSupt[] optSupt)/*-{
+		this.optSupt = optSupt;
+	}-*/;
+
+	public final native OptSupt[] getOptSupt()/*-{
+		return $wnd.cleanObject(this.optSupt);
+
+	}-*/;
+
+	public final native void setCustBankPrefSupt(
+			CustBankPrefSupt[] custBankPrefSupt)/*-{
+		this.custBankPrefSupt = custBankPrefSupt;
+	}-*/;
+
+	public final native CustBankPrefSupt[] getCustBankPrefSupt()/*-{
+		return $wnd.cleanObject(this.custBankPrefSupt);
+
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod[] deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod[] getDeliveryMethod()/*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+
+	}-*/;
+
+	public final native void setStopChkProf(StopChkProf[] stopChkProf)/*-{
+		this.stopChkProf = stopChkProf;
+	}-*/;
+
+	public final native StopChkProf[] getStopChkProf()/*-{
+		return $wnd.cleanObject(this.stopChkProf);
+
+	}-*/;
+
+	public final native void setXferProf(XferProf[] xferProf)/*-{
+		this.xferProf = xferProf;
+	}-*/;
+
+	public final native XferProf[] getXferProf()/*-{
+		return $wnd.cleanObject(this.xferProf);
+
+	}-*/;
+
+	public final native void setInterXferProf(InterXferProf[] interXferProf)/*-{
+		this.interXferProf = interXferProf;
+	}-*/;
+
+	public final native InterXferProf[] getInterXferProf()/*-{
+		return $wnd.cleanObject(this.interXferProf);
+
+	}-*/;
+
+}

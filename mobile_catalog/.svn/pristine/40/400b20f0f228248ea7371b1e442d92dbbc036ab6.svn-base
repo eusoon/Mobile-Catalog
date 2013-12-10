@@ -1,0 +1,40 @@
+package my.com.infopro.mobile.json.ifx.transfer;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+import my.com.infopro.mobile.json.ifx.element.MsgRsHdr;
+import my.com.infopro.mobile.json.ifx.element.RecCtrlOut;
+import my.com.infopro.mobile.json.ifx.element.RqUID;
+import my.com.infopro.mobile.json.ifx.element.Status;
+
+public  class XferAudRs extends IFXObject {
+	public final native  Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+	public final native  void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+	public final native  RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+	public final native  void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native  MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+	public final native  void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+	public final native  RecCtrlOut getRecCtrlOut()/*-{
+		return $wnd.cleanObject(this.recCtrlOut);
+	}-*/;
+	public final native  void setRecCtrlOut(RecCtrlOut recCtrlOut)/*-{
+		this.recCtrlOut = recCtrlOut;
+	}-*/;
+	public final native  XferRsMsg[] getXferRsMsg()/*-{
+		return $wnd.cleanObject(this.xferRsMsg);
+	}-*/;
+	public final native  void setXferRsMsg(XferRsMsg[] xferRsMsg)/*-{
+		this.xferRsMsg = xferRsMsg;
+	}-*/;
+}

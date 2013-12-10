@@ -1,0 +1,29 @@
+package my.com.infopro.ifx.client.model;
+
+public class ATMTrnInfo_Type extends IFXObject {
+
+	public final native void setATMOwner(ATMOwner aTMOwner)/*-{
+		this.aTMOwner = aTMOwner;
+	}-*/;
+
+	public final native ATMOwner getATMOwner()/*-{
+		return $wnd.cleanObject(this.aTMOwner);
+	}-*/;
+
+	public final native void setATMLocation(ATMLocation aTMLocation)/*-{
+		this.aTMLocation = aTMLocation;
+	}-*/;
+
+	public final native ATMLocation getATMLocation()/*-{
+		return $wnd.cleanObject(this.aTMLocation);
+	}-*/;
+
+	public final native void setATMCityState(ATMCityState aTMCityState)/*-{
+		this.aTMCityState = aTMCityState;
+	}-*/;
+
+	public final native ATMCityState getATMCityState()/*-{
+		return $wnd.cleanObject(this.aTMCityState);
+	}-*/;
+
+}

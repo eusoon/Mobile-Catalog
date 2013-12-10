@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.element;
+
+public enum PSSMsgEncryption {
+	None, Channel, EndToEnd
+}

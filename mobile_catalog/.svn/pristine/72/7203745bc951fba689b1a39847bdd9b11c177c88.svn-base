@@ -1,0 +1,41 @@
+package my.com.infopro.ifx.client.model;
+
+public class TerminalObjMsgRec extends IFXObject {
+
+	public final native void setMsgRecDt(MsgRecDt msgRecDt)/*-{
+	this.msgRecDt = msgRecDt;
+	}-*/;
+	
+	public final native MsgRecDt getMsgRecDt()
+	/*-{
+	return $wnd.cleanObject(this.msgRecDt);
+	}-*/;
+	
+	public final native void setTerminalObjAddRs(TerminalObjAddRs terminalObjAddRs)/*-{
+	this.terminalObjAddRs = terminalObjAddRs;
+	}-*/;
+	
+	public final native TerminalObjAddRs getTerminalObjAddRs()
+	/*-{
+	return $wnd.cleanObject(this.terminalObjAddRs);
+	}-*/;
+	
+	public final native void setTerminalObjModRs(TerminalObjModRs terminalObjModRs)/*-{
+	this.terminalObjModRs = terminalObjModRs;
+	}-*/;
+	
+	public final native TerminalObjModRs getTerminalObjModRs()
+	/*-{
+	return $wnd.cleanObject(this.terminalObjModRs);
+	}-*/;
+	
+	public final native void setTerminalObjDelRs(TerminalObjDelRs terminalObjDelRs)/*-{
+	this.terminalObjDelRs = terminalObjDelRs;
+	}-*/;
+	
+	public final native TerminalObjDelRs getTerminalObjDelRs()
+	/*-{
+	return $wnd.cleanObject(this.terminalObjDelRs);
+	}-*/;
+	
+}

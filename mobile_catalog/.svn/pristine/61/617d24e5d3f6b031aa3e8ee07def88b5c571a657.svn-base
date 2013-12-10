@@ -1,0 +1,69 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class XferInfo extends IFXObject{
+	FromAcctRef fromAcctRef;//Aggregate	Optional From Account Reference
+	ToAcctRef toAcctRef;//Aggregate	Optional To Account Reference
+	CurAmt curAmt;//Aggregate	Required Currency Amount.
+	DueDt dueDt;//Date	Optional Due Date. If not specified, the transfer is to be scheduled as soon as possible.
+	Category category;//C-40	Optional Category for this message, modified by the client.
+	ExpediteInd expediteInd;//Boolean	Optional Immediate Transfer Indicator. If set to True, the transfer should be executed immediately, and not at end of day. Subject to support in Service Profile.
+	RecurXferKeys recurXferKeys;//Aggregate	Optional This is a reference to a RecurXfer model object if this instance was created from a recurring model.
+	ForExDealRef forExDealRef;//Aggregate	Optional Foreign Exchange Deal Status Reference Aggregate
+	RefData[] refData;//Aggregate	Optional Repeating Reference Information Aggregate. Identification information, used to correlate to transactions provided in bank statements.
+	public FromAcctRef getFromAcctRef() {
+		return fromAcctRef;
+	}
+	public void setFromAcctRef(FromAcctRef fromAcctRef) {
+		this.fromAcctRef = fromAcctRef;
+	}
+	public ToAcctRef getToAcctRef() {
+		return toAcctRef;
+	}
+	public void setToAcctRef(ToAcctRef toAcctRef) {
+		this.toAcctRef = toAcctRef;
+	}
+	public CurAmt getCurAmt() {
+		return curAmt;
+	}
+	public void setCurAmt(CurAmt curAmt) {
+		this.curAmt = curAmt;
+	}
+	public DueDt getDueDt() {
+		return dueDt;
+	}
+	public void setDueDt(DueDt dueDt) {
+		this.dueDt = dueDt;
+	}
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+	public ExpediteInd getExpediteInd() {
+		return expediteInd;
+	}
+	public void setExpediteInd(ExpediteInd expediteInd) {
+		this.expediteInd = expediteInd;
+	}
+	public RecurXferKeys getRecurXferKeys() {
+		return recurXferKeys;
+	}
+	public void setRecurXferKeys(RecurXferKeys recurXferKeys) {
+		this.recurXferKeys = recurXferKeys;
+	}
+	public ForExDealRef getForExDealRef() {
+		return forExDealRef;
+	}
+	public void setForExDealRef(ForExDealRef forExDealRef) {
+		this.forExDealRef = forExDealRef;
+	}
+	public RefData[] getRefData() {
+		return refData;
+	}
+	public void setRefData(RefData[] refData) {
+		this.refData = refData;
+	}
+}

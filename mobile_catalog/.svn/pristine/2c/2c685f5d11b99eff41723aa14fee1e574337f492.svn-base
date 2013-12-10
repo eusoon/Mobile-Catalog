@@ -1,0 +1,75 @@
+package my.com.infopro.ifx.client.model;
+
+public class CustPayeeInfo_Type extends IFXObject {
+	public final native void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setNickname(Nickname[] nickname)/*-{
+		this.nickname = nickname;
+	}-*/;
+
+	public final native Nickname[] getNickname()/*-{
+		return $wnd.cleanObject(this.nickname);
+	}-*/;
+
+	public final native void setStdPayeeId(StdPayeeId[] stdPayeeId)/*-{
+		this.stdPayeeId = stdPayeeId;
+	}-*/;
+
+	public final native StdPayeeId[] getStdPayeeId()/*-{
+		return $wnd.cleanObject(this.stdPayeeId);
+	}-*/;
+
+	public final native void setFSPayee(FSPayee[] fSPayee)/*-{
+		this.fSPayee = fSPayee;
+	}-*/;
+
+	public final native FSPayee[] getFSPayee()/*-{
+		return $wnd.cleanObject(this.fSPayee);
+	}-*/;
+
+	public final native void setXferPayee(XferPayee xferPayee)/*-{
+		this.xferPayee = xferPayee;
+	}-*/;
+
+	public final native XferPayee getXferPayee()/*-{
+		return $wnd.cleanObject(this.xferPayee);
+	}-*/;
+
+	public final native void setBillerPayee(BillerPayee billerPayee)/*-{
+		this.billerPayee = billerPayee;
+	}-*/;
+
+	public final native BillerPayee getBillerPayee()/*-{
+		return $wnd.cleanObject(this.billerPayee);
+	}-*/;
+
+	public final native void setBillingAcct(BillingAcct billingAcct)/*-{
+		this.billingAcct = billingAcct;
+	}-*/;
+
+	public final native BillingAcct getBillingAcct()/*-{
+		return $wnd.cleanObject(this.billingAcct);
+	}-*/;
+
+	public final native void setAcctPayAcctId(AcctPayAcctId acctPayAcctId)/*-{
+		this.acctPayAcctId = acctPayAcctId;
+	}-*/;
+
+	public final native AcctPayAcctId getAcctPayAcctId()/*-{
+		return $wnd.cleanObject(this.acctPayAcctId);
+	}-*/;
+
+	public final native void setDfltPmtInfo(DfltPmtInfo dfltPmtInfo)/*-{
+		this.dfltPmtInfo = dfltPmtInfo;
+	}-*/;
+
+	public final native DfltPmtInfo getDfltPmtInfo()/*-{
+		return $wnd.cleanObject(this.dfltPmtInfo);
+	}-*/;
+}

@@ -1,0 +1,22 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class FeeRsHdr extends IFXObject {
+
+	protected FeeRsHdr(){
+	}
+	
+	public final native  DebitRef getDebitRef()/*-{
+		return $wnd.cleanObject(this.DebitRef);
+	}-*/;
+	public final native  void setDebitRef(DebitRef debitRef)/*-{
+		DebitRef = debitRef;
+	}-*/;
+	public final native  CreditRef getCreditRef()/*-{
+		return $wnd.cleanObject(this.CreditRef);
+	}-*/;
+	public final native  void setCreditRef(CreditRef creditRef)/*-{
+		CreditRef = creditRef;
+	}-*/;
+}

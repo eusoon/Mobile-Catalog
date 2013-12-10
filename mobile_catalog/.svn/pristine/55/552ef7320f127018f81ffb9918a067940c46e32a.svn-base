@@ -1,0 +1,19 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class DelinqAging extends IFXObject {
+
+	public final native  Aging[] getAging()/*-{
+		return aging;
+	}-*/;
+	public final native  void setAging(Aging[] aging)/*-{
+		this.aging = aging;
+	}-*/;
+	public final native  CurAmt[] getCurAmt()/*-{
+		return curAmt;
+	}-*/;
+	public final native  void setCurAmt(CurAmt[] curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+}

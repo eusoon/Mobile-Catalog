@@ -1,0 +1,100 @@
+package my.com.infopro.ifx.client.model;
+
+public class DepAcctStmtRec_Type extends IFXObject {
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+	}-*/;
+
+	public final native void setDepAcctId(DepAcctId depAcctId)/*-{
+		this.depAcctId = depAcctId;
+	}-*/;
+
+	public final native DepAcctId getDepAcctId()/*-{
+		return $wnd.cleanObject(this.depAcctId);
+	}-*/;
+
+	public final native void setDepAcctStmtId(DepAcctStmtId depAcctStmtId)/*-{
+		this.depAcctStmtId = depAcctStmtId;
+	}-*/;
+
+	public final native DepAcctStmtId getDepAcctStmtId()/*-{
+		return $wnd.cleanObject(this.depAcctStmtId);
+	}-*/;
+
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public final native void setNextDt(NextDt nextDt)/*-{
+		this.nextDt = nextDt;
+	}-*/;
+
+	public final native NextDt getNextDt()/*-{
+		return $wnd.cleanObject(this.nextDt);
+	}-*/;
+
+	public final native void setAcctBal(AcctBal[] acctBal)/*-{
+		this.acctBal = acctBal;
+	}-*/;
+
+	public final native AcctBal[] getAcctBal()/*-{
+		return $wnd.cleanObject(this.acctBal);
+	}-*/;
+
+	public final native void setStmtSummAmt(StmtSummAmt[] stmtSummAmt)/*-{
+		this.stmtSummAmt = stmtSummAmt;
+	}-*/;
+
+	public final native StmtSummAmt[] getStmtSummAmt()/*-{
+		return $wnd.cleanObject(this.stmtSummAmt);
+	}-*/;
+
+	public final native void setMktgInfo(MktgInfo[] mktgInfo)/*-{
+		this.mktgInfo = mktgInfo;
+	}-*/;
+
+	public final native MktgInfo[] getMktgInfo()/*-{
+		return $wnd.cleanObject(this.mktgInfo);
+	}-*/;
+
+	public final native void setStartDt(StartDt[] startDt)/*-{
+		this.startDt = startDt;
+	}-*/;
+
+	public final native StartDt[] getStartDt()/*-{
+		return $wnd.cleanObject(this.startDt);
+	}-*/;
+
+	public final native void setEndDt(EndDt[] endDt)/*-{
+		this.endDt = endDt;
+	}-*/;
+
+	public final native EndDt[] getEndDt()/*-{
+		return $wnd.cleanObject(this.endDt);
+	}-*/;
+
+	public final native void setURL(URL[] uRL)/*-{
+		this.uRL = uRL;
+	}-*/;
+
+	public final native URL[] getURL()/*-{
+		return $wnd.cleanObject(this.uRL);
+	}-*/;
+
+	public final native void setDepAcctTrnRec(DepAcctTrnRec[] depAcctTrnRec)/*-{
+		this.depAcctTrnRec = depAcctTrnRec;
+	}-*/;
+
+	public final native DepAcctTrnRec[] getDepAcctTrnRec()/*-{
+		return $wnd.cleanObject(this.depAcctTrnRec);
+	}-*/;
+}

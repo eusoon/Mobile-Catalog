@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.element;
+
+public enum CorpStmtDetail {
+	Both, Child, Parent
+}

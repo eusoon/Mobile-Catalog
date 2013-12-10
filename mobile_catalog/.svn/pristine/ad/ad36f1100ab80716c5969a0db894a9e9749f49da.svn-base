@@ -1,0 +1,112 @@
+package my.com.infopro.ifx.client.model;
+
+public class IntRateInqRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setRecCtrlOut(RecCtrlOut recCtrlOut)/*-{
+		this.recCtrlOut = recCtrlOut;
+	}-*/;
+
+	public final native RecCtrlOut getRecCtrlOut()/*-{
+		return $wnd.cleanObject(this.recCtrlOut);
+	}-*/;
+
+	public final native void setAcctType(AcctType acctType) /*-{
+		this.acctType = acctType;
+	}-*/;
+
+	public final native AcctType getAcctType() /*-{
+		return $wnd.cleanObject(this.acctType);
+	}-*/;
+
+	public final native void setAcctTaxStatus(AcctTaxStatus acctTaxStatus)/*-{
+		this.acctTaxStatus = acctTaxStatus;
+	}-*/;
+
+	public final native AcctTaxStatus getAcctTaxStatus() /*-{
+		return $wnd.cleanObject(this.acctTaxStatus);
+
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setTerm(Term term)/*-{
+		this.term = term;
+	}-*/;
+
+	public final native Term getTerm()/*-{
+		return $wnd.cleanObject(this.term);
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod getDeliveryMethod() /*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+	}-*/;
+
+	public final native void setIntRateInfo(IntRateInfo intRateInfo)/*-{
+		this.intRateInfo = intRateInfo;
+	}-*/;
+
+	public final native IntRateInfo getIntRateInfo() /*-{
+		return $wnd.cleanObject(this.intRateInfo);
+	}-*/;
+
+}

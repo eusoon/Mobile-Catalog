@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class PayeeType extends PayeeType_Type {
+
+}

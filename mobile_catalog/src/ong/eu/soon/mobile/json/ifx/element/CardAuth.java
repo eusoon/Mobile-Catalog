@@ -1,0 +1,28 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public  class CardAuth extends IFXObject {
+	
+	protected CardAuth(){
+	}
+	
+	public final native  SecToken getSecToken()/*-{
+		return $wnd.cleanObject(this.secToken);
+	}-*/;
+	public final native  void setSecToken(SecToken secToken)/*-{
+		this.secToken = secToken;
+	}-*/;
+	public final native  ResetPinBlock getResetPinBlock()/*-{
+		return $wnd.cleanObject(this.resetPinBlock);
+	}-*/;
+	public final native  void setResetPinBlock(ResetPinBlock resetPinBlock)/*-{
+		this.resetPinBlock = resetPinBlock;
+	}-*/;
+	public final native  TemporaryPINInd getTemporaryPINInd()/*-{
+		return $wnd.cleanObject(this.temporaryPINInd);
+	}-*/;
+	public final native  void setTemporaryPINInd(TemporaryPINInd temporaryPINInd)/*-{
+		this.temporaryPINInd = temporaryPINInd;
+	}-*/;	
+}

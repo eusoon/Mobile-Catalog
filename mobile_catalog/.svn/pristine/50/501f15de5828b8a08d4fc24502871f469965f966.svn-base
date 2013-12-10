@@ -1,0 +1,108 @@
+package my.com.infopro.ifx.client.model;
+
+public class SvcAcctDelRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setSvcAcctId(SvcAcctId svcAcctId)/*-{
+		this.svcAcctId = svcAcctId;
+	}-*/;
+
+	public final native SvcAcctId getSvcAcctId() /*-{
+		return $wnd.cleanObject(this.svcAcctId);
+
+	}-*/;
+
+	public native void setCascadeDel(CascadeDel cascadeDel)/*-{
+		this.cascadeDel = cascadeDel;
+	}-*/;
+
+	public final native CascadeDel getCascadeDel() /*-{
+		return $wnd.cleanObject(this.cascadeDel);
+
+	}-*/;
+
+	public native void setSvcAcctRec(SvcAcctRec svcAcctRec)/*-{
+		this.svcAcctRec = svcAcctRec;
+	}-*/;
+
+	public final native SvcAcctRec getSvcAcctRec() /*-{
+		return $wnd.cleanObject(this.svcAcctRec);
+
+	}-*/;
+
+	public final native void setDependentType(DependentType[] dependentType)/*-{
+		this.dependentType = dependentType;
+	}-*/;
+
+	public final native DependentType[] getDependentType()/*-{
+		return $wnd.cleanObject(this.dependentType);
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+
+	}-*/;
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+
+	}-*/;
+
+}

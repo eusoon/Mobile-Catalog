@@ -1,0 +1,27 @@
+package my.com.infopro.mobile.json.ifx.payee;
+
+import my.com.infopro.mobile.json.ifx.element.CustPayeeKeys;
+import my.com.infopro.mobile.json.ifx.element.MsgRqHdr;
+import my.com.infopro.mobile.json.ifx.element.RqUID;
+
+public class CustPayeeDelRq {
+	
+	public final native RqUID getRqUID() /*-{
+		return $wnd.cleanObject(rqUID);
+	}-*/;
+	public final native void setRqUID(RqUID rqUID) /*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(msgRqHdr);
+	}-*/;
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+	public final native CustPayeeKeys getCustPayeeKeys() /*-{
+		return $wnd.cleanObject(custPayeeKeys);
+	}-*/;
+	public final native void setCustPayeeKeys(CustPayeeKeys custPayeeKeys) /*-{
+		this.custPayeeKeys = custPayeeKeys;
+	}-*/;
+}

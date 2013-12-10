@@ -1,0 +1,29 @@
+package my.com.infopro.ifx.client.model;
+
+public class TerminalSPObjAddRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setTerminalSPObjInfo(TerminalSPObjInfo terminalSPObjInfo)/*-{
+		this.terminalSPObjInfo = terminalSPObjInfo;
+	}-*/;
+
+	public final native TerminalSPObjInfo getTerminalSPObjInfo()/*-{
+		return $wnd.cleanObject(this.terminalSPObjInfo);
+	}-*/;
+
+}

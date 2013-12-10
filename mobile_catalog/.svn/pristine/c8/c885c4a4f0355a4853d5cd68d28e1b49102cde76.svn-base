@@ -1,0 +1,52 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class PointOfServiceData extends IFXObject {
+
+	Environment environment;	 //	Open Enum	 Required	 The environment that this customer interaction occurred under.Valid values: Unknown, Mail, Telephone, ECommerce, MCommerce, Recurring, StoredData, POS, CAT, ATM, Deferred, Installment
+	POSCapabilities pOSCapabilities;	 //	Aggregate	 Optional	 Transaction acceptor point of service capabilities.
+	POSSecurity pOSSecurity;	 //	Aggregate	 Optional	 Transaction acceptor point of service security features.
+	POSAgent pOSAgent;	 //	Aggregate	 Optional	 Transaction acceptor agent (clerk) information.
+	IdentCharacterData identCharacterData;	 //	Aggregate	 Optional	 Customer identification device characteristics.
+	POSLocation pOSLocation;	 //	Open Enum	 Optional	 Valid values: Unknown, OnPremise, OffPremise, Retail, Customer, Agent, Branch, CallCenter
+
+	public Environment getEnvironment() {
+		return environment;
+	}
+	public void setEnvironment(Environment environment) {
+		this.environment = environment;
+	}
+	public POSCapabilities getPOSCapabilities() {
+		return pOSCapabilities;
+	}
+	public void setPOSCapabilities(POSCapabilities pOSCapabilities) {
+		this.pOSCapabilities = pOSCapabilities;
+	}
+	public POSSecurity getPOSSecurity() {
+		return pOSSecurity;
+	}
+	public void setPOSSecurity(POSSecurity pOSSecurity) {
+		this.pOSSecurity = pOSSecurity;
+	}
+	public POSAgent getpOSAgent() {
+		return pOSAgent;
+	}
+	public void setPOSAgent(POSAgent pOSAgent) {
+		this.pOSAgent = pOSAgent;
+	}
+	public IdentCharacterData getIdentCharacterData() {
+		return identCharacterData;
+	}
+	public void setIdentCharacterData(IdentCharacterData identCharacterData) {
+		this.identCharacterData = identCharacterData;
+	}
+	public POSLocation getPOSLocation() {
+		return pOSLocation;
+	}
+	public void setPOSLocation(POSLocation pOSLocation) {
+		this.pOSLocation = pOSLocation;
+	}
+	
+	
+}

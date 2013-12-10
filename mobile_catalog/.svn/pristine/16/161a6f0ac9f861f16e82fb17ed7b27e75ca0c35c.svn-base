@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class ContactName extends ContactName_Type {
+
+}

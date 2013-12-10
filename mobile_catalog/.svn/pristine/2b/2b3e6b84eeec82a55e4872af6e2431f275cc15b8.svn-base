@@ -1,0 +1,16 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class DocCtrlOut extends IFXObject {
+
+	SentPageCount sentPageCount; //Long	Optional	Sent Page Count
+
+	public SentPageCount getSentPageCount() {
+		return sentPageCount;
+	}
+
+	public void setSentPageCount(SentPageCount sentPageCount) {
+		this.sentPageCount = sentPageCount;
+	}	
+}

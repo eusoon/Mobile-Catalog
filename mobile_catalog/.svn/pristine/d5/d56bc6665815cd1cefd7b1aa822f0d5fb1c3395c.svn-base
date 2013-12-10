@@ -1,0 +1,22 @@
+package my.com.infopro.ifx.client.model;
+
+public class POSAgent_Type extends IFXObject {
+	public native void setAgentType(AgentType agentType)/*-{
+		this.agentType = agentType;
+	}-*/;
+
+	public final native AgentType getAgentType()/*-{
+		return $wnd.cleanObject(this.agentType);
+
+	}-*/;
+
+	public native void setAgentId(AgentId agentId)/*-{
+		this.agentId = agentId;
+	}-*/;
+
+	public final native AgentId getAgentId()/*-{
+		return $wnd.cleanObject(this.agentId);
+
+	}-*/;
+
+}

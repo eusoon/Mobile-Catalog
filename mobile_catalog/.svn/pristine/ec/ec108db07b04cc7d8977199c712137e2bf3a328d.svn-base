@@ -1,0 +1,62 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class AcctHoldSel extends IFXObject {
+
+	//begin-xor	Required Repeating
+	AcctHoldKeys[] acctHoldKeys;	 //	Aggregate	 Required	 Account Hold Keys Aggregate
+	//begin-block	Required
+	AcctKeys acctKeys;	 //	Aggregate	 Optional	 Account Keys Aggregate
+	HoldType holdType;	 //	Open Enum	 Optional	 Hold TypeValid values include: Check, Collection, ContingentLiability, CourtOrder, Pledge
+	ChkNumRange chkNumRange;	 //	Aggregate	 Optional	 Check Number Range
+	SelectDtRange selectDtRange;	 //	Aggregate	 Optional	 Identifies which date and date range to be used in the selection criteria
+	CurAmtRange curAmtRange;	 //	Aggregate	 Optional	 Currency Amount Range
+	SecuredAcctKeys securedAcctKeys;	 //	Aggregate	 Optional	 Secured Account Keys
+	//end-block
+	//end-xor
+	
+	public AcctHoldKeys[] getAcctHoldKeys() {
+		return acctHoldKeys;
+	}
+	public void setAcctHoldKeys(AcctHoldKeys[] acctHoldKeys) {
+		this.acctHoldKeys = acctHoldKeys;
+	}
+	public AcctKeys getAcctKeys() {
+		return acctKeys;
+	}
+	public void setAcctKeys(AcctKeys acctKeys) {
+		this.acctKeys = acctKeys;
+	}
+	public HoldType getHoldType() {
+		return holdType;
+	}
+	public void setHoldType(HoldType holdType) {
+		this.holdType = holdType;
+	}
+	public ChkNumRange getChkNumRange() {
+		return chkNumRange;
+	}
+	public void setChkNumRange(ChkNumRange chkNumRange) {
+		this.chkNumRange = chkNumRange;
+	}
+	public SelectDtRange getSelectDtRange() {
+		return selectDtRange;
+	}
+	public void setSelectDtRange(SelectDtRange selectDtRange) {
+		this.selectDtRange = selectDtRange;
+	}
+	public CurAmtRange getCurAmtRange() {
+		return curAmtRange;
+	}
+	public void setCurAmtRange(CurAmtRange curAmtRange) {
+		this.curAmtRange = curAmtRange;
+	}
+	public SecuredAcctKeys getSecuredAcctKeys() {
+		return securedAcctKeys;
+	}
+	public void setSecuredAcctKeys(SecuredAcctKeys securedAcctKeys) {
+		this.securedAcctKeys = securedAcctKeys;
+	}
+	
+}

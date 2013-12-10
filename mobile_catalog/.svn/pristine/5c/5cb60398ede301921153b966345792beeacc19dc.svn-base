@@ -1,0 +1,151 @@
+package my.com.infopro.ifx.client.model;
+
+public class PersonInfo_Type extends IFXObject {
+	public final native void setNameAddrType(NameAddrType nameAddrType)/*-{
+		this.nameAddrType = nameAddrType;
+	}-*/;
+
+	public final native NameAddrType getNameAddrType()/*-{
+		return $wnd.cleanObject(this.nameAddrType);
+	}-*/;
+
+	public final native void setFullName(FullName fullName)/*-{
+		this.fullName = fullName;
+	}-*/;
+
+	public final native FullName getFullName()/*-{
+		return $wnd.cleanObject(this.fullName);
+	}-*/;
+
+	public final native void setPersonName(PersonName personName)/*-{
+		this.personName = personName;
+	}-*/;
+
+	public final native PersonName getPersonName()/*-{
+		return $wnd.cleanObject(this.personName);
+	}-*/;
+
+	public final native void setContactInfo(ContactInfo contactInfo)/*-{
+		this.contactInfo = contactInfo;
+	}-*/;
+
+	public final native ContactInfo getContactInfo()/*-{
+		return $wnd.cleanObject(this.contactInfo);
+	}-*/;
+
+	public final native void setTINInfo(TINInfo tINInfo)/*-{
+		this.tINInfo = tINInfo;
+	}-*/;
+
+	public final native TINInfo getTINInfo()/*-{
+		return $wnd.cleanObject(this.tINInfo);
+	}-*/;
+
+	public final native void setBirthDt(BirthDt birthDt)/*-{
+		this.birthDt = birthDt;
+	}-*/;
+
+	public final native BirthDt getBirthDt()/*-{
+		return $wnd.cleanObject(this.birthDt);
+	}-*/;
+
+	public final native void setDriversLicense(DriversLicense driversLicense)/*-{
+		this.driversLicense = driversLicense;
+	}-*/;
+
+	public final native DriversLicense getDriversLicense()/*-{
+		return $wnd.cleanObject(this.driversLicense);
+	}-*/;
+
+	public final native void setMotherMaidenName(
+			MotherMaidenName motherMaidenName)/*-{
+		this.motherMaidenName = motherMaidenName;
+	}-*/;
+
+	public final native MotherMaidenName getMotherMaidenName()/*-{
+		return $wnd.cleanObject(this.motherMaidenName);
+	}-*/;
+
+	public final native void setSpouseName(SpouseName spouseName)/*-{
+		this.spouseName = spouseName;
+	}-*/;
+
+	public final native SpouseName getSpouseName()/*-{
+		return $wnd.cleanObject(this.spouseName);
+	}-*/;
+
+	public final native void setEmploymentHistory(
+			EmploymentHistory[] employmentHistory)/*-{
+		this.employmentHistory = employmentHistory;
+	}-*/;
+
+	public final native EmploymentHistory[] getEmploymentHistory()/*-{
+		return $wnd.cleanObject(this.employmentHistory);
+	}-*/;
+
+	public final native void setGender(Gender[] gender)/*-{
+		this.gender = gender;
+	}-*/;
+
+	public final native Gender[] getGender()/*-{
+		return $wnd.cleanObject(this.gender);
+	}-*/;
+
+	public final native void setMaritalStatus(MaritalStatus[] maritalStatus)/*-{
+		this.maritalStatus = maritalStatus;
+	}-*/;
+
+	public final native MaritalStatus[] getMaritalStatus()/*-{
+		return $wnd.cleanObject(this.maritalStatus);
+	}-*/;
+
+	public final native void setUSA_MilitaryRank(
+			USA_MilitaryRank[] uSA_MilitaryRank)/*-{
+		this.uSA_MilitaryRank = uSA_MilitaryRank;
+	}-*/;
+
+	public final native USA_MilitaryRank[] getUSA_MilitaryRank()/*-{
+		return $wnd.cleanObject(this.uSA_MilitaryRank);
+	}-*/;
+
+	public final native void setDependents(Dependents[] dependents)/*-{
+		this.dependents = dependents;
+	}-*/;
+
+	public final native Dependents[] getDependents()/*-{
+		return $wnd.cleanObject(this.dependents);
+	}-*/;
+
+	public final native void setPassportNumber(PassportNumber[] passportNumber)/*-{
+		this.passportNumber = passportNumber;
+	}-*/;
+
+	public final native PassportNumber[] getPassportNumber()/*-{
+		return $wnd.cleanObject(this.passportNumber);
+	}-*/;
+
+	public final native void setPassportCountry(
+			PassportCountry[] passportCountry)/*-{
+		this.passportCountry = passportCountry;
+	}-*/;
+
+	public final native PassportCountry[] getPassportCountry()/*-{
+		return $wnd.cleanObject(this.passportCountry);
+	}-*/;
+
+	public final native void setOEDCode(OEDCode[] oEDCode)/*-{
+		this.oEDCode = oEDCode;
+	}-*/;
+
+	public final native OEDCode[] getOEDCode()/*-{
+		return $wnd.cleanObject(this.oEDCode);
+	}-*/;
+
+	public final native void setOEDInstitution(OEDInstitution[] oEDInstitution)/*-{
+		this.oEDInstitution = oEDInstitution;
+	}-*/;
+
+	public final native OEDInstitution[] getOEDInstitution()/*-{
+		return $wnd.cleanObject(this.oEDInstitution);
+	}-*/;
+}

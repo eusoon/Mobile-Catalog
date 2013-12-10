@@ -1,0 +1,23 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtRemitAck_Type extends IFXObject {
+	
+	public final native void setTotalFeeCharge(TotalFeeCharge totalFeeCharge)/*-{
+		this.totalFeeCharge = totalFeeCharge;
+	}-*/;
+
+	public final native TotalFeeCharge getTotalFeeCharge()/*-{
+		return $wnd.cleanObject(this.totalFeeCharge);
+
+	}-*/;
+
+	public final native void setCompositePmtRemitInfo(
+			CompositePmtRemitInfo[] compositePmtRemitInfo)/*-{
+		this.compositePmtRemitInfo = compositePmtRemitInfo;
+	}-*/;
+
+	public final native CompositePmtRemitInfo[] getCompositePmtRemitInfo()/*-{
+		return $wnd.cleanObject(this.compositePmtRemitInfo);
+
+	}-*/;
+}

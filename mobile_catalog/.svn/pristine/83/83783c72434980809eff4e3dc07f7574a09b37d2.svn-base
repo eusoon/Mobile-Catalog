@@ -1,0 +1,29 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class TaxWithheldData extends IFXObject {
+	protected TaxWithheldData(){	
+	}
+	public final native TaxYear getTaxYear() /*-{
+		return $wnd.cleanObject(taxYear);
+	}-*/;
+	public final native void setTaxYear(TaxYear taxYear) /*-{
+		this.taxYear = taxYear;
+	}-*/;
+	public final native JsArray<TaxData> getTaxData() /*-{
+		return $wnd.cleanObject(taxData);
+	}-*/;
+	public final native void setTaxData(JsArray<TaxData> taxData) /*-{
+		this.taxData = taxData;
+	}-*/;
+	public final native TaxIdent getTaxIdent() /*-{
+		return $wnd.cleanObject(taxIdent);
+	}-*/;
+	public final native void setTaxIdent(TaxIdent taxIdent) /*-{
+		this.taxIdent = taxIdent;
+	}-*/;
+
+}

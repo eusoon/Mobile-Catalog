@@ -1,0 +1,71 @@
+package my.com.infopro.ifx.passbk;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.DelElements;
+import my.com.infopro.ifx.element.MsgRqHdr;
+import my.com.infopro.ifx.element.NewElements;
+import my.com.infopro.ifx.element.PassbkInfo;
+import my.com.infopro.ifx.element.PassbkKeys;
+import my.com.infopro.ifx.element.RqUID;
+import my.com.infopro.ifx.element.UpdElements;
+
+public class PassbkModRq extends IFXObject{
+
+	//begin Aggregate
+	RqUID rqUID;	 //	UUID	 Required	 Request Identifier
+	MsgRqHdr msgRqHdr;	 //	Aggregate	 Optional	 Message Request Header
+	PassbkKeys passbkKeys;	 //	Aggregate	 Required	 Passbook Keys Aggregate
+	//begin-block	Required Repeating
+	PassbkInfo[] passbkInfo;	 //	Aggregate	 Required	 Passbook Information Aggregate
+	//begin-xor	Optional Repeating
+	DelElements[] delElements;	 //	IfxPath	 Required	 An IfxPath (relative to a base of this IFX object's Info aggregate) which indicates which element to delete. It is an error if one attempts to delete Required fields.
+	UpdElements[] updElements;	 //	IfxPath	 Required	 An IfxPath (relative to a base of this IFX object's Info aggregate) which indicates which element to update.  The new value of the updated element is in the accompanying xxxInfo aggregate.
+	NewElements[] newElements;	 //	IfxPath	 Required	 An IfxPath (relative to a base of this IFX object's Info aggregate) which indicates which element to add. The new value of the new elements is in the accompanying xxxInfo aggregate.
+	//end-xor
+	//end-block
+	//end Aggregate
+	
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRqHdr getMsgRqHdr() {
+		return msgRqHdr;
+	}
+	public void setMsgRqHdr(MsgRqHdr msgRqHdr) {
+		this.msgRqHdr = msgRqHdr;
+	}
+	public PassbkKeys getPassbkKeys() {
+		return passbkKeys;
+	}
+	public void setPassbkKeys(PassbkKeys passbkKeys) {
+		this.passbkKeys = passbkKeys;
+	}
+	public PassbkInfo[] getPassbkInfo() {
+		return passbkInfo;
+	}
+	public void setPassbkInfo(PassbkInfo[] passbkInfo) {
+		this.passbkInfo = passbkInfo;
+	}
+	public DelElements[] getDelElements() {
+		return delElements;
+	}
+	public void setDelElements(DelElements[] delElements) {
+		this.delElements = delElements;
+	}
+	public UpdElements[] getUpdElements() {
+		return updElements;
+	}
+	public void setUpdElements(UpdElements[] updElements) {
+		this.updElements = updElements;
+	}
+	public NewElements[] getNewElements() {
+		return newElements;
+	}
+	public void setNewElements(NewElements[] newElements) {
+		this.newElements = newElements;
+	}
+	
+}

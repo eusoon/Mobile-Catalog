@@ -1,0 +1,16 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class XferSel extends IFXObject {
+	XferKeys xferKeys;//Aggregate	Required Funds Transfer Keys Aggregate
+
+	public XferKeys getXferKeys() {
+		return xferKeys;
+	}
+
+	public void setXferKeys(XferKeys xferKeys) {
+		this.xferKeys = xferKeys;
+	}
+
+}

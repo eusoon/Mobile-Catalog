@@ -1,0 +1,23 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class LockboxDepIdent extends IFXObject {
+
+	LockboxAcctIdent lockboxAcctIdent; //Identifier	Required	Lockbox Account Identifier. Assigned by FI to identify lockbox to customer, i.e., PO Box number at post office
+	AcctKeys acctKeys; //Aggregate	Optional	Deposit Account Id Aggregate. Deposit account for lockbox transactions.
+	
+	public LockboxAcctIdent getLockboxAcctIdent() {
+		return lockboxAcctIdent;
+	}
+	public void setLockboxAcctIdent(LockboxAcctIdent lockboxAcctIdent) {
+		this.lockboxAcctIdent = lockboxAcctIdent;
+	}
+	public AcctKeys getAcctKeys() {
+		return acctKeys;
+	}
+	public void setAcctKeys(AcctKeys acctKeys) {
+		this.acctKeys = acctKeys;
+	}
+	
+}

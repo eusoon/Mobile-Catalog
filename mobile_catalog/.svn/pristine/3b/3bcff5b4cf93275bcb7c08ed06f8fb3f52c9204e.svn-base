@@ -1,0 +1,19 @@
+package my.com.infopro.ifx.client.model;
+
+public class CompositeContactInfo_Type extends IFXObject {
+	public final native void setContactInfoType(ContactInfoType contactInfoType)/*-{
+		this.contactInfoType = contactInfoType;
+	}-*/;
+
+	public final native ContactInfoType getContactInfoType()/*-{
+		return $wnd.cleanObject(this.contactInfoType);
+	}-*/;
+
+	public final native void setContactInfo(ContactInfo contactInfo)/*-{
+		this.contactInfo = contactInfo;
+	}-*/;
+
+	public final native ContactInfo getContactInfo()/*-{
+		return $wnd.cleanObject(this.contactInfo);
+	}-*/;
+}

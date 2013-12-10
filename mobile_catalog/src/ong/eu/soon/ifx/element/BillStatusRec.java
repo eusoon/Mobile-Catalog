@@ -1,0 +1,27 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class BillStatusRec extends IFXObject {
+	SvcIdent svcIdent;//Aggregate		Optional	Service Identifier
+	BillId billId;//Identifier	Required Bill Identifier
+	BillStatus billStatus;//Aggregate	Required Bill Status Aggregate
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public BillId getBillId() {
+		return billId;
+	}
+	public void setBillId(BillId billId) {
+		this.billId = billId;
+	}
+	public BillStatus getBillStatus() {
+		return billStatus;
+	}
+	public void setBillStatus(BillStatus billStatus) {
+		this.billStatus = billStatus;
+	}
+}

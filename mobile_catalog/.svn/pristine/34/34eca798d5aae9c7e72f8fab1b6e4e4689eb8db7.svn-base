@@ -1,0 +1,93 @@
+package my.com.infopro.ifx.client.model;
+
+public class SvcCore_Type extends IFXObject {
+	public final native void setVersion(Version version)/*-{
+		this.version = version;
+	}-*/;
+
+	public final native Version getVersion()/*-{
+		return $wnd.cleanObject(this.version);
+
+	}-*/;
+
+	public final native void setSPName(SPName sPName)/*-{
+		this.sPName = sPName;
+	}-*/;
+
+	public final native SPName getSPName()/*-{
+		return $wnd.cleanObject(this.sPName);
+
+	}-*/;
+
+	public final native void setLegalName(LegalName legalName)/*-{
+		this.legalName = legalName;
+	}-*/;
+
+	public final native LegalName getLegalName()/*-{
+		return $wnd.cleanObject(this.legalName);
+
+	}-*/;
+
+	public final native void setNickname(Nickname nickname)/*-{
+		this.nickname = nickname;
+	}-*/;
+
+	public final native Nickname getNickname()/*-{
+		return $wnd.cleanObject(this.nickname);
+
+	}-*/;
+
+	public final native void setHoldCoId(HoldCoId holdCoId)/*-{
+		this.holdCoId = holdCoId;
+	}-*/;
+
+	public final native HoldCoId getHoldCoId()/*-{
+		return $wnd.cleanObject(this.holdCoId);
+
+	}-*/;
+
+	public final native void setUSA_RTN(USA_RTN uSA_RTN)/*-{
+		this.uSA_RTN = uSA_RTN;
+	}-*/;
+
+	public final native USA_RTN getUSA_RTN()/*-{
+		return $wnd.cleanObject(this.uSA_RTN);
+
+	}-*/;
+
+	public final native void setOrgContact(OrgContact[] orgContact)/*-{
+		this.orgContact = orgContact;
+	}-*/;
+
+	public final native OrgContact[] getOrgContact()/*-{
+		return $wnd.cleanObject(this.orgContact);
+
+	}-*/;
+
+	public final native void setContactInfo(ContactInfo[] contactInfo)/*-{
+		this.contactInfo = contactInfo;
+	}-*/;
+
+	public final native ContactInfo[] getContactInfo()/*-{
+		return $wnd.cleanObject(this.contactInfo);
+
+	}-*/;
+
+	public final native void setLanguage(Language[] language)/*-{
+		this.language = language;
+	}-*/;
+
+	public final native Language[] getLanguage()/*-{
+		return $wnd.cleanObject(this.language);
+
+	}-*/;
+
+	public final native void setURL(URL[] uRL)/*-{
+		this.uRL = uRL;
+	}-*/;
+
+	public final native URL[] getURL()/*-{
+		return $wnd.cleanObject(this.uRL);
+
+	}-*/;
+}

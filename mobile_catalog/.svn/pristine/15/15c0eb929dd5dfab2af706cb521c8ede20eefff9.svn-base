@@ -1,0 +1,93 @@
+package my.com.infopro.ifx.client.model;
+
+public class ChksumModRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setSvcRqUID(SvcRqUID svcRqUID)/*-{
+		this.svcRqUID = svcRqUID;
+	}-*/;
+
+	public final native SvcRqUID getSvcRqUID()/*-{
+		return $wnd.cleanObject(this.svcRqUID);
+	}-*/;
+
+	public final native void setChksumId(ChksumId chksumId)/*-{
+		this.chksumId = chksumId;
+	}-*/;
+
+	public final native ChksumId getChksumId()/*-{
+		return $wnd.cleanObject(this.chksumId);
+	}-*/;
+
+	public final native void setChksumInfo(ChksumInfo chksumInfo)/*-{
+		this.chksumInfo = chksumInfo;
+	}-*/;
+
+	public final native ChksumInfo getChksumInfo()/*-{
+		return $wnd.cleanObject(this.chksumInfo);
+	}-*/;
+
+	public final native void setChksumRec(ChksumRec chksumRec)/*-{
+		this.chksumRec = chksumRec;
+	}-*/;
+
+	public final native ChksumRec getChksumRec()/*-{
+		return $wnd.cleanObject(this.chksumRec);
+	}-*/;
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+	}-*/;
+
+}

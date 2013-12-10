@@ -1,0 +1,29 @@
+package my.com.infopro.ifx.client.model;
+
+public class MediaTotal_Type extends IFXObject {
+
+	public final native void setMediaTotalType(MediaTotalType mediaTotalType)/*-{
+		this.mediaTotalType = mediaTotalType;
+	}-*/;
+
+	public final native MediaTotalType getMediaTotalType()/*-{
+		return $wnd.cleanObject(this.mediaTotalType);
+	}-*/;
+
+	public final native void setCount(Count count)/*-{
+		this.count = count;
+	}-*/;
+
+	public final native Count getCount()/*-{
+		return $wnd.cleanObject(this.count);
+	}-*/;
+
+	public final native void setTotalCurAmt(TotalCurAmt totalCurAmt)/*-{
+		this.totalCurAmt = totalCurAmt;
+	}-*/;
+
+	public final native TotalCurAmt getTotalCurAmt()/*-{
+		return $wnd.cleanObject(this.totalCurAmt);
+	}-*/;
+
+}

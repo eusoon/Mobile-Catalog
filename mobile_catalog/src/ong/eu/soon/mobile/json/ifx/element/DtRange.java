@@ -1,0 +1,22 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class DtRange extends IFXObject {
+
+	protected DtRange(){
+	}
+	
+	public final native  StartDt getStartDt()/*-{
+		return $wnd.cleanObject(this.startDt);
+	}-*/;
+	public final native  void setStartDt(StartDt startDt)/*-{
+		this.startDt = startDt;
+	}-*/;
+	public final native  EndDt getEndDt()/*-{
+		return $wnd.cleanObject(this.endDt);
+	}-*/;
+	public final native  void setEndDt(EndDt endDt)/*-{
+		this.endDt = endDt;
+	}-*/;
+}

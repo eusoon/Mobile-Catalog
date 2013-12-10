@@ -1,0 +1,110 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class TripLeg extends IFXObject {
+	protected TripLeg(){	
+	}
+	public final native Carrier getCarrier() /*-{
+		return $wnd.cleanObject(carrier);
+	}-*/;
+	public final native void setCarrier(Carrier carrier) /*-{
+		this.carrier = carrier;
+	}-*/;
+	public final native Name getName() /*-{
+		return $wnd.cleanObject(name);
+	}-*/;
+	public final native void setName(Name name) /*-{
+		this.name = name;
+	}-*/;
+	public final native ServiceLevel getServiceLevel() /*-{
+		return $wnd.cleanObject(serviceLevel);
+	}-*/;
+	public final native void setServiceLevel(ServiceLevel serviceLevel) /*-{
+		this.serviceLevel = serviceLevel;
+	}-*/;
+	public final native StopOverInd getStopOverInd() /*-{
+		return $wnd.cleanObject(stopOverInd);
+	}-*/;
+	public final native void setStopOverInd(StopOverInd stopOverInd) /*-{
+		this.stopOverInd = stopOverInd;
+	}-*/;
+	public final native DestAirport getDestAirport() /*-{
+		return $wnd.cleanObject(destAirport);
+	}-*/;
+	public final native void setDestAirport(DestAirport destAirport) /*-{
+		this.destAirport = destAirport;
+	}-*/;
+	public final native ConjunctionTicket getConjunctionTicket() /*-{
+		return $wnd.cleanObject(conjunctionTicket);
+	}-*/;
+	public final native void setConjunctionTicket(ConjunctionTicket conjunctionTicket) /*-{
+		this.conjunctionTicket = conjunctionTicket;
+	}-*/;
+	public final native ExchangeTicket getExchangeTicket() /*-{
+		return $wnd.cleanObject(exchangeTicket);
+	}-*/;
+	public final native void setExchangeTicket(ExchangeTicket exchangeTicket) /*-{
+		this.exchangeTicket = exchangeTicket;
+	}-*/;
+	public final native CouponNumber getCouponNumber() /*-{
+		return $wnd.cleanObject(couponNumber);
+	}-*/;
+	public final native void setCouponNumber(CouponNumber couponNumber) /*-{
+		this.couponNumber = couponNumber;
+	}-*/;
+	public final native FareBasis getFareBasis() /*-{
+		return $wnd.cleanObject(fareBasis);
+	}-*/;
+	public final native void setFareBasis(FareBasis fareBasis) /*-{
+		this.fareBasis = fareBasis;
+	}-*/;
+	public final native FlightNumber getFlightNumber() /*-{
+		return $wnd.cleanObject(FlightNumber);
+	}-*/;
+	public final native void setFlightNumber(FlightNumber flightNumber) /*-{
+		FlightNumber = flightNumber;
+	}-*/;
+	public final native DepartureDt getDepartureDt() /*-{
+		return $wnd.cleanObject(departureDt);
+	}-*/;
+	public final native void setDepartureDt(DepartureDt departureDt) /*-{
+		this.departureDt = departureDt;
+	}-*/;
+	public final native DepartureTime getDepartureTime() /*-{
+		return $wnd.cleanObject(departureTime);
+	}-*/;
+	public final native void setDepartureTime(DepartureTime departureTime) /*-{
+		this.departureTime = departureTime;
+	}-*/;
+	public final native DepartureAirport getDepartureAirport() /*-{
+		return $wnd.cleanObject(departureAirport);
+	}-*/;
+	public final native void setDepartureAirport(DepartureAirport departureAirport) /*-{
+		this.departureAirport = departureAirport;
+	}-*/;
+	public final native ArrivalDt getArrivalDt() /*-{
+		return $wnd.cleanObject(arrivalDt);
+	}-*/;
+	public final native void setArrivalDt(ArrivalDt arrivalDt) /*-{
+		this.arrivalDt = arrivalDt;
+	}-*/;
+	public final native ArrivalTime getArrivalTime() /*-{
+		return $wnd.cleanObject(arrivalTime);
+	}-*/;
+	public final native void setArrivalTime(ArrivalTime arrivalTime) /*-{
+		this.arrivalTime = arrivalTime;
+	}-*/;
+	public final native Restriction getRestriction() /*-{
+		return $wnd.cleanObject(restriction);
+	}-*/;
+	public final native void setRestriction(Restriction restriction) /*-{
+		this.restriction = restriction;
+	}-*/;
+	public final native AirlineCharge getAirlineCharge() /*-{
+		return $wnd.cleanObject(airlineCharge);
+	}-*/;
+	public final native void setAirlineCharge(AirlineCharge airlineCharge) /*-{
+		this.airlineCharge = airlineCharge;
+	}-*/;
+}

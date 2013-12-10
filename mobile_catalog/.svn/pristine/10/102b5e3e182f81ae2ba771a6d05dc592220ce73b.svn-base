@@ -1,0 +1,14 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public  abstract class CardUpdateInfo extends IFXObject {
+	
+	public final native  CardRef getCardRef()/*-{
+		return $wnd.cleanObject(this.cardRef);
+	}-*/;
+
+	public final native  void setCardRef(CardRef cardRef)/*-{
+		this.cardRef = cardRef;
+	}-*/;
+}

@@ -1,0 +1,130 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtRec_Type extends IFXObject {
+
+	public final native void setPmtId(PmtId pmtId)/*-{
+		this.pmtId = pmtId;
+	}-*/;
+
+	public final native PmtId getPmtId()/*-{
+		return $wnd.cleanObject(this.pmtId);
+
+	}-*/;
+
+	public final native void setRecPmtId(RecPmtId recPmtId)/*-{
+		this.recPmtId = recPmtId;
+	}-*/;
+
+	public final native RecPmtId getRecPmtId()/*-{
+		return $wnd.cleanObject(this.recPmtId);
+
+	}-*/;
+
+	public final native void setSvcRqUID(SvcRqUID svcRqUID)/*-{
+		this.svcRqUID = svcRqUID;
+	}-*/;
+
+	public final native SvcRqUID getSvcRqUID()/*-{
+		return $wnd.cleanObject(this.svcRqUID);
+
+	}-*/;
+
+	public final native void setPmtInfo(PmtInfo pmtInfo)/*-{
+		this.pmtInfo = pmtInfo;
+	}-*/;
+
+	public final native PmtInfo getPmtInfo()/*-{
+		return $wnd.cleanObject(this.pmtInfo);
+
+	}-*/;
+
+	public final native void setPmtStatus(PmtStatus pmtStatus)/*-{
+		this.pmtStatus = pmtStatus;
+	}-*/;
+
+	public final native PmtStatus getPmtStatus()/*-{
+		return $wnd.cleanObject(this.pmtStatus);
+
+	}-*/;
+
+	public final native void setPmtRemitAck(PmtRemitAck pmtRemitAck)/*-{
+		this.pmtRemitAck = pmtRemitAck;
+	}-*/;
+
+	public final native PmtRemitAck getPmtRemitAck()/*-{
+		return $wnd.cleanObject(this.pmtRemitAck);
+
+	}-*/;
+
+	public final native void setPmtRemitInfo(PmtRemitInfo pmtRemitInfo)/*-{
+		this.pmtRemitInfo = pmtRemitInfo;
+	}-*/;
+
+	public final native PmtRemitInfo getPmtRemitInfo()/*-{
+		return $wnd.cleanObject(this.pmtRemitInfo);
+
+	}-*/;
+
+	public final native void setCreatedDt(CreatedDt createdDt)/*-{
+		this.createdDt = createdDt;
+	}-*/;
+
+	public final native CreatedDt getCreatedDt()/*-{
+		return $wnd.cleanObject(this.createdDt);
+
+	}-*/;
+
+	public final native void setOrigPmtPrcDt(OrigPmtPrcDt origPmtPrcDt)/*-{
+		this.origPmtPrcDt = origPmtPrcDt;
+	}-*/;
+
+	public final native OrigPmtPrcDt getOrigPmtPrcDt()/*-{
+		return $wnd.cleanObject(this.origPmtPrcDt);
+
+	}-*/;
+
+	public final native void setOrigPmtDueDt(OrigPmtDueDt origPmtDueDt)/*-{
+		this.origPmtDueDt = origPmtDueDt;
+	}-*/;
+
+	public final native OrigPmtDueDt getOrigPmtDueDt()/*-{
+		return $wnd.cleanObject(this.origPmtDueDt);
+
+	}-*/;
+
+	public final native void setFIDebitTrcNum(FIDebitTrcNum fIDebitTrcNum)/*-{
+		this.fIDebitTrcNum = fIDebitTrcNum;
+	}-*/;
+
+	public final native FIDebitTrcNum getFIDebitTrcNum()/*-{
+		return $wnd.cleanObject(this.fIDebitTrcNum);
+
+	}-*/;
+
+	public final native void setFICreditTrcNum(FICreditTrcNum fICreditTrcNum)/*-{
+		this.fICreditTrcNum = fICreditTrcNum;
+	}-*/;
+
+	public final native FICreditTrcNum getFICreditTrcNum()/*-{
+		return $wnd.cleanObject(this.fICreditTrcNum);
+
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+
+	}-*/;
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+
+	}-*/;
+}

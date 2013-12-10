@@ -1,0 +1,57 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+
+public class AcctPeriodData extends IFXObject {
+	
+	public final native  AcctAmtType getAcctAmtType()/*-{
+		return $wnd.cleanObject(this.acctAmtType);
+	}-*/;
+	public final native  void setAcctAmtType(AcctAmtType acctAmtType)/*-{
+		this.acctAmtType = acctAmtType;
+	}-*/;
+	public final native  AcctPeriodType getAcctPeriodType()/*-{
+		return $wnd.cleanObject(this.acctPeriodType);
+	}-*/;
+	public final native  void setAcctPeriodType(AcctPeriodType acctPeriodType)/*-{
+		this.acctPeriodType = acctPeriodType;
+	}-*/;
+	public final native  LastOccurInd getLastOccurInd()/*-{
+		return $wnd.cleanObject(this.lastOccurInd);
+	}-*/;
+	public final native  void setLastOccurInd(LastOccurInd lastOccurInd)/*-{
+		this.lastOccurInd = lastOccurInd;
+	}-*/;
+	public final native  EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+	public final native  void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+	public final native  ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+	public final native  void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+	public final native  Amt getAmt()/*-{
+		return $wnd.cleanObject(this.amt);
+	}-*/;
+	public final native  void setAmt(Amt amt)/*-{
+		this.amt = amt;
+	}-*/;
+	public final native  Count getCount()/*-{
+		return $wnd.cleanObject(this.count);
+	}-*/;
+	public final native  void setCount(Count count)/*-{
+		this.count = count;
+	}-*/;
+	public final native  LastOccuranceDt getLastOccuranceDt()/*-{
+		return $wnd.cleanObject(this.lastOccuranceDt);
+	}-*/;
+	public final native  void setLastOccuranceDt(LastOccuranceDt lastOccuranceDt)/*-{
+		this.lastOccuranceDt = lastOccuranceDt;
+	}-*/;
+
+}

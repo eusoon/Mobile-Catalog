@@ -1,0 +1,26 @@
+package my.com.infopro.ifx.element;
+
+public class SecTokenLogin extends SecToken {
+	LoginName LoginName;//C-40	Required Login Name
+	SubjectPswd SubjectPswd;//Aggregate	Required Subject Password
+	SubjectPassCode SubjectPassCode;//Aggregate	Optional Subject Pass Code
+	public LoginName getLoginName() {
+		return LoginName;
+	}
+	public void setLoginName(LoginName loginName) {
+		LoginName = loginName;
+	}
+	public SubjectPswd getSubjectPswd() {
+		return SubjectPswd;
+	}
+	public void setSubjectPswd(SubjectPswd subjectPswd) {
+		SubjectPswd = subjectPswd;
+	}
+	public SubjectPassCode getSubjectPassCode() {
+		return SubjectPassCode;
+	}
+	public void setSubjectPassCode(SubjectPassCode subjectPassCode) {
+		SubjectPassCode = subjectPassCode;
+	}
+
+}

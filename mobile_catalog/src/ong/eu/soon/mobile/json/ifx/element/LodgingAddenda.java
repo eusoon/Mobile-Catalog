@@ -1,0 +1,105 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+public  class LodgingAddenda extends CardAddenda {
+	protected LodgingAddenda(){	
+	}
+	public final native  Carrier getCarrier()/*-{
+		return $wnd.cleanObject(this.carrier);
+	}-*/;
+	public final native  void setCarrier(Carrier carrier)/*-{
+		this.carrier = carrier;
+	}-*/;
+	public final native  FlightNumber getFlightNumber()/*-{
+		return $wnd.cleanObject(this.flightNumber);
+	}-*/;
+	public final native  void setFlightNumber(FlightNumber flightNumber)/*-{
+		this.flightNumber = flightNumber;
+	}-*/;
+	public final native  CSPhoneNum getCSPhoneNum()/*-{
+		return $wnd.cleanObject(this.cSPhoneNum);
+	}-*/;
+	public final native  void setCSPhoneNum(CSPhoneNum cSPhoneNum)/*-{
+		this.cSPhoneNum = cSPhoneNum;
+	}-*/;
+	public final native  Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+	public final native  void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+	public final native  GuestNumber getGuestNumber()/*-{
+		return $wnd.cleanObject(this.guestNumber);
+	}-*/;
+	public final native  void setGuestNumber(GuestNumber guestNumber)/*-{
+		this.guestNumber = guestNumber;
+	}-*/;
+	public final native  ArrivalDt getArrivalDt()/*-{
+		return $wnd.cleanObject(this.arrivalDt);
+	}-*/;
+	public final native  void setArrivalDt(ArrivalDt arrivalDt)/*-{
+		this.arrivalDt = arrivalDt;
+	}-*/;
+	public final native  ArrivalTime getArrivalTime()/*-{
+		return $wnd.cleanObject(this.arrivalTime);
+	}-*/;
+	public final native  void setArrivalTime(ArrivalTime arrivalTime)/*-{
+		this.arrivalTime = arrivalTime;
+	}-*/;
+	public final native  DepartureDt getDepartureDt()/*-{
+		return $wnd.cleanObject(this.departureDt);
+	}-*/;
+	public final native  void setDepartureDt(DepartureDt departureDt)/*-{
+		this.departureDt = departureDt;
+	}-*/;
+	public final native  DepartureTime getDepartureTime()/*-{
+		return $wnd.cleanObject(this.departureTime);
+	}-*/;
+	public final native  void setDepartureTime(DepartureTime departureTime)/*-{
+		this.departureTime = departureTime;
+	}-*/;
+	public final native  FolioNumber getFolioNumber()/*-{
+		return $wnd.cleanObject(this.folioNumber);
+	}-*/;
+	public final native  void setFolioNumber(FolioNumber folioNumber)/*-{
+		this.folioNumber = folioNumber;
+	}-*/;
+	public final native  PropertyPhoneNumber getPropertyPhoneNumber()/*-{
+		return $wnd.cleanObject(this.propertyPhoneNumber);
+	}-*/;
+	public final native  void setPropertyPhoneNumber(PropertyPhoneNumber propertyPhoneNumber)/*-{
+		this.propertyPhoneNumber = propertyPhoneNumber;
+	}-*/;
+	public final native  BillingAdjustmentInd getBillingAdjustmentInd()/*-{
+		return $wnd.cleanObject(this.billingAdjustmentInd);
+	}-*/;
+	public final native  void setBillingAdjustmentInd(BillingAdjustmentInd billingAdjustmentInd)/*-{
+		this.billingAdjustmentInd = billingAdjustmentInd;
+	}-*/;
+	public final native  TaxExemptInd getTaxExemptInd()/*-{
+		return $wnd.cleanObject(this.taxExemptInd);
+	}-*/;
+	public final native  void setTaxExemptInd(TaxExemptInd taxExemptInd)/*-{
+		this.taxExemptInd = taxExemptInd;
+	}-*/;
+	public final native  NoShowInd getNoShowInd()/*-{
+		return $wnd.cleanObject(this.noShowInd);
+	}-*/;
+	public final native  void setNoShowInd(NoShowInd noShowInd)/*-{
+		this.noShowInd = noShowInd;
+	}-*/;
+	public final native  RoomNights getRoomNights()/*-{
+		return $wnd.cleanObject(this.roomNights);
+	}-*/;
+	public final native  void setRoomNights(RoomNights roomNights)/*-{
+		this.roomNights = roomNights;
+	}-*/;
+	public final native  JsArray<LodgingCharge> getLodgingCharge()/*-{
+		return $wnd.cleanObject(this.lodgingCharge);
+	}-*/;
+	public final native  void setLodgingCharge(JsArray<LodgingCharge> lodgingCharge)/*-{
+		this.lodgingCharge = lodgingCharge;
+	}-*/;
+
+}

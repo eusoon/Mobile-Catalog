@@ -1,0 +1,37 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PartyModRs extends IFXObject {
+	
+	public final native Status getStatus() /*-{
+		return $wnd.cleanObject(status);
+	}-*/;
+	public final native void setStatus(Status status) /*-{
+		this.status = status;
+	}-*/;
+	public final native RqUID getRqUID() /*-{
+		return $wnd.cleanObject(rqUID);
+	}-*/;
+	public final native void setRqUID(RqUID rqUID) /*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(msgRsHdr);
+	}-*/;
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+	public final native PartyRec getPartyRec() /*-{
+		return $wnd.cleanObject(partyRec);
+	}-*/;
+	public final native void setPartyRec(PartyRec partyRec) /*-{
+		this.partyRec = partyRec;
+	}-*/;
+	public final native PartyStatusRec getPartyStatusRec() /*-{
+		return $wnd.cleanObject(partyStatusRec);
+	}-*/;
+	public final native void setPartyStatusRec(PartyStatusRec partyStatusRec) /*-{
+		this.partyStatusRec = partyStatusRec;
+	}-*/;
+}

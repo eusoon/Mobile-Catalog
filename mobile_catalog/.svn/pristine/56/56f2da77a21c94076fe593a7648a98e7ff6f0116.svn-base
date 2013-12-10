@@ -1,0 +1,133 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillInqRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn)/*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+
+	public final native RecCtrlIn getRecCtrlIn()/*-{
+		return $wnd.cleanObject(this.recCtrlIn);
+	}-*/;
+
+	public final native void setSPName(SPName sPName)/*-{
+		this.sPName = sPName;
+	}-*/;
+
+	public final native SPName getSPName()/*-{
+		return $wnd.cleanObject(this.sPName);
+	}-*/;
+
+	public final native void setSelRangeDt(SelRangeDt selRangeDt)/*-{
+		this.selRangeDt = selRangeDt;
+	}-*/;
+
+	public final native SelRangeDt getSelRangeDt()/*-{
+		return $wnd.cleanObject(this.selRangeDt);
+	}-*/;
+
+	public final native void setBillId(BillId billId)/*-{
+		this.billId = billId;
+	}-*/;
+
+	public final native BillId getBillId()/*-{
+		return $wnd.cleanObject(this.billId);
+	}-*/;
+
+	public final native void setBillerId(BillerId[] billerId)/*-{
+		this.billerId = billerId;
+	}-*/;
+
+	public final native BillerId[] getBillerId()/*-{
+		return $wnd.cleanObject(this.billerId);
+	}-*/;
+
+	public final native void setBillType(BillType[] billType)/*-{
+		this.billType = billType;
+	}-*/;
+
+	public final native BillType[] getBillType()/*-{
+		return $wnd.cleanObject(this.billType);
+	}-*/;
+
+	public final native void setBillStatusCode(BillStatusCode billStatusCode)/*-{
+		this.billStatusCode = billStatusCode;
+	}-*/;
+
+	public final native BillStatusCode getBillStatusCode()/*-{
+		return $wnd.cleanObject(this.billStatusCode);
+	}-*/;
+
+	public final native void setBillPmtStatusCode(
+			BillPmtStatusCode billPmtStatusCode)/*-{
+		this.billPmtStatusCode = billPmtStatusCode;
+	}-*/;
+
+	public final native BillPmtStatusCode getBillPmtStatusCode()/*-{
+		return $wnd.cleanObject(this.billPmtStatusCode);
+	}-*/;
+
+	public final native void setNotifyWilling(NotifyWilling[] notifyWilling)/*-{
+		this.notifyWilling = notifyWilling;
+	}-*/;
+
+	public final native NotifyWilling[] getNotifyWilling()/*-{
+		return $wnd.cleanObject(this.notifyWilling);
+	}-*/;
+
+	public final native void setIncCounts(IncCounts[] incCounts)/*-{
+		this.incCounts = incCounts;
+	}-*/;
+
+	public final native IncCounts[] getIncCounts()/*-{
+		return $wnd.cleanObject(this.incCounts);
+	}-*/;
+
+	public final native void setIncSummary(IncSummary[] incSummary)/*-{
+		this.incSummary = incSummary;
+	}-*/;
+
+	public final native IncSummary[] getIncSummary()/*-{
+		return $wnd.cleanObject(this.incSummary);
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod[] deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod[] getDeliveryMethod()/*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+	}-*/;
+}

@@ -1,0 +1,22 @@
+package my.com.infopro.ifx.client.model;
+
+public class IndustId_Type extends IFXObject {
+	
+	public final native void setOrg(Org org)/*-{
+		this.org = org;
+	}-*/;
+
+	public final native Org getOrg()/*-{
+		return $wnd.cleanObject(this.org);
+
+	}-*/;
+
+	public final native void setIndustNum(IndustNum industNum)/*-{
+		this.industNum = industNum;
+	}-*/;
+
+	public final native IndustNum getIndustNum()/*-{
+		return $wnd.cleanObject(this.industNum);
+
+	}-*/;
+}

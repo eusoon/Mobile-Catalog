@@ -1,0 +1,42 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class BillStatus extends IFXObject {
+	BillStatusCode billStatusCode;	 //	Open Enum	 Required	 Bill Status Code	Valid values include: Deleted, Delivered, New, Retired, Undeliverable, Valid, Viewed, Withdrawn
+	StatusDesc statusDesc;	 //	C-255	 Optional	 Status Description
+	EffDt effDt;	 //	DateTime	 Optional	 Effective Date Time
+	StatusModBy statusModBy;	 //	Open Enum	 Optional	 Status Modified ByValid values include: BPP, BPPSR, BSP, BSPSR, CPP, CPPSR, CSP, CSPSR, Customer, FI, PSP
+	Memo memo;	 //	C-255	 Optional	 Memo
+	
+	public BillStatusCode getBillStatusCode() {
+		return billStatusCode;
+	}
+	public void setBillStatusCode(BillStatusCode billStatusCode) {
+		this.billStatusCode = billStatusCode;
+	}
+	public StatusDesc getStatusDesc() {
+		return statusDesc;
+	}
+	public void setStatusDesc(StatusDesc statusDesc) {
+		this.statusDesc = statusDesc;
+	}
+	public EffDt getEffDt() {
+		return effDt;
+	}
+	public void setEffDt(EffDt effDt) {
+		this.effDt = effDt;
+	}
+	public StatusModBy getStatusModBy() {
+		return statusModBy;
+	}
+	public void setStatusModBy(StatusModBy statusModBy) {
+		this.statusModBy = statusModBy;
+	}
+	public Memo getMemo() {
+		return memo;
+	}
+	public void setMemo(Memo memo) {
+		this.memo = memo;
+	}
+}

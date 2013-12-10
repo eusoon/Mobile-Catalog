@@ -1,0 +1,36 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class BillerPayData extends IFXObject {
+
+	PmtOptions[] pmtOptions;	 //	Aggregate	 Optional Repeating	 Payment Options
+	DaysToEPost daysToEPost;	 //	Long	 Optional	 Days to post an electronic payment. The maximum days between receipt of an electronic payment by the biller or BPP and posting to the customer's account.
+	ValidateAcctInd validateAcctInd;	 //	Boolean	 Optional	 Pre-Note Required. If set to True, the Biller requires pre-noting by the Service Provider. Note: Pre-noting is the transmission of a zero dollar message to verify consumer information, usually the payee account information.
+	ValidateAcctMthd validateAcctMthd;	 //	Open Enum	 Optional	 Validate Account MethodValid values include: FormatOnly, Other, PreNoteDefault Value: Other
+	public PmtOptions[] getPmtOptions() {
+		return pmtOptions;
+	}
+	public void setPmtOptions(PmtOptions[] pmtOptions) {
+		this.pmtOptions = pmtOptions;
+	}
+	public DaysToEPost getDaysToEPost() {
+		return daysToEPost;
+	}
+	public void setDaysToEPost(DaysToEPost daysToEPost) {
+		this.daysToEPost = daysToEPost;
+	}
+	public ValidateAcctInd getValidateAcctInd() {
+		return validateAcctInd;
+	}
+	public void setValidateAcctInd(ValidateAcctInd validateAcctInd) {
+		this.validateAcctInd = validateAcctInd;
+	}
+	public ValidateAcctMthd getValidateAcctMthd() {
+		return validateAcctMthd;
+	}
+	public void setValidateAcctMthd(ValidateAcctMthd validateAcctMthd) {
+		this.validateAcctMthd = validateAcctMthd;
+	}
+	
+}

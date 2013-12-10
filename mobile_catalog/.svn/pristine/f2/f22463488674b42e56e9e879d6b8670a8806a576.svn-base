@@ -1,0 +1,15 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.SvcIdent;
+import my.com.infopro.ifx.element.SvcProviderId;
+import my.com.infopro.ifx.element.SvcProviderInfo;
+
+public class SvcProviderRec extends IFXObject {
+	SvcIdent svcIdent;//Aggregate	Optional Service Identifier
+	SvcProviderId svcProviderId;//Identifier	Required Service Provider Identifier
+	SvcProviderInfo svcProviderInfo;//Aggregate	Required Service Provider Information Aggregate
+	SvcProviderEnvr svcProviderEnvr;//Aggregate	Optional Service Provider Environment Aggregate
+	SvcProviderStatus svcProviderStatus;//Aggregate	Required Service Provider Status Aggregate
+
+}

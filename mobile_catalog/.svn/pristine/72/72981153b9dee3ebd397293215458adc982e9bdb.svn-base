@@ -1,0 +1,17 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class ForExDealEnvr extends BaseEnvr {
+	ForExDealIdent forExDealIdent;//NC-250	Required Foreign Exchange Deal Identifier
+
+	protected ForExDealEnvr(){
+	}
+	
+	public ForExDealIdent getForExDealIdent() {
+		return forExDealIdent;
+	}
+
+	public void setForExDealIdent(ForExDealIdent forExDealIdent) {
+		this.forExDealIdent = forExDealIdent;
+	}
+
+}

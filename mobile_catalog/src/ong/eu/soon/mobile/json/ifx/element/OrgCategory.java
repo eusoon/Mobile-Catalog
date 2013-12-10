@@ -1,0 +1,20 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class OrgCategory extends IFXObject {
+	protected OrgCategory(){	
+	}
+	public final native OrgCategoryCode getOrgCategoryCode() /*-{
+		return $wnd.cleanObject(orgCategoryCode);
+	}-*/;
+	public final native void setOrgCategoryCode(OrgCategoryCode orgCategoryCode) /*-{
+		this.orgCategoryCode = orgCategoryCode;
+	}-*/;
+	public final native Desc getDesc() /*-{
+		return $wnd.cleanObject(desc);
+	}-*/;
+	public final native void setDesc(Desc desc) /*-{
+		this.desc = desc;
+	}-*/;
+}

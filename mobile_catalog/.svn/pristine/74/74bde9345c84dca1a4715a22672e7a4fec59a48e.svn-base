@@ -1,0 +1,35 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class SecTokenSecretAnswer extends SecToken {
+
+	public final native SecretIdent getSecretIdent() /*-{
+		return $wnd.cleanObject(secretIdent);
+	}-*/;
+	public final native void setSecretIdent(SecretIdent secretIdent) /*-{
+		this.secretIdent = secretIdent;
+	}-*/;
+	public final native CryptType getCryptType() /*-{
+		return $wnd.cleanObject(cryptType);
+	}-*/;
+	public final native void setCryptType(CryptType cryptType) /*-{
+		this.cryptType = cryptType;
+	}-*/;
+	public final native SecObjId[] getSecObjId() /*-{
+		return $wnd.cleanObject(secObjId);
+	}-*/;
+	public final native void setSecObjId(SecObjId[] secObjId) /*-{
+		this.secObjId = secObjId;
+	}-*/;
+	public final native Secret getSecret() /*-{
+		return $wnd.cleanObject(secret);
+	}-*/;
+	public final native void setSecret(Secret secret) /*-{
+		this.secret = secret;
+	}-*/;
+	public final native CryptSecret getCryptSecret() /*-{
+		return $wnd.cleanObject(CryptSecret);
+	}-*/;
+	public final native void setCryptSecret(CryptSecret cryptSecret) /*-{
+		CryptSecret = cryptSecret;
+	}-*/;
+}

@@ -1,0 +1,62 @@
+package my.com.infopro.ifx.client.model;
+
+public class POSCapabilities_Type extends IFXObject {
+
+	public native void setPOSAttended(POSAttended pOSAttended)/*-{
+		this.pOSAttended = pOSAttended;
+	}-*/;
+
+	public final native POSAttended getPOSAttended()/*-{
+		return $wnd.cleanObject(this.pOSAttended);
+
+	}-*/;
+
+	public native void setPOSOperation(POSOperation[] pOSOperation)/*-{
+		this.pOSOperation = pOSOperation;
+	}-*/;
+
+	public final native POSOperation[] getPOSOperation()/*-{
+		return $wnd.cleanObject(this.pOSOperation);
+
+	}-*/;
+
+	public native void setPOSEntryCapability(
+			POSEntryCapability[] pOSEntryCapability)/*-{
+		this.pOSEntryCapability = pOSEntryCapability;
+	}-*/;
+
+	public final native POSEntryCapability[] getPOSEntryCapability()/*-{
+		return $wnd.cleanObject(this.pOSEntryCapability);
+
+	}-*/;
+
+	public native void setPOSCaptureCapability(
+			POSCaptureCapability[] pOSCaptureCapability)/*-{
+		this.pOSCaptureCapability = pOSCaptureCapability;
+	}-*/;
+
+	public final native POSCaptureCapability[] getPOSCaptureCapability()/*-{
+		return $wnd.cleanObject(this.pOSCaptureCapability);
+
+	}-*/;
+
+	public native void setPOSVerifyCapability(
+			POSVerifyCapability[] pOSVerifyCapability)/*-{
+		this.pOSVerifyCapability = pOSVerifyCapability;
+	}-*/;
+
+	public final native POSVerifyCapability[] getPOSVerifyCapability()/*-{
+		return $wnd.cleanObject(this.pOSVerifyCapability);
+
+	}-*/;
+
+	public native void setPOSOutCapabilities(
+			POSOutCapabilities[] pOSOutCapabilities)/*-{
+		this.pOSOutCapabilities = pOSOutCapabilities;
+	}-*/;
+
+	public final native POSOutCapabilities[] getPOSOutCapabilities()/*-{
+		return $wnd.cleanObject(this.pOSOutCapabilities);
+
+	}-*/;
+}

@@ -1,0 +1,23 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public  class CorrespondDelivery extends IFXObject {
+	
+	protected CorrespondDelivery(){
+	}
+	
+	public final native  CorrespondType getCorrespondType()/*-{
+		return $wnd.cleanObject(this.correspondType);
+	}-*/;
+	public final native  void setCorrespondType(CorrespondType correspondType)/*-{
+		this.correspondType = correspondType;
+	}-*/;
+	public final native  DeliveryInstruction getDeliveryInstruction()/*-{
+		return $wnd.cleanObject(this.deliveryInstruction);
+	}-*/;
+	public final native  void setDeliveryInstruction(DeliveryInstruction deliveryInstruction)/*-{
+		this.deliveryInstruction = deliveryInstruction;
+	}-*/;
+
+}

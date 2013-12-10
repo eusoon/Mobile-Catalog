@@ -1,0 +1,39 @@
+package my.com.infopro.ifx.service;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.MsgRqHdr;
+import my.com.infopro.ifx.element.RecCtrlIn;
+import my.com.infopro.ifx.element.RqUID;
+import my.com.infopro.ifx.element.SvcKeys;
+
+public class SvcSyncRq extends IFXObject {
+	RqUID rqUID;	 //	UUID	 Required	 Request Identifier
+	MsgRqHdr msgRqHdr;	 //	Aggregate	 Optional	 Message Request Header
+	RecCtrlIn recCtrlIn;	 //	Aggregate	 Optional	 Records Control Input
+	SvcKeys[] svcKeys;//Aggregate	Optional Repeating Service Keys Aggregate
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRqHdr getMsgRqHdr() {
+		return msgRqHdr;
+	}
+	public void setMsgRqHdr(MsgRqHdr msgRqHdr) {
+		this.msgRqHdr = msgRqHdr;
+	}
+	public RecCtrlIn getRecCtrlIn() {
+		return recCtrlIn;
+	}
+	public void setRecCtrlIn(RecCtrlIn recCtrlIn) {
+		this.recCtrlIn = recCtrlIn;
+	}
+	public SvcKeys[] getSvcKeys() {
+		return svcKeys;
+	}
+	public void setSvcKeys(SvcKeys[] svcKeys) {
+		this.svcKeys = svcKeys;
+	}
+
+}

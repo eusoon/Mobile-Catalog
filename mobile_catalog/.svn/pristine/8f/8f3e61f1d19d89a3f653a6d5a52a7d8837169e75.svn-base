@@ -1,0 +1,34 @@
+package my.com.infopro.ifx.client.model;
+
+public class InterXferProf_Type extends IFXObject {
+	public final native void setXferProf(XferProf[] xferProf)/*-{
+	this.xferProf = xferProf;
+}-*/;
+
+public final native XferProf[] getXferProf()/*-{
+	return $wnd.cleanObject(this.xferProf);
+
+}-*/;
+	public final native void setDomXferFeeCurAmt(DomXferFeeCurAmt domXferFeeCurAmt)/*-{
+	this.domXferFeeCurAmt = domXferFeeCurAmt;
+}-*/;
+	public final native DomXferFeeCurAmt getDomXferFeeCurAmt()/*-{
+	return $wnd.cleanObject(this.domXferFeeCurAmt);
+
+}-*/;
+	public final native void setIntlXferFeeCurAmt(IntlXferFeeCurAmt intlXferFeeCurAmt)/*-{
+	this.intlXferFeeCurAmt = intlXferFeeCurAmt;
+}-*/;
+	public final native IntlXferFeeCurAmt getIntlXferFeeCurAmt()/*-{
+	return $wnd.cleanObject(this.intlXferFeeCurAmt);
+
+}-*/;
+	public final native void setUSA_ACHProf(USA_ACHProf uSA_ACHProf)/*-{
+	this.uSA_ACHProf = uSA_ACHProf;
+}-*/;
+	public final native USA_ACHProf getUSA_ACHProf()/*-{
+	return $wnd.cleanObject(this.uSA_ACHProf);
+
+}-*/;
+	
+}

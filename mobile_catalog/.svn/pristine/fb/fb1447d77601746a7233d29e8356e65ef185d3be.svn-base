@@ -1,0 +1,30 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+
+import my.com.infopro.mobile.json.ifx.element.AcctTrnInfo;
+import my.com.infopro.mobile.json.ifx.element.AcctTrnKeys;
+import my.com.infopro.mobile.json.ifx.element.AcctTrnRec;
+
+public class AcctTrnRef extends TrnRef {
+
+	protected AcctTrnRef(){	
+	}
+	public final native  AcctTrnKeys getAcctTrnKeys()/*-{
+		return $wnd.cleanObject(this.acctTrnKeys);
+	}-*/;
+	public final native  void setAcctTrnKeys(AcctTrnKeys acctTrnKeys)/*-{
+		this.acctTrnKeys = acctTrnKeys;
+	}-*/;
+	public final native  AcctTrnRec getAcctTrnRec()/*-{
+		return $wnd.cleanObject(this.acctTrnRec);
+	}-*/;
+	public final native  void setAcctTrnRec(AcctTrnRec acctTrnRec)/*-{
+		this.acctTrnRec = acctTrnRec;
+	}-*/;
+	public final native  AcctTrnInfo getAcctTrnInfo()/*-{
+		return $wnd.cleanObject(this.acctTrnInfo);
+	}-*/;
+	public final native  void setAcctTrnInfo(AcctTrnInfo acctTrnInfo)/*-{
+		this.acctTrnInfo = acctTrnInfo;
+	}-*/;	
+}

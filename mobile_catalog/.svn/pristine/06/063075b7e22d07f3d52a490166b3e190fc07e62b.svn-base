@@ -1,0 +1,10 @@
+package my.com.infopro.mobile.client.ifx.element.USA;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXDate;
+
+
+
+
+public class TaxIdCertDate extends IFXDate {
+
+}

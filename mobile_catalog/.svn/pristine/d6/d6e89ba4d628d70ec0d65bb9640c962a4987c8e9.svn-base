@@ -1,0 +1,16 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class FSPayee extends IFXObject {
+
+	public final native  JsArray<PartyData> getPartyData()/*-{
+		return $wnd.cleanObject(this.partyData);
+	}-*/;
+
+	public final native  void setPartyData(JsArray<PartyData> partyData)/*-{
+		this.partyData = partyData;
+	}-*/;
+}

@@ -1,0 +1,11 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXDate;
+
+public class LastPrivacyNoteDt extends IFXDate {
+	protected LastPrivacyNoteDt(){	
+	}
+	protected LastPrivacyNoteDt(){
+	}
+	
+}

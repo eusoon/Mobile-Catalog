@@ -1,0 +1,20 @@
+package my.com.infopro.ifx.client.model;
+
+public class MediaBal_Type extends IFXObject {
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setMediaTotal(MediaTotal[] mediaTotal)/*-{
+		this.mediaTotal = mediaTotal;
+	}-*/;
+
+	public final native MediaTotal[] getMediaTotal()/*-{
+		return $wnd.cleanObject(this.mediaTotal);
+	}-*/;
+}

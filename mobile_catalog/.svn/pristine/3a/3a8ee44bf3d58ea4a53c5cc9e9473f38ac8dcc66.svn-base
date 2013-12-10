@@ -1,0 +1,38 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class CardChipData extends IFXObject {
+	AppPan appPan;//HexBin-20	Optional//Application Primary Account Number
+	AppPanSeq appPanSeq;//HexBin-1	Optional Application PAN Sequence Numbe
+	AppIdent appIdent;//HexBin-16	Optional Application Identifier
+
+	Trk2EquivData trk2EquivData;
+	public AppPan getAppPan() {
+		return appPan;
+	}
+	public void setAppPan(AppPan appPan) {
+		this.appPan = appPan;
+	}
+	public AppPanSeq getAppPanSeq() {
+		return appPanSeq;
+	}
+	public void setAppPanSeq(AppPanSeq appPanSeq) {
+		this.appPanSeq = appPanSeq;
+	}
+	public AppIdent getAppIdent() {
+		return appIdent;
+	}
+	public void setAppIdent(AppIdent appIdent) {
+		this.appIdent = appIdent;
+	}
+	public Trk2EquivData getTrk2EquivData() {
+		return trk2EquivData;
+	}
+	public void setTrk2EquivData(Trk2EquivData trk2EquivData) {
+		this.trk2EquivData = trk2EquivData;
+	}
+
+
+
+}

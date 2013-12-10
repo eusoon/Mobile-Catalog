@@ -1,0 +1,21 @@
+package ong.eu.soon.ifx.element;
+
+public class RemitKeys extends BaseKeys {
+	SvcIdent svcIdent;	 //	Aggregate	 Optional	 Service Identifier
+	//begin-xor	Required
+	RemitId remitId;	 //	Identifier	 Required	 Remittance Identifier
+	//end-xor
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public RemitId getRemitId() {
+		return remitId;
+	}
+	public void setRemitId(RemitId remitId) {
+		this.remitId = remitId;
+	}	
+}

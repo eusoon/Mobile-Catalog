@@ -1,0 +1,54 @@
+package my.com.infopro.ifx.client.model;
+
+public class SecObjAdviseRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setSecObjRec(SecObjRec secObjRec) /*-{
+		this.secObjRec = secObjRec;
+	}-*/;
+
+	public final native SecObjRec getSecObjRec() /*-{
+		return $wnd.cleanObject(this.secObjRec);
+	}-*/;
+
+	public native void setSecObjInitRemKey(SecObjInitRemKey secObjInitRemKey) /*-{
+		this.secObjInitRemKey = secObjInitRemKey;
+	}-*/;
+
+	public final native SecObjInitRemKey getSecObjInitRemKey() /*-{
+		return $wnd.cleanObject(this.secObjInitRemKey);
+	}-*/;
+
+}

@@ -1,0 +1,12 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class ForExRateSheetEnvr extends BaseEnvr {
+	
+	public final native  ForExRateSheetIdent getForExRateSheetIdent()/*-{
+		return $wnd.cleanObject(this.forExRateSheetIdent);
+	}-*/;
+	public final native  void setForExRateSheetIdent(ForExRateSheetIdent forExRateSheetIdent)/*-{
+		this.forExRateSheetIdent = forExRateSheetIdent;
+	}-*/;
+
+}

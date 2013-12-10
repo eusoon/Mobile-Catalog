@@ -1,0 +1,39 @@
+package my.com.infopro.ifx.client.model;
+
+public class EMVRsData_Type extends IFXObject {
+	public final native void setAuthRsCode(AuthRsCode authRsCode)/*-{
+		this.authRsCode = authRsCode;
+	}-*/;
+
+	public final native AuthRsCode getAuthRsCode()/*-{
+		return $wnd.cleanObject(this.authRsCode);
+
+	}-*/;
+
+	public final native void setAuthCode(AuthCode authCode)/*-{
+		this.authCode = authCode;
+	}-*/;
+
+	public final native AuthCode getAuthCode()/*-{
+		return $wnd.cleanObject(this.authCode);
+
+	}-*/;
+
+	public final native void setIssAuthData(IssAuthData issAuthData)/*-{
+		this.issAuthData = issAuthData;
+	}-*/;
+
+	public final native IssAuthData getIssAuthData()/*-{
+		return $wnd.cleanObject(this.issAuthData);
+
+	}-*/;
+
+	public final native void setIssScriptData(IssScriptData issScriptData)/*-{
+		this.issScriptData = issScriptData;
+	}-*/;
+
+	public final native IssScriptData getIssScriptData()/*-{
+		return $wnd.cleanObject(this.issScriptData);
+
+	}-*/;
+}

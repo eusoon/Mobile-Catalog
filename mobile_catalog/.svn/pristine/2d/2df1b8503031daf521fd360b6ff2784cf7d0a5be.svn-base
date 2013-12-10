@@ -1,0 +1,28 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class Term extends IFXObject {
+
+	Count count;//Long		Optional	In this context, <Count> is the number of <TermUnits> for which a term deposit is effective or a credit instrument must be paid.  At the end of this period, the term deposit ceases to exist. 	Note: If <TermUnits>=Days, this is the number of calendar days, not business days.
+	TermUnits termUnits;//Closed Enum	Required Term Units. Units in which the term deposit or credit instrument is measured. Valid values are limited to: Days, Indefinite, Months, Weeks, Years
+	Desc desc;//C-80		Optional	Description
+	public Count getCount() {
+		return count;
+	}
+	public void setCount(Count count) {
+		this.count = count;
+	}
+	public TermUnits getTermUnits() {
+		return termUnits;
+	}
+	public void setTermUnits(TermUnits termUnits) {
+		this.termUnits = termUnits;
+	}
+	public Desc getDesc() {
+		return desc;
+	}
+	public void setDesc(Desc desc) {
+		this.desc = desc;
+	}
+}

@@ -1,0 +1,37 @@
+package my.com.infopro.ifx.client.model;
+
+public class MediaCashInfo_Type extends IFXObject {
+
+	public final native void setCashValidity(CashValidity cashValidity)/*-{
+		this.cashValidity = cashValidity;
+	}-*/;
+
+	public final native CashValidity getCashValidity()/*-{
+		return $wnd.cleanObject(this.cashValidity);
+	}-*/;
+
+	public final native void setCashQuality(CashQuality cashQuality)/*-{
+		this.cashQuality = cashQuality;
+	}-*/;
+
+	public final native CashQuality getCashQuality()/*-{
+		return $wnd.cleanObject(this.cashQuality);
+	}-*/;
+
+	public final native void setCashSignature(CashSignature cashSignature)/*-{
+		this.cashSignature = cashSignature;
+	}-*/;
+
+	public final native CashSignature getCashSignature()/*-{
+		return $wnd.cleanObject(this.cashSignature);
+	}-*/;
+
+	public final native void setCashSerialNum(CashSerialNum cashSerialNum)/*-{
+		this.cashSerialNum = cashSerialNum;
+	}-*/;
+
+	public final native CashSerialNum getCashSerialNum()/*-{
+		return $wnd.cleanObject(this.cashSerialNum);
+	}-*/;
+
+}

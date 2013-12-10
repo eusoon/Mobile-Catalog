@@ -1,0 +1,28 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class MktgMaterial extends IFXObject {
+	MktgText mktgText; //C-unbound	Optional Marketing Text
+	MktgImg mktgImg; //Aggregate	Optional Marketing Image
+	MktgURLmMktgURL	mktgURLmMktgURL;	//URL	Optional Marketing URL
+	public MktgText getMktgText() {
+		return mktgText;
+	}
+	public void setMktgText(MktgText mktgText) {
+		this.mktgText = mktgText;
+	}
+	public MktgImg getMktgImg() {
+		return mktgImg;
+	}
+	public void setMktgImg(MktgImg mktgImg) {
+		this.mktgImg = mktgImg;
+	}
+	public MktgURLmMktgURL getMktgURLmMktgURL() {
+		return mktgURLmMktgURL;
+	}
+	public void setMktgURLmMktgURL(MktgURLmMktgURL mktgURLmMktgURL) {
+		this.mktgURLmMktgURL = mktgURLmMktgURL;
+	}
+
+}

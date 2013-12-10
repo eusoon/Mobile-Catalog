@@ -1,0 +1,49 @@
+package my.com.infopro.ifx.remit;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.Desc;
+import my.com.infopro.ifx.element.MsgRqHdr;
+import my.com.infopro.ifx.element.RemitRqMsg;
+import my.com.infopro.ifx.element.RevReasonCode;
+import my.com.infopro.ifx.element.RqUID;
+
+public class RemitRevRq extends IFXObject {
+
+	RqUID rqUID; //UUID	Required	Request Identifier
+	MsgRqHdr msgRqHdr; //Aggregate	Optional	Message Request Header
+	RevReasonCode revReasonCode; //Aggregate	Required	Reversal Reason Code
+	Desc desc; //C-80	Optional	Description
+	RemitRqMsg remitRqMsg; //Aggregate	Required	Remittance Request Message Record Aggregate
+	
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRqHdr getMsgRqHdr() {
+		return msgRqHdr;
+	}
+	public void setMsgRqHdr(MsgRqHdr msgRqHdr) {
+		this.msgRqHdr = msgRqHdr;
+	}
+	public RevReasonCode getRevReasonCode() {
+		return revReasonCode;
+	}
+	public void setRevReasonCode(RevReasonCode revReasonCode) {
+		this.revReasonCode = revReasonCode;
+	}
+	public Desc getDesc() {
+		return desc;
+	}
+	public void setDesc(Desc desc) {
+		this.desc = desc;
+	}
+	public RemitRqMsg getRemitRqMsg() {
+		return remitRqMsg;
+	}
+	public void setRemitRqMsg(RemitRqMsg remitRqMsg) {
+		this.remitRqMsg = remitRqMsg;
+	}
+
+}

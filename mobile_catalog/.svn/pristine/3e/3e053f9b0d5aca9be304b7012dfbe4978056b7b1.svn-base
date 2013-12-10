@@ -1,0 +1,72 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillerContact_Type extends IFXObject {
+	public final native void setLegalName(LegalName legalName)/*-{
+		this.legalName = legalName;
+	}-*/;
+
+	public final native LegalName getLegalName()/*-{
+		return $wnd.cleanObject(this.legalName);
+	}-*/;
+
+	public final native void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setPostAddr(PostAddr postAddr)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native PostAddr getPostAddr()/*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+
+	public final native void setBillRetAddr(BillRetAddr billRetAddr)/*-{
+		this.billRetAddr = billRetAddr;
+	}-*/;
+
+	public final native BillRetAddr getBillRetAddr()/*-{
+		return $wnd.cleanObject(this.billRetAddr);
+
+	}-*/;
+
+	public final native void setRemitName(RemitName remitName)/*-{
+		this.remitName = remitName;
+	}-*/;
+
+	public final native RemitName getRemitName()/*-{
+		return $wnd.cleanObject(this.remitName);
+
+	}-*/;
+
+	public final native void setRemitAddr(RemitAddr remitAddr)/*-{
+		this.remitAddr = remitAddr;
+	}-*/;
+
+	public final native RemitAddr getRemitAddr()/*-{
+		return $wnd.cleanObject(this.remitAddr);
+
+	}-*/;
+
+	public final native void setOrgContact(OrgContact orgContact)/*-{
+		this.orgContact = orgContact;
+	}-*/;
+
+	public final native OrgContact getOrgContact()/*-{
+		return $wnd.cleanObject(this.orgContact);
+
+	}-*/;
+
+	public final native void setContactInfo(ContactInfo contactInfo)/*-{
+		this.contactInfo = contactInfo;
+	}-*/;
+
+	public final native ContactInfo getContactInfo()/*-{
+		return $wnd.cleanObject(this.contactInfo);
+	}-*/;
+
+}

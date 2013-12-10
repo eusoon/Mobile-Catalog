@@ -1,0 +1,64 @@
+package my.com.infopro.ifx.client.model;
+
+public class SettlementInfo_Type extends IFXObject {
+
+	public final native void setSettlementMethod(
+			SettlementMethod settlementMethod)/*-{
+		this.settlementMethod = settlementMethod;
+	}-*/;
+
+	public final native SettlementMethod getSettlementMethod()/*-{
+		return $wnd.cleanObject(this.settlementMethod);
+	}-*/;
+
+	public final native void setDepAcctId(DepAcctId depAcctId)/*-{
+		this.depAcctId = depAcctId;
+	}-*/;
+
+	public final native DepAcctId getDepAcctId() /*-{
+		return $wnd.cleanObject(this.depAcctId);
+	}-*/;
+
+	public final native void setSettlementId(SettlementId settlementId)/*-{
+		this.settlementId = settlementId;
+	}-*/;
+
+	public final native SettlementId getSettlementId()/*-{
+		return $wnd.cleanObject(this.settlementId);
+	}-*/;
+
+	public final native void setOrgContact(OrgContact[] orgContact)/*-{
+		this.orgContact = orgContact;
+	}-*/;
+
+	public final native OrgContact[] getOrgContact()/*-{
+		return $wnd.cleanObject(this.orgContact);
+
+	}-*/;
+
+	public final native void setContactInfo(ContactInfo contactInfo)/*-{
+		this.contactInfo = contactInfo;
+	}-*/;
+
+	public final native ContactInfo getContactInfo()/*-{
+		return $wnd.cleanObject(this.contactInfo);
+	}-*/;
+
+	public final native void setMemo(Memo memo)/*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo getMemo()/*-{
+		return $wnd.cleanObject(this.memo);
+
+	}-*/;
+
+	public final native void setPmtInstruction(PmtInstruction[] pmtInstruction)/*-{
+		this.pmtInstruction = pmtInstruction;
+	}-*/;
+
+	public final native PmtInstruction[] getPmtInstruction()/*-{
+		return $wnd.cleanObject(this.pmtInstruction);
+
+	}-*/;
+}

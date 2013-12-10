@@ -1,0 +1,21 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillCounts_Type extends IFXObject {
+
+	public final native void setBillStatusCounts(BillStatusCounts[] billStatusCounts)/*-{
+		this.billStatusCounts = billStatusCounts;
+	}-*/;
+
+	public final native BillStatusCounts[] getBillStatusCounts()/*-{
+		return $wnd.cleanObject(this.billStatusCounts);
+	}-*/;
+
+	public final native void setBillPmtStatusCounts(BillPmtStatusCounts[] billPmtStatusCounts)/*-{
+		this.billPmtStatusCounts = billPmtStatusCounts;
+	}-*/;
+
+	public final native BillPmtStatusCounts[] getBillPmtStatusCounts()/*-{
+		return $wnd.cleanObject(this.billPmtStatusCounts);
+	}-*/;
+
+}

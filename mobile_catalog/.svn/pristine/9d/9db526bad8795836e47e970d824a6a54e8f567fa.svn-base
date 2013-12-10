@@ -1,0 +1,231 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class CardOrderInfo extends IFXObject {
+
+	
+	public final native  CardEmbossNum getCardEmbossNum()/*-{
+		return $wnd.cleanObject(this.cardEmbossNum);
+	}-*/;
+	public final native  void setCardEmbossNum(CardEmbossNum cardEmbossNum)/*-{
+		this.cardEmbossNum = cardEmbossNum;
+	}-*/;
+	public final native  CardSeqNum getCardSeqNum()/*-{
+		return $wnd.cleanObject(this.cardSeqNum);
+	}-*/;
+	public final native  void setCardSeqNum(CardSeqNum cardSeqNum)/*-{
+		this.cardSeqNum = cardSeqNum;
+	}-*/;
+	public final native  ValidFromDt getValidFromDt()/*-{
+		return $wnd.cleanObject(this.validFromDt);
+	}-*/;
+	public final native  void setValidFromDt(ValidFromDt validFromDt)/*-{
+		this.validFromDt = validFromDt;
+	}-*/;
+	public final native  ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+	public final native  void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+	public final native  Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+	public final native  void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+	public final native  SecondaryName getSecondaryName()/*-{
+		return $wnd.cleanObject(this.secondaryName);
+	}-*/;
+	public final native  void setSecondaryName(SecondaryName secondaryName)/*-{
+		this.secondaryName = secondaryName;
+	}-*/;
+	public final native  CardMagData getCardMagData()/*-{
+		return $wnd.cleanObject(this.cardMagData);
+	}-*/;
+	public final native  void setCardMagData(CardMagData cardMagData)/*-{
+		this.cardMagData = cardMagData;
+	}-*/;
+	public final native  OrigIssueDt getOrigIssueDt()/*-{
+		return $wnd.cleanObject(this.origIssueDt);
+	}-*/;
+	public final native  void setOrigIssueDt(OrigIssueDt origIssueDt)/*-{
+		this.origIssueDt = origIssueDt;
+	}-*/;
+	public final native  CardRef getCardRef()/*-{
+		return $wnd.cleanObject(this.cardRef);
+	}-*/;
+	public final native  void setCardRef(CardRef cardRef)/*-{
+		this.cardRef = cardRef;
+	}-*/;
+	public final native  PhotoInd getPhotoInd()/*-{
+		return $wnd.cleanObject(this.photoInd);
+	}-*/;
+	public final native  void setPhotoInd(PhotoInd photoInd)/*-{
+		this.photoInd = photoInd;
+	}-*/;
+	public final native  PictureRefIdent getPictureRefIdent()/*-{
+		return $wnd.cleanObject(this.pictureRefIdent);
+	}-*/;
+	public final native  void setPictureRefIdent(PictureRefIdent pictureRefIdent)/*-{
+		this.pictureRefIdent = pictureRefIdent;
+	}-*/;
+	public final native  CardDesign getCardDesign()/*-{
+		return $wnd.cleanObject(this.cardDesign);
+	}-*/;
+	public final native  void setCardDesign(CardDesign cardDesign)/*-{
+		this.cardDesign = cardDesign;
+	}-*/;
+	public final native  CSPhoneNum getcSPhoneNum()/*-{
+		return $wnd.cleanObject(this.cSPhoneNum);
+	}-*/;
+	public final native  void setcSPhoneNum(CSPhoneNum cSPhoneNum)/*-{
+		this.cSPhoneNum = cSPhoneNum;
+	}-*/;
+	public final native  MemberSinceDt getMemberSinceDt()/*-{
+		return $wnd.cleanObject(this.memberSinceDt);
+	}-*/;
+	public final native  void setMemberSinceDt(MemberSinceDt memberSinceDt)/*-{
+		this.memberSinceDt = memberSinceDt;
+	}-*/;
+	public final native  CardType getCardType()/*-{
+		return $wnd.cleanObject(this.cardType);
+	}-*/;
+	public final native  void setCardType(CardType cardType)/*-{
+		this.cardType = cardType;
+	}-*/;
+	public final native  CardCategory getCardCategory()/*-{
+		return $wnd.cleanObject(this.cardCategory);
+	}-*/;
+	public final native  void setCardCategory(CardCategory cardCategory)/*-{
+		this.cardCategory = cardCategory;
+	}-*/;
+	public final native  Brand getBrand()/*-{
+		return $wnd.cleanObject(this.brand);
+	}-*/;
+	public final native  void setBrand(Brand brand)/*-{
+		this.brand = brand;
+	}-*/;
+	public final native  AffinityName getAffinityName()/*-{
+		return $wnd.cleanObject(this.affinityName);
+	}-*/;
+	public final native  void setAffinityName(AffinityName affinityName)/*-{
+		this.affinityName = affinityName;
+	}-*/;
+	public final native  IssuerName getIssuerName()/*-{
+		return $wnd.cleanObject(this.issuerName);
+	}-*/;
+	public final native  void setIssuerName(IssuerName issuerName)/*-{
+		this.issuerName = issuerName;
+	}-*/;
+	public final native  CardTechnology getCardTechnology()/*-{
+		return $wnd.cleanObject(this.cardTechnology);
+	}-*/;
+	public final native  void setCardTechnology(CardTechnology cardTechnology)/*-{
+		this.cardTechnology = cardTechnology;
+	}-*/;
+	public final native  VendorProductIdent getVendorProductIdent()/*-{
+		return $wnd.cleanObject(this.vendorProductIdent);
+	}-*/;
+	public final native  void setVendorProductIdent(VendorProductIdent vendorProductIdent)/*-{
+		this.vendorProductIdent = vendorProductIdent;
+	}-*/;
+	public final native  IssueReason getIssueReason()/*-{
+		return $wnd.cleanObject(this.issueReason);
+	}-*/;
+	public final native  void setIssueReason(IssueReason issueReason)/*-{
+		this.issueReason = issueReason;
+	}-*/;
+	public final native  PinWaive getPinWaive()/*-{
+		return $wnd.cleanObject(this.pinWaive);
+	}-*/;
+	public final native  void setPinWaive(PinWaive pinWaive)/*-{
+		this.pinWaive = pinWaive;
+	}-*/;
+	public final native  PremailerDt getPremailerDt()/*-{
+		return $wnd.cleanObject(this.premailerDt);
+	}-*/;
+	public final native  void setPremailerDt(PremailerDt premailerDt)/*-{
+		this.premailerDt = premailerDt;
+	}-*/;
+	public final native  PostmailerDt getPostmailerDt()/*-{
+		return $wnd.cleanObject(this.postmailerDt);
+	}-*/;
+	public final native  void setPostmailerDt(PostmailerDt postmailerDt)/*-{
+		this.postmailerDt = postmailerDt;
+	}-*/;
+	public final native  PinmailerDt getPinmailerDt()/*-{
+		return $wnd.cleanObject(this.pinmailerDt);
+	}-*/;
+	public final native  void setPinmailerDt(PinmailerDt pinmailerDt)/*-{
+		this.pinmailerDt = pinmailerDt;
+	}-*/;
+	public final native  OrderAcptDt getOrderAcptDt()/*-{
+		return $wnd.cleanObject(this.orderAcptDt);
+	}-*/;
+	public final native  void setOrderAcptDt(OrderAcptDt orderAcptDt)/*-{
+		this.orderAcptDt = orderAcptDt;
+	}-*/;
+	public final native  OrderSchedDt getOrderSchedDt()/*-{
+		return $wnd.cleanObject(this.orderSchedDt);
+	}-*/;
+	public final native  void setOrderSchedDt(OrderSchedDt orderSchedDt)/*-{
+		this.orderSchedDt = orderSchedDt;
+	}-*/;
+	public final native  OrderShipDt getOrderShipDt()/*-{
+		return $wnd.cleanObject(this.orderShipDt);
+	}-*/;
+	public final native  void setOrderShipDt(OrderShipDt orderShipDt)/*-{
+		this.orderShipDt = orderShipDt;
+	}-*/;
+	public final native  ReturnReason getReturnReason()/*-{
+		return $wnd.cleanObject(this.returnReason);
+	}-*/;
+	public final native  void setReturnReason(ReturnReason returnReason)/*-{
+		this.returnReason = returnReason;
+	}-*/;
+	public final native  ReturnReasonDt getReturnReasonDt()/*-{
+		return $wnd.cleanObject(this.returnReasonDt);
+	}-*/;
+	public final native  void setReturnReasonDt(ReturnReasonDt returnReasonDt)/*-{
+		this.returnReasonDt = returnReasonDt;
+	}-*/;
+	public final native  ReturnResolveReason getReturnResolveReason()/*-{
+		return $wnd.cleanObject(this.returnResolveReason);
+	}-*/;
+	public final native  void setReturnResolveReason(ReturnResolveReason returnResolveReason)/*-{
+		this.returnResolveReason = returnResolveReason;
+	}-*/;
+	public final native  ReturnResolveReasonDt getReturnResolveReasonDt()/*-{
+		return $wnd.cleanObject(this.returnResolveReasonDt);
+	}-*/;
+	public final native  void setReturnResolveReasonDt(ReturnResolveReasonDt returnResolveReasonDt)/*-{
+		this.returnResolveReasonDt = returnResolveReasonDt;
+	}-*/;
+	public final native  ProductionPriority getProductionPriority()/*-{
+		return $wnd.cleanObject(this.productionPriority);
+	}-*/;
+	public final native  void setProductionPriority(ProductionPriority productionPriority)/*-{
+		this.productionPriority = productionPriority;
+	}-*/;
+	public final native  DeliveryInstruction getDeliveryInstruction()/*-{
+		return $wnd.cleanObject(this.deliveryInstruction);
+	}-*/;
+	public final native  void setDeliveryInstruction(DeliveryInstruction deliveryInstruction)/*-{
+		this.deliveryInstruction = deliveryInstruction;
+	}-*/;
+	public final native  PinDeliveryInstruction getPinDeliveryInstruction()/*-{
+		return $wnd.cleanObject(this.pinDeliveryInstruction);
+	}-*/;
+	public final native  void setPinDeliveryInstruction(
+			PinDeliveryInstruction pinDeliveryInstruction)/*-{
+		this.pinDeliveryInstruction = pinDeliveryInstruction;
+	}-*/;
+	public final native  PinOnlyInd getPinOnlyInd()/*-{
+		return $wnd.cleanObject(this.pinOnlyInd);
+	}-*/;
+	public final native  void setPinOnlyInd(PinOnlyInd pinOnlyInd)/*-{
+		this.pinOnlyInd = pinOnlyInd;
+	}-*/;
+}

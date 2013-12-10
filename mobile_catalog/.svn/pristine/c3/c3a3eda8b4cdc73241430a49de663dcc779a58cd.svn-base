@@ -1,0 +1,36 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtAuthInfo_Type extends IFXObject {
+	
+	public final native void setDepAcctIdFrom(DepAcctIdFrom depAcctIdFrom)/*-{
+		this.depAcctIdFrom = depAcctIdFrom;
+	}-*/;
+
+	public final native DepAcctIdFrom getDepAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.depAcctIdFrom);
+	}-*/;
+
+	public final native void setCardAcctIdFrom(CardAcctIdFrom cardAcctIdFrom)/*-{
+		this.cardAcctIdFrom = cardAcctIdFrom;
+	}-*/;
+
+	public final native CardAcctIdFrom getCardAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.cardAcctIdFrom);
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setName(Name[] name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name[] getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+}

@@ -1,0 +1,32 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class EMVRqData extends IFXObject {
+
+	public final native  EMVRqRawData geteMVRqRawData()/*-{
+		return $wnd.cleanObject(this.eMVRqRawData);
+	}-*/;
+	public final native  void seteMVRqRawData(EMVRqRawData eMVRqRawData)/*-{
+		this.eMVRqRawData = eMVRqRawData;
+	}-*/;
+	public final native  Trk2EquivData getTrk2EquivData()/*-{
+		return $wnd.cleanObject(this.trk2EquivData);
+	}-*/;
+	public final native  void setTrk2EquivData(Trk2EquivData trk2EquivData)/*-{
+		this.trk2EquivData = trk2EquivData;
+	}-*/;
+	public final native  AppPan getAppPan()/*-{
+		return $wnd.cleanObject(this.appPan);
+	}-*/;
+	public final native  void setAppPan(AppPan appPan)/*-{
+		this.appPan = appPan;
+	}-*/;
+	public final native  IssuerScriptResultData[] getIssuerScriptResultData()/*-{
+		return $wnd.cleanObject(this.issuerScriptResultData);
+	}-*/;
+	public final native  void setIssuerScriptResultData(
+			IssuerScriptResultData[] issuerScriptResultData)/*-{
+		this.issuerScriptResultData = issuerScriptResultData;
+	}-*/;
+}

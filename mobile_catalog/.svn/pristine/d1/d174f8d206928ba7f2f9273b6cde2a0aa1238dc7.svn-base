@@ -1,0 +1,8 @@
+package my.com.infopro.ifx.element;
+
+public enum PmtEnclType {
+
+	UnverifiedCashDeposit, VerifiedCashDeposit, UnverifiedCheckDeposit, 
+	VerifiedCheckDeposit, EnvelopeDeposit, MultiDeposit
+	
+}

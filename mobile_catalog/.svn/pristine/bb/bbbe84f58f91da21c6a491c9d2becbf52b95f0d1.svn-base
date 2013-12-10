@@ -1,0 +1,8 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class CountryCode extends IFXObject {
+	CountryCodeSource countryCodeSource;
+	CountryCodeValue countryCodeValue;
+}

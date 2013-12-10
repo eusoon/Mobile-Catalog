@@ -1,0 +1,9 @@
+package ong.eu.soon.ifx.element;
+
+public enum DayOfMonth {
+	firth(1),tenth(10),eleventh(11),twelveth(12),thirteenth(13),fourteenth(14),fifteenth(15),sixteenth(16),seventeenth(17),eighteenth(18),nineteenth(19),second(2),twentieth(20),twentyfirst(21),twentysecond(22),twentythird(23),twentyfourth(24),twentyfifth(25),twentysixth(26),twentyseventh(27),twentyeighth(28),twentyninth(29),third(3),thirtieth(30),thirtyfirst(31),fourth(4),fifth(5),sixth(6),seventh(7),eighth(8),ninth(9);
+	private int value;
+	private DayOfMonth(int value){
+		this.value=value;
+	}
+}

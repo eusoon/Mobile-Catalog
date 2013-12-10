@@ -1,0 +1,92 @@
+package my.com.infopro.ifx.client.model;
+
+public class BankInfo_Type extends IFXObject {
+	public final native void setBankIdType(BankIdType bankIdType)/*-{
+		this.bankIdType = bankIdType;
+	}-*/;
+
+	public final native BankIdType getBankIdType()/*-{
+		return $wnd.cleanObject(this.bankIdType);
+	}-*/;
+
+	public final native void setBankId(BankId bankId)/*-{
+		this.bankId = bankId;
+	}-*/;
+
+	public final native BankId getBankId()/*-{
+		return $wnd.cleanObject(this.bankId);
+	}-*/;
+
+	public final native void setRefInfo(RefInfo[] refInfo)/*-{
+		this.refInfo = refInfo;
+	}-*/;
+
+	public final native RefInfo[] getRefInfo()/*-{
+		return $wnd.cleanObject(this.refInfo);
+	}-*/;
+
+	public final native void setName(Name[] name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name[] getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setBranchId(BranchId[] branchId)/*-{
+		this.branchId = branchId;
+	}-*/;
+
+	public final native BranchId[] getBranchId()/*-{
+		return $wnd.cleanObject(this.branchId);
+	}-*/;
+
+	public final native void setBranchName(BranchName[] branchName)/*-{
+		this.branchName = branchName;
+	}-*/;
+
+	public final native BranchName[] getBranchName()/*-{
+		return $wnd.cleanObject(this.branchName);
+	}-*/;
+
+	public final native void setPostAddr(PostAddr[] postAddr)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native PostAddr[] getPostAddr()/*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+
+	public native void setCity(City city)/*-{
+		this.city = city;
+	}-*/;
+
+	public final native City getCity() /*-{
+		return $wnd.cleanObject(this.city);
+	}-*/;
+
+	public native void setStateProv(StateProv stateProv)/*-{
+		this.stateProv = stateProv;
+	}-*/;
+
+	public final native StateProv getStateProv() /*-{
+		return $wnd.cleanObject(this.stateProv);
+	}-*/;
+
+	public native void setPostalCode(PostalCode postalCode)/*-{
+		this.postalCode = postalCode;
+	}-*/;
+
+	public final native PostalCode getPostalCode() /*-{
+		return $wnd.cleanObject(this.postalCode);
+	}-*/;
+
+	public native void setCountry(Country country)/*-{
+		this.country = country;
+	}-*/;
+
+	public final native Country getCountry() /*-{
+		return $wnd.cleanObject(this.country);
+	}-*/;
+
+}

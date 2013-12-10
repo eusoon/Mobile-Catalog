@@ -1,0 +1,36 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class PrcSched extends IFXObject {
+	PrcDaysOff[] prcDaysOff;//Closed Enum	 Optional Repeating Processing Days Off
+	//Valid values are limited to: Friday, Holiday, Monday, Saturday, Sunday, Thursday, Tuesday, Wednesday
+	CutoffTm cutoffTm;//Time	Required Cutoff for Daily Processing
+	PrcDtAdj prcDtAdj;//Open Enum	Required Processing Date Adjustment
+	//Valid values include: Earlier, Later
+	HolidayData[] HolidayData;//Aggregate	Optional Repeating Holiday Data
+	public PrcDaysOff[] getPrcDaysOff() {
+		return prcDaysOff;
+	}
+	public void setPrcDaysOff(PrcDaysOff[] prcDaysOff) {
+		this.prcDaysOff = prcDaysOff;
+	}
+	public CutoffTm getCutoffTm() {
+		return cutoffTm;
+	}
+	public void setCutoffTm(CutoffTm cutoffTm) {
+		this.cutoffTm = cutoffTm;
+	}
+	public PrcDtAdj getPrcDtAdj() {
+		return prcDtAdj;
+	}
+	public void setPrcDtAdj(PrcDtAdj prcDtAdj) {
+		this.prcDtAdj = prcDtAdj;
+	}
+	public HolidayData[] getHolidayData() {
+		return HolidayData;
+	}
+	public void setHolidayData(HolidayData[] holidayData) {
+		HolidayData = holidayData;
+	}
+}

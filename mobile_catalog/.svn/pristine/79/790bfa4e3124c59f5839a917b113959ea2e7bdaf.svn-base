@@ -1,0 +1,72 @@
+package my.com.infopro.ifx.client.model;
+
+public class XferModRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setXferId(XferId xferId)/*-{
+		this.xferId = xferId;
+	}-*/;
+
+	public final native XferId getXferId() /*-{
+		return $wnd.cleanObject(this.xferId);
+
+	}-*/;
+
+	public native void setXferInfo(XferInfo xferInfo)/*-{
+		this.xferInfo = xferInfo;
+	}-*/;
+
+	public final native XferInfo getXferInfo() /*-{
+		return $wnd.cleanObject(this.xferInfo);
+
+	}-*/;
+
+	public final native void setDupChkOverride(DupChkOverride dupChkOverride)/*-{
+		this.dupChkOverride = dupChkOverride;
+	}-*/;
+
+	public final native DupChkOverride getDupChkOverride()/*-{
+		return $wnd.cleanObject(this.dupChkOverride);
+	}-*/;
+
+	public final native void setClientChgCode(ClientChgCode clientChgCode)/*-{
+		this.clientChgCode = clientChgCode;
+	}-*/;
+
+	public final native ClientChgCode getClientChgCode()/*-{
+		return $wnd.cleanObject(this.clientChgCode);
+	}-*/;
+
+}

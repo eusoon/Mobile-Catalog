@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class BinData extends BinData_Type {
+
+}

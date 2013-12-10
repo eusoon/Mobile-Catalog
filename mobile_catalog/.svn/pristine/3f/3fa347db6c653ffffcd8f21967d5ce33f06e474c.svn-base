@@ -1,0 +1,8 @@
+package my.com.infopro.ifx.client.model;
+
+
+
+public class Addr1 extends Addr1_Type {
+
+
+}

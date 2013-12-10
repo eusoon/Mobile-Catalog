@@ -1,0 +1,24 @@
+package my.com.infopro.mobile.json.ifx.basetypes;
+
+/**
+ * The IBaseType interface provides two methods to convert from and to
+ * a String. This interface is implemented by objects which model xsd
+ * datatypes, since we need a way to convert from the string representation
+ * in the XML file to the internal object representation, and vice versa.
+* @author Ong Eu Soon (eusoon@gmail.com)
+ * @version $Revision: 2.3 $
+ */
+public interface IBaseType {
+
+    /** 
+     * Returns the string representation of the underlying basetype object.
+     * @return the string
+     */
+    public String getString();
+
+    /**
+     * Converts the supplied string to its internal representation.
+     * @param s the string to convert.
+     */
+    public void setString(String s);
+}

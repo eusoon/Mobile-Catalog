@@ -1,0 +1,39 @@
+package my.com.infopro.ifx.client.model;
+
+public class PresSvcProfInfo_Type extends IFXObject {
+	public final native void setSvcCore(SvcCore svcCore)/*-{
+		this.svcCore = svcCore;
+	}-*/;
+
+	public final native SvcCore getSvcCore()/*-{
+		return $wnd.cleanObject(this.svcCore);
+
+	}-*/;
+
+	public final native void setMsgSupt(MsgSupt[] msgSupt)/*-{
+		this.msgSupt = msgSupt;
+	}-*/;
+
+	public final native MsgSupt[] getMsgSupt()/*-{
+		return $wnd.cleanObject(this.msgSupt);
+
+	}-*/;
+
+	public final native void setOptSupt(OptSupt[] optSupt)/*-{
+		this.optSupt = optSupt;
+	}-*/;
+
+	public final native OptSupt[] getOptSupt()/*-{
+		return $wnd.cleanObject(this.optSupt);
+
+	}-*/;
+
+	public final native void setPrcSched(PrcSched[] prcSched)/*-{
+		this.prcSched = prcSched;
+	}-*/;
+
+	public final native PrcSched[] getPrcSched()/*-{
+		return $wnd.cleanObject(this.prcSched);
+
+	}-*/;
+}

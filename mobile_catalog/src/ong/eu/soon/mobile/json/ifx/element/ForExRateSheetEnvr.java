@@ -1,0 +1,15 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+public class ForExRateSheetEnvr extends BaseEnvr {
+	
+	protected ForExRateSheetEnvr(){
+	}
+	
+	public final native  ForExRateSheetIdent getForExRateSheetIdent()/*-{
+		return $wnd.cleanObject(this.forExRateSheetIdent);
+	}-*/;
+	public final native  void setForExRateSheetIdent(ForExRateSheetIdent forExRateSheetIdent)/*-{
+		this.forExRateSheetIdent = forExRateSheetIdent;
+	}-*/;
+
+}

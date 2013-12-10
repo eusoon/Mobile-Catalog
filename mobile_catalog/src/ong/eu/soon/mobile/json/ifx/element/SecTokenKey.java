@@ -1,0 +1,15 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+public class SecTokenKey extends SecToken {
+
+	protected SecTokenKey(){	
+	}
+	
+	public final native SessKey getSessKey() /*-{
+		return $wnd.cleanObject(sessKey);
+	}-*/;
+
+	public final native void setSessKey(SessKey sessKey) /*-{
+		this.sessKey = sessKey;
+	}-*/;
+}

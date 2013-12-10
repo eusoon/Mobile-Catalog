@@ -1,0 +1,57 @@
+package my.com.infopro.ifx.client.model;
+
+public class EnrollProf_Type extends IFXObject {
+	public final native void setWebEnrollURL(WebEnrollURL webEnrollURL)/*-{
+		this.webEnrollURL = webEnrollURL;
+	}-*/;
+
+	public final native WebEnrollURL getWebEnrollURL()/*-{
+		return $wnd.cleanObject(this.webEnrollURL);
+
+	}-*/;
+
+	public final native void setEnrollDesc(EnrollDesc enrollDesc)/*-{
+		this.enrollDesc = enrollDesc;
+	}-*/;
+
+	public final native EnrollDesc getEnrollDesc()/*-{
+		return $wnd.cleanObject(this.enrollDesc);
+
+	}-*/;
+
+	public final native void setCryptType(CryptType cryptType)/*-{
+		this.cryptType = cryptType;
+	}-*/;
+
+	public final native CryptType getCryptType()/*-{
+		return $wnd.cleanObject(this.cryptType);
+
+	}-*/;
+
+	public final native void setSecretPrompt(SecretPrompt[] secretPrompt)/*-{
+		this.secretPrompt = secretPrompt;
+	}-*/;
+
+	public final native SecretPrompt[] getSecretPrompt()/*-{
+		return $wnd.cleanObject(this.secretPrompt);
+
+	}-*/;
+
+	public final native void setCustNameReqd(CustNameReqd[] custNameReqd)/*-{
+		this.custNameReqd = custNameReqd;
+	}-*/;
+
+	public final native CustNameReqd[] getCustNameReqd()/*-{
+		return $wnd.cleanObject(this.custNameReqd);
+
+	}-*/;
+
+	public final native void setPostAddrReqd(PostAddrReqd[] postAddrReqd)/*-{
+		this.postAddrReqd = postAddrReqd;
+	}-*/;
+
+	public final native PostAddrReqd[] getPostAddrReqd()/*-{
+		return $wnd.cleanObject(this.postAddrReqd);
+
+	}-*/;
+}

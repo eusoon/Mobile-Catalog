@@ -1,0 +1,94 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class BaseEnvr extends IFXObject {
+	
+	protected BaseEnvr(){	
+	}
+	
+	public final native  CreatedDt getCreatedDt()/*-{
+		return $wnd.cleanObject(this.createdDt);
+	}-*/;
+	public final native  void setCreatedDt(CreatedDt createdDt)/*-{
+		this.createdDt = createdDt;
+	}-*/;
+	public final native  CreateRefIdent getCreateRefIdent()/*-{
+		return $wnd.cleanObject(this.createRefIdent);
+	}-*/;
+	public final native  void setCreateRefIdent(CreateRefIdent createRefIdent)/*-{
+		this.createRefIdent = createRefIdent;
+	}-*/;
+	public final native  ClientCreateDt getClientCreateDt()/*-{
+		return $wnd.cleanObject(this.clientCreateDt);
+	}-*/;
+	public final native  void setClientCreateDt(ClientCreateDt clientCreateDt)/*-{
+		this.clientCreateDt = clientCreateDt;
+	}-*/;
+	public final native  ClientBusinessDt getClientBusinessDt()/*-{
+		return $wnd.cleanObject(this.clientBusinessDt);
+	}-*/;
+	public final native  void setClientBusinessDt(ClientBusinessDt clientBusinessDt)/*-{
+		this.clientBusinessDt = clientBusinessDt;
+	}-*/;
+	public final native  LastUpdateDt getLastUpdateDt()/*-{
+		return $wnd.cleanObject(this.lastUpdateDt);
+	}-*/;
+	public final native  void setLastUpdateDt(LastUpdateDt lastUpdateDt)/*-{
+		this.lastUpdateDt = lastUpdateDt;
+	}-*/;
+	public final native  LastUpdateRqUID getLastUpdateRqUID()/*-{
+		return $wnd.cleanObject(this.lastUpdateRqUID);
+	}-*/;
+	public final native  void setLastUpdateRqUID(LastUpdateRqUID lastUpdateRqUID)/*-{
+		this.lastUpdateRqUID = lastUpdateRqUID;
+	}-*/;
+	public final native  LoginName getLoginName()/*-{
+		return $wnd.cleanObject(this.loginName);
+	}-*/;
+	public final native  void setLoginName(LoginName loginName)/*-{
+		this.loginName = loginName;
+	}-*/;
+	public final native  PartyKeys getPartyKeys()/*-{
+		return $wnd.cleanObject(this.partyKeys);
+	}-*/;
+	public final native  void setPartyKeys(PartyKeys partyKeys)/*-{
+		this.partyKeys = partyKeys;
+	}-*/;
+	public final native  CardKeys getCardKeys()/*-{
+		return $wnd.cleanObject(this.cardKeys);
+	}-*/;
+	public final native  void setCardKeys(CardKeys cardKeys)/*-{
+		this.cardKeys = cardKeys;
+	}-*/;
+	public final native  PassbkKeys getPassbkKeys()/*-{
+		return $wnd.cleanObject(this.passbkKey);
+	}-*/;
+	public final native  void setPassbkKeys(PassbkKeys passbkKeys)/*-{
+		this.passbkKeys = passbkKeys;
+	}-*/;
+	public final native  NetworkTrnData getNetworkTrnData()/*-{
+		return $wnd.cleanObject(this.networkTrnData);
+	}-*/;
+	public final native  void setNetworkTrnData(NetworkTrnData networkTrnData)/*-{
+		this.networkTrnData = networkTrnData;
+	}-*/;
+	public final native  ServerTerminalSeqNum getServerTerminalSeqNum()/*-{
+		return $wnd.cleanObject(this.serverTerminalSeqNum);
+	}-*/;
+	public final native  void setServerTerminalSeqNum(ServerTerminalSeqNum serverTerminalSeqNum)/*-{
+		this.serverTerminalSeqNum = serverTerminalSeqNum;
+	}-*/;
+	public final native  PointOfServiceData getPointOfServiceData()/*-{
+		return $wnd.cleanObject(this.pointOfServiceData);
+	}-*/;
+	public final native  void setPointOfServiceData(PointOfServiceData pointOfServiceData)/*-{
+		this.pointOfServiceData = pointOfServiceData;
+	}-*/;
+	public final native  ClientTerminalSeqNum getClientTerminalSeqNum()/*-{
+		return $wnd.cleanObject(this.clientTerminalSeqNum);
+	}-*/;
+	public final native  void setClientTerminalSeqNum(ClientTerminalSeqNum clientTerminalSeqNum)/*-{
+		this.clientTerminalSeqNum = clientTerminalSeqNum;
+	}-*/;
+}

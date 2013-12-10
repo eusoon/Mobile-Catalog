@@ -1,0 +1,74 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.passbk.PassbkAddRs;
+import my.com.infopro.ifx.passbk.PassbkDelRs;
+import my.com.infopro.ifx.passbk.PassbkInqRs;
+import my.com.infopro.ifx.passbk.PassbkModRs;
+import my.com.infopro.ifx.passbk.PassbkStatusInqRs;
+import my.com.infopro.ifx.passbk.PassbkStatusModRs;
+import my.com.infopro.ifx.passbk.PassbkRevRs;
+
+public class PassbkRsMsg extends IFXObject {
+
+	MsgRecDt msgRecDt; //Timestamp	Optional	Audit Record Creation Date
+	//begin-xor	Required
+	PassbkAddRs passbkAddRs; //Aggregate	Required	Passbook Add Response
+	PassbkModRs passbkModRs; //Aggregate	Required	Passbook Modify Response
+	PassbkDelRs passbkDelRs; //Aggregate	Required	Passbook Delete Response
+	PassbkRevRs PassbkRevRs; //Aggregate	Required	Passbook Reversal Response
+	PassbkInqRs passbkInqRs; //Aggregate	Required	Passbook Inquiry Response
+	PassbkStatusModRs passbkStatusModRs; //Aggregate	Required	Passbook Status Modify Response
+	PassbkStatusInqRs passbkStatusInqRs; //Aggregate	Required	Passbook Status Inquiry Response
+	//end-xor
+	
+	public MsgRecDt getMsgRecDt() {
+		return msgRecDt;
+	}
+	public void setMsgRecDt(MsgRecDt msgRecDt) {
+		this.msgRecDt = msgRecDt;
+	}
+	public PassbkAddRs getPassbkAddRs() {
+		return passbkAddRs;
+	}
+	public void setPassbkAddRs(PassbkAddRs passbkAddRs) {
+		this.passbkAddRs = passbkAddRs;
+	}
+	public PassbkModRs getPassbkModRs() {
+		return passbkModRs;
+	}
+	public void setPassbkModRs(PassbkModRs passbkModRs) {
+		this.passbkModRs = passbkModRs;
+	}
+	public PassbkDelRs getPassbkDelRs() {
+		return passbkDelRs;
+	}
+	public void setPassbkDelRs(PassbkDelRs passbkDelRs) {
+		this.passbkDelRs = passbkDelRs;
+	}
+	public PassbkRevRs getPassbkRevRs() {
+		return PassbkRevRs;
+	}
+	public void setPassbkRevRs(PassbkRevRs passbkRevRs) {
+		PassbkRevRs = passbkRevRs;
+	}
+	public PassbkInqRs getPassbkInqRs() {
+		return passbkInqRs;
+	}
+	public void setPassbkInqRs(PassbkInqRs passbkInqRs) {
+		this.passbkInqRs = passbkInqRs;
+	}
+	public PassbkStatusModRs getPassbkStatusModRs() {
+		return passbkStatusModRs;
+	}
+	public void setPassbkStatusModRs(PassbkStatusModRs passbkStatusModRs) {
+		this.passbkStatusModRs = passbkStatusModRs;
+	}
+	public PassbkStatusInqRs getPassbkStatusInqRs() {
+		return passbkStatusInqRs;
+	}
+	public void setPassbkStatusInqRs(PassbkStatusInqRs passbkStatusInqRs) {
+		this.passbkStatusInqRs = passbkStatusInqRs;
+	}
+	
+}

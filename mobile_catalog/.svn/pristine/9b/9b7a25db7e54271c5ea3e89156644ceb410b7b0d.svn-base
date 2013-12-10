@@ -1,0 +1,23 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum FeeType {
+	ForEx	//Fee for foreign exchange	N
+	,StopChk	//Fee for issuing a stop check	N
+	,Late	//Fee for being late in payment	N
+	,Transaction	//Transaction Fee	N
+	,Interchange	//Interchange Fee	N
+	,Surcharge	//Surcharge Fee	N
+	,Membership	//Fee for membership	N
+	,Overlimit	//Fee for being over the credit limit.	N
+	,LostStolen	//Fee for a card lost or stolen request.	N
+	,CardReplacement	//Fee for a card replacement request.	N
+	,ReturnedPayment	//Fee for a returned payment.	N
+	,Statement	//Fee for producing a statement.	N
+	,CashAdv	//Fee for cash advance Transaction.	N
+	,Purchase	//Fee for purchase transaction.	N
+	,Load	//Fee for prepaid load.	N
+	,Inactivity	//Fee for inactivity.	N
+	,Activation	//Fee for card activation	N
+	,BalanceInquiry	//Fee for a balance inquiry	N
+
+}

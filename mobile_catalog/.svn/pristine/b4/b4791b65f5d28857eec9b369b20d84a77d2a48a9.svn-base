@@ -1,0 +1,56 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class PmtLegalRptData extends IFXObject {
+	LegalRptCode legalRptCode;	 //	C-36	 Required	 Country specific code given by the central bank. Example: T015L-LVAWU
+	SupplRptCode supplRptCode;	 //	C-36	 Optional	 Supplemental country dependent code. Could be more detail or could be another code.
+	Desc desc;	 //	C-80	 Optional	 Description for additional information to the legal reporting code.
+	Memo memo;	 //	C-255	 Optional	 Memo for Legal Reporting. From Customer to Central Bank.
+	SupplyingCountry supplyingCountry;	 //	Aggregate	 Optional	 ISO code of the country from which goods or services come.
+	CurAmt curAmt;	 //	Aggregate	 Required	 Currency Amount. Amount Paid to supplying country on invoice. The Payer provides this amount to the CPP. CPP will pass this to central bank. CPP do nothing with this amount.
+	ImportDt importDt;	 //	Date	 Optional	 Date the goods or services are imported.
+	
+	public LegalRptCode getLegalRptCode() {
+		return legalRptCode;
+	}
+	public void setLegalRptCode(LegalRptCode legalRptCode) {
+		this.legalRptCode = legalRptCode;
+	}
+	public SupplRptCode getSupplRptCode() {
+		return supplRptCode;
+	}
+	public void setSupplRptCode(SupplRptCode supplRptCode) {
+		this.supplRptCode = supplRptCode;
+	}
+	public Desc getDesc() {
+		return desc;
+	}
+	public void setDesc(Desc desc) {
+		this.desc = desc;
+	}
+	public Memo getMemo() {
+		return memo;
+	}
+	public void setMemo(Memo memo) {
+		this.memo = memo;
+	}
+	public SupplyingCountry getSupplyingCountry() {
+		return supplyingCountry;
+	}
+	public void setSupplyingCountry(SupplyingCountry supplyingCountry) {
+		this.supplyingCountry = supplyingCountry;
+	}
+	public CurAmt getCurAmt() {
+		return curAmt;
+	}
+	public void setCurAmt(CurAmt curAmt) {
+		this.curAmt = curAmt;
+	}
+	public ImportDt getImportDt() {
+		return importDt;
+	}
+	public void setImportDt(ImportDt importDt) {
+		this.importDt = importDt;
+	}
+}

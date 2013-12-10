@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum LegalForm {
+	Club, LimitedLiabilityPartnership, Partnership, PrivateLimitedCompany, PublicLimitedCompany, Society, SoleTraders
+}

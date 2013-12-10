@@ -1,0 +1,61 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PmtInfo extends IFXObject {
+	public final native CurAmt getCurAmt() /*-{
+		return $wnd.cleanObject(curAmt);
+	}-*/;
+	public final native void setCurAmt(CurAmt curAmt) /*-{
+		this.curAmt = curAmt;
+	}-*/;
+	public final native CPPData getcPPData() /*-{
+		return $wnd.cleanObject(cPPData);
+	}-*/;
+	public final native void setcPPData(CPPData cPPData) /*-{
+		this.cPPData = cPPData;
+	}-*/;
+	public final native DebtorData getDebtorData() /*-{
+		return $wnd.cleanObject(debtorData);
+	}-*/;
+	public final native void setDebtorData(DebtorData debtorData) /*-{
+		this.debtorData = debtorData;
+	}-*/;
+	public final native PmtInstruction getPmtInstruction() /*-{
+		return $wnd.cleanObject(pmtInstruction);
+	}-*/;
+	public final native void setPmtInstruction(PmtInstruction pmtInstruction) /*-{
+		this.pmtInstruction = pmtInstruction;
+	}-*/;
+	public final native PrcDt getPrcDt() /*-{
+		return $wnd.cleanObject(prcDt);
+	}-*/;
+	public final native void setPrcDt(PrcDt prcDt) /*-{
+		this.prcDt = prcDt;
+	}-*/;
+	public final native DueDt getDueDt() /*-{
+		return $wnd.cleanObject(dueDt);
+	}-*/;
+	public final native void setDueDt(DueDt dueDt) /*-{
+		this.dueDt = dueDt;
+	}-*/;
+	public final native ExpediteInd getExpediteInd() /*-{
+		return $wnd.cleanObject(expediteInd);
+	}-*/;
+	public final native void setExpediteInd(ExpediteInd expediteInd) /*-{
+		this.expediteInd = expediteInd;
+	}-*/;
+	public final native RecurPmtKeys getRecurPmtKeys() /*-{
+		return $wnd.cleanObject(recurPmtKeys);
+	}-*/;
+	public final native void setRecurPmtKeys(RecurPmtKeys recurPmtKeys) /*-{
+		this.recurPmtKeys = recurPmtKeys;
+	}-*/;
+	public final native PmtCreditDetail[] getPmtCreditDetail() /*-{
+		return $wnd.cleanObject(pmtCreditDetail);
+	}-*/;
+	public final native void setPmtCreditDetail(PmtCreditDetail[] pmtCreditDetail) /*-{
+		this.pmtCreditDetail = pmtCreditDetail;
+	}-*/;
+	
+}

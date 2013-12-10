@@ -1,0 +1,18 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class SecTokenParty extends SecToken {
+
+	public final native IdentVerifyMethod getIdentVerifyMethod() /*-{
+		return $wnd.cleanObject(identVerifyMethod);
+	}-*/;
+	public final native void setIdentVerifyMethod(IdentVerifyMethod identVerifyMethod) /*-{
+		this.identVerifyMethod = identVerifyMethod;
+	}-*/;
+	public final native PersonData getPersonData() /*-{
+		return $wnd.cleanObject(personData);
+	}-*/;
+	public final native void setPersonData(PersonData personData) /*-{
+		this.personData = personData;
+	}-*/;
+
+}

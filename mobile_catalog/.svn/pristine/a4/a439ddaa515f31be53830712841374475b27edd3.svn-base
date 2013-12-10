@@ -1,0 +1,28 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class PmtStatusRec extends IFXObject {
+	SvcIdent svcIdent;	 //	Aggregate	 Optional	 Service Identifier
+	PmtId pmtId;	 //	Identifier	 Required	 Payment Identifier
+	PmtStatus pmtStatus;	 //	Aggregate	 Required	 Payment Status Aggregate
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public PmtId getPmtId() {
+		return pmtId;
+	}
+	public void setPmtId(PmtId pmtId) {
+		this.pmtId = pmtId;
+	}
+	public PmtStatus getPmtStatus() {
+		return pmtStatus;
+	}
+	public void setPmtStatus(PmtStatus pmtStatus) {
+		this.pmtStatus = pmtStatus;
+	}
+}

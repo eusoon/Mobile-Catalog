@@ -1,0 +1,15 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class SvcSel extends IFXObject {
+	SvcKeys svcKeys;//Aggregate	Required Service Keys Aggregate
+
+	public SvcKeys getSvcKeys() {
+		return svcKeys;
+	}
+
+	public void setSvcKeys(SvcKeys svcKeys) {
+		this.svcKeys = svcKeys;
+	}
+}

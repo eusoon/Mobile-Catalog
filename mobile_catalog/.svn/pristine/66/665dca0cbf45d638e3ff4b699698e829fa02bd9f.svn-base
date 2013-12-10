@@ -1,0 +1,21 @@
+package my.com.infopro.mobile.client.transfer;
+
+import com.google.gwt.user.client.ui.Widget;
+
+import my.com.infopro.mobile.client.ui.Page;
+
+public class TransferPreviewPage extends Page {
+
+	@Override
+	public String getHeading() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Widget initialize() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

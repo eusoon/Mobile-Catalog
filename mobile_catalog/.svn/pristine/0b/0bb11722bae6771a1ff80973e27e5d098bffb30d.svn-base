@@ -1,0 +1,33 @@
+package my.com.infopro.ifx.card;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.CardOrderKeys;
+import my.com.infopro.ifx.element.MsgRqHdr;
+import my.com.infopro.ifx.element.RqUID;
+
+public class CardOrderCanRq extends IFXObject {
+
+	RqUID rqUID; //UUID	Required	Request Identifier
+	MsgRqHdr msgRqHdr; //Aggregate	Optional	Message Request Header
+	CardOrderKeys cardOrderKeys; //Aggregate	Required	Card Order Keys Aggregate
+	
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRqHdr getMsgRqHdr() {
+		return msgRqHdr;
+	}
+	public void setMsgRqHdr(MsgRqHdr msgRqHdr) {
+		this.msgRqHdr = msgRqHdr;
+	}
+	public CardOrderKeys getCardOrderKeys() {
+		return cardOrderKeys;
+	}
+	public void setCardOrderKeys(CardOrderKeys cardOrderKeys) {
+		this.cardOrderKeys = cardOrderKeys;
+	}
+
+}

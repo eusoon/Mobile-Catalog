@@ -1,0 +1,125 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class TripLeg extends IFXObject {
+	Carrier carrier;//C-3	Optional Carrier
+	Name name;//C-40	Optional Name
+	ServiceLevel serviceLevel;//Open Enum	Optional Indicates to what segment the customer belongs, and the level of service or the type of pricing that the customer should receive as a result. There is no defined value for this enumeration. Defined values include: Gold, Silver, Platinum , First Class, Business Class, or Coach.
+	StopOverInd stopOverInd;//Boolean	Optional Stop Over Indicator
+	DestAirport destAirport;//	C-5		Optional	Destination Airport
+	ConjunctionTicket conjunctionTicket;//C-15	Optional Conjunction Ticket
+	ExchangeTicket exchangeTicket;//C-15	Optional Exchange Ticket
+	CouponNumber couponNumber;//C-1	Optional Coupon Number
+	FareBasis fareBasis;//C-15	Optional Fare Basis
+	FlightNumber FlightNumber;//C-5	 Optional Flight Number
+	DepartureDt departureDt;//Date	Optional Departure Date
+	DepartureTime departureTime;//Time	Optional Departure Time
+	DepartureAirport departureAirport;//C-5	Optional Departure Airport
+	ArrivalDt arrivalDt;//Date	Optional Arrival Date
+	ArrivalTime arrivalTime;//Time	OptionalArrival Time
+	Restriction restriction;//C-20	Optional Restriction
+	AirlineCharge airlineCharge;//Aggregate	Optional Repeating Airline Charge
+	public Carrier getCarrier() {
+		return carrier;
+	}
+	public void setCarrier(Carrier carrier) {
+		this.carrier = carrier;
+	}
+	public Name getName() {
+		return name;
+	}
+	public void setName(Name name) {
+		this.name = name;
+	}
+	public ServiceLevel getServiceLevel() {
+		return serviceLevel;
+	}
+	public void setServiceLevel(ServiceLevel serviceLevel) {
+		this.serviceLevel = serviceLevel;
+	}
+	public StopOverInd getStopOverInd() {
+		return stopOverInd;
+	}
+	public void setStopOverInd(StopOverInd stopOverInd) {
+		this.stopOverInd = stopOverInd;
+	}
+	public DestAirport getDestAirport() {
+		return destAirport;
+	}
+	public void setDestAirport(DestAirport destAirport) {
+		this.destAirport = destAirport;
+	}
+	public ConjunctionTicket getConjunctionTicket() {
+		return conjunctionTicket;
+	}
+	public void setConjunctionTicket(ConjunctionTicket conjunctionTicket) {
+		this.conjunctionTicket = conjunctionTicket;
+	}
+	public ExchangeTicket getExchangeTicket() {
+		return exchangeTicket;
+	}
+	public void setExchangeTicket(ExchangeTicket exchangeTicket) {
+		this.exchangeTicket = exchangeTicket;
+	}
+	public CouponNumber getCouponNumber() {
+		return couponNumber;
+	}
+	public void setCouponNumber(CouponNumber couponNumber) {
+		this.couponNumber = couponNumber;
+	}
+	public FareBasis getFareBasis() {
+		return fareBasis;
+	}
+	public void setFareBasis(FareBasis fareBasis) {
+		this.fareBasis = fareBasis;
+	}
+	public FlightNumber getFlightNumber() {
+		return FlightNumber;
+	}
+	public void setFlightNumber(FlightNumber flightNumber) {
+		FlightNumber = flightNumber;
+	}
+	public DepartureDt getDepartureDt() {
+		return departureDt;
+	}
+	public void setDepartureDt(DepartureDt departureDt) {
+		this.departureDt = departureDt;
+	}
+	public DepartureTime getDepartureTime() {
+		return departureTime;
+	}
+	public void setDepartureTime(DepartureTime departureTime) {
+		this.departureTime = departureTime;
+	}
+	public DepartureAirport getDepartureAirport() {
+		return departureAirport;
+	}
+	public void setDepartureAirport(DepartureAirport departureAirport) {
+		this.departureAirport = departureAirport;
+	}
+	public ArrivalDt getArrivalDt() {
+		return arrivalDt;
+	}
+	public void setArrivalDt(ArrivalDt arrivalDt) {
+		this.arrivalDt = arrivalDt;
+	}
+	public ArrivalTime getArrivalTime() {
+		return arrivalTime;
+	}
+	public void setArrivalTime(ArrivalTime arrivalTime) {
+		this.arrivalTime = arrivalTime;
+	}
+	public Restriction getRestriction() {
+		return restriction;
+	}
+	public void setRestriction(Restriction restriction) {
+		this.restriction = restriction;
+	}
+	public AirlineCharge getAirlineCharge() {
+		return airlineCharge;
+	}
+	public void setAirlineCharge(AirlineCharge airlineCharge) {
+		this.airlineCharge = airlineCharge;
+	}
+}

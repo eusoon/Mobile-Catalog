@@ -1,0 +1,19 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class SPRefIdCorrect extends IFXObject {
+
+	public final native  SPRefIdent getsPRefIdent()/*-{
+		return $wnd.cleanObject(this.sPRefIdent);
+	}-*/;
+	public final native  void setsPRefIdent(SPRefIdent sPRefIdent)/*-{
+		this.sPRefIdent = sPRefIdent;
+	}-*/;
+	public final native  CorrectAction getCorrectAction()/*-{
+		return $wnd.cleanObject(this.correctAction);
+	}-*/;
+	public final native  void setCorrectAction(CorrectAction correctAction)/*-{
+		this.correctAction = correctAction;
+	}-*/;
+}

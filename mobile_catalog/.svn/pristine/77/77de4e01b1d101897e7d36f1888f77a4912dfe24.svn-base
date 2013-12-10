@@ -1,0 +1,8 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public abstract class TrnRef extends IFXObject {
+	
+
+}

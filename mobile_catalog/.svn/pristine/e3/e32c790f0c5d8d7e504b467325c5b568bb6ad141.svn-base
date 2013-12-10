@@ -1,0 +1,15 @@
+package my.com.infopro.ifx.element;
+
+public class SecTokenIssuedIdent extends SecToken {
+	IssuedIdent issuedIdent;//Aggregate	Required Issued Identification
+
+	public IssuedIdent getIssuedIdent() {
+		return issuedIdent;
+	}
+
+	public void setIssuedIdent(IssuedIdent issuedIdent) {
+		this.issuedIdent = issuedIdent;
+	}
+
+
+}

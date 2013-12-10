@@ -1,0 +1,47 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtAuthStatus_Type extends IFXObject {
+	
+	public final native void setPmtAuthStatusCode(
+			PmtAuthStatusCode pmtAuthStatusCode)/*-{
+		this.pmtAuthStatusCode = pmtAuthStatusCode;
+	}-*/;
+
+	public final native PmtAuthStatusCode getPmtAuthStatusCode()/*-{
+		return $wnd.cleanObject(this.pmtAuthStatusCode);
+
+	}-*/;
+
+	public final native void setStatusDesc(StatusDesc statusDesc)/*-{
+		this.statusDesc = statusDesc;
+	}-*/;
+
+	public final native StatusDesc getStatusDesc()/*-{
+		return $wnd.cleanObject(this.statusDesc);
+
+	}-*/;
+
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public native void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+
+	public final native ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+
+	public final native void setStatusModBy(StatusModBy statusModBy)/*-{
+		this.statusModBy = statusModBy;
+	}-*/;
+
+	public final native StatusModBy getStatusModBy()/*-{
+		return $wnd.cleanObject(this.statusModBy);
+	}-*/;
+}

@@ -1,0 +1,46 @@
+package my.com.infopro.mobile.client.callback;
+
+import com.allen_sauer.gwt.log.client.Log;
+import com.google.gwt.core.client.JsArray;
+import com.google.gwt.json.client.JSONArray;
+import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.model.Transfer;
+import my.com.infopro.mobile.client.utils.ResultPage;
+import my.com.infopro.mobile.json.ifx.element.CustPayeeRec;
+import my.com.infopro.mobile.json.ifx.element.XferInfo;
+import my.com.infopro.mobile.json.ifx.element.XferRec;
+import my.com.infopro.mobile.json.ifx.transfer.XferAddRs;
+import my.com.infopro.mobile.json.ifx.transfer.XferInqRs;
+
+public abstract class XferAddRsCallbackWrapper {
+	private long start;
+	private final LoggedUser loggerUser = LoggedUser.get();
+	public final AsyncCallback<XferAddRs> getAsyncCallback() {
+		AsyncCallback<XferAddRs> asyncCallback=new AsyncCallback<XferAddRs> (){
+	
+			@Override
+			public void onSuccess(XferAddRs result) {
+				Log.debug("Time : " + (System.currentTimeMillis() - start));
+		
+					XferRec xferRec=result.getXferRec();
+					XferInfo xferInfo=xferRec.getXferInfo();
+					xferInfo.getFromAcctRef().getAcctRec().getAcctInfo().getAcctIdent();
+					JSONObject transfer = new JSONObject();
+					
+					Transfer result1=transfer.getJavaScriptObject().cast();
+					XferAddRsCallbackWrapper.this.onSuccess(result1);
+			}
+			@Override
+			public void onFailure(Throwable throwable) {
+				XferAddRsCallbackWrapper.this.onFailure(throwable);
+			}	
+		};
+		return asyncCallback;
+	}
+	protected abstract void onSuccess(Transfer result) ;
+	protected abstract void onFailure(Throwable throwable) ;
+	protected abstract void onCall(AsyncCallback<XferInqRs> callback) ;
+}

@@ -1,0 +1,76 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtAuthInqRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn)/*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+
+	public final native RecCtrlIn getRecCtrlIn()/*-{
+		return $wnd.cleanObject(this.recCtrlIn);
+
+	}-*/;
+
+	public final native void setPmtAuthId(PmtAuthId pmtAuthId)/*-{
+		this.pmtAuthId = pmtAuthId;
+	}-*/;
+
+	public final native PmtAuthId getPmtAuthId()/*-{
+		return $wnd.cleanObject(this.pmtAuthId);
+	}-*/;
+
+	public final native void setSelRangeCurAmt(SelRangeCurAmt[] selRangeCurAmt)/*-{
+		this.selRangeCurAmt = selRangeCurAmt;
+	}-*/;
+
+	public final native SelRangeCurAmt[] getSelRangeCurAmt()/*-{
+		return $wnd.cleanObject(this.selRangeCurAmt);
+	}-*/;
+
+	public final native void setSelRangeDt(SelRangeDt selRangeDt)/*-{
+		this.selRangeDt = selRangeDt;
+	}-*/;
+
+	public final native SelRangeDt getSelRangeDt()/*-{
+		return $wnd.cleanObject(this.selRangeDt);
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod getDeliveryMethod() /*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+	}-*/;
+}

@@ -1,0 +1,28 @@
+package my.com.infopro.mobile.client.app;
+import my.com.infopro.mobile.client.tablet.SplashTablet;
+
+
+public class SplashTableImpl implements SplashClientFactory {
+
+	private MobileWebAppShell splash;
+
+
+	@Override
+	public MobileWebAppShell getSplash() {
+		 if (splash == null) {
+			 splash = createSplash();
+		    }
+		    return splash;
+	}
+
+	  /**
+	   * Create the application UI splash.
+	   * 
+	   * @return the UI splash
+	   */
+	  protected MobileWebAppShell createSplash() {
+	    
+	    return new SplashTablet();
+	  }
+
+}

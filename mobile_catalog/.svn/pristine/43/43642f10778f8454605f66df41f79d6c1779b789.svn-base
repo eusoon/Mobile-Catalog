@@ -1,0 +1,4 @@
+package my.com.infopro.ifx.client.model;
+
+public class OrgPhone_Type extends IFXObject {
+}

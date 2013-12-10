@@ -1,0 +1,34 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public  class ChkImgData extends IFXObject {
+	
+	protected ChkImgData(){
+	}
+	
+	public final native  CryptType getCryptType()/*-{
+		return $wnd.cleanObject(this.cryptType);
+	}-*/;
+	public final native  void setCryptType(CryptType cryptType)/*-{
+		this.cryptType = cryptType;
+	}-*/;
+	public final native  SecObjId getSecObjId()/*-{
+		return $wnd.cleanObject(this.SecObjId);
+	}-*/;
+	public final native  void setSecObjId(SecObjId secObjId)/*-{
+		SecObjId = secObjId;
+	}-*/;
+	public final native  ChkImgFront getChkImgFront()/*-{
+		return $wnd.cleanObject(this.ChkImgFront);
+	}-*/;
+	public final native  void setChkImgFront(ChkImgFront chkImgFront)/*-{
+		ChkImgFront = chkImgFront;
+	}-*/;
+	public final native  ChkImgBack getChkImgBack()/*-{
+		return $wnd.cleanObject(this.ChkImgBack);
+	}-*/;
+	public final native  void setChkImgBack(ChkImgBack chkImgBack)/*-{
+		ChkImgBack = chkImgBack;
+	}-*/;
+}

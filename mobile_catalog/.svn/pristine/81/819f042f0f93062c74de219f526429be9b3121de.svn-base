@@ -1,0 +1,22 @@
+package my.com.infopro.ifx.element;
+
+
+public class CustPayeeKeys extends BaseKeys {
+	SvcIdent svcIdent;	 //	Aggregate	 Optional	 Service Identifier
+	//begin-xor	Required
+	CustPayeeId custPayeeId;	 //	Identifier	 Required	 Customer Payee Identifier
+	//end-xor
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public CustPayeeId getCustPayeeId() {
+		return custPayeeId;
+	}
+	public void setCustPayeeId(CustPayeeId custPayeeId) {
+		this.custPayeeId = custPayeeId;
+	}	
+}

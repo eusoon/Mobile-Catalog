@@ -1,0 +1,23 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class NextStmtData extends IFXObject {
+	protected NextStmtData(){	
+	}
+	public final native NextStmtDt getNextStmtDt() /*-{
+		return $wnd.cleanObject(nextStmtDt);
+	}-*/;
+
+	public final native void setNextStmtDt(NextStmtDt nextStmtDt) /*-{
+		this.nextStmtDt = nextStmtDt;
+	}-*/;
+
+	public final native NextDueDt getNextDueDt() /*-{
+		return $wnd.cleanObject(nextDueDt);
+	}-*/;
+
+	public final native void setNextDueDt(NextDueDt nextDueDt) /*-{
+		this.nextDueDt = nextDueDt;
+	}-*/;
+}

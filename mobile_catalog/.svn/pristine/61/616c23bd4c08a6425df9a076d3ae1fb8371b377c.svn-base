@@ -1,0 +1,42 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class CustPayeeRec extends IFXObject {
+	SvcIdent svcIdent;	 //	Aggregate	 Optional	 Service Identifier
+	CustPayeeId custPayeeId;	 //	Identifier	 Required	 Customer Payee Identifier
+	CustPayeeInfo custPayeeInfo;	 //	Aggregate	 Required	 Customer Payee Information Aggregate
+	CustPayeeEnvr custPayeeEnvr;	 //	Aggregate	 Optional	 Customer Payee Environment Aggregate
+	CustPayeeStatus custPayeeStatus;	 //	Aggregate	 Required	 Customer Payee Status Aggregate
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public CustPayeeId getCustPayeeId() {
+		return custPayeeId;
+	}
+	public void setCustPayeeId(CustPayeeId custPayeeId) {
+		this.custPayeeId = custPayeeId;
+	}
+	public CustPayeeInfo getCustPayeeInfo() {
+		return custPayeeInfo;
+	}
+	public void setCustPayeeInfo(CustPayeeInfo custPayeeInfo) {
+		this.custPayeeInfo = custPayeeInfo;
+	}
+	public CustPayeeEnvr getCustPayeeEnvr() {
+		return custPayeeEnvr;
+	}
+	public void setCustPayeeEnvr(CustPayeeEnvr custPayeeEnvr) {
+		this.custPayeeEnvr = custPayeeEnvr;
+	}
+	public CustPayeeStatus getCustPayeeStatus() {
+		return custPayeeStatus;
+	}
+	public void setCustPayeeStatus(CustPayeeStatus custPayeeStatus) {
+		this.custPayeeStatus = custPayeeStatus;
+	}
+}

@@ -1,0 +1,19 @@
+package my.com.infopro.mobile.json.ifx.basetypes;
+
+/**
+ * Wrapper class to accomodate xsd:base64Binary which translates to byte[] 
+ * in Java. Instead, we make our generator translate the xsd:base64Binary
+ * to this IFXBase64Binary class which has methods to get and set an array of 
+ * bytes.
+* @author Ong Eu Soon (eusoon@gmail.com)
+ * @version $Revision: 2.3 $
+ */
+public class IFXBase64Binary extends IFXString {
+	protected IFXBase64Binary(){	
+	}
+    public  final native byte[] getBytes() /*-{
+        return $wnd.cleanObject(this.bytes);
+     }-*/;
+
+	
+}

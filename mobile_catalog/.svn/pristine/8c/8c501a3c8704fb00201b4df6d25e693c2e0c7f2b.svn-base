@@ -1,0 +1,79 @@
+package my.com.infopro.ifx.client.model;
+
+import java.awt.PageAttributes.MediaType;
+
+public class MediaItem_Type extends IFXObject {
+
+	public final native void setMediaContainerId(MediaContainerId mediaContainerId)/*-{
+		this.mediaContainerId = mediaContainerId;
+	}-*/;
+
+	public final native MediaContainerId getMediaContainerId()/*-{
+		return $wnd.cleanObject(this.mediaContainerId);
+	}-*/;
+
+	public final native void setMediaType(MediaType mediaType)/*-{
+		this.mediaType = mediaType;
+	}-*/;
+
+	public final native MediaType getMediaType()/*-{
+		return $wnd.cleanObject(this.mediaType);
+	}-*/;
+
+	public final native void setMediaSubType(MediaSubType mediaSubType)/*-{
+		this.mediaSubType = mediaSubType;
+	}-*/;
+
+	public final native MediaSubType getMediaSubType()/*-{
+		return $wnd.cleanObject(this.mediaSubType);
+	}-*/;
+
+	public final native void setMediaCashInfo(MediaCashInfo mediaCashInfo)/*-{
+		this.mediaCashInfo = mediaCashInfo;
+	}-*/;
+
+	public final native MediaCashInfo getMediaCashInfo()/*-{
+		return $wnd.cleanObject(this.mediaCashInfo);
+	}-*/;
+
+	public final native void setCreditMediaChkInfo(CreditMediaChkInfo creditMediaChkInfo)/*-{
+		this.creditMediaChkInfo = creditMediaChkInfo;
+	}-*/;
+
+	public final native CreditMediaChkInfo getCreditMediaChkInfo()/*-{
+		return $wnd.cleanObject(this.creditMediaChkInfo);
+	}-*/;
+
+	public final native void setCount(Count count)/*-{
+		this.count = count;
+	}-*/;
+
+	public final native Count getCount()/*-{
+		return $wnd.cleanObject(this.count);
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setTotalCurAmt(TotalCurAmt totalCurAmt)/*-{
+		this.totalCurAmt = totalCurAmt;
+	}-*/;
+
+	public final native TotalCurAmt getTotalCurAmt()/*-{
+		return $wnd.cleanObject(this.totalCurAmt);
+	}-*/;
+
+	public final native void setMediaBal(MediaBal mediaBal)/*-{
+		this.mediaBal = mediaBal;
+	}-*/;
+
+	public final native MediaBal getMediaBal()/*-{
+		return $wnd.cleanObject(this.mediaBal);
+	}-*/;
+
+}

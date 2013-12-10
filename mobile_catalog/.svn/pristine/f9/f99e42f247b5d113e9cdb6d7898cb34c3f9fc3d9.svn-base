@@ -1,0 +1,69 @@
+package my.com.infopro.ifx.client.model;
+
+public class DevAdviseRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setTrnRqUID(TrnRqUID[] trnRqUID)/*-{
+		this.trnRqUID = trnRqUID;
+	}-*/;
+
+	public final native TrnRqUID[] getTrnRqUID()/*-{
+		return $wnd.cleanObject(this.trnRqUID);
+	}-*/;
+
+	public final native void setReconRqUID(ReconRqUID[] reconRqUID)/*-{
+		this.reconRqUID = reconRqUID;
+	}-*/;
+
+	public final native ReconRqUID[] getReconRqUID()/*-{
+		return $wnd.cleanObject(this.reconRqUID);
+
+	}-*/;
+
+	public final native void setDevRec(DevRec[] devRec)/*-{
+		this.devRec = devRec;
+	}-*/;
+
+	public final native DevRec[] getDevRec()/*-{
+		return $wnd.cleanObject(this.devRec);
+	}-*/;
+
+	public final native void setDevId(DevId[] devId)/*-{
+		this.devId = devId;
+	}-*/;
+
+	public final native DevId[] getDevId()/*-{
+		return $wnd.cleanObject(this.devId);
+	}-*/;
+
+	public final native void setDevStatus(DevStatus[] devStatus)/*-{
+		this.devStatus = devStatus;
+	}-*/;
+
+	public final native DevStatus[] getDevStatus()/*-{
+		return $wnd.cleanObject(this.devStatus);
+	}-*/;
+
+}

@@ -1,0 +1,18 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public class DiscIdent {
+	DiscName discName;//C-64	Optional Disclosure Name
+	Version version;//NC-12	Optional The version of the object or item.
+	public DiscName getDiscName() {
+		return discName;
+	}
+	public void setDiscName(DiscName discName) {
+		this.discName = discName;
+	}
+	public Version getVersion() {
+		return version;
+	}
+	public void setVersion(Version version) {
+		this.version = version;
+	}
+}

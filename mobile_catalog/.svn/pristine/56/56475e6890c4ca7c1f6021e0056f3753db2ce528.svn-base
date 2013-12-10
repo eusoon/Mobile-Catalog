@@ -1,0 +1,113 @@
+package my.com.infopro.ifx.client.model;
+
+public class PaySvcProfInfo_Type extends IFXObject {
+	public final native void setSvcCore(SvcCore svcCore)/*-{
+		this.svcCore = svcCore;
+	}-*/;
+
+	public final native SvcCore getSvcCore()/*-{
+		return $wnd.cleanObject(this.svcCore);
+
+	}-*/;
+
+	public final native void setMsgSupt(MsgSupt[] msgSupt)/*-{
+		this.msgSupt = msgSupt;
+	}-*/;
+
+	public final native MsgSupt[] getMsgSupt()/*-{
+		return $wnd.cleanObject(this.msgSupt);
+
+	}-*/;
+
+	public final native void setOptSupt(OptSupt[] optSupt)/*-{
+		this.optSupt = optSupt;
+	}-*/;
+
+	public final native OptSupt[] getOptSupt()/*-{
+		return $wnd.cleanObject(this.optSupt);
+
+	}-*/;
+
+	public final native void setPrcSched(PrcSched[] prcSched)/*-{
+		this.prcSched = prcSched;
+	}-*/;
+
+	public final native PrcSched[] getPrcSched()/*-{
+		return $wnd.cleanObject(this.prcSched);
+
+	}-*/;
+
+	public final native void setPmtModel(PmtModel[] pmtModel)/*-{
+		this.pmtModel = pmtModel;
+	}-*/;
+
+	public final native PmtModel[] getPmtModel()/*-{
+		return $wnd.cleanObject(this.pmtModel);
+
+	}-*/;
+
+	public final native void setDfltDaysToPay(DfltDaysToPay dfltDaysToPay)/*-{
+		this.dfltDaysToPay = dfltDaysToPay;
+	}-*/;
+
+	public final native DfltDaysToPay getDfltDaysToPay()/*-{
+		return $wnd.cleanObject(this.dfltDaysToPay);
+
+	}-*/;
+
+	public final native void setDfltXferDaysToPay(
+			DfltXferDaysToPay[] dfltXferDaysToPay)/*-{
+		this.dfltXferDaysToPay = dfltXferDaysToPay;
+	}-*/;
+
+	public final native DfltXferDaysToPay[] getDfltXferDaysToPay()/*-{
+		return $wnd.cleanObject(this.dfltXferDaysToPay);
+
+	}-*/;
+
+	public final native void setDaysWith(DaysWith daysWith)/*-{
+		this.daysWith = daysWith;
+	}-*/;
+
+	public final native DaysWith getDaysWith()/*-{
+		return $wnd.cleanObject(this.daysWith);
+
+	}-*/;
+
+	public final native void setHistRetentionDays(
+			HistRetentionDays[] histRetentionDays)/*-{
+		this.histRetentionDays = histRetentionDays;
+	}-*/;
+
+	public final native HistRetentionDays[] getHistRetentionDays()/*-{
+		return $wnd.cleanObject(this.histRetentionDays);
+
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod[] deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod[] getDeliveryMethod()/*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+
+	}-*/;
+
+	public final native void setModPendingType(ModPendingType[] modPendingType)/*-{
+		this.modPendingType = modPendingType;
+	}-*/;
+
+	public final native ModPendingType[] getModPendingType()/*-{
+		return $wnd.cleanObject(this.modPendingType);
+
+	}-*/;
+
+	public final native void setRecPmtProf(RecPmtProf[] recPmtProf)/*-{
+		this.recPmtProf = recPmtProf;
+	}-*/;
+
+	public final native RecPmtProf[] getRecPmtProf()/*-{
+		return $wnd.cleanObject(this.recPmtProf);
+
+	}-*/;
+}

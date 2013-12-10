@@ -1,0 +1,75 @@
+package my.com.infopro.ifx.client.model;
+
+public class PostingSessionInqRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn)/*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+
+	public final native RecCtrlIn getRecCtrlIn()/*-{
+		return $wnd.cleanObject(this.recCtrlIn);
+
+	}-*/;
+
+	public native void setPostingSessionId(PostingSessionId postingSessionId)/*-{
+		this.postingSessionId = postingSessionId;
+	}-*/;
+
+	public final native PostingSessionId getPostingSessionId()/*-{
+		return $wnd.cleanObject(this.postingSessionId);
+
+	}-*/;
+
+	public native void setPostingSessionStatusCode(
+			PostingSessionStatusCode postingSessionStatusCode)/*-{
+		this.postingSessionStatusCode = postingSessionStatusCode;
+	}-*/;
+
+	public final native PostingSessionStatusCode getPostingSessionStatusCode()/*-{
+		return $wnd.cleanObject(this.postingSessionStatusCode);
+
+	}-*/;
+
+	public final native void setSelRangeDt(SelRangeDt selRangeDt)/*-{
+		this.selRangeDt = selRangeDt;
+	}-*/;
+
+	public final native SelRangeDt getSelRangeDt()/*-{
+		return $wnd.cleanObject(this.selRangeDt);
+
+	}-*/;
+
+}

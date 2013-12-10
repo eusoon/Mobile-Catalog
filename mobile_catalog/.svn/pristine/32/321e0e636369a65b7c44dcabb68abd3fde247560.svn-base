@@ -1,0 +1,44 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+import my.com.infopro.mobile.client.ifx.element.SvcIdent;
+
+public class XferRec extends IFXObject {
+	SvcIdent svcIdent;//	Aggregate		Optional	Service Identifier
+	XferId xferId;//	Identifier		Required	Funds Transfer Identifier
+	XferInfo xferInfo;//	Aggregate		Required	Funds Transfer Information Aggregate
+	XferEnvr xferEnvr;//	Aggregate		Optional	Funds Transfer Environment Aggregate
+	XferStatus xferStatus;//	Aggregate		Required	Funds Transfer Status Aggregate
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public XferId getXferId() {
+		return xferId;
+	}
+	public void setXferId(XferId xferId) {
+		this.xferId = xferId;
+	}
+	public XferInfo getXferInfo() {
+		return xferInfo;
+	}
+	public void setXferInfo(XferInfo xferInfo) {
+		this.xferInfo = xferInfo;
+	}
+	public XferEnvr getXferEnvr() {
+		return xferEnvr;
+	}
+	public void setXferEnvr(XferEnvr xferEnvr) {
+		this.xferEnvr = xferEnvr;
+	}
+	public XferStatus getXferStatus() {
+		return xferStatus;
+	}
+	public void setXferStatus(XferStatus xferStatus) {
+		this.xferStatus = xferStatus;
+	}
+
+
+}

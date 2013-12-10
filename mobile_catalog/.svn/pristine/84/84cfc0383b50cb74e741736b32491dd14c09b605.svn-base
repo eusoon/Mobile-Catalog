@@ -1,0 +1,41 @@
+package my.com.infopro.ifx.client.model;
+
+public class ForExDealAddRs_Type extends IFXObject {
+
+	public native void setForExDealInfo(ForExDealInfo forExDealInfo)/*-{
+		this.forExDealInfo = forExDealInfo;
+	}-*/;
+
+	public final native ForExDealInfo getForExDealInfo() /*-{
+		return $wnd.cleanObject(this.forExDealInfo);
+
+	}-*/;
+
+	public native void setForExDealRec(ForExDealRec forExDealRec)/*-{
+		this.forExDealRec = forExDealRec;
+	}-*/;
+
+	public final native ForExDealRec getForExDealRec() /*-{
+		return $wnd.cleanObject(this.forExDealRec);
+
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+
+	}-*/;
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+
+	}-*/;
+
+}

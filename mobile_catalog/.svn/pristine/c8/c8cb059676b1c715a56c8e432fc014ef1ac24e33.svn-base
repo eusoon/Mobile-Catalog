@@ -1,0 +1,36 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.service.SvcAdviseRs;
+import my.com.infopro.mobile.json.ifx.service.SvcInqRs;
+import my.com.infopro.mobile.json.ifx.service.SvcStatusInqRs;
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public  class SvcRsMsg extends IFXObject {
+	protected SvcRsMsg(){	
+	}
+	public final native  MsgRecDt getMsgRecDt()/*-{
+		return $wnd.cleanObject(this.msgRecDt);
+	}-*/;
+	public final native  void setMsgRecDt(MsgRecDt msgRecDt)/*-{
+		this.msgRecDt = msgRecDt;
+	}-*/;
+	public final native  SvcInqRs getSvcInqRs()/*-{
+		return $wnd.cleanObject(this.svcInqRs);
+	}-*/;
+	public final native  void setSvcInqRs(SvcInqRs svcInqRs)/*-{
+		this.svcInqRs = svcInqRs;
+	}-*/;
+	public final native  SvcAdviseRs getSvcAdviseRs()/*-{
+		return $wnd.cleanObject(this.svcAdviseRs);
+	}-*/;
+	public final native  void setSvcAdviseRs(SvcAdviseRs svcAdviseRs)/*-{
+		this.svcAdviseRs = svcAdviseRs;
+	}-*/;
+	public final native  SvcStatusInqRs getSvcStatusInqRs()/*-{
+		return $wnd.cleanObject(this.svcStatusInqRs);
+	}-*/;
+	public final native  void setSvcStatusInqRs(SvcStatusInqRs svcStatusInqRs)/*-{
+		this.svcStatusInqRs = svcStatusInqRs;
+	}-*/;
+
+}

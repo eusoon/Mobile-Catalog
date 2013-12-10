@@ -1,0 +1,41 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+import ong.eu.soon.mobile.json.ifx.element.SvcIdent;
+
+public class XferRec extends IFXObject {
+	protected XferRec(){	
+	}
+	public final native SvcIdent getSvcIdent() /*-{
+		return $wnd.cleanObject(svcIdent);
+	}-*/;
+	public final native void setSvcIdent(SvcIdent svcIdent) /*-{
+		this.svcIdent = svcIdent;
+	}-*/;
+	public final native XferId getXferId() /*-{
+		return $wnd.cleanObject(xferId);
+	}-*/;
+	public final native void setXferId(XferId xferId) /*-{
+		this.xferId = xferId;
+	}-*/;
+	public final native XferInfo getXferInfo() /*-{
+		return $wnd.cleanObject(xferInfo);
+	}-*/;
+	public final native void setXferInfo(XferInfo xferInfo) /*-{
+		this.xferInfo = xferInfo;
+	}-*/;
+	public final native XferEnvr getXferEnvr() /*-{
+		return $wnd.cleanObject(xferEnvr);
+	}-*/;
+	public final native void setXferEnvr(XferEnvr xferEnvr) /*-{
+		this.xferEnvr = xferEnvr;
+	}-*/;
+	public final native XferStatus getXferStatus() /*-{
+		return $wnd.cleanObject(xferStatus);
+	}-*/;
+	public final native void setXferStatus(XferStatus xferStatus) /*-{
+		this.xferStatus = xferStatus;
+	}-*/;
+
+
+}

@@ -1,0 +1,22 @@
+package my.com.infopro.mobile.json.ifx.basetypes;
+
+/**
+ * This is the superclass from which all IFX beans descend. This is needed
+ * to make the XML Encoding and Decoding happen in a general way.
+  * @author Ong Eu Soon (eusoob@gmail.com)
+ * @version $Revision: 2.3 $
+ */
+public class IFXObject {
+
+    /**
+     * Returns a String representation of this object. The method uses
+     * reflection to stringify the values of the member variables. This
+     * method is useful for dumping the contents of a IFXObject to see
+     * whats going wrong or for logging. Needs to be used sparingly since
+     * it uses reflection.
+     * @return a String representation of this object.
+     */
+    public  final native String toString() /*-{
+        return $wnd.cleanString(this.string);
+    }-*/;
+}

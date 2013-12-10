@@ -1,0 +1,23 @@
+package com.bigoloo.gwt.jalaliwidget.client;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.rpc.RemoteService;
+import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
+
+@RemoteServiceRelativePath("jalaliwidgetService")
+public interface jalaliwidgetService extends RemoteService {
+    // Sample interface method of remote interface
+    String getMessage(String msg);
+
+    /**
+     * Utility/Convenience class.
+     * Use jalaliwidgetService.App.getInstance() to access static instance of jalaliwidgetServiceAsync
+     */
+    public static class App {
+        private static jalaliwidgetServiceAsync ourInstance = GWT.create(jalaliwidgetService.class);
+
+        public static synchronized jalaliwidgetServiceAsync getInstance() {
+            return ourInstance;
+        }
+    }
+}

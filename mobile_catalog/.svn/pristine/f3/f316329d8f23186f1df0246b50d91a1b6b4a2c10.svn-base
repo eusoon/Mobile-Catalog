@@ -1,0 +1,17 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class DocCtrlOut extends IFXObject {
+
+	protected DocCtrlOut(){
+	}
+	
+	public final native  SentPageCount getSentPageCount()/*-{
+		return $wnd.cleanObject(this.sentPageCount);
+	}-*/;
+
+	public final native  void setSentPageCount(SentPageCount sentPageCount)/*-{
+		this.sentPageCount = sentPageCount;
+	}-*/;	
+}

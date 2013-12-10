@@ -1,0 +1,48 @@
+package my.com.infopro.ifx.client.model;
+
+public class SignonICC_Type extends IFXObject {
+	public native void setAppPan(AppPan appPan)/*-{
+		this.appPan = appPan;
+	}-*/;
+
+	public final native AppPan getAppPan()/*-{
+		return $wnd.cleanObject(this.appPan);
+
+	}-*/;
+
+	public native void setAppPanSeq(AppPanSeq appPanSeq)/*-{
+		this.appPanSeq = appPanSeq;
+	}-*/;
+
+	public final native AppPanSeq getAppPanSeq()/*-{
+		return $wnd.cleanObject(this.appPanSeq);
+
+	}-*/;
+
+	public native void setAppId(AppId appId)/*-{
+		this.appId = appId;
+	}-*/;
+
+	public final native AppId getAppId()/*-{
+		return $wnd.cleanObject(this.appId);
+
+	}-*/;
+
+	public final native void setPINBlock(PINBlock pINBlock)/*-{
+		this.pINBlock = pINBlock;
+	}-*/;
+
+	public final native PINBlock getPINBlock()/*-{
+		return $wnd.cleanObject(this.pINBlock);
+
+	}-*/;
+
+	public final native void setGenSessKey(GenSessKey genSessKey)/*-{
+		this.genSessKey = genSessKey;
+	}-*/;
+
+	public final native GenSessKey getGenSessKey()/*-{
+		return $wnd.cleanObject(this.genSessKey);
+
+	}-*/;
+}

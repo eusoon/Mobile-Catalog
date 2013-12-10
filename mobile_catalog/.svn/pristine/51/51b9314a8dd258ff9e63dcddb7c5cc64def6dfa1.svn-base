@@ -1,0 +1,34 @@
+package my.com.infopro.mobile.json.ifx.rate;
+
+import my.com.infopro.mobile.json.ifx.element.ForExDealRec;
+import my.com.infopro.mobile.json.ifx.element.ForExDealStatusRec;
+import my.com.infopro.mobile.json.ifx.element.MsgRqHdr;
+import my.com.infopro.mobile.json.ifx.element.RqUID;
+
+public class ForExDealAdviseRq {
+	
+	public final native RqUID getRqUID() /*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+	public final native void setRqUID(RqUID rqUID) /*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+	public final native ForExDealRec getForExDealRec() /*-{
+		return $wnd.cleanObject(this.forExDealRec);
+	}-*/;
+	public final native void setForExDealRec(ForExDealRec forExDealRec) /*-{
+		this.forExDealRec = forExDealRec;
+	}-*/;
+	public final native ForExDealStatusRec getForExDealStatusRec() /*-{
+		return $wnd.cleanObject(this.forExDealStatusRec);
+	}-*/;
+	public final native void setForExDealStatusRec(ForExDealStatusRec forExDealStatusRec) /*-{
+		this.forExDealStatusRec = forExDealStatusRec;
+	}-*/;
+}

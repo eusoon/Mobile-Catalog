@@ -1,0 +1,52 @@
+package my.com.infopro.ifx.client.model;
+
+import com.google.gwt.core.client.JavaScriptObject;
+
+public class CustId_Type extends IFXObject {
+	
+	public native void setSPName(SPName sPName) /*-{
+		this.sPName = sPName;
+	}-*/;
+
+	public final native SPName getSPName()/*-{
+		return $wnd.cleanObject(this.sPName);
+
+	}-*/;
+
+	public native void setCustPermId(CustPermId custPermId)/*-{
+		this.custPermId = custPermId;
+	}-*/;
+
+	public final native CustPermId getCustPermId()/*-{
+		return $wnd.cleanObject(this.custPermId);
+
+	}-*/;
+
+	public native void setCustLoginId(CustLoginId custLoginId)/*-{
+		this.custLoginId = custLoginId;
+	}-*/;
+
+	public final native CustLoginId getCustLoginId()/*-{
+		return $wnd.cleanObject(this.custLoginId);
+
+	}-*/;
+
+	public native void setCardMagData(CardMagData cardMagData)/*-{
+		this.cardMagData = cardMagData;
+	}-*/;
+
+	public final native CardMagData getCardMagData()/*-{
+		return $wnd.cleanObject(this.cardMagData);
+
+	}-*/;
+
+	public native void setCardLogicalData(CardLogicalData cardLogicalData)/*-{
+		this.cardLogicalData = cardLogicalData;
+	}-*/;
+
+	public final native CardLogicalData getCardLogicalData()/*-{
+		return $wnd.cleanObject(this.cardLogicalData);
+
+	}-*/;
+
+}

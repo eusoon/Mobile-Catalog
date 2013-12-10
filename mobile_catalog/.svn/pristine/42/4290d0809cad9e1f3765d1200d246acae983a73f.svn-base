@@ -1,0 +1,12 @@
+package my.com.infopro.ifx.client.model;
+
+public class AcctMsgRqInfo_Type extends IFXObject {
+	public final native void setAcctInqRq(AcctInqRq acctInqRq)/*-{
+		this.acctInqRq = acctInqRq;
+	}-*/;
+
+	public final native AcctInqRq getAcctInqRq()/*-{
+		return $wnd.cleanObject(this.acctInqRq);
+
+	}-*/;
+}

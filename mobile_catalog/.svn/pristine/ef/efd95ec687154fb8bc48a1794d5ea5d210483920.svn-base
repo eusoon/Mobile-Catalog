@@ -1,0 +1,31 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillerPayInfo_Type extends IFXObject {
+	
+	public final native void setPmtInst(PmtInst[] pmtInst)/*-{
+		this.pmtInst = pmtInst;
+	}-*/;
+
+	public final native PmtInst[] getPmtInst()/*-{
+		return $wnd.cleanObject(this.pmtInst);
+
+	}-*/;
+
+	public final native void setDaysToEPost(DaysToEPost[] daysToEPost)/*-{
+		this.daysToEPost = daysToEPost;
+	}-*/;
+
+	public final native DaysToEPost[] getDaysToEPost()/*-{
+		return $wnd.cleanObject(this.daysToEPost);
+
+	}-*/;
+
+	public final native void setPrenoteReqd(PrenoteReqd[] prenoteReqd)/*-{
+		this.prenoteReqd = prenoteReqd;
+	}-*/;
+
+	public final native PrenoteReqd[] getPrenoteReqd()/*-{
+		return $wnd.cleanObject(this.prenoteReqd);
+
+	}-*/;
+}

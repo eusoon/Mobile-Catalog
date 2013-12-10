@@ -1,0 +1,68 @@
+package my.com.infopro.ifx.client.model;
+
+public class Status_Type extends IFXObject {
+	public final native void setId(IFXString id)/*-{
+		this.id = id;
+	}-*/;
+
+	public final native IFXString getId()/*-{
+		return $wnd.cleanObject(this.id);
+
+	}-*/;
+
+	public final native void setStatusCode(StatusCode statusCode)/*-{
+		this.statusCode = statusCode;
+	}-*/;
+
+	public final native StatusCode getStatusCode()/*-{
+		return $wnd.cleanObject(this.statusCode);
+
+	}-*/;
+
+	public final native void setServerStatusCode(
+			ServerStatusCode serverStatusCode)/*-{
+		this.serverStatusCode = serverStatusCode;
+	}-*/;
+
+	public final native ServerStatusCode getServerStatusCode()/*-{
+		return $wnd.cleanObject(this.serverStatusCode);
+
+	}-*/;
+
+	public final native void setSeverity(Severity severity)/*-{
+		this.severity = severity;
+	}-*/;
+
+	public final native Severity getSeverity()/*-{
+		return $wnd.cleanObject(this.severity);
+
+	}-*/;
+
+	public final native void setStatusDesc(StatusDesc statusDesc)/*-{
+		this.statusDesc = statusDesc;
+	}-*/;
+
+	public final native StatusDesc getStatusDesc()/*-{
+		return $wnd.cleanObject(this.statusDesc);
+
+	}-*/;
+
+	public final native void setAdditionalStatus(
+			AdditionalStatus[] additionalStatus)/*-{
+		this.additionalStatus = additionalStatus;
+	}-*/;
+
+	public final native AdditionalStatus[] getAdditionalStatus()/*-{
+		return $wnd.cleanObject(this.additionalStatus);
+
+	}-*/;
+
+	public final native void setAsyncRsInfo(AsyncRsInfo[] asyncRsInfo)/*-{
+		this.asyncRsInfo = asyncRsInfo;
+	}-*/;
+
+	public final native AsyncRsInfo[] getAsyncRsInfo()/*-{
+		return $wnd.cleanObject(this.asyncRsInfo);
+
+	}-*/;
+}

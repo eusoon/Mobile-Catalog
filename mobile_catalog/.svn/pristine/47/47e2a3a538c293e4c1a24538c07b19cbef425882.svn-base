@@ -1,0 +1,117 @@
+package my.com.infopro.ifx.client.model;
+
+public class MediaAcctAdjInqRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlOut(RecCtrlOut recCtrlOut)/*-{
+		this.recCtrlOut = recCtrlOut;
+	}-*/;
+
+	public final native RecCtrlOut getRecCtrlOut()/*-{
+		return $wnd.cleanObject(this.recCtrlOut);
+	}-*/;
+
+	public final native void setMediaAcctAdjId(MediaAcctAdjId mediaAcctAdjId)/*-{
+		this.mediaAcctAdjId = mediaAcctAdjId;
+	}-*/;
+
+	public final native MediaAcctAdjId getMediaAcctAdjId()/*-{
+		return $wnd.cleanObject(this.mediaAcctAdjId);
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId[] cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId[] getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+	}-*/;
+
+	public final native void setSPRefId(SPRefId[] sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId[] getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+	}-*/;
+
+	public final native void setMediaAcctId(MediaAcctId[] mediaAcctId)/*-{
+		this.mediaAcctId = mediaAcctId;
+	}-*/;
+
+	public final native MediaAcctId[] getMediaAcctId()/*-{
+		return $wnd.cleanObject(this.mediaAcctId);
+	}-*/;
+
+	public final native void setSelRangeDt(SelRangeDt[] selRangeDt)/*-{
+		this.selRangeDt = selRangeDt;
+	}-*/;
+
+	public final native SelRangeDt[] getSelRangeDt()/*-{
+		return $wnd.cleanObject(this.selRangeDt);
+	}-*/;
+
+	public final native void setSelRangeCurAmt(SelRangeCurAmt[] selRangeCurAmt)/*-{
+		this.selRangeCurAmt = selRangeCurAmt;
+	}-*/;
+
+	public final native SelRangeCurAmt[] getSelRangeCurAmt()/*-{
+		return $wnd.cleanObject(this.selRangeCurAmt);
+	}-*/;
+
+	public final native void setMediaAcctAdjRec(
+			MediaAcctAdjRec[] mediaAcctAdjRec)/*-{
+		this.mediaAcctAdjRec = mediaAcctAdjRec;
+	}-*/;
+
+	public final native MediaAcctAdjRec[] getMediaAcctAdjRec()/*-{
+		return $wnd.cleanObject(this.mediaAcctAdjRec);
+	}-*/;
+}

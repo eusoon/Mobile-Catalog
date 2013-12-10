@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public enum ClientChgCode {
+	None, ConsumerCancelled, TerminalExceptionAmountKnown, TerminalExceptionAmountUnknown, ConsumerExceptionAmountKnown, ConsumerExceptionAmountUnknown, ConsumerDeclined, ConsumerTimeout
+}

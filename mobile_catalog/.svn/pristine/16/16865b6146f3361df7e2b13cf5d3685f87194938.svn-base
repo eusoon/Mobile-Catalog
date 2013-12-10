@@ -1,0 +1,7 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class MortAcctRec extends MortAcctRec_Type {
+
+
+}

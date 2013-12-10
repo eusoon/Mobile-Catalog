@@ -1,0 +1,36 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class StdPayeeInfo extends IFXObject {
+
+	PartyData partyData; //Abstract Aggregate	Optional	Payee Name Valid Aggregates are: OrgData, PersonData
+	AcctMask[] acctMask; //NC-32	Optional Repeating	Account Mask. Zero or more edit masks to facilitate <BillingAcct> entry and editing.
+	DaysToPay daysToPay; //Long	Required	Days to Pay. Minimum number of business days needed to process. Assigned by the Pay provider. Cannot be changed by the client.
+	BillerKeys billerKeys; //Aggregate	Optional	Biller Keys Aggregate
+	
+	public PartyData getPartyData() {
+		return partyData;
+	}
+	public void setPartyData(PartyData partyData) {
+		this.partyData = partyData;
+	}
+	public AcctMask[] getAcctMask() {
+		return acctMask;
+	}
+	public void setAcctMask(AcctMask[] acctMask) {
+		this.acctMask = acctMask;
+	}
+	public DaysToPay getDaysToPay() {
+		return daysToPay;
+	}
+	public void setDaysToPay(DaysToPay daysToPay) {
+		this.daysToPay = daysToPay;
+	}
+	public BillerKeys getBillerKeys() {
+		return billerKeys;
+	}
+	public void setBillerKeys(BillerKeys billerKeys) {
+		this.billerKeys = billerKeys;
+	}
+}

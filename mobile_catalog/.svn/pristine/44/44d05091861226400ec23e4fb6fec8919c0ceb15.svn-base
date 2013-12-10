@@ -1,0 +1,8 @@
+package my.com.infopro.mobile.json.ifx.payee;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class CustPayeeRqMsg extends IFXObject {
+	protected CustPayeeRqMsg(){	
+	}
+}

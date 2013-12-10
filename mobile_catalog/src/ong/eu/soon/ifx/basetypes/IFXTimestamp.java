@@ -1,0 +1,74 @@
+/*
+ * $Id: IFXTime.java,v 1.1 2004/02/23 03:36:46 spal Exp $
+ * $Source: /cvsroot/ifx-framework/code/src/org/sourceforge/ifx/basetypes/IFXTime.java,v $
+ * IFX-Framework - IFX XML to JavaBean application framework.
+ * Copyright (C) 2003  The IFX-Framework Team
+ * 
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+package ong.eu.soon.ifx.basetypes;
+
+import java.sql.Timestamp;
+import com.google.gwt.i18n.shared.DateTimeFormat;
+import java.util.Date;
+
+
+
+/**
+ * The IFXTime class provides an abstraction of the xsd:time datatype.
+ * @author Sujit Pal (spal@users.sourceforge.net)
+ * @version $Revision: 1.1 $
+ */
+public class IFXTimestamp extends IFXObject implements IBaseType {
+
+    private final static DateTimeFormat sdf = DateTimeFormat.getFormat("HH:mm:ss.SSSZ");
+    private Timestamp _cal;
+
+    /** Default constructor */
+    public IFXTimestamp() {
+        this._cal = new Timestamp(new Date().getTime());
+    }
+
+    // implementing the methods of IBaseType
+
+    /**
+     * Returns the String representation of this object.
+     * @return a String.
+     */
+    public String getString() {
+        return sdf.format(this._cal);
+    }
+
+    /**
+     * Sets the value of this object from a String.
+     * @param s a String.
+     */
+    public void setString(String s) {
+
+         this._cal.setTime(sdf.parse(s).getTime());
+        
+    }
+
+    /**
+     * Compares two IFXTime objects for equality.
+     * @param obj the object to compare against.
+     * @return true or false.
+     */
+    public boolean equals(Object obj) {
+        if (!(obj instanceof IFXTimestamp)) return false;
+        IFXTimestamp that = (IFXTimestamp) obj;
+        return (this.getString().equals(that.getString()));
+    }
+}

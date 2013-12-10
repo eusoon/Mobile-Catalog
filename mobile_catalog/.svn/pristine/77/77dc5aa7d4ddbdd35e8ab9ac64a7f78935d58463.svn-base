@@ -1,0 +1,48 @@
+package my.com.infopro.mobile.json.ifx.transfer;
+
+import my.com.infopro.mobile.json.ifx.element.DelElements;
+import my.com.infopro.mobile.json.ifx.element.MsgRqHdr;
+import my.com.infopro.mobile.json.ifx.element.NewElements;
+import my.com.infopro.mobile.json.ifx.element.RqUID;
+import my.com.infopro.mobile.json.ifx.element.UpdElements;
+import my.com.infopro.mobile.json.ifx.element.XferInfo;
+
+public class XferModRq {
+
+	public final native  RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+	public final native  void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native  MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+	public final native  void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+	public final native  XferInfo getXferInfo()/*-{
+		return $wnd.cleanObject(this.xferInfo);
+	}-*/;
+	public final native  void setXferInfo(XferInfo xferInfo)/*-{
+		this.xferInfo = xferInfo;
+	}-*/;
+	public final native  DelElements[] getDelElements()/*-{
+		return $wnd.cleanObject(this.delElements);
+	}-*/;
+	public final native  void setDelElements(DelElements[] delElements)/*-{
+		this.delElements = delElements;
+	}-*/;
+	public final native  UpdElements[] getUpdElements()/*-{
+		return $wnd.cleanObject(this.UpdElements);
+	}-*/;
+	public final native  void setUpdElements(UpdElements[] updElements)/*-{
+		UpdElements = updElements;
+	}-*/;
+	public final native  NewElements[] getNewElements()/*-{
+		return $wnd.cleanObject(this.NewElements);
+	}-*/;
+	public final native  void setNewElements(NewElements[] newElements)/*-{
+		NewElements = newElements;
+	}-*/;
+}

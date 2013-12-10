@@ -1,0 +1,31 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class POSSecurity extends IFXObject {
+	
+	public final native PSSNetworkType getpSSNetworkType() /*-{
+		return $wnd.cleanObject(pSSNetworkType);
+	}-*/;
+	public final native void setpSSNetworkType(PSSNetworkType pSSNetworkType) /*-{
+		this.pSSNetworkType = pSSNetworkType;
+	}-*/;
+	public final native PSSMsgMAC[] getpSSMsgMAC() /*-{
+		return $wnd.cleanObject(pSSMsgMAC);
+	}-*/;
+	public final native void setpSSMsgMAC(PSSMsgMAC[] pSSMsgMAC) /*-{
+		this.pSSMsgMAC = pSSMsgMAC;
+	}-*/;
+	public final native PSSMsgEncryption[] getpSSMsgEncryption() /*-{
+		return $wnd.cleanObject(pSSMsgEncryption);
+	}-*/;
+	public final native void setpSSMsgEncryption(PSSMsgEncryption[] pSSMsgEncryption) /*-{
+		this.pSSMsgEncryption = pSSMsgEncryption;
+	}-*/;
+	public final native PSSCATSecLevel getpSSCATSecLevel() /*-{
+		return $wnd.cleanObject(pSSCATSecLevel);
+	}-*/;
+	public final native void setpSSCATSecLevel(PSSCATSecLevel pSSCATSecLevel) /*-{
+		this.pSSCATSecLevel = pSSCATSecLevel;
+	}-*/;
+}

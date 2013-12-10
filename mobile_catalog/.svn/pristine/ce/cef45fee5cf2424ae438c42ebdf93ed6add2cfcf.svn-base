@@ -1,0 +1,11 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXLong;
+
+public class InternalScore extends IFXLong {
+	protected InternalScore(){	
+	}
+	protected InternalScore(){
+	}
+	
+}

@@ -1,0 +1,42 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+import com.google.gwt.core.client.JsArray;
+
+
+public class InvoiceAdj extends IFXObject {
+	protected InvoiceAdj(){	
+	}
+	public final native  InvoiceAdjNum getInvoiceAdjNum()/*-{
+		return $wnd.cleanObject(this.invoiceAdjNum);
+	}-*/;
+	public final native  void setInvoiceAdjNum(InvoiceAdjNum invoiceAdjNum)/*-{
+		this.invoiceAdjNum = invoiceAdjNum;
+	}-*/;
+	public final native  AdjType getAdjType()/*-{
+		return $wnd.cleanObject(this.adjType);
+	}-*/;
+	public final native  void setAdjType(AdjType adjType)/*-{
+		this.adjType = adjType;
+	}-*/;
+	public final native  JsArray<CurAmt> getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+	public final native  void setCurAmt(JsArray<CurAmt> curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+	public final native  EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+	public final native  void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+	public final native  Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+	}-*/;
+	public final native  void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+
+}

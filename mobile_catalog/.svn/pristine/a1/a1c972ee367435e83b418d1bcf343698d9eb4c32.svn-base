@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class IssActionCodeOnline extends IssActionCodeOnline_Type {
+
+}

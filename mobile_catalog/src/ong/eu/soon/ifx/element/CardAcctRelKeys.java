@@ -1,0 +1,41 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class CardAcctRelKeys extends IFXObject {
+
+	SvcIdent svcIdent;	 //	Aggregate	 Optional	 Service Identifier
+	//begin-xor	Required
+	CardAcctRelId cardAcctRelId;	 //	Identifier	 Required	 Card Accountt Relationship Identifier
+	//begin-block	Required
+	CardKeys cardKeys;	 //	Aggregate	 Required	 Card Keys Aggregate
+	AcctKeys acctKeys;	 //	Aggregate	 Required	 Account Keys Aggregate
+	//end-block
+	//end-xor
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public CardAcctRelId getCardAcctRelId() {
+		return cardAcctRelId;
+	}
+	public void setCardAcctRelId(CardAcctRelId cardAcctRelId) {
+		this.cardAcctRelId = cardAcctRelId;
+	}
+	public CardKeys getCardKeys() {
+		return cardKeys;
+	}
+	public void setCardKeys(CardKeys cardKeys) {
+		this.cardKeys = cardKeys;
+	}
+	public AcctKeys getAcctKeys() {
+		return acctKeys;
+	}
+	public void setAcctKeys(AcctKeys acctKeys) {
+		this.acctKeys = acctKeys;
+	}
+	
+}

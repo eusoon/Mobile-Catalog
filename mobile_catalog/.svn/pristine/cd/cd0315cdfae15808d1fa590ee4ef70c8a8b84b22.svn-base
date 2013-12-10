@@ -1,0 +1,13 @@
+package my.com.infopro.ifx.client.model;
+
+public class XferPayee_Type extends IFXObject {
+	
+	public final native void setDepAcctIdTo(DepAcctIdTo depAcctIdTo)/*-{
+		this.depAcctIdTo = depAcctIdTo;
+	}-*/;
+
+	public final native DepAcctIdTo getDepAcctIdTo()/*-{
+		return $wnd.cleanObject(this.depAcctIdTo);
+	}-*/;
+
+}

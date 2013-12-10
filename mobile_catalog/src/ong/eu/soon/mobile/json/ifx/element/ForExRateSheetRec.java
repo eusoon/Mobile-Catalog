@@ -1,0 +1,41 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class ForExRateSheetRec extends IFXObject {
+
+	protected ForExRateSheetRec(){
+	}
+	
+	public final native  SvcIdent getSvcIdent()/*-{
+		return $wnd.cleanObject(this.svcIdent);
+	}-*/;
+	public final native  void setSvcIdent(SvcIdent svcIdent)/*-{
+		this.svcIdent = svcIdent;
+	}-*/;
+	public final native  ForExRateSheetId getForExRateSheetId()/*-{
+		return $wnd.cleanObject(this.forExRateSheetId);
+	}-*/;
+	public final native  void setForExRateSheetId(ForExRateSheetId forExRateSheetId)/*-{
+		this.forExRateSheetId = forExRateSheetId;
+	}-*/;
+	public final native  ForExRateSheetInfo getForExRateSheetInfo()/*-{
+		return $wnd.cleanObject(this.forExRateSheetInfo);
+	}-*/;
+	public final native  void setForExRateSheetInfo(ForExRateSheetInfo forExRateSheetInfo)/*-{
+		this.forExRateSheetInfo = forExRateSheetInfo;
+	}-*/;
+	public final native  ForExRateSheetEnvr getForExRateSheetEnvr()/*-{
+		return $wnd.cleanObject(this.forExRateSheetEnvr);
+	}-*/;
+	public final native  void setForExRateSheetEnvr(ForExRateSheetEnvr forExRateSheetEnvr)/*-{
+		this.forExRateSheetEnvr = forExRateSheetEnvr;
+	}-*/;
+	public final native  ForExRateSheetStatus getForExRateSheetStatus()/*-{
+		return $wnd.cleanObject(this.forExRateSheetStatus);
+	}-*/;
+	public final native  void setForExRateSheetStatus(ForExRateSheetStatus forExRateSheetStatus)/*-{
+		this.forExRateSheetStatus = forExRateSheetStatus;
+	}-*/;
+	
+}

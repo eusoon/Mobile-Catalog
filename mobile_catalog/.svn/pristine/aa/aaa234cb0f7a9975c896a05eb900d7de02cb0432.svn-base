@@ -1,0 +1,56 @@
+package my.com.infopro.mobile.json.ifx.payee;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+import my.com.infopro.mobile.json.ifx.element.CustPayeeInfo;
+import my.com.infopro.mobile.json.ifx.element.CustPayeeKeys;
+import my.com.infopro.mobile.json.ifx.element.DelElements;
+import my.com.infopro.mobile.json.ifx.element.MsgRqHdr;
+import my.com.infopro.mobile.json.ifx.element.NewElements;
+import my.com.infopro.mobile.json.ifx.element.RqUID;
+import my.com.infopro.mobile.json.ifx.element.UpdElements;
+
+public class CustPayeeModRq extends IFXObject {
+	
+	public final native RqUID getRqUID() /*-{
+		return $wnd.cleanObject(rqUID);
+	}-*/;
+	public final native void setRqUID(RqUID rqUID) /*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(msgRqHdr);
+	}-*/;
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+	public final native CustPayeeKeys getCustPayeeKeys() /*-{
+		return $wnd.cleanObject(custPayeeKeys);
+	}-*/;
+	public final native void setCustPayeeKeys(CustPayeeKeys custPayeeKeys) /*-{
+		this.custPayeeKeys = custPayeeKeys;
+	}-*/;
+	public final native CustPayeeInfo getCustPayeeInfo() /*-{
+		return $wnd.cleanObject(custPayeeInfo);
+	}-*/;
+	public final native void setCustPayeeInfo(CustPayeeInfo custPayeeInfo) /*-{
+		this.custPayeeInfo = custPayeeInfo;
+	}-*/;
+	public final native DelElements[] getDelElements() /*-{
+		return $wnd.cleanObject(delElements);
+	}-*/;
+	public final native void setDelElements(DelElements[] delElements) /*-{
+		this.delElements = delElements;
+	}-*/;
+	public final native UpdElements[] getUpdElements() /*-{
+		return $wnd.cleanObject(UpdElements);
+	}-*/;
+	public final native void setUpdElements(UpdElements[] updElements) /*-{
+		UpdElements = updElements;
+	}-*/;
+	public final native NewElements[] getNewElements() /*-{
+		return $wnd.cleanObject(NewElements);
+	}-*/;
+	public final native void setNewElements(NewElements[] newElements) /*-{
+		NewElements = newElements;
+	}-*/;
+}

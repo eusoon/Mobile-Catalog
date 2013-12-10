@@ -1,0 +1,60 @@
+package my.com.infopro.ifx.client.model;
+
+public class RecChkOrdAddRq_Type {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public native void setChkOrdInfo(ChkOrdInfo chkOrdInfo)/*-{
+		this.chkOrdInfo = chkOrdInfo;
+	}-*/;
+
+	public final native ChkOrdInfo getChkOrdInfo() /*-{
+		return $wnd.cleanObject(this.chkOrdInfo);
+	}-*/;
+
+	public final native void setRecModelInfo(RecModelInfo recModelInfo)/*-{
+		this.recModelInfo = recModelInfo;
+	}-*/;
+
+	public final native RecModelInfo getRecModelInfo()/*-{
+		return $wnd.cleanObject(this.recModelInfo);
+	}-*/;
+
+	public final native void setDupChkOverride(DupChkOverride dupChkOverride)/*-{
+		this.dupChkOverride = dupChkOverride;
+	}-*/;
+
+	public final native DupChkOverride getDupChkOverride()/*-{
+		return $wnd.cleanObject(this.dupChkOverride);
+	}-*/;
+
+}

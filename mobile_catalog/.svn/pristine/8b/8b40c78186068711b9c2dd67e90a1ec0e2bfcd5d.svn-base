@@ -1,0 +1,41 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+import my.com.infopro.mobile.json.ifx.element.CurAmt;
+import my.com.infopro.mobile.json.ifx.element.Desc;
+import my.com.infopro.mobile.json.ifx.element.EffDt;
+import my.com.infopro.mobile.json.ifx.element.ExpDt;
+
+public  class ExtAcctBal extends IFXObject {
+
+	public final native  ExtBalType[] getExtBalType()/*-{
+		return $wnd.cleanObject(this.extBalType);
+	}-*/;
+	public final native  void setExtBalType(ExtBalType[] extBalType)/*-{
+		this.extBalType = extBalType;
+	}-*/;
+	public final native  CurAmt[] getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+	public final native  void setCurAmt(CurAmt[] curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+	public final native  EffDt[] getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+	public final native  void setEffDt(EffDt[] effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+	public final native  ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+	public final native  void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+	public final native  Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+	}-*/;
+	public final native  void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+}

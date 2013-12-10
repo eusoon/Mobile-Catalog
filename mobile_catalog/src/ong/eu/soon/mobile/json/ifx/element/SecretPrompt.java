@@ -1,0 +1,48 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+
+public class SecretPrompt extends IFXObject {
+
+	protected SecretPrompt(){	
+	}
+	
+	public final native SecretIdent getSecretIdent()/*-{
+		return $wnd.cleanObject(secretIdent);
+	}-*/;
+	public final native void setSecretIdent(SecretIdent secretIdent)/*-{
+		this.secretIdent = secretIdent;
+	}-*/;
+	public final native Prompt getPrompt()/*-{
+		return $wnd.cleanObject(prompt);
+	}-*/;
+	public final native void setPrompt(Prompt prompt)/*-{
+		this.prompt = prompt;
+	}-*/;
+	public final native Memo getMemo()/*-{
+		return $wnd.cleanObject(memo);
+	}-*/;
+	public final native void setMemo(Memo memo)/*-{
+		this.memo = memo;
+	}-*/;
+	public final native SecretOptional getSecretOptional()/*-{
+		return $wnd.cleanObject(secretOptional);
+	}-*/;
+	public final native void setSecretOptional(SecretOptional secretOptional)/*-{
+		this.secretOptional = secretOptional;
+	}-*/;
+	public final native SecretFormat getSecretFormat()/*-{
+		return $wnd.cleanObject(secretFormat);
+	}-*/;
+	public final native void setSecretFormat(SecretFormat secretFormat)/*-{
+		this.secretFormat = secretFormat;
+	}-*/;
+	public final native SecretMask getSecretMask()/*-{
+		return $wnd.cleanObject(secretMask);
+	}-*/;
+	public final native void setSecretMask(SecretMask secretMask)/*-{
+		this.secretMask = secretMask;
+	}-*/;
+	
+}

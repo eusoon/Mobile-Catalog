@@ -1,0 +1,29 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class CounterpartyData extends IFXObject {
+
+	LegalName legalName; //C-96	Optional	Legal Name. Used by entities like trusts, or businesses in the case where an individual is "doing business as" a company. Name of payor of funds.
+	RefData refData; //Aggregate	Optional Repeating	Reference Information Aggregate. References unique to the counterparty of the transaction.
+	AcctKeys acctKeys; //Aggregate	Optional	Account Keys Aggregate
+	
+	public LegalName getLegalName() {
+		return legalName;
+	}
+	public void setLegalName(LegalName legalName) {
+		this.legalName = legalName;
+	}
+	public RefData getRefData() {
+		return refData;
+	}
+	public void setRefData(RefData refData) {
+		this.refData = refData;
+	}
+	public AcctKeys getAcctKeys() {
+		return acctKeys;
+	}
+	public void setAcctKeys(AcctKeys acctKeys) {
+		this.acctKeys = acctKeys;
+	}
+}

@@ -1,0 +1,53 @@
+package my.com.infopro.ifx.client.model;
+
+public class CompRemitStmtAddRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public final native void setCompRemitStmtInfo(CompRemitStmtInfo compRemitStmtInfo)/*-{
+		this.compRemitStmtInfo = compRemitStmtInfo;
+	}-*/;
+
+	public final native CompRemitStmtInfo getCompRemitStmtInfo()/*-{
+		return $wnd.cleanObject(this.compRemitStmtInfo);
+	}-*/;
+
+	public final native void setDupChkOverride(DupChkOverride dupChkOverride)/*-{
+		this.dupChkOverride = dupChkOverride;
+	}-*/;
+
+	public final native DupChkOverride getDupChkOverride()/*-{
+		return $wnd.cleanObject(this.dupChkOverride);
+	}-*/;
+
+}

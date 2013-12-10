@@ -1,0 +1,37 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class MsgRqHdr extends IFXObject {
+	
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(asyncRqUID);
+	}-*/;
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID) /*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+	public final native SvcIdent getSvcIdent() /*-{
+		return $wnd.cleanObject(svcIdent);
+	}-*/;
+	public final native void setSvcIdent(SvcIdent svcIdent) /*-{
+		this.svcIdent = svcIdent;
+	}-*/;
+	public final native CredentialsRqHdr[] getCredentialsRqHdr() /*-{
+		return $wnd.cleanObject(credentialsRqHdr);
+	}-*/;
+	public final native void setCredentialsRqHdr(CredentialsRqHdr[] credentialsRqHdr) /*-{
+		this.credentialsRqHdr = credentialsRqHdr;
+	}-*/;
+	public final native ContextRqHdr getContextRqHdr() /*-{
+		return $wnd.cleanObject(contextRqHdr);
+	}-*/;
+	public final native void setContextRqHdr(ContextRqHdr contextRqHdr) /*-{
+		this.contextRqHdr = contextRqHdr;
+	}-*/;
+	public final native FeeRqHdr[] getFeeRqHdr() /*-{
+		return $wnd.cleanObject(feeRqHdr);
+	}-*/;
+	public final native void setFeeRqHdr(FeeRqHdr[] feeRqHdr) /*-{
+		this.feeRqHdr = feeRqHdr;
+	}-*/;
+}

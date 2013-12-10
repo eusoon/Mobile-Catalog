@@ -1,0 +1,11 @@
+package ong.eu.soon.mobile.json.ifx.basetypes;
+
+/**
+ * The IFXHexBinary class provides a wrapper for the xsd:hexBinary datatype.
+ * @author Ong Eu Soon (eusoob@gmail.com)
+ * @version $Revision: 2.3 $
+ */
+public class IFXHexBinary extends IFXBase64Binary {
+	protected IFXHexBinary(){	
+	}
+}

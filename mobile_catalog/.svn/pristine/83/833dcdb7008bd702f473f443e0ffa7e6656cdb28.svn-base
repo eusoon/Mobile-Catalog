@@ -1,0 +1,28 @@
+package my.com.infopro.ifx.client.model;
+
+public class DevRec_Type extends IFXObject {
+	public final native void setDevId(DevId devId)/*-{
+	this.devId = devId;
+}-*/;
+	
+	public final native DevId getDevId()/*-{
+	return $wnd.cleanObject(this.devId);
+}-*/;
+	
+	public final native void setDevInfo(DevInfo devInfo)/*-{
+	this.devInfo = devInfo;
+}-*/;
+	
+	public final native DevInfo getDevInfo()/*-{
+	return $wnd.cleanObject(this.devInfo);
+}-*/;
+	
+	public final native void setDevStatus(DevStatus devStatus)/*-{
+	this.devStatus = devStatus;
+}-*/;
+	
+	public final native DevStatus getDevStatus()/*-{
+	return $wnd.cleanObject(this.devStatus);
+}-*/;
+	
+}

@@ -1,0 +1,145 @@
+package my.com.infopro.mobile.client.login;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.ui.Widget;
+
+import my.com.infopro.mobile.client.InfoproMobile;
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.Navigation;
+import my.com.infopro.mobile.client.Notification;
+import my.com.infopro.mobile.client.model.InitialData;
+import my.com.infopro.mobile.client.services.AccessService;
+import my.com.infopro.mobile.client.ui.Icon;
+import my.com.infopro.mobile.client.ui.Page;
+import my.com.infopro.mobile.client.ui.panels.SquarePanel;
+import my.com.infopro.mobile.client.ui.widgets.IconLabel;
+import my.com.infopro.mobile.client.ui.widgets.LabelField;
+import my.com.infopro.mobile.client.ui.widgets.PasswordField;
+import my.com.infopro.mobile.client.utils.BaseAsyncCallback;
+import my.com.infopro.mobile.client.utils.PageAction;
+import my.com.infopro.mobile.client.utils.PageActionAsync;
+import my.com.infopro.mobile.client.utils.Storage;
+import my.com.infopro.mobile.client.utils.StringHelper;
+
+public class OTPPage extends Page {
+	
+	private AccessService accessService = GWT.create(AccessService.class);
+	private PasswordField otp;
+	private PageAction    otpAction;  
+	private LabelField    otpLabel;
+	
+	@Override
+	public String getHeading() {
+		return messages.otpHeading();
+	}
+	 @Override
+	public boolean isDisplayMenu() {
+	    return false;
+	}  
+
+	@Override
+	public Widget initialize() {
+		SquarePanel container = new SquarePanel(); 
+        container.addStyleName("login");
+     // Secure login message
+        IconLabel otpMessage = new IconLabel(messages.secureLogin(), Icon.LOGIN.image());
+        otpMessage.addStyleName("login-icon-label");
+        otpMessage.addTextStyleName("login-icon-label-text");        
+        container.add(otpMessage);
+        
+        otpLabel = new LabelField(messages.otpHeading());
+        otpLabel.setStyleName("otp-label");
+        container.add(otpLabel);
+        otp = new PasswordField(messages.typeYourOTPHere());                         
+        container.add(otp); 
+     // If otp session has expired, display a message
+        if(LoggedUser.get().isOTPExpired()) {
+            Notification.get().information(messages.otpExpired());
+        } 
+        return container;
+	}
+	 @Override
+	    public List<PageAction> getPageActions() {
+	        List<PageAction> actions = new ArrayList<PageAction>();                
+	        
+	        // Add change user action only if an user is already set
+	        if(Storage.get().getItem("otp") != null) {
+	            actions.add(getNewOTPAction());
+	        }  
+	        
+	        // Add login action
+	        actions.add(getOTPAction());
+	       
+	        return actions;
+	    }
+	  /**
+	     * Returns otp page action
+	     */
+	    private PageAction getOTPAction() {
+	       otpAction = new PageActionAsync<String>() {        
+	            @Override
+	            public void runAsync(BaseAsyncCallback<String> callback) {
+	                // Validate input
+	                if(validate()) {                
+	                    // Execute user login
+	                    accessService.authenticateOTP(otp.getValue(), callback);
+	                }
+	            } 
+	            @Override
+	            protected void onCallbackSuccess(String result) {
+	                // Initialize user's session data
+	            	if(result.equalsIgnoreCase("Success")){
+	            		LoggedUser.get().setOTPAuthenticated(otp.getValue(), result);     
+	            	}
+	                
+	                // Load service page
+	                Navigation.get().getServicePageAnchor();
+	            }
+	            @Override
+	            public String getLabel() {               
+	                return messages.otpHeading();
+	            }
+	        }; 
+	        return otpAction;
+	    }
+	 /**
+	     * Returns new otp page action
+	     */
+	    private PageAction getNewOTPAction() {
+	        return new PageAction() {
+	            @Override
+	            public void run() {
+	                // Reset otp form
+	                otp.clear();
+//	                otp.setReadOnly(false);
+	                otpLabel.setVisible(false);
+	                // Hide new otp action
+	                InfoproMobile.get().getMainLayout().addActions(Arrays.asList(otpAction), true);
+	            }
+
+	            @Override
+	            public String getLabel() {
+	                return messages.newOTP();
+	            }    
+	        };
+	    }
+	/*
+	 * Client side input validation
+     */
+    private boolean validate() {
+        // Hide previous notifications
+        Notification.get().hide();
+        
+        // Validate principal and password
+        if(StringHelper.isEmpty(otp.getValue()))  {
+            Notification.get().error(messages.otpFieldsCannotBeEmpty());
+            return false;
+        }
+
+        return true;
+    }
+}

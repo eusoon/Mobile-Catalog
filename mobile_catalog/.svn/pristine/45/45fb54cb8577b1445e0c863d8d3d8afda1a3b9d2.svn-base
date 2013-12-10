@@ -1,0 +1,29 @@
+package my.com.infopro.mobile.json.ifx.rate;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+import my.com.infopro.mobile.json.ifx.element.ForExDealKeys;
+import my.com.infopro.mobile.json.ifx.element.MsgRqHdr;
+import my.com.infopro.mobile.json.ifx.element.RqUID;
+
+public class ForExDealCanRq extends IFXObject{
+	
+	public final native RqUID getRqUID() /*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+	public final native void setRqUID(RqUID rqUID) /*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+	public final native ForExDealKeys getForExDealKeys() /*-{
+		return $wnd.cleanObject(this.forExDealKeys);
+	}-*/;
+	public final native void setForExDealKeys(ForExDealKeys forExDealKeys) /*-{
+		this.forExDealKeys = forExDealKeys;
+	}-*/;
+	
+}

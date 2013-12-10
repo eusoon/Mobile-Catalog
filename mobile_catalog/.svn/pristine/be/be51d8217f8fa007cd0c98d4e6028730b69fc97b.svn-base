@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class USA_RTN extends USA_RTN_Type {
+
+}

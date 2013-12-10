@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public enum OEDInstitution {
+	AffiliateFinancialInstitution, HoldingCompany, OtherFinancialInstitution, ThisFinancialInstitution, Unknown
+}

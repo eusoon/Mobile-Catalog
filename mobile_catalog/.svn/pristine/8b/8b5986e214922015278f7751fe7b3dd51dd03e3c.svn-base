@@ -1,0 +1,19 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class ForExDealSel extends IFXObject {
+
+	//begin-xor	Required Repeating
+	ForExDealKeys[] forExDealKeys; //Aggregate	Required	Foreign Exchange Deal Keys Aggregate
+	//end-xor
+
+	public ForExDealKeys[] getForExDealKeys() {
+		return forExDealKeys;
+	}
+
+	public void setForExDealKeys(ForExDealKeys[] forExDealKeys) {
+		this.forExDealKeys = forExDealKeys;
+	}
+		
+}

@@ -1,0 +1,158 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillerInqRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlOut(RecCtrlOut recCtrlOut)/*-{
+		this.recCtrlOut = recCtrlOut;
+	}-*/;
+
+	public final native RecCtrlOut getRecCtrlOut()/*-{
+		return $wnd.cleanObject(this.recCtrlOut);
+	}-*/;
+
+	public final native void setBillerId(BillerId[] billerId)/*-{
+		this.billerId = billerId;
+	}-*/;
+
+	public final native BillerId[] getBillerId()/*-{
+		return $wnd.cleanObject(this.billerId);
+	}-*/;
+
+	public final native void setName(Name[] name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name[] getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setPostAddr(PostAddr[] postAddr)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native PostAddr[] getPostAddr()/*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+
+	public final native void setPhone(Phone[] phone)/*-{
+		this.phone = phone;
+	}-*/;
+
+	public final native Phone[] getPhone()/*-{
+		return $wnd.cleanObject(this.phone);
+	}-*/;
+
+	public final native void setPostalCode(PostalCode[] postalCode)/*-{
+		this.postalCode = postalCode;
+	}-*/;
+
+	public final native PostalCode[] getPostalCode()/*-{
+		return $wnd.cleanObject(this.postalCode);
+	}-*/;
+
+	public final native void setUpDt(UpDt[] upDt)/*-{
+		this.upDt = upDt;
+	}-*/;
+
+	public final native UpDt[] getUpDt()/*-{
+		return $wnd.cleanObject(this.upDt);
+	}-*/;
+
+	public final native void setIndustId(IndustId[] industId)/*-{
+		this.industId = industId;
+	}-*/;
+
+	public final native IndustId[] getIndustId()/*-{
+		return $wnd.cleanObject(this.industId);
+	}-*/;
+
+	public final native void setIncBillerContact(
+			IncBillerContact[] incBillerContact)/*-{
+		this.incBillerContact = incBillerContact;
+	}-*/;
+
+	public final native IncBillerContact[] getIncBillerContact()/*-{
+		return $wnd.cleanObject(this.incBillerContact);
+	}-*/;
+
+	public final native void setIncImages(IncImages[] incImages)/*-{
+		this.incImages = incImages;
+	}-*/;
+
+	public final native IncImages[] getIncImages()/*-{
+		return $wnd.cleanObject(this.incImages);
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod[] deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod[] getDeliveryMethod()/*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+	}-*/;
+
+	public final native void setNewUpDt(NewUpDt[] newUpDt)/*-{
+		this.newUpDt = newUpDt;
+	}-*/;
+
+	public final native NewUpDt[] getNewUpDt()/*-{
+		return $wnd.cleanObject(this.newUpDt);
+	}-*/;
+
+	public final native void setBillerRec(BillerRec[] billerRec)/*-{
+		this.billerRec = billerRec;
+	}-*/;
+
+	public final native BillerRec[] getBillerRec()/*-{
+		return $wnd.cleanObject(this.billerRec);
+	}-*/;
+
+}

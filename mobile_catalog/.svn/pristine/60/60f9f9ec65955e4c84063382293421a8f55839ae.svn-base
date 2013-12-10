@@ -1,0 +1,43 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class CreditStatus extends IFXObject {
+	
+	public final native  CreditStatusCode getCreditStatusCode()/*-{
+		return $wnd.cleanObject(this.creditStatusCode);
+	}-*/;
+	public final native  void setCreditStatusCode(CreditStatusCode creditStatusCode)/*-{
+		this.creditStatusCode = creditStatusCode;
+	}-*/;
+	public final native  StatusDesc getStatusDesc()/*-{
+		return $wnd.cleanObject(this.statusDesc);
+	}-*/;
+	public final native  void setStatusDesc(StatusDesc statusDesc)/*-{
+		this.statusDesc = statusDesc;
+	}-*/;
+	public final native  EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+	public final native  void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+	public final native  StatusModBy getStatusModBy()/*-{
+		return $wnd.cleanObject(this.statusModBy);
+	}-*/;
+	public final native  void setStatusModBy(StatusModBy statusModBy)/*-{
+		this.statusModBy = statusModBy;
+	}-*/;
+	public final native  CreditHeldAmtExpDt getCreditHeldAmtExpDt()/*-{
+		return $wnd.cleanObject(this.creditHeldAmtExpDt);
+	}-*/;
+	public final native  void setCreditHeldAmtExpDt(CreditHeldAmtExpDt creditHeldAmtExpDt)/*-{
+		this.creditHeldAmtExpDt = creditHeldAmtExpDt;
+	}-*/;
+	public final native  StatusReason getStatusReason()/*-{
+		return $wnd.cleanObject(this.StatusReason);
+	}-*/;
+	public final native  void setStatusReason(StatusReason statusReason)/*-{
+		StatusReason = statusReason;
+	}-*/;
+}

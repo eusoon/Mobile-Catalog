@@ -1,0 +1,28 @@
+package my.com.infopro.ifx.client.model;
+
+public class CardMagData_Type extends IFXObject {
+
+	public native void setMagData1(MagData1 magData1) /*-{
+		this.magData1 = magData1;
+	}-*/;
+
+	public final native MagData1 getMagData1() /*-{
+		return $wnd.cleanObject(this.magData1);
+	}-*/;
+
+	public native void setMagData2(MagData2 magData2) /*-{
+		this.magData2 = magData2;
+	}-*/;
+
+	public final native MagData2 getMagData2() /*-{
+		return $wnd.cleanObject(this.magData2);
+	}-*/;
+	public native void setMagData3(MagData3 magData3) /*-{
+	this.magData3 = magData3;
+}-*/;
+
+public final native MagData3 getMagData3() /*-{
+	return $wnd.cleanObject(this.magData3);
+}-*/;
+
+}

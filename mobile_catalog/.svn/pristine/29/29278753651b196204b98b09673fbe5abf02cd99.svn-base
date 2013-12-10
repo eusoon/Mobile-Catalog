@@ -1,0 +1,18 @@
+package my.com.infopro.ifx.client.model;
+
+public class RecCtrlIn_Type extends IFXObject {
+	public final native void setMaxRec(MaxRec maxRec)/*-{
+	this.maxRec = maxRec;
+}-*/;
+	public final native MaxRec getMaxRec()/*-{
+	return $wnd.cleanObject(this.maxRec);
+
+}-*/;
+	public final native void setCursor(Cursor cursor)/*-{
+	this.cursor = cursor;
+}-*/;
+	public final native Cursor getCursor()/*-{
+	return $wnd.cleanObject(this.cursor);
+
+}-*/;
+}

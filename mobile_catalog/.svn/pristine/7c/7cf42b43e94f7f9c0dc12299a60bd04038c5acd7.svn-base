@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class FIDebitTrcNum extends FIDebitTrcNum_Type {
+
+}

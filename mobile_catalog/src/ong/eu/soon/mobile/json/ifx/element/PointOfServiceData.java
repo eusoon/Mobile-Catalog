@@ -1,0 +1,46 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class PointOfServiceData extends IFXObject {
+	protected PointOfServiceData(){	
+	}
+	public final native Environment getEnvironment() /*-{
+		return $wnd.cleanObject(environment);
+	}-*/;
+	public final native void setEnvironment(Environment environment) /*-{
+		this.environment = environment;
+	}-*/;
+	public final native POSCapabilities getPOSCapabilities() /*-{
+		return $wnd.cleanObject(pOSCapabilities);
+	}-*/;
+	public final native void setPOSCapabilities(POSCapabilities pOSCapabilities) /*-{
+		this.pOSCapabilities = pOSCapabilities;
+	}-*/;
+	public final native POSSecurity getPOSSecurity() /*-{
+		return $wnd.cleanObject(pOSSecurity);
+	}-*/;
+	public final native void setPOSSecurity(POSSecurity pOSSecurity) /*-{
+		this.pOSSecurity = pOSSecurity;
+	}-*/;
+	public final native POSAgent getpOSAgent() /*-{
+		return $wnd.cleanObject(pOSAgent);
+	}-*/;
+	public final native void setPOSAgent(POSAgent pOSAgent) /*-{
+		this.pOSAgent = pOSAgent;
+	}-*/;
+	public final native IdentCharacterData getIdentCharacterData() /*-{
+		return $wnd.cleanObject(identCharacterData);
+	}-*/;
+	public final native void setIdentCharacterData(IdentCharacterData identCharacterData) /*-{
+		this.identCharacterData = identCharacterData;
+	}-*/;
+	public final native POSLocation getPOSLocation() /*-{
+		return $wnd.cleanObject(pOSLocation);
+	}-*/;
+	public final native void setPOSLocation(POSLocation pOSLocation) /*-{
+		this.pOSLocation = pOSLocation;
+	}-*/;
+	
+	
+}

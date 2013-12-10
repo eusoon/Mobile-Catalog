@@ -1,0 +1,8 @@
+package my.com.infopro.ifx.client.model;
+
+public class MicrUnformatted_Type extends IFXObject {
+
+	public MicrUnformatted_Type() {
+	}
+	
+}

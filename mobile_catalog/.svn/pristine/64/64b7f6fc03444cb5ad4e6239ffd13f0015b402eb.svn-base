@@ -1,0 +1,11 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXString;
+
+public class InvoiceNum extends IFXString {
+	protected InvoiceNum(){	
+	}
+	protected InvoiceNum(){
+	}
+	
+}

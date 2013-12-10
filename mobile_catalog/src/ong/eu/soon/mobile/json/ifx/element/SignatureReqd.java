@@ -1,0 +1,34 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class SignatureReqd extends IFXObject {
+
+	protected SignatureReqd(){
+	}
+	
+	public final native NumSignatureReqd getNumSignatureReqd() /*-{
+		return $wnd.cleanObject(numSignatureReqd);
+	}-*/;
+	public final native void setNumSignatureReqd(NumSignatureReqd numSignatureReqd) /*-{
+		this.numSignatureReqd = numSignatureReqd;
+	}-*/;
+	public final native SignatureAmtLimit getSignatureAmtLimit() /*-{
+		return $wnd.cleanObject(signatureAmtLimit);
+	}-*/;
+	public final native void setSignatureAmtLimit(SignatureAmtLimit signatureAmtLimit) /*-{
+		this.signatureAmtLimit = signatureAmtLimit;
+	}-*/;
+	public final native SignatureTransaction getSignatureTransaction() /*-{
+		return $wnd.cleanObject(signatureTransaction);
+	}-*/;
+	public final native void setSignatureTransaction(SignatureTransaction signatureTransaction) /*-{
+		this.signatureTransaction = signatureTransaction;
+	}-*/;
+	public final native SigningInstruction getSigningInstruction() /*-{
+		return $wnd.cleanObject(signingInstruction);
+	}-*/;
+	public final native void setSigningInstruction(SigningInstruction signingInstruction) /*-{
+		this.signingInstruction = signingInstruction;
+	}-*/;
+}

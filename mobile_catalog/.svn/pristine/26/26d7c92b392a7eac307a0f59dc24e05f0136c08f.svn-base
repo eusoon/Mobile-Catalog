@@ -1,0 +1,20 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PartyData extends IFXObject {
+
+	public final native Contact[] getContact() /*-{
+		return $wnd.cleanObject(contact);
+	}-*/;
+	public final native void setContact(Contact[] contact) /*-{
+		this.contact = contact;
+	}-*/;
+	public final native IssuedIdent[] getIssuedIdent() /*-{
+		return $wnd.cleanObject(issuedIdent);
+	}-*/;
+	public final native void setIssuedIdent(IssuedIdent[] issuedIdent) /*-{
+		this.issuedIdent = issuedIdent;
+	}-*/;
+
+}

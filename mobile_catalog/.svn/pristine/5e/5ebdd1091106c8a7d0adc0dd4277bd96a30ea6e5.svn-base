@@ -1,0 +1,69 @@
+package my.com.infopro.ifx.client.model;
+
+public class RemitInqRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRemitId(RemitId remitId)/*-{
+		this.remitId = remitId;
+	}-*/;
+
+	public final native RemitId getRemitId()/*-{
+		return $wnd.cleanObject(this.remitId);
+	}-*/;
+
+	public final native void setSelRangeCurAmt(SelRangeCurAmt[] selRangeCurAmt)/*-{
+		this.selRangeCurAmt = selRangeCurAmt;
+	}-*/;
+
+	public final native SelRangeCurAmt[] getSelRangeCurAmt()/*-{
+		return $wnd.cleanObject(this.selRangeCurAmt);
+	}-*/;
+
+	public final native void setSelRangeDt(SelRangeDt[] selRangeDt)/*-{
+		this.selRangeDt = selRangeDt;
+	}-*/;
+
+	public final native SelRangeDt[] getSelRangeDt()/*-{
+		return $wnd.cleanObject(this.selRangeDt);
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod[] deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod[] getDeliveryMethod()/*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+	}-*/;
+
+}

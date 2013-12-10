@@ -1,0 +1,10 @@
+package my.com.infopro.mobile.client.model;
+
+public class ServiceProvider extends Entity{
+	
+	protected ServiceProvider(){
+	}
+	 public final native String getServiceProviderName() /*-{
+     return $wnd.cleanString(this.serviceProviderName);
+ }-*/;
+}

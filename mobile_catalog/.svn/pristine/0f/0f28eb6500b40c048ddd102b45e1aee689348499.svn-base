@@ -1,0 +1,25 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public  class BillStmtData extends IFXObject {
+
+	public final native  ImageURL getImageURL()/*-{
+		return $wnd.cleanObject(this.imageURL);
+	}-*/;
+	public final native  void setImageURL(ImageURL imageURL)/*-{
+		this.imageURL = imageURL;
+	}-*/;
+	public final native  PrefetchURL[] getPrefetchURL()/*-{
+		return $wnd.cleanObject(this.prefetchURL);
+	}-*/;
+	public final native  void setPrefetchURL(PrefetchURL[] prefetchURL)/*-{
+		this.prefetchURL = prefetchURL;
+	}-*/;
+	public final native  ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+	public final native  void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+}

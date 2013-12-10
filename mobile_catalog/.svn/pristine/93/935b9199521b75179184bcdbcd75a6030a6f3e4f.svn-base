@@ -1,0 +1,45 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillPmtStatus_Type extends IFXObject {
+
+	public final native void setPmtId(PmtId pmtId)/*-{
+		this.pmtId = pmtId;
+	}-*/;
+
+	public final native PmtId getPmtId()/*-{
+		return $wnd.cleanObject(this.pmtId);
+	}-*/;
+
+	public final native void setBillPmtStatusCode(BillPmtStatusCode billPmtStatusCode)/*-{
+		this.billPmtStatusCode = billPmtStatusCode;
+	}-*/;
+
+	public final native BillPmtStatusCode getBillPmtStatusCode()/*-{
+		return $wnd.cleanObject(this.billPmtStatusCode);
+	}-*/;
+
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public final native void setStatusModBy(StatusModBy statusModBy)/*-{
+		this.statusModBy = statusModBy;
+	}-*/;
+
+	public final native StatusModBy getStatusModBy()/*-{
+		return $wnd.cleanObject(this.statusModBy);
+	}-*/;
+
+	public final native void setMemo(Memo memo)/*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo getMemo()/*-{
+		return $wnd.cleanObject(this.memo);
+	}-*/;
+
+}

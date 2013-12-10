@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class MagData3 extends MagData3_Type {
+
+}

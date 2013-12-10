@@ -1,0 +1,8 @@
+package my.com.infopro.ifx.element.USA;
+
+import my.com.infopro.ifx.basetypes.IFXDate;;
+
+
+public class TaxIdCertDate extends IFXDate {
+
+}

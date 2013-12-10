@@ -1,0 +1,149 @@
+package my.com.infopro.ifx.client.model;
+
+public class ForExRateInqRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+public final native Status getStatus()/*-{
+	return $wnd.cleanObject(this.status);
+
+}-*/;
+
+public native void setRqUID(RqUID rqUID)/*-{
+	this.rqUID = rqUID;
+}-*/;
+
+public final native RqUID getRqUID()/*-{
+	return $wnd.cleanObject(this.rqUID);
+
+}-*/;
+
+public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+	this.msgRqHdr = msgRqHdr;
+}-*/;
+
+public final native MsgRqHdr getMsgRqHdr() /*-{
+	return $wnd.cleanObject(this.msgRqHdr);
+}-*/;
+
+public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+	this.msgRsHdr = msgRsHdr;
+}-*/;
+
+public final native MsgRsHdr getMsgRsHdr() /*-{
+	return $wnd.cleanObject(this.msgRsHdr);
+}-*/;
+
+public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+	this.asyncRqUID = asyncRqUID;
+}-*/;
+
+public final native AsyncRqUID getAsyncRqUID() /*-{
+	return $wnd.cleanObject(this.asyncRqUID);
+}-*/;
+
+public native void setCustId(CustId custId)/*-{
+	this.custId = custId;
+}-*/;
+
+public final native CustId getCustId() /*-{
+	return $wnd.cleanObject(this.custId);
+
+}-*/;
+
+public native void setDepAcctId(DepAcctId depAcctId)/*-{
+	this.depAcctId = depAcctId;
+}-*/;
+
+public final native DepAcctId getDepAcctId() /*-{
+	return $wnd.cleanObject(this.depAcctId);
+}-*/;
+public final native void setCardAcctId(CardAcctId cardAcctId)/*-{
+	this.cardAcctId = cardAcctId;
+}-*/;
+
+public final native CardAcctId getCardAcctId() /*-{
+	return $wnd.cleanObject(this.cardAcctId);
+}-*/;
+public final native void setCurAmt(CurAmt curAmt)/*-{
+	this.curAmt = curAmt;
+}-*/;
+
+public final native CurAmt getCurAmt()/*-{
+	return $wnd.cleanObject(this.curAmt);
+}-*/;
+public native void setCurCode(CurCode curCode)/*-{
+	this.curCode = curCode;
+}-*/;
+
+public final native CurCode getCurCode()/*-{
+	return $wnd.cleanObject(this.curCode);
+
+}-*/;
+public native void setForExRateType(ForExRateType forExRateType)/*-{
+	this.forExRateType = forExRateType;
+}-*/;
+
+public final native ForExRateType getForExRateType()/*-{
+	return $wnd.cleanObject(this.forExRateType);
+
+}-*/;
+
+public final native void setForExRateDealType(
+		ForExRateDealType forExRateDealType)/*-{
+	this.forExRateDealType = forExRateDealType;
+}-*/;
+
+public final native ForExRateDealType getForExRateDealType()/*-{
+	return $wnd.cleanObject(this.forExRateDealType);
+
+}-*/;
+public native void setForExValDtType(ForExValDtType forExValDtType)/*-{
+	this.forExValDtType = forExValDtType;
+}-*/;
+
+public final native ForExValDtType getForExValDtType()/*-{
+	return $wnd.cleanObject(this.forExValDtType);
+
+}-*/;
+public native void setForExValDt(ForExValDt forExValDt)/*-{
+	this.forExValDt = forExValDt;
+}-*/;
+
+public final native ForExValDt getForExValDt()/*-{
+	return $wnd.cleanObject(this.forExValDt);
+
+}-*/;
+public final native void setStartDt(StartDt[] startDt)/*-{
+	this.startDt = startDt;
+}-*/;
+
+public final native StartDt[] getStartDt()/*-{
+	return $wnd.cleanObject(this.startDt);
+}-*/;
+
+public final native void setEndDt(EndDt[] endDt)/*-{
+	this.endDt = endDt;
+}-*/;
+
+public final native EndDt[] getEndDt()/*-{
+	return $wnd.cleanObject(this.endDt);
+}-*/;
+public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+	this.deliveryMethod = deliveryMethod;
+}-*/;
+
+public final native DeliveryMethod getDeliveryMethod() /*-{
+	return $wnd.cleanObject(this.deliveryMethod);
+}-*/;
+public final native void setForExRateRec(ForExRateRec forExRateRec)/*-{
+	this.forExRateRec = forExRateRec;
+}-*/;
+
+public final ForExRateRec getForExRateRec() {
+	return null;
+}
+
+
+}

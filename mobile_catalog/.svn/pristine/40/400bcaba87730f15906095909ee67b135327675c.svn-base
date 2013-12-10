@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum SegmentType {
+	CorpCostCenter, CostCenter, Division, GeneralLedger, OrgLvl1, OrgLvl2, OrgLvl3, Portfolio, Region
+}

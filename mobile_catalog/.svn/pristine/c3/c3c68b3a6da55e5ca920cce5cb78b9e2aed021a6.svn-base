@@ -1,0 +1,156 @@
+package my.com.infopro.ifx.client.model;
+
+public class RecXferInqRs_Type extends IFXObject {
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setRecCtrlOut(RecCtrlOut recCtrlOut)/*-{
+		this.recCtrlOut = recCtrlOut;
+	}-*/;
+
+	public final native RecCtrlOut getRecCtrlOut()/*-{
+		return $wnd.cleanObject(this.recCtrlOut);
+
+	}-*/;
+
+	public final native void setRecXferId(RecXferId[] recXferId)/*-{
+		this.recXferId = recXferId;
+	}-*/;
+
+	public final native RecXferId[] getRecXferId()/*-{
+		return $wnd.cleanObject(this.recXferId);
+
+	}-*/;
+
+	public final native void setDepAcctIdFrom(DepAcctIdFrom[] depAcctIdFrom)/*-{
+		this.depAcctIdFrom = depAcctIdFrom;
+	}-*/;
+
+	public final native DepAcctIdFrom[] getDepAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.depAcctIdFrom);
+
+	}-*/;
+
+	public final native void setCardAcctIdFrom(CardAcctIdFrom[] cardAcctIdFrom)/*-{
+		this.cardAcctIdFrom = cardAcctIdFrom;
+	}-*/;
+
+	public final native CardAcctIdFrom[] getCardAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.cardAcctIdFrom);
+
+	}-*/;
+
+	public final native void setLoanAcctIdFrom(LoanAcctIdFrom[] loanAcctIdFrom)/*-{
+		this.loanAcctIdFrom = loanAcctIdFrom;
+	}-*/;
+
+	public final native LoanAcctIdFrom[] getLoanAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.loanAcctIdFrom);
+
+	}-*/;
+
+	public final native void setSelRangeCurAmt(SelRangeCurAmt[] selRangeCurAmt)/*-{
+		this.selRangeCurAmt = selRangeCurAmt;
+	}-*/;
+
+	public final native SelRangeCurAmt[] getSelRangeCurAmt()/*-{
+		return $wnd.cleanObject(this.selRangeCurAmt);
+
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId[] cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId[] getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+
+	}-*/;
+
+	public final native void setSPRefId(SPRefId[] sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId[] getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+
+	}-*/;
+
+	public final native void setIncToken(IncToken[] incToken)/*-{
+		this.incToken = incToken;
+	}-*/;
+
+	public final native IncToken[] getIncToken()/*-{
+		return $wnd.cleanObject(this.incToken);
+
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod[] deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod[] getDeliveryMethod()/*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+
+	}-*/;
+
+	public final native void setRecXferRec(RecXferRec[] recXferRec)/*-{
+		this.recXferRec = recXferRec;
+	}-*/;
+
+	public final native RecXferRec[] getRecXferRec()/*-{
+		return $wnd.cleanObject(this.recXferRec);
+
+	}-*/;
+
+	public final native void setToken(Token[] token)/*-{
+		this.token = token;
+	}-*/;
+
+	public final native Token[] getToken()/*-{
+		return $wnd.cleanObject(this.token);
+
+	}-*/;
+}

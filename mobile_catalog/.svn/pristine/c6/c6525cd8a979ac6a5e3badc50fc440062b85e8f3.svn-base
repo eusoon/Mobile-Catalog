@@ -1,0 +1,11 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXDate;
+
+public class LastReviewDt extends IFXDate {
+	protected LastReviewDt(){	
+	}
+	protected LastReviewDt(){
+	}
+	
+}

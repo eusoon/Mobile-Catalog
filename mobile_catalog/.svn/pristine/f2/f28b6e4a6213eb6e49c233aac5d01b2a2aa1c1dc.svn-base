@@ -1,0 +1,34 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class ChkImgData extends IFXObject {
+	CryptType cryptType;//Open Enum	Required Encryption Type. Defined values: None, PKCS#1 , PKCS#7, PKCS#10, ECB, CBC, CFB, OFB, TECB, TCBC, TCBC-I, TCFB, TCFB-P, TOFB, TOFB-I, AECB, ACBC, ACFB, AOFB, ACM. Must be supported in list of encryption types in the SP's Service Profile.
+	SecObjId SecObjId;//Identifier	Optional Identifier of Security Object on which the <ChkImgFront> and <ChkImgBack> is encrypted. Note: If security objects are managed in band, this element should be included in order to know how to decrypt <ChkImgFront> and <ChkImgBack>.
+	ChkImgFront ChkImgFront; //Aggregate	Required Front of check image. There must be agreement between two parties on the format of the image.
+	ChkImgBack ChkImgBack;//Aggregate	Optional Back of check image. There must be agreement between two parties on the format of the image.
+	public CryptType getCryptType() {
+		return cryptType;
+	}
+	public void setCryptType(CryptType cryptType) {
+		this.cryptType = cryptType;
+	}
+	public SecObjId getSecObjId() {
+		return SecObjId;
+	}
+	public void setSecObjId(SecObjId secObjId) {
+		SecObjId = secObjId;
+	}
+	public ChkImgFront getChkImgFront() {
+		return ChkImgFront;
+	}
+	public void setChkImgFront(ChkImgFront chkImgFront) {
+		ChkImgFront = chkImgFront;
+	}
+	public ChkImgBack getChkImgBack() {
+		return ChkImgBack;
+	}
+	public void setChkImgBack(ChkImgBack chkImgBack) {
+		ChkImgBack = chkImgBack;
+	}
+}

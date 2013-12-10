@@ -1,0 +1,69 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public class SecTokenCard extends SecToken {
+	CardEmbossNum cardEmbossNum;//NC-32	Required Embossed Card Number
+	CardSeqNum cardSeqNum; //NC-3	Optional Card Sequence Number
+	Brand brand;//Open Enum	Optional Card Brand Valid values include: AmEx, CarteBancaire, Discover, JCB, MasterCard, PrivateLabel, VISA
+	CardTechnology cardTechnology;//Open Enum	Optional Card Technology Valid values include: ICCCard, MagStripeCard
+	ExpDt expDt;//DateTime	Optional Expiration Date
+	CardVrfyData cardVrfyData;//NC-16	Optional Card Verification Data
+	Name name;//C-40	Optional Name
+	CSPhoneNum cSPhoneNum;//Phone Number	Optional Card (customer) service phone number
+	PINData PINData ; //Aggregate	Optional PIN Data
+	public CardEmbossNum getCardEmbossNum() {
+		return cardEmbossNum;
+	}
+	public void setCardEmbossNum(CardEmbossNum cardEmbossNum) {
+		this.cardEmbossNum = cardEmbossNum;
+	}
+	public CardSeqNum getCardSeqNum() {
+		return cardSeqNum;
+	}
+	public void setCardSeqNum(CardSeqNum cardSeqNum) {
+		this.cardSeqNum = cardSeqNum;
+	}
+	public Brand getBrand() {
+		return brand;
+	}
+	public void setBrand(Brand brand) {
+		this.brand = brand;
+	}
+	public CardTechnology getCardTechnology() {
+		return cardTechnology;
+	}
+	public void setCardTechnology(CardTechnology cardTechnology) {
+		this.cardTechnology = cardTechnology;
+	}
+	public ExpDt getExpDt() {
+		return expDt;
+	}
+	public void setExpDt(ExpDt expDt) {
+		this.expDt = expDt;
+	}
+	public CardVrfyData getCardVrfyData() {
+		return cardVrfyData;
+	}
+	public void setCardVrfyData(CardVrfyData cardVrfyData) {
+		this.cardVrfyData = cardVrfyData;
+	}
+	public Name getName() {
+		return name;
+	}
+	public void setName(Name name) {
+		this.name = name;
+	}
+	public CSPhoneNum getcSPhoneNum() {
+		return cSPhoneNum;
+	}
+	public void setcSPhoneNum(CSPhoneNum cSPhoneNum) {
+		this.cSPhoneNum = cSPhoneNum;
+	}
+	public PINData getPINData() {
+		return PINData;
+	}
+	public void setPINData(PINData pINData) {
+		PINData = pINData;
+	}
+
+
+}

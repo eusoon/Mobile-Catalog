@@ -1,0 +1,19 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class CustPayeeSel extends IFXObject {
+
+	public final native  CustPayeeKeys getCustPayeeKeys()/*-{
+		return $wnd.cleanObject(this.custPayeeKeys);
+	}-*/;
+	public final native  void setCustPayeeKeys(CustPayeeKeys custPayeeKeys)/*-{
+		this.custPayeeKeys = custPayeeKeys;
+	}-*/;
+	public final native  PayeeType[] getPayeeType()/*-{
+		return $wnd.cleanObject(this.payeeType);
+	}-*/;
+	public final native  void setPayeeType(PayeeType[] payeeType)/*-{
+		this.payeeType = payeeType;
+	}-*/;
+}

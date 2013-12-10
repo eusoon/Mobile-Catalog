@@ -1,0 +1,39 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class QuestionAnswer extends IFXObject {
+	
+	//begin -xor
+	QuestionIdent questionIdent;// NC-36	Required	Question Identifier
+	Question question;//C-unbound	Required	Question
+	//end -xor
+	Selection selection; //Open Enum	Optional	Selection	Valid values include: Accept, Ack, Decline, No, NoAck, OptIn, OptOut, Yes
+	Answer answer; //C-255	Optional	Answer
+
+	
+	public QuestionIdent getQuestionIdent() {
+		return questionIdent;
+	}
+	public void setQuestionIdent(QuestionIdent questionIdent) {
+		this.questionIdent = questionIdent;
+	}
+	public Question getQuestion() {
+		return question;
+	}
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
+	public Selection getSelection() {
+		return selection;
+	}
+	public void setSelection(Selection selection) {
+		this.selection = selection;
+	}
+	public Answer getAnswer() {
+		return answer;
+	}
+	public void setAnswer(Answer answer) {
+		this.answer = answer;
+	}
+}

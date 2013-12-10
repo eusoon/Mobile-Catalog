@@ -1,0 +1,23 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class RelPartyRef extends PartyRef {
+	
+	public final native RelPartyRole[] getRelPartyRole() /*-{
+		return $wnd.cleanObject(relPartyRole);
+	}-*/;
+	public final native void setRelPartyRole(RelPartyRole[] relPartyRole) /*-{
+		this.relPartyRole = relPartyRole;
+	}-*/;
+	public final native RelEstablishDt getRelEstablishDt() /*-{
+		return $wnd.cleanObject(relEstablishDt);
+	}-*/;
+	public final native void setRelEstablishDt(RelEstablishDt relEstablishDt) /*-{
+		this.relEstablishDt = relEstablishDt;
+	}-*/;
+	public final native TimeFrame getTimeFrame() /*-{
+		return $wnd.cleanObject(timeFrame);
+	}-*/;
+	public final native void setTimeFrame(TimeFrame timeFrame) /*-{
+		this.timeFrame = timeFrame;
+	}-*/;
+}

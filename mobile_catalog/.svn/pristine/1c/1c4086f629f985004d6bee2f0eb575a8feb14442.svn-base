@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class ChkOrdSyncRq extends ChkOrdSyncRq_Type {
+
+}

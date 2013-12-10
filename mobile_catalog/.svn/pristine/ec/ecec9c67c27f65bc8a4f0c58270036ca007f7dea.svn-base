@@ -1,0 +1,15 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public  class CardSel extends IFXObject {
+	
+	public final native  CardKeys getCardKeys()/*-{
+		return $wnd.cleanObject(this.cardKeys);
+	}-*/;
+
+	public final native  void setCardKeys(CardKeys cardKeys)/*-{
+		this.cardKeys = cardKeys;
+	}-*/;
+
+}

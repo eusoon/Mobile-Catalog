@@ -1,0 +1,101 @@
+package my.com.infopro.ifx.client.model;
+
+public class RecPmtInstAddRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecPmtId(RecPmtId recPmtId)/*-{
+		this.recPmtId = recPmtId;
+	}-*/;
+
+	public final native RecPmtId getRecPmtId()/*-{
+		return $wnd.cleanObject(this.recPmtId);
+	}-*/;
+
+	public final native void setDueDt(DueDt dueDt)/*-{
+		this.dueDt = dueDt;
+	}-*/;
+
+	public final native DueDt getDueDt()/*-{
+		return $wnd.cleanObject(this.dueDt);
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setRemitDetail(RemitDetail[] remitDetail)/*-{
+		this.remitDetail = remitDetail;
+	}-*/;
+
+	public final native RemitDetail[] getRemitDetail()/*-{
+		return $wnd.cleanObject(this.remitDetail);
+	}-*/;
+
+	public final native void setPmtLegalRpt(PmtLegalRpt[] pmtLegalRpt)/*-{
+		this.pmtLegalRpt = pmtLegalRpt;
+	}-*/;
+
+	public final native PmtLegalRpt[] getPmtLegalRpt()/*-{
+		return $wnd.cleanObject(this.pmtLegalRpt);
+	}-*/;
+
+	public final native void setPmtRec(PmtRec[] pmtRec)/*-{
+		this.pmtRec = pmtRec;
+	}-*/;
+
+	public final native PmtRec[] getPmtRec()/*-{
+		return $wnd.cleanObject(this.pmtRec);
+	}-*/;
+
+}

@@ -1,0 +1,12 @@
+package my.com.infopro.mobile.json.ifx.basetypes;
+
+/**
+ * The IFXTime class provides an abstraction of the xsd:time datatype.
+* @author Ong Eu Soon (eusoob@gmail.com)
+ * @version $Revision: 2.3 $
+ */
+public class IFXTimestamp extends IFXString {
+	protected IFXTimestamp(){	
+	}
+	
+}

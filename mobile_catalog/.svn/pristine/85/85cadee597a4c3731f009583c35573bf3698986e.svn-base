@@ -1,0 +1,63 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PmtInstruction extends IFXObject {
+	public final native PmtMethod getPmtMethod() /*-{
+		return $wnd.cleanObject(pmtMethod);
+	}-*/;
+	public final native void setPmtMethod(PmtMethod pmtMethod) /*-{
+		this.pmtMethod = pmtMethod;
+	}-*/;
+	public final native FromAcctRef getFromAcctRef() /*-{
+		return $wnd.cleanObject(fromAcctRef);
+	}-*/;
+	public final native void setFromAcctRef(FromAcctRef fromAcctRef) /*-{
+		this.fromAcctRef = fromAcctRef;
+	}-*/;
+	public final native SettlementIdent getSettlementIdent() /*-{
+		return $wnd.cleanObject(settlementIdent);
+	}-*/;
+	public final native void setSettlementIdent(SettlementIdent settlementIdent) /*-{
+		this.settlementIdent = settlementIdent;
+	}-*/;
+	public final native Memo getMemo() /*-{
+		return $wnd.cleanObject(memo);
+	}-*/;
+	public final native void setMemo(Memo memo) /*-{
+		this.memo = memo;
+	}-*/;
+	public final native CountryCode getCountryCode() /*-{
+		return $wnd.cleanObject(countryCode);
+	}-*/;
+	public final native void setCountryCode(CountryCode countryCode) /*-{
+		this.countryCode = countryCode;
+	}-*/;
+	public final native PmtFormat getPmtFormat() /*-{
+		return $wnd.cleanObject(pmtFormat);
+	}-*/;
+	public final native void setPmtFormat(PmtFormat pmtFormat) /*-{
+		this.pmtFormat = pmtFormat;
+	}-*/;
+	public final native JsArray<RefData> getRefData() /*-{
+		return $wnd.cleanObject(refData);
+	}-*/;
+	public final native void setRefData(JsArray<RefData> refData) /*-{
+		this.refData = refData;
+	}-*/;
+	public final native JsArray<IntermediaryAcct> getIntermediaryAcct() /*-{
+		return $wnd.cleanObject(intermediaryAcct);
+	}-*/;
+	public final native void setIntermediaryAcct(JsArray<IntermediaryAcct> intermediaryAcct) /*-{
+		this.intermediaryAcct = intermediaryAcct;
+	}-*/;
+	public final native FeeChargeAlloc getFeeChargeAlloc() /*-{
+		return $wnd.cleanObject(feeChargeAlloc);
+	}-*/;
+	public final native void setFeeChargeAlloc(FeeChargeAlloc feeChargeAlloc) /*-{
+		this.feeChargeAlloc = feeChargeAlloc;
+	}-*/;
+	
+}

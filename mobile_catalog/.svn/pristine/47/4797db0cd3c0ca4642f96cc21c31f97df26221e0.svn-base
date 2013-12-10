@@ -1,0 +1,28 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class BillStmtData extends IFXObject {
+	ImageURL imageURL;	 //	URL	 Required	 URL address for retrieving an image of the complete bill encoded as HTML. This may be cached by the client for later display, or it may be viewed live directly from the Web.
+	PrefetchURL[] prefetchURL;	 //	URL	 Optional Repeating	 List of URLs required in order to display an HTML image of the complete bill, to support off-line viewing.
+	ExpDt expDt;	 //	DateTime	 Optional	 Date/Time after which embedded authentication token expires. If absent, the embedded token never expires.
+	
+	public ImageURL getImageURL() {
+		return imageURL;
+	}
+	public void setImageURL(ImageURL imageURL) {
+		this.imageURL = imageURL;
+	}
+	public PrefetchURL[] getPrefetchURL() {
+		return prefetchURL;
+	}
+	public void setPrefetchURL(PrefetchURL[] prefetchURL) {
+		this.prefetchURL = prefetchURL;
+	}
+	public ExpDt getExpDt() {
+		return expDt;
+	}
+	public void setExpDt(ExpDt expDt) {
+		this.expDt = expDt;
+	}
+}

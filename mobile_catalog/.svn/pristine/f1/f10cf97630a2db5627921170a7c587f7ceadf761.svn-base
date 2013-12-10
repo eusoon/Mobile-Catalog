@@ -1,0 +1,342 @@
+package my.com.infopro.ifx.client.model;
+
+public class EMVRqData_Type extends IFXObject {
+	public native void setAppId(AppId appId)/*-{
+		this.appId = appId;
+	}-*/;
+
+	public final native AppId getAppId()/*-{
+		return $wnd.cleanObject(this.appId);
+
+	}-*/;
+
+	public native void setTrk2EquivData(Trk2EquivData trk2EquivData)/*-{
+		this.trk2EquivData = trk2EquivData;
+	}-*/;
+
+	public final native Trk2EquivData getTrk2EquivData()/*-{
+		return $wnd.cleanObject(this.trk2EquivData);
+
+	}-*/;
+
+	public native void setAppPan(AppPan appPan)/*-{
+		this.appPan = appPan;
+	}-*/;
+
+	public final native AppPan getAppPan()/*-{
+		return $wnd.cleanObject(this.appPan);
+
+	}-*/;
+
+	public native void setAppPanSeq(AppPanSeq appPanSeq)/*-{
+		this.appPanSeq = appPanSeq;
+	}-*/;
+
+	public final native AppPanSeq getAppPanSeq()/*-{
+		return $wnd.cleanObject(this.appPanSeq);
+
+	}-*/;
+
+	public native void setCryptoInfoData(CryptoInfoData cryptoInfoData)/*-{
+		this.cryptoInfoData = cryptoInfoData;
+	}-*/;
+
+	public final native CryptoInfoData getCryptoInfoData()/*-{
+		return $wnd.cleanObject(this.cryptoInfoData);
+
+	}-*/;
+
+	public native void setAuthRqCrypto(AuthRqCrypto authRqCrypto)/*-{
+		this.authRqCrypto = authRqCrypto;
+	}-*/;
+
+	public final native AuthRqCrypto getAuthRqCrypto()/*-{
+		return $wnd.cleanObject(this.authRqCrypto);
+
+	}-*/;
+
+	public native void setIssAppData(IssAppData issAppData)/*-{
+		this.issAppData = issAppData;
+	}-*/;
+
+	public final native IssAppData getIssAppData()/*-{
+		return $wnd.cleanObject(this.issAppData);
+
+	}-*/;
+
+	public native void setAppICProf(AppICProf appICProf)/*-{
+		this.appICProf = appICProf;
+	}-*/;
+
+	public final native AppICProf getAppICProf()/*-{
+		return $wnd.cleanObject(this.appICProf);
+
+	}-*/;
+
+	public native void setAppTrnCounter(AppTrnCounter appTrnCounter)/*-{
+		this.appTrnCounter = appTrnCounter;
+	}-*/;
+
+	public final native AppTrnCounter getAppTrnCounter()/*-{
+		return $wnd.cleanObject(this.appTrnCounter);
+
+	}-*/;
+
+	public native void setAuthAmt(AuthAmt authAmt)/*-{
+		this.authAmt = authAmt;
+	}-*/;
+
+	public final native AuthAmt getAuthAmt()/*-{
+		return $wnd.cleanObject(this.authAmt);
+
+	}-*/;
+
+	public native void setSecAmt(SecAmt secAmt)/*-{
+		this.secAmt = secAmt;
+	}-*/;
+
+	public final native SecAmt getSecAmt()/*-{
+		return $wnd.cleanObject(this.secAmt);
+
+	}-*/;
+
+	public native void setTerminalCountryCode(
+			TerminalCountryCode terminalCountryCode)/*-{
+		this.terminalCountryCode = terminalCountryCode;
+	}-*/;
+
+	public final native TerminalCountryCode getTerminalCountryCode()/*-{
+		return $wnd.cleanObject(this.terminalCountryCode);
+
+	}-*/;
+
+	public native void setTerminalVrfyRslt(TerminalVrfyRslt terminalVrfyRslt)/*-{
+		this.terminalVrfyRslt = terminalVrfyRslt;
+	}-*/;
+
+	public final native TerminalVrfyRslt getTerminalVrfyRslt()/*-{
+		return $wnd.cleanObject(this.terminalVrfyRslt);
+
+	}-*/;
+
+	public native void setCurCode(CurCode curCode)/*-{
+		this.curCode = curCode;
+	}-*/;
+
+	public final native CurCode getCurCode()/*-{
+		return $wnd.cleanObject(this.curCode);
+
+	}-*/;
+
+	public native void setTrnDt(TrnDt trnDt)/*-{
+		this.trnDt = trnDt;
+	}-*/;
+
+	public final native TrnDt getTrnDt()/*-{
+		return $wnd.cleanObject(this.trnDt);
+
+	}-*/;
+
+	public native void setEMVTrnType(EMVTrnType eMVTrnType)/*-{
+		this.eMVTrnType = eMVTrnType;
+	}-*/;
+
+	public final native EMVTrnType getEMVTrnType()/*-{
+		return $wnd.cleanObject(this.eMVTrnType);
+
+	}-*/;
+
+	public native void setUnpredictNum(UnpredictNum unpredictNum)/*-{
+		this.unpredictNum = unpredictNum;
+	}-*/;
+
+	public final native UnpredictNum getUnpredictNum()/*-{
+		return $wnd.cleanObject(this.unpredictNum);
+
+	}-*/;
+
+	public native void setTerminalCaps(TerminalCaps terminalCaps)/*-{
+		this.terminalCaps = terminalCaps;
+	}-*/;
+
+	public final native TerminalCaps getTerminalCaps()/*-{
+		return $wnd.cleanObject(this.terminalCaps);
+
+	}-*/;
+
+	public native void setCVMRslts(CVMRslts cVMRslts)/*-{
+		this.cVMRslts = cVMRslts;
+	}-*/;
+
+	public final native CVMRslts getCVMRslts()/*-{
+		return $wnd.cleanObject(this.cVMRslts);
+
+	}-*/;
+
+	public native void setTrnStatInfo(TrnStatInfo trnStatInfo)/*-{
+		this.trnStatInfo = trnStatInfo;
+	}-*/;
+
+	public final native TrnStatInfo getTrnStatInfo()/*-{
+		return $wnd.cleanObject(this.trnStatInfo);
+
+	}-*/;
+
+	public native void setAppVersionNum(AppVersionNum appVersionNum)/*-{
+		this.appVersionNum = appVersionNum;
+	}-*/;
+
+	public final native AppVersionNum getAppVersionNum()/*-{
+		return $wnd.cleanObject(this.appVersionNum);
+
+	}-*/;
+
+	public native void setIssScriptResultData(
+			IssScriptResultData[] issScriptResultData)/*-{
+		this.issScriptResultData = issScriptResultData;
+	}-*/;
+
+	public final native IssScriptResultData[] getIssScriptResultData()/*-{
+		return $wnd.cleanObject(this.issScriptResultData);
+
+	}-*/;
+
+	public native void setAppEffDt(AppEffDt[] appEffDt)/*-{
+		this.appEffDt = appEffDt;
+	}-*/;
+
+	public final native AppEffDt[] getAppEffDt()/*-{
+		return $wnd.cleanObject(this.appEffDt);
+
+	}-*/;
+
+	public native void setAppExpDt(AppExpDt[] appExpDt)/*-{
+		this.appExpDt = appExpDt;
+	}-*/;
+
+	public final native AppExpDt[] getAppExpDt()/*-{
+		return $wnd.cleanObject(this.appExpDt);
+
+	}-*/;
+
+	public native void setIssCountryCode(IssCountryCode[] issCountryCode)/*-{
+		this.issCountryCode = issCountryCode;
+	}-*/;
+
+	public final native IssCountryCode[] getIssCountryCode()/*-{
+		return $wnd.cleanObject(this.issCountryCode);
+
+	}-*/;
+
+	public native void setIssActionCodeDefault(
+			IssActionCodeDefault[] issActionCodeDefault)/*-{
+		this.issActionCodeDefault = issActionCodeDefault;
+	}-*/;
+
+	public final native IssActionCodeDefault[] getIssActionCodeDefault()/*-{
+		return $wnd.cleanObject(this.issActionCodeDefault);
+
+	}-*/;
+
+	public native void setIssActionCodeDenial(
+			IssActionCodeDenial[] issActionCodeDenial)/*-{
+		this.issActionCodeDenial = issActionCodeDenial;
+	}-*/;
+
+	public final native IssActionCodeDenial[] getIssActionCodeDenial()/*-{
+		return $wnd.cleanObject(this.issActionCodeDenial);
+
+	}-*/;
+
+	public native void setIssActionCodeOnline(
+			IssActionCodeOnline[] issActionCodeOnline)/*-{
+		this.issActionCodeOnline = issActionCodeOnline;
+	}-*/;
+
+	public final native IssActionCodeOnline[] getIssActionCodeOnline()/*-{
+		return $wnd.cleanObject(this.issActionCodeOnline);
+
+	}-*/;
+
+	public native void setCDOL1(CDOL1[] cDOL1)/*-{
+		this.cDOL1 = cDOL1;
+	}-*/;
+
+	public final native CDOL1[] getCDOL1()/*-{
+		return $wnd.cleanObject(this.cDOL1);
+
+	}-*/;
+
+	public native void setCDOL2(CDOL2[] cDOL2)/*-{
+		this.cDOL2 = cDOL2;
+	}-*/;
+
+	public final native CDOL2[] getCDOL2()/*-{
+		return $wnd.cleanObject(this.cDOL2);
+
+	}-*/;
+
+	public native void setTDOL(TDOL[] tDOL)/*-{
+		this.tDOL = tDOL;
+	}-*/;
+
+	public final native TDOL[] getTDOL()/*-{
+		return $wnd.cleanObject(this.tDOL);
+
+	}-*/;
+
+	public native void setTCHash(TCHash[] tCHash)/*-{
+		this.tCHash = tCHash;
+	}-*/;
+
+	public final native TCHash[] getTCHash()/*-{
+		return $wnd.cleanObject(this.tCHash);
+
+	}-*/;
+
+	public native void setPDOL(PDOL[] pDOL)/*-{
+		this.pDOL = pDOL;
+	}-*/;
+
+	public final native PDOL[] getPDOL()/*-{
+		return $wnd.cleanObject(this.pDOL);
+
+	}-*/;
+
+	public native void setTrnSeqCntr(TrnSeqCntr[] trnSeqCntr)/*-{
+		this.trnSeqCntr = trnSeqCntr;
+	}-*/;
+
+	public final native TrnSeqCntr[] getTrnSeqCntr()/*-{
+		return $wnd.cleanObject(this.trnSeqCntr);
+
+	}-*/;
+
+	public native void setIssDiscData(IssDiscData[] issDiscData)/*-{
+		this.issDiscData = issDiscData;
+	}-*/;
+
+	public final native IssDiscData[] getIssDiscData()/*-{
+		return $wnd.cleanObject(this.issDiscData);
+
+	}-*/;
+
+	public native void setTrnCategory(TrnCategory[] trnCategory)/*-{
+		this.trnCategory = trnCategory;
+	}-*/;
+
+	public final native TrnCategory[] getTrnCategory()/*-{
+		return $wnd.cleanObject(this.trnCategory);
+
+	}-*/;
+
+	public native void setCVMList(CVMList[] cVMList)/*-{
+		this.cVMList = cVMList;
+	}-*/;
+
+	public final native CVMList[] getCVMList()/*-{
+		return $wnd.cleanObject(this.cVMList);
+
+	}-*/;
+
+}

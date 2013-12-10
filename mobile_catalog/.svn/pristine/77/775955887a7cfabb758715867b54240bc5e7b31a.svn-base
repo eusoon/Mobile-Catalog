@@ -1,0 +1,21 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillStatusCounts_Type extends IFXObject {
+
+	public final native void setBillStatusCode(BillStatusCode billStatusCode)/*-{
+		this.billStatusCode = billStatusCode;
+	}-*/;
+
+	public final native BillStatusCode getBillStatusCode()/*-{
+		return $wnd.cleanObject(this.billStatusCode);
+	}-*/;
+
+	public final native void setCount(Count count)/*-{
+		this.count = count;
+	}-*/;
+
+	public final native Count getCount()/*-{
+		return $wnd.cleanObject(this.count);
+	}-*/;
+
+}

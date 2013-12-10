@@ -1,0 +1,149 @@
+package my.com.infopro.ifx.client.model;
+
+public class RemitInfo_Type extends IFXObject {
+	public final native void setRemitInstruction(RemitInstruction remitInstruction)/*-{
+		this.remitInstruction = remitInstruction;
+	}-*/;
+
+	public final native RemitInstruction getRemitInstruction()/*-{
+		return $wnd.cleanObject(this.remitInstruction);
+
+	}-*/;
+
+	public final native void setSettlementInfo(SettlementInfo settlementInfo)/*-{
+		this.settlementInfo = settlementInfo;
+	}-*/;
+
+	public final native SettlementInfo getSettlementInfo()/*-{
+		return $wnd.cleanObject(this.settlementInfo);
+
+	}-*/;
+
+	public final native void setCounterpartyInfo(
+			CounterpartyInfo counterpartyInfo)/*-{
+		this.counterpartyInfo = counterpartyInfo;
+	}-*/;
+
+	public final native CounterpartyInfo getCounterpartyInfo()/*-{
+		return $wnd.cleanObject(this.counterpartyInfo);
+
+	}-*/;
+
+	public final native void setChkInfo(ChkInfo chkInfo)/*-{
+		this.chkInfo = chkInfo;
+	}-*/;
+
+	public final native ChkInfo getChkInfo()/*-{
+		return $wnd.cleanObject(this.chkInfo);
+
+	}-*/;
+
+	public final native void setChkURL(ChkURL chkURL)/*-{
+		this.chkURL = chkURL;
+	}-*/;
+
+	public final native ChkURL getChkURL()/*-{
+		return $wnd.cleanObject(this.chkURL);
+
+	}-*/;
+
+	public final native void setCustPayeeId(CustPayeeId custPayeeId)/*-{
+		this.custPayeeId = custPayeeId;
+	}-*/;
+
+	public final native CustPayeeId getCustPayeeId()/*-{
+		return $wnd.cleanObject(this.custPayeeId);
+
+	}-*/;
+
+	public final native void setCustPayeeInfo(CustPayeeInfo custPayeeInfo)/*-{
+		this.custPayeeInfo = custPayeeInfo;
+	}-*/;
+
+	public final native CustPayeeInfo getCustPayeeInfo()/*-{
+		return $wnd.cleanObject(this.custPayeeInfo);
+
+	}-*/;
+
+	public final native void setBillRefInfo(BillRefInfo billRefInfo)/*-{
+		this.billRefInfo = billRefInfo;
+	}-*/;
+
+	public final native BillRefInfo getBillRefInfo()/*-{
+		return $wnd.cleanObject(this.billRefInfo);
+
+	}-*/;
+
+	public final native void setBillId(BillId billId)/*-{
+		this.billId = billId;
+	}-*/;
+
+	public final native BillId getBillId()/*-{
+		return $wnd.cleanObject(this.billId);
+
+	}-*/;
+
+	public final native void setPmtId(PmtId pmtId)/*-{
+		this.pmtId = pmtId;
+	}-*/;
+
+	public final native PmtId getPmtId()/*-{
+		return $wnd.cleanObject(this.pmtId);
+
+	}-*/;
+
+	public final native void setMemo(Memo memo)/*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo getMemo()/*-{
+		return $wnd.cleanObject(this.memo);
+
+	}-*/;
+
+	public final native void setBillingAcct(BillingAcct billingAcct)/*-{
+		this.billingAcct = billingAcct;
+	}-*/;
+
+	public final native BillingAcct getBillingAcct()/*-{
+		return $wnd.cleanObject(this.billingAcct);
+
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+
+	}-*/;
+
+	public final native void setPmtSummAmt(PmtSummAmt[] pmtSummAmt)/*-{
+		this.pmtSummAmt = pmtSummAmt;
+	}-*/;
+
+	public final native PmtSummAmt[] getPmtSummAmt()/*-{
+		return $wnd.cleanObject(this.pmtSummAmt);
+
+	}-*/;
+
+	public final native void setInvoiceInfo(InvoiceInfo[] invoiceInfo)/*-{
+		this.invoiceInfo = invoiceInfo;
+	}-*/;
+
+	public final native InvoiceInfo[] getInvoiceInfo()/*-{
+		return $wnd.cleanObject(this.invoiceInfo);
+
+	}-*/;
+
+	public final native void setPmtLegalRpt(PmtLegalRpt pmtLegalRpt)/*-{
+		this.pmtLegalRpt = pmtLegalRpt;
+	}-*/;
+
+	public final native PmtLegalRpt getPmtLegalRpt()/*-{
+		return $wnd.cleanObject(this.pmtLegalRpt);
+
+	}-*/;
+
+}

@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.client.svc;
+
+public enum SvcType {
+	FUND_TRANSFER, SWIFT_TRANSFER, PAYMENTS
+}

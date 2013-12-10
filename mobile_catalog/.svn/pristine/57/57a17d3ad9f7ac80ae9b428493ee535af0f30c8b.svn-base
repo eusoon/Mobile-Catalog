@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class USA_MilitaryRank extends USA_MilitaryRank_Type {
+
+}

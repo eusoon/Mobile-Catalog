@@ -1,0 +1,44 @@
+package my.com.infopro.ifx.client.model;
+
+public class AcctBal_Type extends IFXObject {
+	public final native void setBalType(BalType balType)/*-{
+		this.balType = balType;
+	}-*/;
+
+	public final native BalType getBalType()/*-{
+		return $wnd.cleanObject(this.balType);
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public native void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+
+	public final native ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+
+	public native void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+
+	public final native Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+
+	}-*/;
+}

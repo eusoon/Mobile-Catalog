@@ -1,0 +1,91 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class ContextRqHdr extends IFXObject {
+	FieldSelect[] fieldSelect;	 //	IfxPath	 Optional Repeating	 Field Select
+	ClientTerminalSeqNum clientTerminalSeqNum;	 //	NC-36	 Optional	 Client Sequence Number
+	NetworkTrnData networkTrnData;	 //	Aggregate	 Optional	 Network Transaction Data
+	PointOfServiceData pointOfServiceData;	 //	Aggregate	 Optional	 Point of Service Data
+	EMVRqData eMVRqData;	 //	Aggregate	 Optional	 EMV Request Data
+	MsgAuthCode msgAuthCode;	 //	Aggregate	 Optional	 Message Authentication Code
+	ClientDt clientDt;	 //	DateTime	 Optional	 Client DateTime
+	CustLangPref custLangPref;	 //	NC-17	 Optional	 Customer Language Preference
+	ClearingLangCode clearingLangCode;	 //	Aggregate	 Optional	 Clearing Language Code
+	ClientApp clientApp;	 //	Aggregate	 Optional	 Client Application
+	ProxyClient proxyClient;	 //	Aggregate	 Optional	 Proxy Client
+	MsgGroupReference msgGroupReference;	 //	C-36	 Optional	 Message Group Reference
+	
+	public FieldSelect[] getFieldSelect() {
+		return fieldSelect;
+	}
+	public void setFieldSelect(FieldSelect[] fieldSelect) {
+		this.fieldSelect = fieldSelect;
+	}
+	public ClientTerminalSeqNum getClientTerminalSeqNum() {
+		return clientTerminalSeqNum;
+	}
+	public void setClientTerminalSeqNum(ClientTerminalSeqNum clientTerminalSeqNum) {
+		this.clientTerminalSeqNum = clientTerminalSeqNum;
+	}
+	public NetworkTrnData getNetworkTrnData() {
+		return networkTrnData;
+	}
+	public void setNetworkTrnData(NetworkTrnData networkTrnData) {
+		this.networkTrnData = networkTrnData;
+	}
+	public PointOfServiceData getPointOfServiceData() {
+		return pointOfServiceData;
+	}
+	public void setPointOfServiceData(PointOfServiceData pointOfServiceData) {
+		this.pointOfServiceData = pointOfServiceData;
+	}
+	public EMVRqData geteMVRqData() {
+		return eMVRqData;
+	}
+	public void seteMVRqData(EMVRqData eMVRqData) {
+		this.eMVRqData = eMVRqData;
+	}
+	public MsgAuthCode getMsgAuthCode() {
+		return msgAuthCode;
+	}
+	public void setMsgAuthCode(MsgAuthCode msgAuthCode) {
+		this.msgAuthCode = msgAuthCode;
+	}
+	public ClientDt getClientDt() {
+		return clientDt;
+	}
+	public void setClientDt(ClientDt clientDt) {
+		this.clientDt = clientDt;
+	}
+	public CustLangPref getCustLangPref() {
+		return custLangPref;
+	}
+	public void setCustLangPref(CustLangPref custLangPref) {
+		this.custLangPref = custLangPref;
+	}
+	public ClearingLangCode getClearingLangCode() {
+		return clearingLangCode;
+	}
+	public void setClearingLangCode(ClearingLangCode clearingLangCode) {
+		this.clearingLangCode = clearingLangCode;
+	}
+	public ClientApp getClientApp() {
+		return clientApp;
+	}
+	public void setClientApp(ClientApp clientApp) {
+		this.clientApp = clientApp;
+	}
+	public ProxyClient getProxyClient() {
+		return proxyClient;
+	}
+	public void setProxyClient(ProxyClient proxyClient) {
+		this.proxyClient = proxyClient;
+	}
+	public MsgGroupReference getMsgGroupReference() {
+		return msgGroupReference;
+	}
+	public void setMsgGroupReference(MsgGroupReference msgGroupReference) {
+		this.msgGroupReference = msgGroupReference;
+	}
+}

@@ -1,0 +1,14 @@
+package my.com.infopro.mobile.json.ifx.basetypes;
+
+import com.google.gwt.core.client.JavaScriptObject;
+
+/**
+ * This is the superclass from which all IFX beans descend. This is needed
+ * to make the XML Encoding and Decoding happen in a general way.
+  * @author Ong Eu Soon (eusoob@gmail.com)
+ * @version $Revision: 2.3 $
+ */
+public class IFXObject extends JavaScriptObject {
+
+
+}

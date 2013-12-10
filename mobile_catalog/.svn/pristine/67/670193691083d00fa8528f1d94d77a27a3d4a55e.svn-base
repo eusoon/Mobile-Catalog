@@ -1,0 +1,52 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtMsgRec_Type extends IFXObject {
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setMsgRecDt(MsgRecDt msgRecDt)/*-{
+		this.msgRecDt = msgRecDt;
+	}-*/;
+
+	public final native MsgRecDt getMsgRecDt()/*-{
+		return $wnd.cleanObject(this.msgRecDt);
+	}-*/;
+
+	public final native void setPmtAddRs(PmtAddRs pmtAddRs)/*-{
+		this.pmtAddRs = pmtAddRs;
+	}-*/;
+
+	public final native PmtAddRs getPmtAddRs()/*-{
+		return $wnd.cleanObject(this.pmtAddRs);
+	}-*/;
+
+	public final native void setPmtModRs(PmtModRs pmtModRs)/*-{
+		this.pmtModRs = pmtModRs;
+	}-*/;
+
+	public final native PmtModRs getPmtModRs()/*-{
+		return $wnd.cleanObject(this.pmtModRs);
+	}-*/;
+
+	public final native void setPmtStatusModRs(PmtStatusModRs pmtStatusModRs)/*-{
+		this.pmtStatusModRs = pmtStatusModRs;
+	}-*/;
+
+	public final native PmtStatusModRs getPmtStatusModRs()/*-{
+		return $wnd.cleanObject(this.pmtStatusModRs);
+	}-*/;
+
+	public final native void setPmtCanRs(PmtCanRs pmtCanRs)/*-{
+		this.pmtCanRs = pmtCanRs;
+	}-*/;
+
+	public final native PmtCanRs getPmtCanRs()/*-{
+		return $wnd.cleanObject(this.pmtCanRs);
+	}-*/;
+}

@@ -1,0 +1,63 @@
+package my.com.infopro.ifx.client.model;
+
+public class ForExDealAdviseRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setForExDealRec(ForExDealRec forExDealRec)/*-{
+		this.forExDealRec = forExDealRec;
+	}-*/;
+
+	public final native ForExDealRec getForExDealRec() /*-{
+		return $wnd.cleanObject(this.forExDealRec);
+
+	}-*/;
+
+	public final native void setForExDealId(ForExDealId[] forExDealId)/*-{
+		this.forExDealId = forExDealId;
+	}-*/;
+
+	public final native ForExDealId[] getForExDealId()/*-{
+		return $wnd.cleanObject(this.forExDealId);
+	}-*/;
+
+	public final native void setForExDealStatus(ForExDealStatus forExDealStatus)/*-{
+		this.forExDealStatus = forExDealStatus;
+	}-*/;
+
+	public final native ForExDealStatus getForExDealStatus()/*-{
+		return $wnd.cleanObject(this.forExDealStatus);
+	}-*/;
+
+}

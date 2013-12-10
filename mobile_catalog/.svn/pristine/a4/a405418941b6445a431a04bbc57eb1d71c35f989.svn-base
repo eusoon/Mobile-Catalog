@@ -1,0 +1,19 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class ForExRateSheetSel extends IFXObject {
+
+	//begin-xor	Required Repeating
+	ForExRateSheetKeys forExRateSheetKeys; //Aggregate	Required	Foreign Exchange Rate Sheet Keys Aggregate
+	//end-xor
+
+	public ForExRateSheetKeys getForExRateSheetKeys() {
+		return forExRateSheetKeys;
+	}
+
+	public void setForExRateSheetKeys(ForExRateSheetKeys forExRateSheetKeys) {
+		this.forExRateSheetKeys = forExRateSheetKeys;
+	}
+
+}

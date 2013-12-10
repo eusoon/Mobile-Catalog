@@ -1,0 +1,101 @@
+package my.com.infopro.ifx.client.model;
+
+public class TerminalObjStatusModRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public final native void setTerminalObjId(TerminalObjId terminalObjId)/*-{
+		this.terminalObjId = terminalObjId;
+	}-*/;
+
+	public final native TerminalObjId getTerminalObjId()/*-{
+		return $wnd.cleanObject(this.terminalObjId);
+	}-*/;
+
+	public final native void setRestartType(RestartType restartType)/*-{
+		this.restartType = restartType;
+	}-*/;
+
+	public final native RestartType getRestartType()/*-{
+		return $wnd.cleanObject(this.restartType);
+	}-*/;
+
+	public final native void setEffUrgency(EffUrgency effUrgency)/*-{
+		this.effUrgency = effUrgency;
+	}-*/;
+
+	public final native EffUrgency getEffUrgency()/*-{
+		return $wnd.cleanObject(this.effUrgency);
+	}-*/;
+
+	public final native void setExpectedOpenDt(ExpectedOpenDt[] expectedOpenDt)/*-{
+		this.expectedOpenDt = expectedOpenDt;
+	}-*/;
+
+	public final native ExpectedOpenDt[] getExpectedOpenDt()/*-{
+		return $wnd.cleanObject(this.expectedOpenDt);
+	}-*/;
+
+	public final native void setTerminalObjStatus(TerminalObjStatus[] terminalObjStatus)/*-{
+		this.terminalObjStatus = terminalObjStatus;
+	}-*/;
+
+	public final native TerminalObjStatus[] getTerminalObjStatus()/*-{
+		return $wnd.cleanObject(this.terminalObjStatus);
+	}-*/;
+
+	public final native void setTerminalObjRec(TerminalObjRec[] terminalObjRec)/*-{
+		this.terminalObjRec = terminalObjRec;
+	}-*/;
+
+	public final native TerminalObjRec[] getTerminalObjRec()/*-{
+		return $wnd.cleanObject(this.terminalObjRec);
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId[] cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId[] getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+	}-*/;
+
+	public final native void setSPRefId(SPRefId[] sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId[] getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+	}-*/;
+
+}

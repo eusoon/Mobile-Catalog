@@ -1,0 +1,43 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+import com.google.gwt.core.client.JsArray;
+
+
+public class DebitRec extends IFXObject {
+
+	protected DebitRec(){
+	}
+	
+	public final native  SvcIdent getSvcIdent()/*-{
+		return $wnd.cleanObject(this.svcIdent);
+	}-*/;
+	public final native  void setSvcIdent(SvcIdent svcIdent)/*-{
+		this.svcIdent = svcIdent;
+	}-*/;
+	public final native  JsArray<DebitId> getDebitId()/*-{
+		return $wnd.cleanObject(this.debitId);
+	}-*/;
+	public final native  void setDebitId(JsArray<DebitId> debitId)/*-{
+		this.debitId = debitId;
+	}-*/;
+	public final native  JsArray<DebitInfo> getDebitInfo()/*-{
+		return $wnd.cleanObject(this.debitInfo);
+	}-*/;
+	public final native  void setDebitInfo(JsArray<DebitInfo> debitInfo)/*-{
+		this.debitInfo = debitInfo;
+	}-*/;
+	public final native  DebitEnvr getDebitEnvr()/*-{
+		return $wnd.cleanObject(this.debitEnvr);
+	}-*/;
+	public final native  void setDebitEnvr(DebitEnvr debitEnvr)/*-{
+		this.debitEnvr = debitEnvr;
+	}-*/;
+	public final native  JsArray<DebitStatus> getDebitStatus()/*-{
+		return $wnd.cleanObject(this.debitStatus);
+	}-*/;
+	public final native  void setDebitStatus(JsArray<DebitStatus> debitStatus)/*-{
+		this.debitStatus = debitStatus;
+	}-*/;
+}

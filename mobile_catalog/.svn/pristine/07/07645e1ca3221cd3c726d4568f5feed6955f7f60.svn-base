@@ -1,0 +1,12 @@
+package my.com.infopro.mobile.client.model;
+
+public class Svc extends Entity{
+
+
+	public final native String getSvcName() /*-{
+		return $wnd.cleanString(this.svcName);
+	-*/;
+	public final native String getSvcType()/*-{
+		return $wnd.cleanString(this.svcType);
+	-*/;
+}

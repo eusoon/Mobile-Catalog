@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.5.0/distro-source/core/src/gwt-module.dtd">
+<module  rename-to="api">
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name='com.googlecode.gwtphonegap.PhoneGap' />
+	<inherits name="com.google.gwt.i18n.CldrLocales"/>
+	<inherits name="my.com.infopro.mobile.IFXJson" />
+	<inherits name="org.apache.commons.Lang3" />
+	<inherits name="org.apache.commons.Collection" />
+	<inherits name="org.apache.commons.Beanutils" />
+	<inherits name="com.jayway.Jsonpath" />
+	<inherits name="net.mnidev.Jsonsmart" />
+	<source path="client" />
+
+
+	<entry-point class="my.com.infopro.mobile.client.InfoproMobile" />
+	<replace-with class="my.com.infopro.mobile.client.services.AccessServiceImpl">
+		<when-type-is class="my.com.infopro.mobile.client.services.AccessService"/>
+	</replace-with>
+	<replace-with class="my.com.infopro.mobile.client.services.AccountServiceImpl">
+	    <when-type-is class="my.com.infopro.mobile.client.services.AccountService"/>
+	</replace-with>
+	<replace-with class="my.com.infopro.mobile.client.services.ContactServiceImpl">
+	    <when-type-is class="my.com.infopro.mobile.client.services.ContactService"/>
+	</replace-with>
+	<replace-with class="my.com.infopro.mobile.client.services.ConfigurationServiceImpl">
+		<when-type-is class="my.com.infopro.mobile.client.services.ConfigurationService"/>
+	</replace-with>
+	<replace-with class="my.com.infopro.mobile.client.services.GeneralServiceImpl">
+		<when-type-is class="my.com.infopro.mobile.client.services.GeneralService"/>
+	</replace-with>
+	<replace-with class="my.com.infopro.mobile.client.services.PaymentServiceImpl">
+		<when-type-is class="my.com.infopro.mobile.client.services.PaymentService"/>
+	</replace-with>	
+	<replace-with class="my.com.infopro.mobile.client.services.UserServiceImpl">
+		<when-type-is class="my.com.infopro.mobile.client.services.UserService"/>
+	</replace-with>	
+	<replace-with class="my.com.infopro.mobile.client.services.ServiceProviderServiceImpl">
+		<when-type-is class="my.com.infopro.mobile.client.services.ServiceProviderService"/>
+	</replace-with>	
+	<extend-property name="locale" values="en,nl,es,pt,it,de,fr,ru,el,zh,ja,cs"/>
+   	<set-property-fallback name="locale" value="en"/>
+   	<set-property name="locale" value="en,nl,es,pt,it,de,fr,ru,el,zh,ja,cs"/>			
+	<set-property name="gwt.logging.popupHandler" value="DISABLED" />
+	<set-property name="gwt.logging.enabled" value="FALSE" />
+
+	<set-property name="phonegap.env" value="yes" />		
+	<add-linker name="xsiframe"/>
+	<set-configuration-property name="devModeRedirectEnabled" value="true"/>
+</module>

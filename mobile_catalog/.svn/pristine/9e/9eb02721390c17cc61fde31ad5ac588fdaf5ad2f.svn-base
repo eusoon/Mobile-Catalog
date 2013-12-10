@@ -1,0 +1,28 @@
+package my.com.infopro.ifx.client.model;
+
+public class PayerInfo_Type extends IFXObject {
+	public final native void setPersonInfo(PersonInfo personInfo)/*-{
+		this.personInfo = personInfo;
+	}-*/;
+
+	public final native PersonInfo getPersonInfo()/*-{
+		return $wnd.cleanObject(this.personInfo);
+	}-*/;
+
+	public final native void setOrgInfo(OrgInfo orgInfo)/*-{
+		this.orgInfo = orgInfo;
+	}-*/;
+
+	public final native OrgInfo getOrgInfo()/*-{
+		return $wnd.cleanObject(this.orgInfo);
+	}-*/;
+
+	public final native void setOrgId(OrgId orgId)/*-{
+		this.orgId = orgId;
+	}-*/;
+
+	public final native OrgId getOrgId()/*-{
+		return $wnd.cleanObject(this.orgId);
+	}-*/;
+
+}

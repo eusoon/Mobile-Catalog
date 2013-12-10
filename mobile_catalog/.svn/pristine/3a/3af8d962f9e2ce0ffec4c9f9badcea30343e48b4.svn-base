@@ -1,0 +1,103 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtInfo_Type extends IFXObject {
+	
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setLegalName(LegalName legalName)/*-{
+		this.legalName = legalName;
+	}-*/;
+
+	public final native LegalName getLegalName()/*-{
+		return $wnd.cleanObject(this.legalName);
+
+	}-*/;
+
+	public final native void setPayerInfo(PayerInfo payerInfo)/*-{
+		this.payerInfo = payerInfo;
+	}-*/;
+
+	public final native PayerInfo getPayerInfo()/*-{
+		return $wnd.cleanObject(this.payerInfo);
+
+	}-*/;
+
+	public final native void setRemitInfo(RemitInfo[] remitInfo)/*-{
+		this.remitInfo = remitInfo;
+	}-*/;
+
+	public final native RemitInfo[] getRemitInfo()/*-{
+		return $wnd.cleanObject(this.remitInfo);
+
+	}-*/;
+
+	public final native void setDepAcctIdFrom(DepAcctIdFrom depAcctIdFrom)/*-{
+		this.depAcctIdFrom = depAcctIdFrom;
+	}-*/;
+
+	public final native DepAcctIdFrom getDepAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.depAcctIdFrom);
+	}-*/;
+
+	public final native void setCardAcctIdFrom(CardAcctIdFrom cardAcctIdFrom)/*-{
+		this.cardAcctIdFrom = cardAcctIdFrom;
+	}-*/;
+
+	public final native CardAcctIdFrom getCardAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.cardAcctIdFrom);
+	}-*/;
+
+	public final native void setCategory(Category[] category)/*-{
+		this.category = category;
+	}-*/;
+
+	public final native Category[] getCategory()/*-{
+		return $wnd.cleanObject(this.category);
+	}-*/;
+
+	public final native void setPrcDt(PrcDt[] prcDt)/*-{
+		this.prcDt = prcDt;
+	}-*/;
+
+	public final native PrcDt[] getPrcDt()/*-{
+		return $wnd.cleanObject(this.prcDt);
+	}-*/;
+
+	public final native void setDueDt(DueDt dueDt)/*-{
+		this.dueDt = dueDt;
+	}-*/;
+
+	public final native DueDt getDueDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+
+	public final native void setImmediatePmt(ImmediatePmt[] immediatePmt)/*-{
+		this.immediatePmt = immediatePmt;
+	}-*/;
+
+	public final native ImmediatePmt[] getImmediatePmt()/*-{
+		return $wnd.cleanObject(this.immediatePmt);
+	}-*/;
+
+	public final native void setForExDealId(ForExDealId[] forExDealId)/*-{
+		this.forExDealId = forExDealId;
+	}-*/;
+
+	public final native ForExDealId[] getForExDealId()/*-{
+		return $wnd.cleanObject(this.forExDealId);
+	}-*/;
+
+	public final native void setPmtRefId(PmtRefId[] pmtRefId)/*-{
+		this.pmtRefId = pmtRefId;
+	}-*/;
+
+	public final native PmtRefId[] getPmtRefId()/*-{
+		return $wnd.cleanObject(this.pmtRefId);
+	}-*/;
+}

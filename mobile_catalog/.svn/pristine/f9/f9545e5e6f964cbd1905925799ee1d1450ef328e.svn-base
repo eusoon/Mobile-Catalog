@@ -1,0 +1,38 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class SubjectPswd extends IFXObject {
+	CryptType cryptType;//Open Enum	Required Encryption Type. Valid values include: ACBC, ACFB, ACM, AECB, AOFB, CBC, CFB, ECB, None, OFB, PKCS#1, PKCS#10, PKCS#7, RSA#1, TCBC, TCBC-I, TCFB, TCFB-P, TECB, TOFB, TOFB-I, TR-31
+	SecObjId secObjId;//Identifier	Optional Repeating Security Object Identifier
+
+	//begin-xor Required 
+	Pswd pswd;//C-32	Required Clear Text Password
+	CryptPswd cryptPswd;//Aggregate	Required Encrypted Password
+	//end-xor
+	public CryptType getCryptType() {
+		return cryptType;
+	}
+	public void setCryptType(CryptType cryptType) {
+		this.cryptType = cryptType;
+	}
+	public SecObjId getSecObjId() {
+		return secObjId;
+	}
+	public void setSecObjId(SecObjId secObjId) {
+		this.secObjId = secObjId;
+	}
+	public Pswd getPswd() {
+		return pswd;
+	}
+	public void setPswd(Pswd pswd) {
+		this.pswd = pswd;
+	}
+	public CryptPswd getCryptPswd() {
+		return cryptPswd;
+	}
+	public void setCryptPswd(CryptPswd cryptPswd) {
+		this.cryptPswd = cryptPswd;
+	}
+
+}

@@ -1,0 +1,75 @@
+package my.com.infopro.ifx.client.model;
+
+public class ContactInfo_Type extends IFXObject {
+	public final native void setContactPref(ContactPref contactPref)/*-{
+		this.contactPref = contactPref;
+	}-*/;
+
+	public final native ContactPref getContactPref()/*-{
+		return $wnd.cleanObject(this.contactPref);
+
+	}-*/;
+
+	public final native void setPrefTimeStart(PrefTimeStart prefTimeStart)/*-{
+		this.prefTimeStart = prefTimeStart;
+	}-*/;
+
+	public final native PrefTimeStart getPrefTimeStart()/*-{
+		return $wnd.cleanObject(this.prefTimeStart);
+
+	}-*/;
+
+	public final native void setPrefTimeEnd(PrefTimeEnd prefTimeEnd)/*-{
+		this.prefTimeEnd = prefTimeEnd;
+	}-*/;
+
+	public final native PrefTimeEnd getPrefTimeEnd()/*-{
+		return $wnd.cleanObject(this.prefTimeEnd);
+
+	}-*/;
+
+	public final native void setPhoneNum(PhoneNum[] phoneNum)/*-{
+		this.phoneNum = phoneNum;
+	}-*/;
+
+	public final native PhoneNum[] getPhoneNum()/*-{
+		return $wnd.cleanObject(this.phoneNum);
+
+	}-*/;
+
+	public final native void setContactName(ContactName[] contactName)/*-{
+		this.contactName = contactName;
+	}-*/;
+
+	public final native ContactName[] getContactName()/*-{
+		return $wnd.cleanObject(this.contactName);
+
+	}-*/;
+
+	public final native void setEmailAddr(EmailAddr[] emailAddr)/*-{
+		this.emailAddr = emailAddr;
+	}-*/;
+
+	public final native EmailAddr[] getEmailAddr()/*-{
+		return $wnd.cleanObject(this.emailAddr);
+
+	}-*/;
+
+	public final native void setURL(URL[] uRL)/*-{
+		this.uRL = uRL;
+	}-*/;
+
+	public final native URL[] getURL()/*-{
+		return $wnd.cleanObject(this.uRL);
+
+	}-*/;
+
+	public final native void setPostAddr(PostAddr[] postAddr)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native PostAddr[] getPostAddr()/*-{
+		return $wnd.cleanObject(this.postAddr);
+
+	}-*/;
+}

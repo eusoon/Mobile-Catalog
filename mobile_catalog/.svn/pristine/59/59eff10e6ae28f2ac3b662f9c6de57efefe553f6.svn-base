@@ -1,0 +1,45 @@
+package my.com.infopro.ifx.client.model;
+
+public class SecObjInqRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setSecObjId(SecObjId secObjId)/*-{
+		this.secObjId = secObjId;
+	}-*/;
+
+	public final native SecObjId getSecObjId()/*-{
+		return $wnd.cleanObject(this.secObjId);
+	}-*/;
+
+	public final native void setSecObjName(SecObjName secObjName)/*-{
+		this.secObjName = secObjName;
+	}-*/;
+
+	public final native SecObjName getSecObjName()/*-{
+		return $wnd.cleanObject(this.secObjName);
+	}-*/;
+
+	public final native void setSecObjPurpose(SecObjPurpose secObjPurpose)/*-{
+		this.secObjPurpose = secObjPurpose;
+	}-*/;
+
+	public final native SecObjPurpose getSecObjPurpose()/*-{
+		return $wnd.cleanObject(this.secObjPurpose);
+	}-*/;
+
+}

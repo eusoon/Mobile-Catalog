@@ -1,0 +1,93 @@
+package my.com.infopro.ifx.client.model;
+
+public class RecPmtAudRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlOut(RecCtrlOut recCtrlOut)/*-{
+		this.recCtrlOut = recCtrlOut;
+	}-*/;
+
+	public final native RecCtrlOut getRecCtrlOut()/*-{
+		return $wnd.cleanObject(this.recCtrlOut);
+	}-*/;
+
+	public final native void setSelRangeDt(SelRangeDt selRangeDt)/*-{
+		this.selRangeDt = selRangeDt;
+	}-*/;
+
+	public final native SelRangeDt getSelRangeDt()/*-{
+		return $wnd.cleanObject(this.selRangeDt);
+	}-*/;
+
+	public final native void setMethod(Method[] method)/*-{
+		this.method = method;
+	}-*/;
+
+	public final native Method[] getMethod()/*-{
+		return $wnd.cleanObject(this.method);
+	}-*/;
+
+	public final native void setRecPmtId(RecPmtId[] recPmtId)/*-{
+		this.recPmtId = recPmtId;
+	}-*/;
+
+	public final native RecPmtId[] getRecPmtId()/*-{
+		return $wnd.cleanObject(this.recPmtId);
+	}-*/;
+
+	public final native void setRecPmtMsgRec(RecPmtMsgRec[] recPmtMsgRec)/*-{
+		this.recPmtMsgRec = recPmtMsgRec;
+	}-*/;
+
+	public final native RecPmtMsgRec[] getRecPmtMsgRec()/*-{
+		return $wnd.cleanObject(this.recPmtMsgRec);
+	}-*/;
+
+}

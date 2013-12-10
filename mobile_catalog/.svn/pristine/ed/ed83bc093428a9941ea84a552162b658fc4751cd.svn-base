@@ -1,0 +1,28 @@
+package my.com.infopro.ifx.client.model;
+
+public class MediaAcctAdjMsgRec_Type extends IFXObject {
+
+	public final native void setCustId(CustId custId)/*-{
+	this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+	return $wnd.cleanObject(this.custId);
+	}-*/;
+	
+	public final native void setMsgRecDt(MsgRecDt msgRecDt)/*-{
+	this.msgRecDt = msgRecDt;
+	}-*/;
+	
+	public final native MsgRecDt getMsgRecDt()/*-{
+	return $wnd.cleanObject(this.msgRecDt);
+	}-*/;
+	
+	public final native void setMediaAcctAdjAddRs(MediaAcctAdjAddRs mediaAcctAdjAddRs)/*-{
+	this.mediaAcctAdjAddRs = mediaAcctAdjAddRs;
+	}-*/;
+	
+	public final native MediaAcctAdjAddRs getMediaAcctAdjAddRs()/*-{
+	return $wnd.cleanObject(this.mediaAcctAdjAddRs);
+	}-*/;
+}

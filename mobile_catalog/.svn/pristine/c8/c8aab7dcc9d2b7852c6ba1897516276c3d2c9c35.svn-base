@@ -1,0 +1,31 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class StdPayeeInfo extends IFXObject {
+	
+	public final native PartyData getPartyData() /*-{
+		return $wnd.cleanObject(partyData);
+	}-*/;
+	public final native void setPartyData(PartyData partyData) /*-{
+		this.partyData = partyData;
+	}-*/;
+	public final native AcctMask[] getAcctMask() /*-{
+		return $wnd.cleanObject(acctMask);
+	}-*/;
+	public final native void setAcctMask(AcctMask[] acctMask) /*-{
+		this.acctMask = acctMask;
+	}-*/;
+	public final native DaysToPay getDaysToPay() /*-{
+		return $wnd.cleanObject(daysToPay);
+	}-*/;
+	public final native void setDaysToPay(DaysToPay daysToPay) /*-{
+		this.daysToPay = daysToPay;
+	}-*/;
+	public final native BillerKeys getBillerKeys() /*-{
+		return $wnd.cleanObject(billerKeys);
+	}-*/;
+	public final native void setBillerKeys(BillerKeys billerKeys) /*-{
+		this.billerKeys = billerKeys;
+	}-*/;
+}

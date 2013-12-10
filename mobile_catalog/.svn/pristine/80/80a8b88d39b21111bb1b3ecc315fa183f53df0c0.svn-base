@@ -1,0 +1,56 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public class CardOrderKeys extends BaseKeys {
+
+	SvcIdent svcIdent;	 //	Aggregate	 Optional	 Service Identifier
+	//begin-xor	Required
+	CardOrderId cardOrderId;	 //	Identifier	 Required	 Card Order Identifier
+	//begin-or	Required
+	//begin-xor	Optional
+	CardEmbossNum cardEmbossNum;	 //	NC-32	 Required	 Embossed Card Number
+	CardNum cardNum;	 //	NC-32	 Required	 Card Number
+	//end-xor
+	CardSeqNum cardSeqNum;	 //	NC-3	 Optional	 Card Sequence Number
+	CreatedDt createdDt;	 //	DateTime	 Required	 Creation DateTime
+	//end-or
+	//end-xor
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public CardOrderId getCardOrderId() {
+		return cardOrderId;
+	}
+	public void setCardOrderId(CardOrderId cardOrderId) {
+		this.cardOrderId = cardOrderId;
+	}
+	public CardEmbossNum getCardEmbossNum() {
+		return cardEmbossNum;
+	}
+	public void setCardEmbossNum(CardEmbossNum cardEmbossNum) {
+		this.cardEmbossNum = cardEmbossNum;
+	}
+	public CardNum getCardNum() {
+		return cardNum;
+	}
+	public void setCardNum(CardNum cardNum) {
+		this.cardNum = cardNum;
+	}
+	public CardSeqNum getCardSeqNum() {
+		return cardSeqNum;
+	}
+	public void setCardSeqNum(CardSeqNum cardSeqNum) {
+		this.cardSeqNum = cardSeqNum;
+	}
+	public CreatedDt getCreatedDt() {
+		return createdDt;
+	}
+	public void setCreatedDt(CreatedDt createdDt) {
+		this.createdDt = createdDt;
+	}
+	
+	
+}

@@ -1,0 +1,64 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class CardPeriodData extends IFXObject {
+
+	protected CardPeriodData(){
+	}
+	
+	public final native  CardAmtType getCardAmtType()/*-{
+		return $wnd.cleanObject(this.cardAmtType);
+	}-*/;
+	public final native  void setCardAmtType(CardAmtType cardAmtType)/*-{
+		this.cardAmtType = cardAmtType;
+	}-*/;
+	public final native  CardAmtSource getCardAmtSource()/*-{
+		return $wnd.cleanObject(this.cardAmtSource);
+	}-*/;
+	public final native  void setCardAmtSource(CardAmtSource cardAmtSource)/*-{
+		this.cardAmtSource = cardAmtSource;
+	}-*/;
+	public final native  CardPeriodType getCardPeriodType()/*-{
+		return $wnd.cleanObject(this.cardPeriodType);
+	}-*/;
+	public final native  void setCardPeriodType(CardPeriodType cardPeriodType)/*-{
+		this.cardPeriodType = cardPeriodType;
+	}-*/;
+	public final native  LastOccurInd getLastOccurInd()/*-{
+		return $wnd.cleanObject(this.lastOccurInd);
+	}-*/;
+	public final native  void setLastOccurInd(LastOccurInd lastOccurInd)/*-{
+		this.lastOccurInd = lastOccurInd;
+	}-*/;
+	public final native  EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+	public final native  void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+	public final native  ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+	public final native  void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+	public final native  Amt getAmt()/*-{
+		return $wnd.cleanObject(this.amt);
+	}-*/;
+	public final native  void setAmt(Amt amt)/*-{
+		this.amt = amt;
+	}-*/;
+	public final native  Count getCount()/*-{
+		return $wnd.cleanObject(this.count);
+	}-*/;
+	public final native  void setCount(Count count)/*-{
+		this.count = count;
+	}-*/;
+	public final native  LastOccuranceDt getLastOccuranceDt()/*-{
+		return $wnd.cleanObject(this.lastOccuranceDt);
+	}-*/;
+	public final native  void setLastOccuranceDt(LastOccuranceDt lastOccuranceDt)/*-{
+		this.lastOccuranceDt = lastOccuranceDt;
+	}-*/;
+}

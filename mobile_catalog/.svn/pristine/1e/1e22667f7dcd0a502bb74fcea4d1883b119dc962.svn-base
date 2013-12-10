@@ -1,0 +1,335 @@
+/*
+    This file is part of Cyclos (www.cyclos.org).
+    A project of the Social Trade Organisation (www.socialtrade.org).
+
+    Cyclos is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    Cyclos is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Cyclos; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+ */
+package my.com.infopro.mobile.client.accounts;
+
+import java.math.BigDecimal;
+
+import com.google.gwt.i18n.shared.DateTimeFormat;
+import my.com.infopro.ifx.acct.AcctTrnInqRq;
+import my.com.infopro.ifx.element.AcctId;
+import my.com.infopro.ifx.element.AcctKeys;
+import my.com.infopro.ifx.element.AcctTrnSel;
+
+import my.com.infopro.ifx.element.RqUID;
+
+import my.com.infopro.mobile.client.IFX;
+
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.Navigation;
+import my.com.infopro.mobile.client.Notification;
+import my.com.infopro.mobile.client.Notification.NotificationLayout;
+import my.com.infopro.mobile.client.model.Account;
+import my.com.infopro.mobile.client.model.AccountStatus;
+
+import my.com.infopro.mobile.client.model.Parameters;
+import my.com.infopro.mobile.client.model.Transfer;
+import my.com.infopro.mobile.client.services.AccountService;
+import my.com.infopro.mobile.client.ui.Page;
+import my.com.infopro.mobile.client.ui.PageAnchor;
+import my.com.infopro.mobile.client.ui.widgets.AccountRow;
+import my.com.infopro.mobile.client.ui.widgets.DataList;
+import my.com.infopro.mobile.client.utils.Amount;
+import my.com.infopro.mobile.client.utils.BaseAsyncCallback;
+import my.com.infopro.mobile.client.utils.ParameterKey;
+import my.com.infopro.mobile.client.utils.ResultPage;
+import my.com.infopro.mobile.client.utils.StringHelper;
+
+import my.com.infopro.mobile.clients.setting.LocalSettings;
+import my.com.infopro.mobile.json.ifx.acct.AcctTrnInqRs;
+import my.com.infopro.mobile.json.ifx.element.AcctTrnInfo;
+import my.com.infopro.mobile.json.ifx.element.AcctTrnRec;
+import my.com.infopro.mobile.json.ifx.element.CurCode;
+import my.com.infopro.mobile.json.ifx.element.CustPayeeInfo;
+import my.com.infopro.mobile.json.ifx.element.Email;
+import my.com.infopro.mobile.json.ifx.element.Locator;
+
+
+import com.google.gwt.cell.client.Cell.Context;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JsArray;
+import com.google.gwt.json.client.JSONArray;
+import com.google.gwt.json.client.JSONNull;
+import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.json.client.JSONString;
+import com.google.gwt.json.client.JSONValue;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.Widget;
+
+/**
+ * A {@link Page} used to display account details.
+ */
+public class AccountDetailsPage extends Page {
+
+    private FlowPanel container;
+    private AccountRow accountInformation;
+    private DataList<Transfer> dataList;
+    private Long accountId;
+    private String accountName;
+    
+    private AccountService accountService = GWT.create(AccountService.class);
+    
+    @Override
+    public String getHeading() {
+        return messages.accountDetailsHeading();
+    }
+
+    @Override
+    public boolean hasCustomScroll() {     
+        return true;
+    }
+    
+    @Override
+    public Widget initialize() {
+        
+        // List pages uses fixed notification layout
+        Notification.get().setLayout(NotificationLayout.FIXED);
+        
+        container = new FlowPanel();            
+        
+        accountId = getParameters().getRequiredLong(ParameterKey.ID);
+        
+        createAccountInformation();
+        createDataList();                       
+        
+        return container;
+    }
+    
+    /**
+     * Creates account information bar
+     */
+    private void createAccountInformation() {
+
+        // Retrieve account name from initial accounts
+        accountName = getInitialAccountName(accountId);               
+      
+        accountInformation = new AccountRow();          
+        accountInformation.addStyleName("account-information-row");
+        accountInformation.setRightStyle("account-information-row-right-column");
+        accountInformation.setHeading(accountName, "account-information-heading");
+        
+        // Fetch account status data
+        accountService.getAccountStatus(accountId, new BaseAsyncCallback<AccountStatus>() {
+            @Override
+            public void onSuccess(AccountStatus status) {
+                accountInformation.setSub(messages.lowerCreditLimit(status.getFormattedCreditLimit()), "account-information-sub");
+                accountInformation.setSub(messages.availableBalance(status.getFormattedAvailableBalance()), "account-information-sub");
+                accountInformation.setValue(status.getFormattedBalance(), "account-information-value");
+            }                
+        });                           
+    }
+    
+    /**
+     * Retrieves account name from initial accounts by the given id
+     */
+    private String getInitialAccountName(Long accountId) {
+        JsArray<Account> accounts = LoggedUser.get().getInitialData().getAccounts();
+        for(int i = 0; i < accounts.length(); i++) {
+            Account account = accounts.get(i);
+            if(account.getId().longValue() == accountId) {
+                return account.getType().getName();
+            }
+        }
+        return "";
+    }
+    
+    /**
+     * Creates data list which fetches and render transfers
+     */
+    private void createDataList() {                
+        
+        dataList = new DataList<Transfer>() {
+            @Override
+            protected Widget onRender(Context context, Transfer data) {
+
+                // Value can be null
+                if (data == null) {
+                  return null;
+                }
+                
+                // If it is a user payment return user name otherwise return account name
+       //         String name = data.getBasicMember() == null ? data.getSystemAccountName() : data.getBasicMember().getName();
+                String name=data.getSystemAccountName();
+                // Create row widget
+                AccountRow row = new AccountRow();
+                row.setHeading(name);
+                row.setSub(data.getFormattedProcessDate());
+                
+                boolean positiveAmount = data.getAmount() > 0d;
+                
+                // If amount is positive add a + sign
+                String amount = positiveAmount ? "+ " + data.getFormattedAmount() : StringHelper.insertCharsAt(1, " ", data.getFormattedAmount());
+                                
+                row.setValue(amount, positiveAmount);
+                
+                return row;
+            }
+           
+            @Override
+            protected void onSearchData(int page, int length, final AsyncCallback<ResultPage<Transfer>> callback) {
+                // Fetch transfers
+            	
+                Parameters parameters = new Parameters();
+                parameters.set(ParameterKey.CURRENT_PAGE, String.valueOf(page));
+                parameters.set(ParameterKey.PAGE_SIZE, String.valueOf(length));
+                LoggedUser loggerUser=LoggedUser.get();
+				AcctTrnInqRq acctTrnInqRq=new AcctTrnInqRq();
+            	acctTrnInqRq.setRqUID(IFX.getRqUID("ACCT"));
+            	acctTrnInqRq.setMsgRqHdr(IFX.getMsgRqHdr(loggerUser));
+            	
+            	AcctTrnSel[] acctTrnSel=new AcctTrnSel[1];
+            	AcctKeys acctKeys=new AcctKeys();
+            	AcctId acctId=new AcctId();
+            	acctId.setString(java.lang.Long.toString(accountId));
+				acctKeys.setAcctId(acctId);
+				acctTrnSel[0].setAcctKeys(acctKeys);
+				acctTrnInqRq.setAcctTrnSel(acctTrnSel);
+				parameters.add("acctTrnInqRq", acctTrnInqRq);
+				
+               // accountService.searchAccountHistory(accountId, parameters, callback);  
+                
+                AsyncCallback<AcctTrnInqRs> callback1=new AsyncCallback<AcctTrnInqRs>(){
+
+					@Override
+					public void onFailure(Throwable caught) {
+						callback.onFailure(caught);
+					}
+
+					@Override
+					public void onSuccess(AcctTrnInqRs acctTrnInqRs) {
+						 LocalSettings localSettings=new LocalSettings();
+						JsArray<AcctTrnRec> acctTrnRecs=acctTrnInqRs.getAcctTrnRec();
+						JSONArray arr = new JSONArray();
+						
+						for(int i=0; i<acctTrnRecs.length();i++){
+							 AcctTrnRec acctTrnRec=acctTrnRecs.get(i);
+							 AcctTrnInfo acctTrnInfo =acctTrnRec.getAcctTrnInfo();
+							 CustPayeeInfo custPayeeInfo =acctTrnInfo.getCustPayeeInfo();
+					
+							 String transferTypeValue=acctTrnInfo.getTrnType().getTrnTypeValue().getString();
+							 String date=acctTrnInfo.getPostedDt().getString();
+							 String processDate=acctTrnInfo.getEffDt().getString();
+							 String amount=acctTrnInfo.getTotalCurAmt().getAmt().getString();
+							 String transactionNumber="";
+							
+							 String systemAccountName="";
+							 
+							 String description=acctTrnInfo.getMemo().getString();
+							 
+							 String name=acctTrnInfo.getName().getString();
+							 
+							 
+							 JSONObject transfer = new JSONObject();
+							 transfer.put("date", getAsJSONString(date));
+							 DateTimeFormat df = DateTimeFormat.getFormat("yyyy-mm-ddThh:mm:ss");//
+								// formatted as per ISO 8601
+						
+//							 CalendarConverter calendarConverter=new CalendarConverter(df);
+//							 Calendar formattedDate=calendarConverter.valueOf(date); 
+//							 transfer.put("formattedDate", getAsJSONString(calendarConverter.toString(formattedDate)));	 
+							 transfer.put("processDate", getAsJSONString(processDate));
+//							 Calendar formattedProcessDate=calendarConverter.valueOf(date);
+//							 transfer.put("formattedProcessDate", getAsJSONString(calendarConverter.toString(formattedProcessDate))); 
+							 transfer.put("amount", getAsJSONString(amount));
+							 Amount amt=new Amount();
+							 amt.setValue(new BigDecimal(amount));
+//					         String formattedAmount=localSettings.getAmountConverter().toString(amt);
+//							 transfer.put("formattedAmount", getAsJSONString(formattedAmount));
+							 JSONObject transferType=new JSONObject();
+							 JSONObject from=new JSONObject();
+							 JSONObject currency=new JSONObject();
+							 CurCode curCode=acctTrnInfo.getTotalCurAmt().getCurCode();
+							 currency.put("name", getAsJSONString(curCode.getCurCodeValue().getString()));
+							 currency.put("symbol", getAsJSONString(curCode.getCurCodeValue().getString()));
+							 String fromAccountName=acctTrnInfo.getCustPayeeInfo().getPayerAcctNum().getString();
+							 from.put("name", getAsJSONString(fromAccountName));
+							 from.put("currency", currency);
+							 transferType.put("from", from);
+							 JSONObject to=new JSONObject();
+							 String toAccountName=acctTrnInfo.getCustPayeeInfo().getPayeeAcctNum().getString();
+							 to.put("name", getAsJSONString(toAccountName));
+							 to.put("currency", currency);
+							 transferType.put("to", to);
+							 transferType.put("name", getAsJSONString(transferTypeValue));
+						     transfer.put("transferType", transferType);
+							 transfer.put("description", getAsJSONString(description));
+							 JSONObject member=new JSONObject();
+							 JsArray<my.com.infopro.mobile.json.ifx.element.Contact> contacts=custPayeeInfo.getStdPayeeRef().getStdPayeeInfo().getPartyData().getContact();
+							 for(int x=0;i<contacts.length();x++){
+									my.com.infopro.mobile.json.ifx.element.Contact contact1=contacts.get(x);
+									Locator locator=contact1.getLocator();
+									if(locator instanceof Email){
+										Email email=(Email)locator;
+										String email1=email.getEmailAddr().getString();;
+										member.put("email", getAsJSONString(email1));
+									}
+								}
+								
+								String payeeName=custPayeeInfo.getName().getString();
+								member.put("name",getAsJSONString(payeeName));
+								String username=acctTrnRec.getAcctTrnEnvr().getPartyKeys().getLoginIdent().getLoginName().getString();
+								member.put("username", getAsJSONString(username));
+							 
+							 transfer.put("member", member);
+							 transfer.put("name", getAsJSONString(name));
+							 transfer.put("systemAccountName", getAsJSONString(systemAccountName));
+							 transfer.put("transactionNumber", getAsJSONString(transactionNumber));
+							 arr.set(i++,transfer);
+						}
+						JSONObject resultPage = new JSONObject();
+						resultPage.put("elements", arr);
+						ResultPage<Transfer> result=resultPage.getJavaScriptObject().cast();
+						callback.onSuccess(result);
+					}
+                	
+                };
+				accountService.searchAccountTransactionHistory(accountId, parameters, callback1); 
+            }         
+            private JSONValue getAsJSONString(String value) {
+        		if (value == null) {
+        			return JSONNull.getInstance();
+        		}
+
+        		return new JSONString(value);
+        	}
+            @Override
+            protected void onRowSelected(Transfer value) {                 
+                // Go to transfer details
+                navigateToTransferDetails(value);
+            }
+            
+            @Override
+            protected Widget addHeader() {                
+                return accountInformation;
+            }
+        };
+        container.add(dataList);
+    }      
+    
+    /**
+     * Navigates to transfer details sending according parameters     
+     */
+    private void navigateToTransferDetails(Transfer transfer) {
+        Parameters params = new Parameters();
+        params.add(ParameterKey.ID, transfer.getId());
+        Navigation.get().go(PageAnchor.PAYMENT_DETAILS, params);
+    }
+
+}

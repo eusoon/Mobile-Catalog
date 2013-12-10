@@ -1,0 +1,44 @@
+package my.com.infopro.ifx.client.model;
+
+public class StdPayeeInfo_Type extends IFXObject {
+	
+	public final native void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setPostAddr(PostAddr postAddr)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native PostAddr getPostAddr()/*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+
+	public final native void setAcctMask(AcctMask[] _acctMask)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native AcctMask[] getAcctMask()/*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+
+	public final native void setIndustId(IndustId[] industId)/*-{
+		this.industId = industId;
+	}-*/;
+
+	public final native IndustId[] getIndustId()/*-{
+		return $wnd.cleanObject(this.industId);
+	}-*/;
+
+	public final native void setDaysToPay(DaysToPay[] _daysToPay)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native DaysToPay[] getDaysToPay()/*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+}

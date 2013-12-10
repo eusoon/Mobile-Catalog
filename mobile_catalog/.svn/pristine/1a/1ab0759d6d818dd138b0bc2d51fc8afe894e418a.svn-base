@@ -1,0 +1,44 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtAuthMsgRec_Type extends IFXObject {
+	
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setMsgRecDt(MsgRecDt msgRecDt)/*-{
+		this.msgRecDt = msgRecDt;
+	}-*/;
+
+	public final native MsgRecDt getMsgRecDt()/*-{
+		return $wnd.cleanObject(this.msgRecDt);
+	}-*/;
+
+	public final native void setPmtAuthAddRs(PmtAuthAddRs pmtAuthAddRs)/*-{
+		this.pmtAuthAddRs = pmtAuthAddRs;
+	}-*/;
+
+	public final native PmtAuthAddRs getPmtAuthAddRs()/*-{
+		return $wnd.cleanObject(this.pmtAuthAddRs);
+	}-*/;
+
+	public final native void setPmtAuthModRs(PmtAuthModRs pmtAuthModRs)/*-{
+		this.pmtAuthModRs = pmtAuthModRs;
+	}-*/;
+
+	public final native PmtAuthModRs getPmtAuthModRs()/*-{
+		return $wnd.cleanObject(this.pmtAuthModRs);
+	}-*/;
+
+	public final native void setPmtAuthCanRs(PmtAuthCanRs pmtAuthCanRs)/*-{
+		this.pmtAuthCanRs = pmtAuthCanRs;
+	}-*/;
+
+	public final native PmtAuthCanRs getPmtAuthCanRs()/*-{
+		return $wnd.cleanObject(this.pmtAuthCanRs);
+	}-*/;
+}

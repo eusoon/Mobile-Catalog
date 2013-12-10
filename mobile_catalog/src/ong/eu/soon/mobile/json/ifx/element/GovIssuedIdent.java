@@ -1,0 +1,34 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class GovIssuedIdent extends IFXObject {
+
+	protected GovIssuedIdent(){
+	}
+	
+	public final native  CountryCode getCountryCode()/*-{
+		return $wnd.cleanObject(this.countryCode);
+	}-*/;
+	public final native  void setCountryCode(CountryCode countryCode)/*-{
+		this.countryCode = countryCode;
+	}-*/;
+	public final native  GovLevel getGovLevel()/*-{
+		return $wnd.cleanObject(this.govLevel);
+	}-*/;
+	public final native  void setGovLevel(GovLevel govLevel)/*-{
+		this.govLevel = govLevel;
+	}-*/;
+	public final native  GovOrgName getGovOrgName()/*-{
+		return $wnd.cleanObject(this.govOrgName);
+	}-*/;
+	public final native  void setGovOrgName(GovOrgName govOrgName)/*-{
+		this.govOrgName = govOrgName;
+	}-*/;
+	public final native  StateProv getStateProv()/*-{
+		return $wnd.cleanObject(this.stateProv);
+	}-*/;
+	public final native  void setStateProv(StateProv stateProv)/*-{
+		this.stateProv = stateProv;
+	}-*/;
+}

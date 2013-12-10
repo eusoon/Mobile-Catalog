@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class XferInqRs extends XferInqRs_Type {
+
+}

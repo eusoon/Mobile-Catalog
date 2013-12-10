@@ -1,0 +1,270 @@
+package com.bigoloo.gwt.jalaliwidget.client;
+
+
+import com.google.gwt.event.dom.client.ChangeEvent;
+import com.google.gwt.event.dom.client.ChangeHandler;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.HasChangeHandlers;
+import com.google.gwt.event.shared.HandlerRegistration;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.ui.*;
+
+import com.sahandrc.calendar.gwt.GWTPersianCalendar;
+import com.sahandrc.calendar.utils.PersianCalendarConstants;
+
+import java.util.Calendar;
+import java.util.Date;
+
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: Bahiraei
+ * Date: 12/22/12
+ * Time: 1:21 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class JalaliDatePicker extends Composite implements ClickHandler, HasChangeHandlers{
+
+       private class NavBar extends Composite implements ClickHandler {
+
+        public final DockPanel bar = new DockPanel();
+        public final Button prevMonth = new Button("&lt;", this);
+        public final Button prevYear = new Button("&lt;&lt;", this);
+        public final Button nextYear = new Button("&gt;&gt;", this);
+        public final Button nextMonth = new Button("&gt;", this);
+        public final Button today = new Button("امروز", this);
+        public final HTML title = new HTML();
+
+
+        private final JalaliDatePicker calendar;
+
+        public NavBar(JalaliDatePicker calendar) {
+            this.calendar = calendar;
+
+//            setWidget(bar);
+            initWidget(bar);
+            bar.setStyleName("navbar");
+            title.setStyleName("header");
+            prevMonth.setStyleName("button");
+            prevYear.setStyleName("button");
+            nextMonth.setStyleName("button");
+            nextYear.setStyleName("button");
+            today.setStyleName("button");
+
+            HorizontalPanel prevButtons = new HorizontalPanel();
+            prevButtons.add(prevMonth);
+            prevButtons.add(prevYear);
+
+            HorizontalPanel nextButtons = new HorizontalPanel();
+            nextButtons.add(nextYear);
+            nextButtons.add(nextMonth);
+            nextButtons.add(today);
+
+            bar.add(prevButtons, DockPanel.WEST);
+            bar.setCellHorizontalAlignment(prevButtons, DockPanel.ALIGN_LEFT);
+            bar.add(nextButtons, DockPanel.EAST);
+            bar.setCellHorizontalAlignment(nextButtons, DockPanel.ALIGN_RIGHT);
+            bar.add(title, DockPanel.CENTER);
+            bar.setVerticalAlignment(DockPanel.ALIGN_MIDDLE);
+            bar.setCellHorizontalAlignment(title, HasAlignment.ALIGN_CENTER);
+            bar.setCellVerticalAlignment(title, HasAlignment.ALIGN_MIDDLE);
+            bar.setCellWidth(title, "100%");
+
+        }
+
+		@Override
+		public void onClick(ClickEvent event) {
+			Widget sender=	(Widget) event.getSource();
+			if (sender == prevMonth) {
+                calendar.prevMonth();
+            } else if (sender == prevYear) {
+                calendar.prevYear();
+            } else if (sender == nextYear) {
+                calendar.nextYear();
+            } else if (sender == nextMonth) {
+                calendar.nextMonth();
+            }else if (sender==today){
+              calendar.today();
+          }
+			
+		}
+
+
+
+
+
+    }
+
+
+    private void today() {
+        Date todayDate = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(todayDate);
+        persianCalendar.setDate(cal.get(Calendar.DATE));
+        persianCalendar.setMonth(cal.get(Calendar.MONTH));
+        persianCalendar.setYear(cal.get(Calendar.YEAR));
+        drawCalendar();
+    }
+
+    private void prevMonth() {
+        persianCalendar.setPersianDate(persianCalendar.getPersianYear(), persianCalendar.getPersianMonth() - 1, persianCalendar.getPersianDay());
+        drawCalendar();
+    }
+
+    private void prevYear() {
+        persianCalendar.setPersianDate(persianCalendar.getPersianYear()-1,persianCalendar.getPersianMonth(),persianCalendar.getPersianDay());
+        drawCalendar();
+        }
+    private void nextYear() {
+        persianCalendar.setPersianDate(persianCalendar.getPersianYear()+1,persianCalendar.getPersianMonth(),persianCalendar.getPersianDay());
+        drawCalendar();
+    }
+    private void nextMonth() {
+        persianCalendar.setPersianDate(persianCalendar.getPersianYear(),persianCalendar.getPersianMonth()+1,persianCalendar.getPersianDay());
+        drawCalendar();
+    }
+    private static class CellHTML extends HTML  {
+        private int day;
+
+        public CellHTML(String text, int day) {
+            super(text);
+            this.day = day;
+        }
+
+        public int getDay() {
+            return day;
+        }
+
+    }
+    private final NavBar navbar = new NavBar(this);
+    private final DockPanel outer = new DockPanel();
+//    private final Label label = new Label();
+    private final GWTPersianCalendar persianCalendar=new GWTPersianCalendar();
+
+
+
+    private final Grid grid = new Grid(7, 7) {
+        public boolean clearCell(int row, int column) {
+            boolean retValue = super.clearCell(row, column);
+
+            Element td = getCellFormatter().getElement(row, column);
+            DOM.setInnerHTML(td, "");
+            return retValue;
+        }
+    };
+   public JalaliDatePicker(){
+//       setWidget(outer);
+       initWidget(outer);
+       grid.setStyleName("table");
+       grid.setCellSpacing(0);
+       outer.add(navbar, DockPanel.NORTH);
+       outer.add(grid, DockPanel.CENTER);
+       drawCalendar();
+       setStyleName("CalendarWidget");
+
+   }
+
+    protected void setHeaderText(int year, int month) {
+        navbar.title.setText(PersianCalendarConstants.persianMonthNames[month-1] + ", " + year);
+    }
+     public  void drawCalendar(){
+
+         int year = persianCalendar.getPersianYear();
+         int month = persianCalendar.getPersianMonth();
+         int day = persianCalendar.getPersianDay();
+         setHeaderText(year, month);
+         grid.getRowFormatter().setStyleName(0, "weekheader");
+         for (int i = 0; i < PersianCalendarConstants.persianWeekDays.length; i++) {
+             grid.getCellFormatter().setStyleName(0, i, "days");
+             grid.setText(0, i, PersianCalendarConstants.persianWeekDays[i]);
+         }
+
+         int firstDay=getFirstDayoFMonth();
+         persianCalendar.setPersianDate(year,month,day);
+
+         int j = 0;
+         for (int i = 1; i < 7; i++) {
+             for (int k = 0; k < 7; k++, j++) {
+                 int displayNum = (j - firstDay + 1);
+                 if (j < firstDay || displayNum > getMonthDayCount(month)) {
+                     grid.getCellFormatter().setStyleName(i, k, "empty");
+                     grid.setHTML(i, k, "&nbsp;");
+                 } else {
+                     CellHTML html = new CellHTML(
+                             "<span>" + String.valueOf(displayNum) + "</span>",
+                             displayNum);
+
+                     
+                     html.addClickHandler(this);
+
+                     grid.getCellFormatter().setStyleName(i, k, "cell");
+                     if (displayNum == day) {
+                         grid.getCellFormatter().addStyleName(i, k, "today");
+                     } else if (displayNum == day) {
+                         grid.getCellFormatter().addStyleName(i, k, "day");
+                     }
+                     grid.setWidget(i, k, html);
+                 }
+             }
+         }
+
+     }
+
+    private int getMonthDayCount(int month) {
+        int count=0;
+
+        if(month<=6){
+            count=31;
+        }else if (month>6&&month<=11){
+            count=30;
+        }else if(month==12){
+            count=(persianCalendar.isPersianLeapYear())?30:29;
+        }
+       return count;
+    }
+
+    private int getFirstDayoFMonth() {
+
+
+       persianCalendar.setPersianDate(persianCalendar.getPersianYear(),persianCalendar.getPersianMonth(),1);
+       String weekDayName=persianCalendar.getPersianWeekDayName();
+
+        for(int i=0;i<PersianCalendarConstants.persianWeekDays.length;i++){
+            if(weekDayName.equals(PersianCalendarConstants.persianWeekDays[i])) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public String getPersianLongDate(){
+        return persianCalendar.getPersianLongDate()  ;
+
+    }
+    public String getPersianShortDate(){
+        return persianCalendar.getPersianShortDate();
+    }
+
+
+
+	@Override
+	public HandlerRegistration addChangeHandler(ChangeHandler handler) {
+		return addDomHandler(handler, ChangeEvent.getType());
+	}
+
+
+	@Override
+	public void onClick(ClickEvent event) {
+		 Widget sender=(Widget)event.getSource();
+		 CellHTML cell = (CellHTML)sender;
+	     persianCalendar.setPersianDate(persianCalendar.getPersianYear(),persianCalendar.getPersianMonth(), cell.getDay());
+	     drawCalendar();
+
+	}
+  
+
+
+
+}

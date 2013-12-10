@@ -1,0 +1,15 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class BillSel extends IFXObject {
+	BillKeys billKeys;//Aggregate	Required Bill Keys Aggregate
+
+	public BillKeys getBillKeys() {
+		return billKeys;
+	}
+
+	public void setBillKeys(BillKeys billKeys) {
+		this.billKeys = billKeys;
+	}
+}

@@ -1,0 +1,31 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class OrgCategoryCode extends IFXObject {
+	
+	public final native MCC[] getmCC() /*-{
+		return $wnd.cleanObject(mCC);
+	}-*/;
+	public final native void setmCC(MCC[] mCC) /*-{
+		this.mCC = mCC;
+	}-*/;
+	public final native NAICS[] getnAICS() /*-{
+		return $wnd.cleanObject(nAICS);
+	}-*/;
+	public final native void setnAICS(NAICS[] nAICS) /*-{
+		this.nAICS = nAICS;
+	}-*/;
+	public final native SIC[] getsIC() /*-{
+		return $wnd.cleanObject(sIC);
+	}-*/;
+	public final native void setsIC(SIC[] sIC) /*-{
+		this.sIC = sIC;
+	}-*/;
+	public final native OrgCatIdent[] getOrgCatIdent() /*-{
+		return $wnd.cleanObject(orgCatIdent);
+	}-*/;
+	public final native void setOrgCatIdent(OrgCatIdent[] orgCatIdent) /*-{
+		this.orgCatIdent = orgCatIdent;
+	}-*/;
+}

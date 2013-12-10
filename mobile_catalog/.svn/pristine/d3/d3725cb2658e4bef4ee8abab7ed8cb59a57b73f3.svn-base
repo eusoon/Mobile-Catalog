@@ -1,0 +1,40 @@
+package my.com.infopro.ifx.client.model;
+
+public class AdditionalStatus_Type extends IFXObject {
+	public final native void setStatusCode(StatusCode statusCode)/*-{
+		this.statusCode = statusCode;
+	}-*/;
+
+	public final native StatusCode getStatusCode()/*-{
+		return $wnd.cleanObject(this.statusCode);
+
+	}-*/;
+
+	public final native void setServerStatusCode(
+			ServerStatusCode serverStatusCode)/*-{
+		this.serverStatusCode = serverStatusCode;
+	}-*/;
+
+	public final native ServerStatusCode getServerStatusCode()/*-{
+		return $wnd.cleanObject(this.serverStatusCode);
+
+	}-*/;
+
+	public final native void setSeverity(Severity severity)/*-{
+		this.severity = severity;
+	}-*/;
+
+	public final native Severity getSeverity()/*-{
+		return $wnd.cleanObject(this.severity);
+
+	}-*/;
+
+	public final native void setStatusDesc(StatusDesc statusDesc)/*-{
+		this.statusDesc = statusDesc;
+	}-*/;
+
+	public final native StatusDesc getStatusDesc()/*-{
+		return $wnd.cleanObject(this.statusDesc);
+
+	}-*/;
+}

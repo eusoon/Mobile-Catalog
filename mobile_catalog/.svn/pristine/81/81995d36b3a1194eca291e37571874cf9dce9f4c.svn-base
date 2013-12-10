@@ -1,0 +1,109 @@
+package my.com.infopro.ifx.client.model;
+
+public class CustDiscInqRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setSvcName(SvcName svcName)/*-{
+		this.svcName = svcName;
+	}-*/;
+
+	public final native SvcName getSvcName()/*-{
+		return $wnd.cleanObject(this.svcName);
+
+	}-*/;
+
+	public native void setDiscId(DiscId discId)/*-{
+		this.discId = discId;
+	}-*/;
+
+	public final native DiscId getDiscId() /*-{
+		return $wnd.cleanObject(this.discId);
+
+	}-*/;
+
+	public native void setCustDiscStatusCode(
+			CustDiscStatusCode custDiscStatusCode)/*-{
+		this.custDiscStatusCode = custDiscStatusCode;
+	}-*/;
+
+	public final native CustDiscStatusCode getCustDiscStatusCode() /*-{
+		return $wnd.cleanObject(this.custDiscStatusCode);
+
+	}-*/;
+
+	public native void setIncDisc(IncDisc incDisc)/*-{
+		this.incDisc = incDisc;
+	}-*/;
+
+	public final native IncDisc getIncDisc() /*-{
+		return $wnd.cleanObject(this.incDisc);
+
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod getDeliveryMethod() /*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+	}-*/;
+
+	public native void setCustDiscRec(CustDiscRec custDiscRec)/*-{
+		this.custDiscRec = custDiscRec;
+	}-*/;
+
+	public final native CustDiscRec getCustDiscRec() /*-{
+		return $wnd.cleanObject(this.custDiscRec);
+
+	}-*/;
+
+}

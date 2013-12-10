@@ -1,0 +1,8 @@
+package my.com.infopro.mobile.json.ifx.element.USA;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXString;
+
+public class TaxIdCertCode extends IFXString{
+	protected TaxIdCertCode(){	
+	}
+}

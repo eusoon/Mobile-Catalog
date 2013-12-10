@@ -1,0 +1,16 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class SvcProviderSel extends IFXObject {
+	protected SvcProviderSel(){	
+	}
+	public final native SvcProviderKeys getSvcProviderKeys() /*-{
+		return $wnd.cleanObject(svcProviderKeys);
+	}-*/;
+
+	public final native void setSvcProviderKeys(SvcProviderKeys svcProviderKeys) /*-{
+		this.svcProviderKeys = svcProviderKeys;
+	}-*/;
+
+}

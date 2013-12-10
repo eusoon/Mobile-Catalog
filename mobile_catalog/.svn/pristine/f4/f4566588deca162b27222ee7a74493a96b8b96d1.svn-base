@@ -1,0 +1,36 @@
+package my.com.infopro.ifx.client.model;
+
+public class CCAcctRec_Type extends IFXObject {
+	public final native void setDueDt(DueDt dueDt)/*-{
+		this.dueDt = dueDt;
+	}-*/;
+
+	public final native DueDt getDueDt()/*-{
+		return $wnd.cleanObject(this.dueDt);
+	}-*/;
+
+	public native void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+
+	public final native ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+
+	public final native void setLastPmtDt(LastPmtDt lastPmtDt)/*-{
+		this.lastPmtDt = lastPmtDt;
+	}-*/;
+
+	public final native LastPmtDt getLastPmtDt()/*-{
+		return $wnd.cleanObject(this.lastPmtDt);
+	}-*/;
+
+	public final native void setLastPmtCurAmt(LastPmtCurAmt lastPmtCurAmt)/*-{
+		this.lastPmtCurAmt = lastPmtCurAmt;
+	}-*/;
+
+	public final native LastPmtCurAmt getLastPmtCurAmt()/*-{
+		return $wnd.cleanObject(this.lastPmtCurAmt);
+	}-*/;
+
+}

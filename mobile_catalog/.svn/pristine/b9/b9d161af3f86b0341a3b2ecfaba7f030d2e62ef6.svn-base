@@ -1,0 +1,49 @@
+package my.com.infopro.ifx.client.model;
+
+public class RemitInstruction_Type extends IFXObject {
+	public final native void setRemitRefId(RemitRefId remitRefId)/*-{
+		this.remitRefId = remitRefId;
+	}-*/;
+
+	public final native RemitRefId getRemitRefId()/*-{
+		return $wnd.cleanObject(this.remitRefId);
+
+	}-*/;
+
+	public final native void setPmtRefId(PmtRefId pmtRefId)/*-{
+		this.pmtRefId = pmtRefId;
+	}-*/;
+
+	public final native PmtRefId getPmtRefId()/*-{
+		return $wnd.cleanObject(this.pmtRefId);
+
+	}-*/;
+
+	public final native void setDeliveryInstruction(
+			DeliveryInstruction deliveryInstruction)/*-{
+		this.deliveryInstruction = deliveryInstruction;
+	}-*/;
+
+	public final native DeliveryInstruction getDeliveryInstruction()/*-{
+		return $wnd.cleanObject(this.deliveryInstruction);
+
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod getDeliveryMethod()/*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+
+	}-*/;
+
+	public final native void setContactInfo(ContactInfo contactInfo)/*-{
+		this.contactInfo = contactInfo;
+	}-*/;
+
+	public final native ContactInfo getContactInfo()/*-{
+		return $wnd.cleanObject(this.contactInfo);
+
+	}-*/;
+}

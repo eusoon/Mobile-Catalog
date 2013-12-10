@@ -1,0 +1,133 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtBatchStatusInqRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setPayorAcctId(PayorAcctId payorAcctId)/*-{
+		this.payorAcctId = payorAcctId;
+	}-*/;
+
+	public final native PayorAcctId getPayorAcctId()/*-{
+		return $wnd.cleanObject(this.payorAcctId);
+	}-*/;
+
+	public final native void setPayorAcctName(PayorAcctName payorAcctName)/*-{
+		this.payorAcctName = payorAcctName;
+	}-*/;
+
+	public final native PayorAcctName getPayorAcctName()/*-{
+		return $wnd.cleanObject(this.payorAcctName);
+	}-*/;
+
+	public final native void setPmtBatchId(PmtBatchId[] pmtBatchId)/*-{
+		this.pmtBatchId = pmtBatchId;
+	}-*/;
+
+	public final native PmtBatchId[] getPmtBatchId()/*-{
+		return $wnd.cleanObject(this.pmtBatchId);
+	}-*/;
+
+	public final native void setPmtRefId(PmtRefId[] pmtRefId)/*-{
+		this.pmtRefId = pmtRefId;
+	}-*/;
+
+	public final native PmtRefId[] getPmtRefId()/*-{
+		return $wnd.cleanObject(this.pmtRefId);
+	}-*/;
+
+	public final native void setSvcRqUID(SvcRqUID[] svcRqUID)/*-{
+		this.svcRqUID = svcRqUID;
+	}-*/;
+
+	public final native SvcRqUID[] getSvcRqUID()/*-{
+		return $wnd.cleanObject(this.svcRqUID);
+	}-*/;
+
+	public final native void setPmtRemitRefId(PmtRemitRefId[] pmtRemitRefId)/*-{
+		this.pmtRemitRefId = pmtRemitRefId;
+	}-*/;
+
+	public final native PmtRemitRefId[] getPmtRemitRefId()/*-{
+		return $wnd.cleanObject(this.pmtRemitRefId);
+	}-*/;
+
+	public final native void setChkNum(ChkNum[] chkNum)/*-{
+		this.chkNum = chkNum;
+	}-*/;
+
+	public final native ChkNum[] getChkNum()/*-{
+		return $wnd.cleanObject(this.chkNum);
+	}-*/;
+
+	public final native void setCustPayeeId(CustPayeeId[] custPayeeId)/*-{
+		this.custPayeeId = custPayeeId;
+	}-*/;
+
+	public final native CustPayeeId[] getCustPayeeId()/*-{
+		return $wnd.cleanObject(this.custPayeeId);
+	}-*/;
+
+	public final native void setCustPayeeName(CustPayeeName[] custPayeeName)/*-{
+		this.custPayeeName = custPayeeName;
+	}-*/;
+
+	public final native CustPayeeName[] getCustPayeeName()/*-{
+		return $wnd.cleanObject(this.custPayeeName);
+	}-*/;
+
+	public final native void setPmtBatchStatusCode(PmtBatchStatusCode[] pmtBatchStatusCode)/*-{
+		this.pmtBatchStatusCode = pmtBatchStatusCode;
+	}-*/;
+
+	public final native PmtBatchStatusCode[] getPmtBatchStatusCode()/*-{
+		return $wnd.cleanObject(this.pmtBatchStatusCode);
+	}-*/;
+
+	public final native void setPmtTrnStatusCode(PmtTrnStatusCode[] pmtTrnStatusCode)/*-{
+		this.pmtTrnStatusCode = pmtTrnStatusCode;
+	}-*/;
+
+	public final native PmtTrnStatusCode[] getPmtTrnStatusCode()/*-{
+		return $wnd.cleanObject(this.pmtTrnStatusCode);
+	}-*/;
+
+	public final native void setSelRangeDueDt(SelRangeDueDt[] selRangeDueDt)/*-{
+		this.selRangeDueDt = selRangeDueDt;
+	}-*/;
+
+	public final native SelRangeDueDt[] getSelRangeDueDt()/*-{
+		return $wnd.cleanObject(this.selRangeDueDt);
+	}-*/;
+
+}

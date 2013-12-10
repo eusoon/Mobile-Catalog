@@ -1,0 +1,27 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class CreditMediaCashData extends IFXObject {
+	CashAmt cashAmt;//Aggregate		Required 	Cash Amount. The cash denomination being deposited.
+	CashValidity CashValidity;//Open Enum	Optional Cash Validity. The validity of the cash being deposited. Defined Values: Genuine, Counterfeit, Suspect
+	CashQuality CashQuality;//Open Enum	Optional Cash Quality. The quality of the cash being deposited.Defined Values: Fit, Unfit
+	public CashAmt getCashAmt() {
+		return cashAmt;
+	}
+	public void setCashAmt(CashAmt cashAmt) {
+		this.cashAmt = cashAmt;
+	}
+	public CashValidity getCashValidity() {
+		return CashValidity;
+	}
+	public void setCashValidity(CashValidity cashValidity) {
+		CashValidity = cashValidity;
+	}
+	public CashQuality getCashQuality() {
+		return CashQuality;
+	}
+	public void setCashQuality(CashQuality cashQuality) {
+		CashQuality = cashQuality;
+	}
+}

@@ -1,0 +1,36 @@
+package my.com.infopro.ifx.client.model;
+
+public class DfltPmtInfo_Type extends IFXObject {
+	
+	public final native void setDepAcctIdFrom(DepAcctIdFrom depAcctIdFrom)/*-{
+		this.depAcctIdFrom = depAcctIdFrom;
+	}-*/;
+
+	public final native DepAcctIdFrom getDepAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.depAcctIdFrom);
+	}-*/;
+
+	public final native void setCardAcctIdFrom(CardAcctIdFrom cardAcctIdFrom)/*-{
+		this.cardAcctIdFrom = cardAcctIdFrom;
+	}-*/;
+
+	public final native CardAcctIdFrom getCardAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.cardAcctIdFrom);
+	}-*/;
+
+	public final native void setCategory(Category category)/*-{
+		this.category = category;
+	}-*/;
+
+	public final native Category getCategory()/*-{
+		return $wnd.cleanObject(this.category);
+	}-*/;
+
+	public final native void setMemo(Memo memo) /*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo getMemo() /*-{
+		return $wnd.cleanObject(this.memo);
+	}-*/;
+}

@@ -1,0 +1,25 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class RecurPmtKeys extends IFXObject {
+
+	SvcIdent svcIdent; //Aggregate	Optional	Service Identifier
+	//begin-xor	Required
+	RecurPmtId recurPmtId; //Identifier	Required	Recurring Payment Model Identifier
+	//end-xor
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public RecurPmtId getRecurPmtId() {
+		return recurPmtId;
+	}
+	public void setRecurPmtId(RecurPmtId recurPmtId) {
+		this.recurPmtId = recurPmtId;
+	}
+	
+}

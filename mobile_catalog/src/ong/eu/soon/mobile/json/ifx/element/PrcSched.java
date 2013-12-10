@@ -1,0 +1,35 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+import com.google.gwt.core.client.JsArray;
+
+
+public class PrcSched extends IFXObject {
+	protected PrcSched(){	
+	}
+	public final native JsArray<PrcDaysOff> getPrcDaysOff() /*-{
+		return $wnd.cleanObject(prcDaysOff);
+	}-*/;
+	public final native void setPrcDaysOff(JsArray<PrcDaysOff> prcDaysOff) /*-{
+		this.prcDaysOff = prcDaysOff;
+	}-*/;
+	public final native CutoffTm getCutoffTm() /*-{
+		return $wnd.cleanObject(cutoffTm);
+	}-*/;
+	public final native void setCutoffTm(CutoffTm cutoffTm) /*-{
+		this.cutoffTm = cutoffTm;
+	}-*/;
+	public final native PrcDtAdj getPrcDtAdj() /*-{
+		return $wnd.cleanObject(prcDtAdj);
+	}-*/;
+	public final native void setPrcDtAdj(PrcDtAdj prcDtAdj) /*-{
+		this.prcDtAdj = prcDtAdj;
+	}-*/;
+	public final native JsArray<HolidayData> getHolidayData() /*-{
+		return $wnd.cleanObject(HolidayData);
+	}-*/;
+	public final native void setHolidayData(JsArray<HolidayData> holidayData) /*-{
+		HolidayData = holidayData;
+	}-*/;
+}

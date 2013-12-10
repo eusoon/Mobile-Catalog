@@ -1,0 +1,19 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class RemitSel extends IFXObject {
+
+	//begin-xor	Required Repeating
+	RemitKeys[] remitKeys; //Aggregate	Required	Remittance Keys Aggregate
+	//end-xor
+
+	public RemitKeys[] getRemitKeys() {
+		return remitKeys;
+	}
+
+	public void setRemitKeys(RemitKeys[] remitKeys) {
+		this.remitKeys = remitKeys;
+	}
+	
+}

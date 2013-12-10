@@ -1,0 +1,10 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXLong;
+
+public class DaysCall extends IFXLong {
+
+	protected DaysCall(){
+	}
+	
+}

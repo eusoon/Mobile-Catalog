@@ -1,0 +1,8 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class ForExQuoteId extends Identifier {
+
+	protected ForExQuoteId(){
+	}
+	
+}

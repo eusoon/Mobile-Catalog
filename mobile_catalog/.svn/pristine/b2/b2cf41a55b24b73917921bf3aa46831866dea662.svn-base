@@ -1,0 +1,27 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class RecCtrlIn extends IFXObject {
+	RecCountLimit RecCountLimit;//Aggregate	Optional Record Count Limit
+	Cursor cursor;//Aggregate	Optional Cursor Handle
+	Token token;//NC-1024	Optional Token
+	public RecCountLimit getRecCountLimit() {
+		return RecCountLimit;
+	}
+	public void setRecCountLimit(RecCountLimit recCountLimit) {
+		RecCountLimit = recCountLimit;
+	}
+	public Cursor getCursor() {
+		return cursor;
+	}
+	public void setCursor(Cursor cursor) {
+		this.cursor = cursor;
+	}
+	public Token getToken() {
+		return token;
+	}
+	public void setToken(Token token) {
+		this.token = token;
+	}
+}

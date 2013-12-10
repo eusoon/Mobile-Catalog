@@ -1,0 +1,57 @@
+package my.com.infopro.ifx.client.model;
+
+public class DepAcctTrnAdviseRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setDepAcctIdTo(DepAcctIdTo depAcctIdTo)/*-{
+		this.depAcctIdTo = depAcctIdTo;
+	}-*/;
+
+	public final native DepAcctIdTo getDepAcctIdTo() /*-{
+		return $wnd.cleanObject(this.depAcctIdTo);
+
+	}-*/;
+
+	public native void setCardAcctIdTo(CardAcctIdTo cardAcctIdTo)/*-{
+		this.cardAcctIdTo = cardAcctIdTo;
+	}-*/;
+
+	public final native CardAcctIdTo getCardAcctIdTo() /*-{
+		return $wnd.cleanObject(this.cardAcctIdTo);
+
+	}-*/;
+
+	public native void setDepAcctTrnRec(DepAcctTrnRec depAcctTrnRec)/*-{
+		this.depAcctTrnRec = depAcctTrnRec;
+	}-*/;
+
+	public final native DepAcctTrnRec getDepAcctTrnRec() /*-{
+		return $wnd.cleanObject(this.depAcctTrnRec);
+
+	}-*/;
+
+}

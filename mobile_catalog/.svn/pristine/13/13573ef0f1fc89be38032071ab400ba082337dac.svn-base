@@ -1,0 +1,84 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class RecurRule extends IFXObject {
+	protected RecurRule(){	
+	}
+	public final native RecurType getRecurType() /*-{
+		return $wnd.cleanObject(recurType);
+	}-*/;
+	public final native void setRecurType(RecurType recurType) /*-{
+		this.recurType = recurType;
+	}-*/;
+	public final native RecurInterval getRecurInterval() /*-{
+		return $wnd.cleanObject(recurInterval);
+	}-*/;
+	public final native void setRecurInterval(RecurInterval recurInterval) /*-{
+		this.recurInterval = recurInterval;
+	}-*/;
+	public final native RecurInstance getRecurInstance() /*-{
+		return $wnd.cleanObject(recurInstance);
+	}-*/;
+	public final native void setRecurInstance(RecurInstance recurInstance) /*-{
+		this.recurInstance = recurInstance;
+	}-*/;
+	public final native DayOfWeek getDayOfWeek() /*-{
+		return $wnd.cleanObject(dayOfWeek);
+	}-*/;
+	public final native void setDayOfWeek(DayOfWeek dayOfWeek) /*-{
+		this.dayOfWeek = dayOfWeek;
+	}-*/;
+	public final native DayOfMonth getDayOfMonth() /*-{
+		return $wnd.cleanObject(dayOfMonth);
+	}-*/;
+	public final native void setDayOfMonth(DayOfMonth dayOfMonth) /*-{
+		this.dayOfMonth = dayOfMonth;
+	}-*/;
+	public final native Month getMonth() /*-{
+		return $wnd.cleanObject(month);
+	}-*/;
+	public final native void setMonth(Month month) /*-{
+		this.month = month;
+	}-*/;
+	public final native TimeOfDay getTimeOfDay() /*-{
+		return $wnd.cleanObject(timeOfDay);
+	}-*/;
+	public final native void setTimeOfDay(TimeOfDay timeOfDay) /*-{
+		this.timeOfDay = timeOfDay;
+	}-*/;
+	public final native RecurStartDate getRecurStartDate() /*-{
+		return $wnd.cleanObject(recurStartDate);
+	}-*/;
+	public final native void setRecurStartDate(RecurStartDate recurStartDate) /*-{
+		this.recurStartDate = recurStartDate;
+	}-*/;
+	public final native Occurrences getOccurrences() /*-{
+		return $wnd.cleanObject(occurrences);
+	}-*/;
+	public final native void setOccurrences(Occurrences occurrences) /*-{
+		this.occurrences = occurrences;
+	}-*/;
+	public final native RecurEndDate getRecurEndDate() /*-{
+		return $wnd.cleanObject(recurEndDate);
+	}-*/;
+	public final native void setRecurEndDate(RecurEndDate recurEndDate) /*-{
+		this.recurEndDate = recurEndDate;
+	}-*/;
+	public final native AdjDays getAdjDays() /*-{
+		return $wnd.cleanObject(adjDays);
+	}-*/;
+	public final native void setAdjDays(AdjDays adjDays) /*-{
+		this.adjDays = adjDays;
+	}-*/;
+	public final native AdjDaysBasis getAdjDaysBasis() /*-{
+		return $wnd.cleanObject(adjDaysBasis);
+	}-*/;
+	public final native void setAdjDaysBasis(AdjDaysBasis adjDaysBasis) /*-{
+		this.adjDaysBasis = adjDaysBasis;
+	}-*/;
+
+
+
+
+}

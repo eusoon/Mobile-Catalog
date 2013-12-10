@@ -1,0 +1,8 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class AsyncRqUID extends AsyncRqUID_Type{
+
+
+
+}

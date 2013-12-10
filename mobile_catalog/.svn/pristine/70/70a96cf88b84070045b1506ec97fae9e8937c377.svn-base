@@ -1,0 +1,36 @@
+package my.com.infopro.mobile.json.ifx.rate;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+import my.com.infopro.mobile.json.ifx.element.ForExQuoteRec;
+import my.com.infopro.mobile.json.ifx.element.ForExQuoteStatusRec;
+import my.com.infopro.mobile.json.ifx.element.MsgRqHdr;
+import my.com.infopro.mobile.json.ifx.element.RqUID;
+
+public class ForExQuoteAdviseRq extends IFXObject{
+	
+	public final native RqUID getRqUID() /*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+	public final native void setRqUID(RqUID rqUID) /*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+	public final native ForExQuoteRec getForExQuoteRec() /*-{
+		return $wnd.cleanObject(this.forExQuoteRec);
+	}-*/;
+	public final native void setForExQuoteRec(ForExQuoteRec forExQuoteRec) /*-{
+		this.forExQuoteRec = forExQuoteRec;
+	}-*/;
+	public final native ForExQuoteStatusRec getForExQuoteStatusRec() /*-{
+		return $wnd.cleanObject(this.forExQuoteStatusRec);
+	}-*/;
+	public final native void setForExQuoteStatusRec(ForExQuoteStatusRec forExQuoteStatusRec) /*-{
+		this.forExQuoteStatusRec = forExQuoteStatusRec;
+	}-*/;
+
+}

@@ -1,0 +1,89 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class ChkDetail extends IFXObject {
+	
+	protected ChkDetail(){
+	}
+	
+	public final native  ManualMicr getManualMicr()/*-{
+		return $wnd.cleanObject(this.ManualMicr);
+	}-*/;
+
+	public final native  void setManualMicr(ManualMicr manualMicr)/*-{
+		ManualMicr = manualMicr;
+	}-*/;
+
+	public final native  FIIdent getFIIdent()/*-{
+		return $wnd.cleanObject(this.fIIdent);
+	}-*/;
+
+	public final native  void setFIIdent(FIIdent fIIdent)/*-{
+		this.fIIdent = fIIdent;
+	}-*/;
+
+	public final native  AcctIdent getAcctIdent()/*-{
+		return $wnd.cleanObject(this.acctIdent);
+	}-*/;
+
+	public final native  void setAcctIdent(AcctIdent acctIdent)/*-{
+		this.acctIdent = acctIdent;
+	}-*/;
+
+	public final native  ProcessControl getProcessControl()/*-{
+		return $wnd.cleanObject(this.processControl);
+	}-*/;
+
+	public final native  void setProcessControl(ProcessControl processControl)/*-{
+		this.processControl = processControl;
+	}-*/;
+
+	public final native  ChkNum getChkNum()/*-{
+		return $wnd.cleanObject(this.chkNum);
+	}-*/;
+
+	public final native  void setChkNum(ChkNum chkNum)/*-{
+		this.chkNum = chkNum;
+	}-*/;
+
+	public final native  OrigDt getOrigDt()/*-{
+		return $wnd.cleanObject(this.origDt);
+	}-*/;
+
+	public final native  void setOrigDt(OrigDt origDt)/*-{
+		this.origDt = origDt;
+	}-*/;
+
+	public final native  Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native  void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native  PostAddr getPostAddr()/*-{
+		return $wnd.cleanObject(this.PostAddr);
+	}-*/;
+
+	public final native  void setPostAddr(PostAddr postAddr)/*-{
+		PostAddr = postAddr;
+	}-*/;
+
+	public final native  OrgPhone getOrgPhone()/*-{
+		return $wnd.cleanObject(this.orgPhone);
+	}-*/;
+
+	public final native  void setOrgPhone(OrgPhone orgPhone)/*-{
+		this.orgPhone = orgPhone;
+	}-*/;
+
+	public final native  Memo getMemo()/*-{
+		return $wnd.cleanObject(this.memo);
+	}-*/;
+
+	public final native  void setMemo(Memo memo)/*-{
+		this.memo = memo;
+	}-*/;
+}

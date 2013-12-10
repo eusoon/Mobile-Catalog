@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class MediaAcctInventoryRevRq extends MediaAcctInventoryRevRq_Type {
+
+}

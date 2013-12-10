@@ -1,0 +1,119 @@
+package my.com.infopro.ifx.client.model;
+
+public class PassbkInqRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn)/*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+
+	public final native RecCtrlIn getRecCtrlIn()/*-{
+		return $wnd.cleanObject(this.recCtrlIn);
+	}-*/;
+
+	public final native void setPassbkId(PassbkId[] passbkId)/*-{
+		this.passbkId = passbkId;
+	}-*/;
+
+	public final native PassbkId[] getPassbkId()/*-{
+		return $wnd.cleanObject(this.passbkId);
+	}-*/;
+
+	public final native void setDepAcctId(DepAcctId[] depAcctId)/*-{
+		this.depAcctId = depAcctId;
+	}-*/;
+
+	public final native DepAcctId[] getDepAcctId()/*-{
+		return $wnd.cleanObject(this.depAcctId);
+	}-*/;
+
+	public final native void setCardAcctId(CardAcctId[] cardAcctId)/*-{
+		this.cardAcctId = cardAcctId;
+	}-*/;
+
+	public final native CardAcctId[] getCardAcctId()/*-{
+		return $wnd.cleanObject(this.cardAcctId);
+	}-*/;
+
+	public final native void setLoanAcctId(LoanAcctId[] loanAcctId)/*-{
+		this.loanAcctId = loanAcctId;
+	}-*/;
+
+	public final native LoanAcctId[] getLoanAcctId()/*-{
+		return $wnd.cleanObject(this.loanAcctId);
+	}-*/;
+
+	public final native void setName(Name[] name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name[] getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setPassbkLastItemPrinted(
+			PassbkLastItemPrinted[] passbkLastItemPrinted)/*-{
+		this.passbkLastItemPrinted = passbkLastItemPrinted;
+	}-*/;
+
+	public final native PassbkLastItemPrinted[] getPassbkLastItemPrinted()/*-{
+		return $wnd.cleanObject(this.passbkLastItemPrinted);
+	}-*/;
+
+	public final native void setPassbkLastBalPrinted(
+			PassbkLastBalPrinted[] passbkLastBalPrinted)/*-{
+		this.passbkLastBalPrinted = passbkLastBalPrinted;
+	}-*/;
+
+	public final native PassbkLastBalPrinted[] getPassbkLastBalPrinted()/*-{
+		return $wnd.cleanObject(this.passbkLastBalPrinted);
+	}-*/;
+
+	public final native void setPassbkNextLine(PassbkNextLine[] passbkNextLine)/*-{
+		this.passbkNextLine = passbkNextLine;
+	}-*/;
+
+	public final native PassbkNextLine[] getPassbkNextLine()/*-{
+		return $wnd.cleanObject(this.passbkNextLine);
+	}-*/;
+
+	public final native void setPassbkNextPage(PassbkNextPage[] passbkNextPage)/*-{
+		this.passbkNextPage = passbkNextPage;
+	}-*/;
+
+	public final native PassbkNextPage[] getPassbkNextPage()/*-{
+		return $wnd.cleanObject(this.passbkNextPage);
+	}-*/;
+
+}

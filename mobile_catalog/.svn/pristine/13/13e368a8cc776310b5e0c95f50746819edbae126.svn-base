@@ -1,0 +1,73 @@
+package my.com.infopro.ifx.client.model;
+
+public class DiscInqRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setSvcName(SvcName svcName)/*-{
+		this.svcName = svcName;
+	}-*/;
+
+	public final native SvcName getSvcName()/*-{
+		return $wnd.cleanObject(this.svcName);
+
+	}-*/;
+
+	public final native void setDiscId(DiscId discId)/*-{
+		this.discId = discId;
+	}-*/;
+
+	public final native DiscId getDiscId()/*-{
+		return $wnd.cleanObject(this.discId);
+
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod getDeliveryMethod() /*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+
+	}-*/;
+
+	public final native void setUpDt(UpDt upDt)/*-{
+		this.upDt = upDt;
+	}-*/;
+
+	public final native UpDt getUpDt()/*-{
+		return $wnd.cleanObject(this.upDt);
+
+	}-*/;
+}

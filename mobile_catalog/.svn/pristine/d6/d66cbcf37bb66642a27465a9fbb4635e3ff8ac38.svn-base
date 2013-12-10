@@ -1,0 +1,79 @@
+package my.com.infopro.ifx.client.model;
+
+public class RecXferSyncRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn)/*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+
+	public final native RecCtrlIn getRecCtrlIn()/*-{
+		return $wnd.cleanObject(this.recCtrlIn);
+
+	}-*/;
+
+	public final native void setToken(Token token)/*-{
+		this.token = token;
+	}-*/;
+
+	public final native Token getToken()/*-{
+		return $wnd.cleanObject(this.token);
+
+	}-*/;
+
+	public final native void setDepAcctIdFrom(DepAcctIdFrom depAcctIdFrom)/*-{
+		this.depAcctIdFrom = depAcctIdFrom;
+	}-*/;
+
+	public final native DepAcctIdFrom getDepAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.depAcctIdFrom);
+	}-*/;
+
+	public final native void setCardAcctIdFrom(CardAcctIdFrom cardAcctIdFrom)/*-{
+		this.cardAcctIdFrom = cardAcctIdFrom;
+	}-*/;
+
+	public final native CardAcctIdFrom getCardAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.cardAcctIdFrom);
+	}-*/;
+
+	public final native void setLoanAcctIdFrom(LoanAcctIdFrom[] loanAcctIdFrom)/*-{
+		this.loanAcctIdFrom = loanAcctIdFrom;
+	}-*/;
+
+	public final native LoanAcctIdFrom[] getLoanAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.loanAcctIdFrom);
+
+	}-*/;
+
+}

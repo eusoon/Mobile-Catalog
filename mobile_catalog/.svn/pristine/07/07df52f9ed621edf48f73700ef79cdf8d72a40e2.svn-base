@@ -1,0 +1,20 @@
+package my.com.infopro.ifx.client.model;
+
+public class SPRefIdCorrect_Type extends IFXObject {
+
+	public final native void setCSPRefId(CSPRefId cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+	}-*/;
+
+	public final native void setCorrectAction(CorrectAction correctAction) /*-{
+		this.correctAction = correctAction;
+	}-*/;
+
+	public final native CorrectAction getCorrectAction()/*-{
+		return $wnd.cleanObject(this.correctAction);
+	}-*/;
+}

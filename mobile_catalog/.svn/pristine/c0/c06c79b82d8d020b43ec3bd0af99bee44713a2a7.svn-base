@@ -1,0 +1,39 @@
+package my.com.infopro.ifx.party;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.MsgRqHdr;
+import my.com.infopro.ifx.element.PartyAuth;
+import my.com.infopro.ifx.element.PartyKeys;
+import my.com.infopro.ifx.element.RqUID;
+
+public class PartyAuthModRq extends IFXObject {
+	RqUID rqUID;	 //	UUID	 Required	 Request Identifier
+	MsgRqHdr msgRqHdr;	 //	Aggregate	 Optional	 Message Request Header
+	PartyKeys partyKeys;	 //	Aggregate	 Optional	 Party Keys Aggregate
+	PartyAuth partyAuth;	 //	Aggregate	 Required	 Party Authorization and/or Authentication Data
+	
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRqHdr getMsgRqHdr() {
+		return msgRqHdr;
+	}
+	public void setMsgRqHdr(MsgRqHdr msgRqHdr) {
+		this.msgRqHdr = msgRqHdr;
+	}
+	public PartyKeys getPartyKeys() {
+		return partyKeys;
+	}
+	public void setPartyKeys(PartyKeys partyKeys) {
+		this.partyKeys = partyKeys;
+	}
+	public PartyAuth getPartyAuth() {
+		return partyAuth;
+	}
+	public void setPartyAuth(PartyAuth partyAuth) {
+		this.partyAuth = partyAuth;
+	}
+}

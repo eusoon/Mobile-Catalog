@@ -1,0 +1,9 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.element.URL;
+
+public class ImageURL extends URL {
+	protected ImageURL(){	
+	}
+
+}

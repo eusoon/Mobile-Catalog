@@ -1,0 +1,375 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+;
+
+public class AcctInfo extends IFXObject {
+	CurCode curCode;//Aggregate	Optional Currency Code
+	Desc desc;//C-80	Optional Description
+	AcctIdent[] acctIdent; //Aggregate Optional Repeating Account Identifier 
+	BBAN bBAN;//Basic Bank Account Identifier
+	IBAN iBAN;//International Bank Account Number
+	UPIC uPIC;//Universal Payment Identification Code
+	CLABE cLABE;//CLABE
+	FIData fIData;//Financial Institution Data Aggregate
+	AcctUse acctUse;//Account Use
+	//begin-xor Optional
+	Term term;//The Term for a deposit or credit account.
+	MaturityDt maturityDt;//Maturity Date
+	//end-xor
+	IntRateData[] intRateData; //Aggregate	Optional Repeating Interest Rate Data
+	TaxWithholding taxWithholding; //Boolean	Optional Tax Withholding Indicator
+	TaxCountry taxCountry; //Aggregate	Optional Tax Country
+	TaxProvince taxProvince; //C-32	Optional Tax Province
+	ProductIdent productIdent; //C-42	Optional Product Identifier
+	DaysCall daysCall; //Long	Optional Days Call
+	InitialAmount initialAmount;//Aggregate	Optional Initial Amount
+	AcctType acctType;//Aggregate	Optional Account Type
+	AcctTaxType acctTaxType; //Open Enum	Optional Account Tax Type Valid values include: Standard, TaxDeferred, TaxFree
+	AcctTitle acctTitle; //C-255	Optional Account Title
+	Memo memo; 	//C-255	Optional Memo
+	OpenDt openDt; //Date	Optional Opening Date
+	ClosedDt closedDt; //Date	Optiona Closed Date
+	RelationshipMgr[] relationshipMgr;  //Aggregate	Optional Repeating Relationship Manager
+	PostAddr postAddr; //Aggregate	Optional Postal Address
+	MktgMaterial[] mktgMaterial; //Aggregate	Optional Repeating Marketing Material
+	AcctBal[] acctBal; //Aggregate	Optional Repeating Account Balance
+	AcctPeriodData[] acctPeriodData; //Aggregate	Optional Repeating Account Period Data
+	GraceEndDt graceEndDt; //Date	Optional Grace End Date
+	RemainingPmtCount remainingPmtCount; //Long	Optional Number of Payments Remaining
+	AcctTrnLimit[] acctTrnLimit;	//Aggregate	Optional Repeating Account Transaction Limit
+	TaxWithheldData[] taxWithheldData; //Aggregate	Optional Repeating Tax Withheld Data
+	DepAcctData depAcctData; //Aggregate	Optional Deposit Account Data
+	CreditAcctData creditAcctData;//Aggregate	Optional Credit Account Data Aggregate
+	AcctPricing[] acctPricing; //Aggregate	Optional Repeating Account Pricing
+	CorporateAcctData corporateAcctData; //Aggregate	Optional Corporate Account Data Aggregate
+	CorrespondDelivery[] correspondDelivery; //Aggregate	Optional Repeating Correspondence Delivery Aggregate
+	Segmentation[] segmentation;//Aggregate	Optional Repeating Segmentation Aggregate
+	AcctApplIdent acctApplIdent; //	NC-36 Optional Account Application Identifier
+	CampaignIdent campaignIdent; //NC-36	Optional Campaign Identifier
+	Ownership ownership;//C-42	Optional Ownership Identifier
+	StmtTimeFrame[] stmtTimeFrame;// Aggregate	Optional Repeating  The current and previous schedules for statement generation. When there are multiple occurrences the current schedule will be the first occurrence and the previous schedules will be in the subsequent occurrences with the most recent date first.
+	NextStmtData[] nextStmtData; //Aggregate	Optional Repeating Next Statement Data Aggregate
+
+	public CurCode getCurCode() {
+		return curCode;
+	}
+	public void setCurCode(CurCode curCode) {
+		this.curCode = curCode;
+	}
+	public Desc getDesc() {
+		return desc;
+	}
+	public void setDesc(Desc desc) {
+		this.desc = desc;
+	}
+	public AcctIdent[] getAcctIdent() {
+		return acctIdent;
+	}
+	public void setAcctIdent(AcctIdent[] acctIdent) {
+		this.acctIdent = acctIdent;
+	}
+	public BBAN getBBAN() {
+		return bBAN;
+	}
+	public void setBBAN(BBAN bBAN) {
+		this.bBAN = bBAN;
+	}
+	public IBAN getIBAN() {
+		return iBAN;
+	}
+	public void setIBAN(IBAN iBAN) {
+		this.iBAN = iBAN;
+	}
+	public UPIC getUPIC() {
+		return uPIC;
+	}
+	public void setUPIC(UPIC uPIC) {
+		this.uPIC = uPIC;
+	}
+	public CLABE getCLABE() {
+		return cLABE;
+	}
+	public void setCLABE(CLABE cLABE) {
+		this.cLABE = cLABE;
+	}
+	public FIData getFIData() {
+		return fIData;
+	}
+	public void setFIData(FIData fIData) {
+		this.fIData = fIData;
+	}
+	public AcctUse getAcctUse() {
+		return acctUse;
+	}
+	public void setAcctUse(AcctUse acctUse) {
+		this.acctUse = acctUse;
+	}
+	public Term getTerm() {
+		return term;
+	}
+	public void setTerm(Term term) {
+		this.term = term;
+	}
+	public MaturityDt getMaturityDt() {
+		return maturityDt;
+	}
+	public void setMaturityDt(MaturityDt maturityDt) {
+		this.maturityDt = maturityDt;
+	}
+	public IntRateData[] getIntRateData() {
+		return intRateData;
+	}
+	public void setIntRateData(IntRateData[] intRateData) {
+		this.intRateData = intRateData;
+	}
+	public TaxWithholding getTaxWithholding() {
+		return taxWithholding;
+	}
+	public void setTaxWithholding(TaxWithholding taxWithholding) {
+		this.taxWithholding = taxWithholding;
+	}
+	public TaxCountry getTaxCountry() {
+		return taxCountry;
+	}
+	public void setTaxCountry(TaxCountry taxCountry) {
+		this.taxCountry = taxCountry;
+	}
+	public TaxProvince getTaxProvince() {
+		return taxProvince;
+	}
+	public void setTaxProvince(TaxProvince taxProvince) {
+		this.taxProvince = taxProvince;
+	}
+	public ProductIdent getProductIdent() {
+		return productIdent;
+	}
+	public void setProductIdent(ProductIdent productIdent) {
+		this.productIdent = productIdent;
+	}
+	public DaysCall getDaysCall() {
+		return daysCall;
+	}
+	public void setDaysCall(DaysCall daysCall) {
+		this.daysCall = daysCall;
+	}
+	public InitialAmount getInitialAmount() {
+		return initialAmount;
+	}
+	public void setInitialAmount(InitialAmount initialAmount) {
+		this.initialAmount = initialAmount;
+	}
+	public AcctType getAcctType() {
+		return acctType;
+	}
+	public void setAcctType(AcctType acctType) {
+		this.acctType = acctType;
+	}
+	public AcctTaxType getAcctTaxType() {
+		return acctTaxType;
+	}
+	public void setAcctTaxType(AcctTaxType acctTaxType) {
+		this.acctTaxType = acctTaxType;
+	}
+	public AcctTitle getAcctTitle() {
+		return acctTitle;
+	}
+	public void setAcctTitle(AcctTitle acctTitle) {
+		this.acctTitle = acctTitle;
+	}
+	public Memo getMemo() {
+		return memo;
+	}
+	public void setMemo(Memo memo) {
+		this.memo = memo;
+	}
+	public OpenDt getOpenDt() {
+		return openDt;
+	}
+	public void setOpenDt(OpenDt openDt) {
+		this.openDt = openDt;
+	}
+	public ClosedDt getClosedDt() {
+		return closedDt;
+	}
+	public void setClosedDt(ClosedDt closedDt) {
+		this.closedDt = closedDt;
+	}
+	public RelationshipMgr[] getRelationshipMgr() {
+		return relationshipMgr;
+	}
+	public void setRelationshipMgr(RelationshipMgr[] relationshipMgr) {
+		this.relationshipMgr = relationshipMgr;
+	}
+	public PostAddr getPostAddr() {
+		return postAddr;
+	}
+	public void setPostAddr(PostAddr postAddr) {
+		this.postAddr = postAddr;
+	}
+	public MktgMaterial[] getMktgMaterial() {
+		return mktgMaterial;
+	}
+	public void setMktgMaterial(MktgMaterial[] mktgMaterial) {
+		this.mktgMaterial = mktgMaterial;
+	}
+	public AcctBal[] getAcctBal() {
+		return acctBal;
+	}
+	public void setAcctBal(AcctBal[] acctBal) {
+		this.acctBal = acctBal;
+	}
+	public AcctPeriodData[] getAcctPeriodData() {
+		return acctPeriodData;
+	}
+	public void setAcctPeriodData(AcctPeriodData[] acctPeriodData) {
+		this.acctPeriodData = acctPeriodData;
+	}
+	public GraceEndDt getGraceEndDt() {
+		return graceEndDt;
+	}
+	public void setGraceEndDt(GraceEndDt graceEndDt) {
+		this.graceEndDt = graceEndDt;
+	}
+	public RemainingPmtCount getRemainingPmtCount() {
+		return remainingPmtCount;
+	}
+	public void setRemainingPmtCount(RemainingPmtCount remainingPmtCount) {
+		this.remainingPmtCount = remainingPmtCount;
+	}
+	public AcctTrnLimit[] getAcctTrnLimit() {
+		return acctTrnLimit;
+	}
+	public void setAcctTrnLimit(AcctTrnLimit[] acctTrnLimit) {
+		this.acctTrnLimit = acctTrnLimit;
+	}
+	public TaxWithheldData[] getTaxWithheldData() {
+		return taxWithheldData;
+	}
+	public void setTaxWithheldData(TaxWithheldData[] taxWithheldData) {
+		this.taxWithheldData = taxWithheldData;
+	}
+	public DepAcctData getDepAcctData() {
+		return depAcctData;
+	}
+	public void setDepAcctData(DepAcctData depAcctData) {
+		this.depAcctData = depAcctData;
+	}
+	public CreditAcctData getCreditAcctData() {
+		return creditAcctData;
+	}
+	public void setCreditAcctData(CreditAcctData creditAcctData) {
+		this.creditAcctData = creditAcctData;
+	}
+	public AcctPricing[] getAcctPricing() {
+		return acctPricing;
+	}
+	public void setAcctPricing(AcctPricing[] acctPricing) {
+		this.acctPricing = acctPricing;
+	}
+	public CorporateAcctData getCorporateAcctData() {
+		return corporateAcctData;
+	}
+	public void setCorporateAcctData(CorporateAcctData corporateAcctData) {
+		this.corporateAcctData = corporateAcctData;
+	}
+	public CorrespondDelivery[] getCorrespondDelivery() {
+		return correspondDelivery;
+	}
+	public void setCorrespondDelivery(CorrespondDelivery[] correspondDelivery) {
+		this.correspondDelivery = correspondDelivery;
+	}
+	public Segmentation[] getSegmentation() {
+		return segmentation;
+	}
+	public void setSegmentation(Segmentation[] segmentation) {
+		this.segmentation = segmentation;
+	}
+	public AcctApplIdent getAcctApplIdent() {
+		return acctApplIdent;
+	}
+	public void setAcctApplIdent(AcctApplIdent acctApplIdent) {
+		this.acctApplIdent = acctApplIdent;
+	}
+	public CampaignIdent getCampaignIdent() {
+		return campaignIdent;
+	}
+	public void setCampaignIdent(CampaignIdent campaignIdent) {
+		this.campaignIdent = campaignIdent;
+	}
+	public Ownership getOwnership() {
+		return ownership;
+	}
+	public void setOwnership(Ownership ownership) {
+		this.ownership = ownership;
+	}
+	public StmtTimeFrame[] getStmtTimeFrame() {
+		return stmtTimeFrame;
+	}
+	public void setStmtTimeFrame(StmtTimeFrame[] stmtTimeFrame) {
+		this.stmtTimeFrame = stmtTimeFrame;
+	}
+	public NextStmtData[] getNextStmtData() {
+		return nextStmtData;
+	}
+	public void setNextStmtData(NextStmtData[] nextStmtData) {
+		this.nextStmtData = nextStmtData;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

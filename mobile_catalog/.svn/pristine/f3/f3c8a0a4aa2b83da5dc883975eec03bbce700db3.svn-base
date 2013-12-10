@@ -1,0 +1,237 @@
+/*
+   This file is part of Cyclos.
+
+   Cyclos is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+
+   Cyclos is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with Cyclos; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+ */
+package my.com.infopro.mobile.client.accounts;
+
+import java.math.BigDecimal;
+import my.com.infopro.ifx.acct.AcctInqRq;
+import my.com.infopro.mobile.client.IFX;
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.Navigation;
+import my.com.infopro.mobile.client.Notification;
+import my.com.infopro.mobile.client.Notification.NotificationLayout;
+import my.com.infopro.mobile.client.model.Account;
+import my.com.infopro.mobile.client.model.AccountData;
+import my.com.infopro.mobile.client.model.Parameters;
+import my.com.infopro.mobile.client.services.AccountService;
+import my.com.infopro.mobile.client.ui.Page;
+import my.com.infopro.mobile.client.ui.PageAnchor;
+import my.com.infopro.mobile.client.ui.widgets.AccountRow;
+import my.com.infopro.mobile.client.ui.widgets.SimpleDataList;
+import my.com.infopro.mobile.client.utils.Amount;
+import my.com.infopro.mobile.client.utils.ParameterKey;
+import my.com.infopro.mobile.client.setting.LocalSettings;
+import my.com.infopro.mobile.json.ifx.acct.AcctInqRs;
+import my.com.infopro.mobile.json.ifx.element.AcctBal;
+import my.com.infopro.mobile.json.ifx.element.AcctRec;
+
+import my.com.infopro.ifx.element.BalTypeValues;
+
+import my.com.infopro.ifx.element.RecSelect;
+import my.com.infopro.ifx.element.RqUID;
+
+
+import com.google.gwt.cell.client.Cell.Context;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JsArray;
+import com.google.gwt.json.client.JSONArray;
+import com.google.gwt.json.client.JSONNull;
+import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.json.client.JSONString;
+import com.google.gwt.json.client.JSONValue;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Widget;
+//import com.jayway.jsonpath.JsonPath;
+
+/**
+ * A {@link Page} used to display accounts.
+ * 
+ * @author luis
+ */
+public class AccountsPage extends Page {
+    
+    private AccountService accountService = GWT.create(AccountService.class);
+    private JsArray<Account> accounts;
+    private IFX ifx=new IFX();
+    @Override
+    public String getHeading() {
+        accounts = LoggedUser.get().getInitialData().getAccounts();
+        
+        // If exists only an account display details title
+        if(accounts.length() == 1) {
+            return messages.accountDetailsHeading();
+        } 
+        return messages.accountsHeading();
+    }
+
+    @Override
+    public boolean hasCustomScroll() {
+        return true;
+    }
+    
+    @Override
+    public Widget initialize() {                           
+        
+        if(accounts.length() == 1) {
+            // If exists only an account display details page
+            final Account account = accounts.get(0);
+            
+            Parameters params = new Parameters();
+            params.add(ParameterKey.ID, account.getId());   
+            
+            Page page = new AccountDetailsPage();
+            page.setParameters(params);
+
+            return page.initialize();
+        }
+        
+        // List pages uses fixed notification layout
+        Notification.get().setLayout(NotificationLayout.FIXED);
+        
+        // If there are multiple accounts, display it
+        SimpleDataList<AccountData> dataList = new SimpleDataList<AccountData>() {
+       
+            @Override
+            protected Widget onRender(Context context, AccountData data) {                
+                
+                // Value can be null
+                if (data == null) {
+                  return null;
+                }
+                
+                // Create row widget
+                AccountRow row = new AccountRow();
+                row.setHeading(data.getAccount().getType().getName());
+ //               row.setSub(LoggedUser.get().getInitialData().getProfile().getName());
+                row.setSub(data.getAccount().getAccountNo());
+                row.setValue(data.getStatus().getFormattedBalance(), data.getStatus().getBalance() > 0d);
+                
+                return row;
+            }
+
+            
+            @Override
+            protected void onSearchData(final AsyncCallback<JsArray<AccountData>> callback) {
+            	final LoggedUser loggerUser=LoggedUser.get();
+            	Parameters params=new Parameters();
+            	AcctInqRq acctInqRq=new AcctInqRq();
+				acctInqRq.setRqUID(ifx.getRqUID("ACCT"));
+				acctInqRq.setMsgRqHdr(ifx.getMsgRqHdr(loggerUser));
+
+				RecSelect[] recSelect = new RecSelect[1];
+				recSelect[0].setString("$.acctInqRs.acctRec.acctEnvr.partyKeys.loginIdent[?(@.loginName='"+loggerUser.getPrincipal()+"')]");
+				acctInqRq.setRecSelect(recSelect);
+				
+				params.add("accInqRq", acctInqRq);
+				
+            	AsyncCallback<AcctInqRs> callback1 = new AsyncCallback<AcctInqRs>() {
+            	      public void onFailure(Throwable caught) {
+            	        callback.onFailure(caught);
+            	      }
+
+
+            	      public void onSuccess(AcctInqRs acctInqRs) {
+            	    	  LocalSettings localSettings=new LocalSettings();
+           	    	  
+            	    	  JSONArray arr = new JSONArray();
+            	    	  
+            	    
+            	    	JsArray<AcctRec> acctRecs=acctInqRs.getAcctRec();
+						for(int i=0;i< acctRecs.length();i++){
+							AcctRec acctRec=acctRecs.get(i);
+            	    		String loginName=acctRec.getAcctEnvr().getPartyKeys().getLoginIdent().getLoginName().getString();
+            	    		if(loggerUser.getPrincipal().equalsIgnoreCase(loginName)){
+	    	    			  	JSONObject accountData = new JSONObject();
+	              	    		JSONObject account= new JSONObject();
+	              	    		String id=acctRec.getAcctId().getString();
+	              	            account.put("accountNo", getAsJSONString(id));
+	              	    		String type=acctRec.getAcctInfo().getAcctType().getAcctTypeValue().getString();
+	              	    		account.put("type", getAsJSONString(type));
+	  							accountData.put("account", account);
+	  							
+	  							JSONObject accountStatus= new JSONObject();
+	  							
+	  							JsArray<AcctBal> acctBals=acctRec.getAcctInfo().getAcctBal();
+	  							for(int y=0;y<acctBals.length();y++){
+	  								AcctBal acctBal=acctBals.get(y);
+	  								if(acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.Current)|| acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.Outstanding)){
+	  									String balance=acctBal.getCurAmt().getAmt().getString();
+	  									accountStatus.put("balance", getAsJSONString(balance));
+	  									Amount amt=new Amount();
+	  									amt.setValue(new BigDecimal(balance));
+//	  									String formattedBalance=localSettings.getAmountConverter().toString(amt);
+//	  									accountStatus.put("formattedBalance", getAsJSONString(formattedBalance));
+	  								}else if(acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.CreditLimit)){
+	  									String creditLimit=acctBal.getCurAmt().getAmt().getString();
+	  									accountStatus.put("creditLimit", getAsJSONString(creditLimit));
+	  									Amount amt=new Amount();
+	  									amt.setValue(new BigDecimal(creditLimit));
+//	  									String formattedCreditLimit=localSettings.getAmountConverter().toString(amt);
+//	  									accountStatus.put("formattedCreditLimit", getAsJSONString(formattedCreditLimit));
+	  								}else if(acctBal.getBalType().getBalTypeValues().equals(BalTypeValues.Avail)){
+	  									String availableBalance=acctBal.getCurAmt().getAmt().getString();
+	  									accountStatus.put("availableBalance",getAsJSONString(availableBalance));
+	  									Amount amt=new Amount();
+	  									amt.setValue(new BigDecimal(availableBalance));
+//	  									String formattedAvailableBalance=localSettings.getAmountConverter().toString(amt);
+//	  									accountStatus.put("formattedAvailableBalance", getAsJSONString(formattedAvailableBalance));
+	  								}
+	  								accountData.put("accountStatus", accountStatus);
+	  							}
+								arr.set(i++,accountData);
+            	    		 }else{
+            	    			 
+            	    		 }
+            	    	  }
+            	    	  
+            	    	 JsArray<AccountData> result1= arr.getJavaScriptObject().cast();
+            	    	 callback.onSuccess(result1);
+            	        ;
+            	      }
+            	    };
+                // Fetch account data
+                accountService.getAccountsData(params,callback1);
+            }     
+            private JSONValue getAsJSONString(String value) {
+        		if (value == null) {
+        			return JSONNull.getInstance();
+        		}
+
+        		return new JSONString(value);
+        	}
+            
+            @Override
+            protected void onRowSelected(AccountData value) { 
+                // Go to account details
+                navigateToAccountDetails(value.getAccount());
+            }
+        };
+
+        return dataList;
+    }
+    
+    /**
+     * Navigates to account details sending according parameters     
+     */
+    private void navigateToAccountDetails(Account account) {
+        Parameters params = new Parameters();
+        params.add(ParameterKey.ID, account.getId());   
+        Navigation.get().go(PageAnchor.ACCOUNT_DETAILS, params);      
+    }
+
+}

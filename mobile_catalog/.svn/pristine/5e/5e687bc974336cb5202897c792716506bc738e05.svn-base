@@ -1,0 +1,67 @@
+package my.com.infopro.ifx.client.model;
+
+public class MediaAcctAdjInfo_Type extends IFXObject {
+	public final native void setMediaAcctId(MediaAcctId mediaAcctId)/*-{
+		this.mediaAcctId = mediaAcctId;
+	}-*/;
+
+	public final native MediaAcctId getMediaAcctId()/*-{
+		return $wnd.cleanObject(this.mediaAcctId);
+	}-*/;
+
+	public final native void setMediaTrnType(MediaTrnType mediaTrnType) /*-{
+		this.mediaTrnType = mediaTrnType;
+	}-*/;
+
+	public final native MediaTrnType getMediaTrnType()/*-{
+		return $wnd.cleanObject(this.mediaTrnType);
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setTrnAuthId(TrnAuthId trnAuthId)/*-{
+		this.trnAuthId = trnAuthId;
+	}-*/;
+
+	public final native TrnAuthId getTrnAuthId()/*-{
+		return $wnd.cleanObject(this.trnAuthId);
+	}-*/;
+
+	public final native void setTrnRqUID(TrnRqUID trnRqUID)/*-{
+		this.trnRqUID = trnRqUID;
+	}-*/;
+
+	public final native TrnRqUID getTrnRqUID()/*-{
+		return $wnd.cleanObject(this.trnRqUID);
+	}-*/;
+
+	public final native void setRelatedCreditId(RelatedCreditId relatedCreditId)/*-{
+		this.relatedCreditId = relatedCreditId;
+	}-*/;
+
+	public final native RelatedCreditId getRelatedCreditId()/*-{
+		return $wnd.cleanObject(this.relatedCreditId);
+	}-*/;
+
+	public final native void setMediaItem(MediaItem[] mediaItem)/*-{
+		this.mediaItem = mediaItem;
+	}-*/;
+
+	public final native MediaItem[] getMediaItem()/*-{
+		return $wnd.cleanObject(this.mediaItem);
+	}-*/;
+
+	public final native void setBaseEnvr(BaseEnvr[] baseEnvr)/*-{
+		this.baseEnvr = baseEnvr;
+	}-*/;
+
+	public final native BaseEnvr[] getBaseEnvr()/*-{
+		return $wnd.cleanObject(this.baseEnvr);
+	}-*/;
+}

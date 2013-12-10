@@ -1,0 +1,21 @@
+package my.com.infopro.ifx.client.model;
+
+public class SignoffRq_Type extends IFXObject {
+	public final native void setId(IFXString id)/*-{
+		this.id = id;
+	}-*/;
+
+	public final native IFXString getId()/*-{
+		return $wnd.cleanObject(this.id);
+
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+}

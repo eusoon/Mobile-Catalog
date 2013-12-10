@@ -1,0 +1,41 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillerPayee_Type extends IFXObject {
+	
+	public final native void setBillerId(BillerId billerId)/*-{
+		this.billerId = billerId;
+	}-*/;
+
+	public final native BillerId getBillerId()/*-{
+		return $wnd.cleanObject(this.billerId);
+
+	}-*/;
+
+	public final native void setBillerContact(BillerContact billerContact)/*-{
+		this.billerContact = billerContact;
+	}-*/;
+
+	public final native BillerContact getBillerContact()/*-{
+		return $wnd.cleanObject(this.billerContact);
+
+	}-*/;
+
+	public final native void setHistRetentionDays(
+			HistRetentionDays histRetentionDays)/*-{
+		this.histRetentionDays = histRetentionDays;
+	}-*/;
+
+	public final native HistRetentionDays getHistRetentionDays()/*-{
+		return $wnd.cleanObject(this.histRetentionDays);
+
+	}-*/;
+
+	public final native void setBillerPayInfo(BillerPayInfo billerPayInfo)/*-{
+		this.billerPayInfo = billerPayInfo;
+	}-*/;
+
+	public final native BillerPayInfo getBillerPayInfo()/*-{
+		return $wnd.cleanObject(this.billerPayInfo);
+
+	}-*/;
+}

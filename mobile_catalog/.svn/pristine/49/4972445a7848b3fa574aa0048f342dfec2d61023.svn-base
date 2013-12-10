@@ -1,0 +1,41 @@
+package my.com.infopro.mobile.client.app;
+
+import my.com.infopro.mobile.client.tablet.MobileWebAppShellTablet;
+import my.com.infopro.mobile.client.tablet.SplashTablet;
+
+public class MobileWebAppShellTableImpl implements MobileWebAppShellClientFactory {
+
+	private MobileWebAppShell shell;
+	
+	private Splash splash;
+
+	@Override
+	public MobileWebAppShell getShell() {
+		 if (shell == null) {
+		      shell = createShell();
+		    }
+		    return shell;
+
+	}
+	@Override
+	public Splash getSplash() {
+		 if (splash == null) {
+			 splash = createSplash();
+		    }
+		    return splash;
+
+	}
+	 /**
+	   * Create the application UI shell.
+	   * 
+	   * @return the UI shell
+	   */
+	  protected MobileWebAppShell createShell() {
+	    
+	    return new MobileWebAppShellTablet();
+	  }
+	  protected Splash createSplash() {
+		    
+		    return new SplashTablet();
+	  }
+}

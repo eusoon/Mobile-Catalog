@@ -1,0 +1,236 @@
+package my.com.infopro.ifx.element;
+
+public class VehicleRentalAddenda extends CardAddenda {
+	RentalAgreement rentalAgreement;//C-32	Optional Rental Agreement
+	RenterName renterName;//C-40	Optional Renter Name
+	RentalAgencyName rentalAgencyName;//C-40	Optional Rental Agency Name
+	PickupCity pickupCity;//C-32	Optional Pickup City
+	PickupStateProv pickupStateProv;//C-32	Optional Pickup State/Province
+	PickupRegion pickupRegion;//C-32	Optional Pickup Region
+	PickupCountry pickupCountry;//Aggregate	Optional Pickup Country
+	PickupLoc pickupLoc;//C-40	Optional Pickup Location
+	PickupDt pickupDt;//Date	Optional Pickup Date
+	PickupTime pickupTime;//Time	Optional Pickup Time
+	ReturnCity returnCity;//C-32	Optional Return City
+	ReturnStateProv returnStateProv;//C-32	Optional Return State/Province
+	ReturnRegion returnRegion;//C-32	Optional Return Region
+	ReturnCountry returnCountry;//Aggregate	Optional Return Country
+	ReturnLoc returnLoc;//C-40	Optional Return Location
+	ReturnDt returnDt;//Date	Optional Return Date
+	ReturnTime returnTime;//Time	Optional Return Time
+	CSPhoneNum cSPhoneNum;//Phone Number	Optional Card (customer) service phone number
+	RentalRateDuration rentalRateDuration;//C-1	Optional Rental Rate Duration
+	TotalDistance totalDistance;//Long	Optional Total Distance
+	MaxFreeDistance maxFreeDistance;//Long	Optional Maximum Free Distance
+	DistanceUnit distanceUnit;//Open Enum	OptionalDistance UnitValid values include: Kilometers, Miles
+	VehicleInsuranceInd vehicleInsuranceInd;//Boolean	Optional Vehicle Insurance Indicator
+	RentalAuditAdjInd rentalAuditAdjInd;//Boolean	Optional Rental Audit Adjustment Indicator
+	RentalProgram rentalProgram;//C-20	Optional Rental Program
+	TotalTaxCollectedInd totalTaxCollectedInd;//Boolean	Optional Total Tax Collected Indicator
+	CommodityCategory commodityCategory;//C-15	Optional Commodity Category
+	TaxExemptInd taxExemptInd;//Boolean	Optional Tax Exempt Indicator
+	CorporateIdent corporateIdent;//C-12	Optional Corporate Identifier
+	DaysRented daysRented;//Long	OptionalDays Rented
+	NoShowInd noShowInd;//Boolean	Optional No Show Indicator
+	RentalClass rentalClass;//C-15	Optional Rental Class
+	RentalCharge rentalCharge;//Aggregate	Optional Repeating Rental Charge
+	public RentalAgreement getRentalAgreement() {
+		return rentalAgreement;
+	}
+	public void setRentalAgreement(RentalAgreement rentalAgreement) {
+		this.rentalAgreement = rentalAgreement;
+	}
+	public RenterName getRenterName() {
+		return renterName;
+	}
+	public void setRenterName(RenterName renterName) {
+		this.renterName = renterName;
+	}
+	public RentalAgencyName getRentalAgencyName() {
+		return rentalAgencyName;
+	}
+	public void setRentalAgencyName(RentalAgencyName rentalAgencyName) {
+		this.rentalAgencyName = rentalAgencyName;
+	}
+	public PickupCity getPickupCity() {
+		return pickupCity;
+	}
+	public void setPickupCity(PickupCity pickupCity) {
+		this.pickupCity = pickupCity;
+	}
+	public PickupStateProv getPickupStateProv() {
+		return pickupStateProv;
+	}
+	public void setPickupStateProv(PickupStateProv pickupStateProv) {
+		this.pickupStateProv = pickupStateProv;
+	}
+	public PickupRegion getPickupRegion() {
+		return pickupRegion;
+	}
+	public void setPickupRegion(PickupRegion pickupRegion) {
+		this.pickupRegion = pickupRegion;
+	}
+	public PickupCountry getPickupCountry() {
+		return pickupCountry;
+	}
+	public void setPickupCountry(PickupCountry pickupCountry) {
+		this.pickupCountry = pickupCountry;
+	}
+	public PickupLoc getPickupLoc() {
+		return pickupLoc;
+	}
+	public void setPickupLoc(PickupLoc pickupLoc) {
+		this.pickupLoc = pickupLoc;
+	}
+	public PickupDt getPickupDt() {
+		return pickupDt;
+	}
+	public void setPickupDt(PickupDt pickupDt) {
+		this.pickupDt = pickupDt;
+	}
+	public PickupTime getPickupTime() {
+		return pickupTime;
+	}
+	public void setPickupTime(PickupTime pickupTime) {
+		this.pickupTime = pickupTime;
+	}
+	public ReturnCity getReturnCity() {
+		return returnCity;
+	}
+	public void setReturnCity(ReturnCity returnCity) {
+		this.returnCity = returnCity;
+	}
+	public ReturnStateProv getReturnStateProv() {
+		return returnStateProv;
+	}
+	public void setReturnStateProv(ReturnStateProv returnStateProv) {
+		this.returnStateProv = returnStateProv;
+	}
+	public ReturnRegion getReturnRegion() {
+		return returnRegion;
+	}
+	public void setReturnRegion(ReturnRegion returnRegion) {
+		this.returnRegion = returnRegion;
+	}
+	public ReturnCountry getReturnCountry() {
+		return returnCountry;
+	}
+	public void setReturnCountry(ReturnCountry returnCountry) {
+		this.returnCountry = returnCountry;
+	}
+	public ReturnLoc getReturnLoc() {
+		return returnLoc;
+	}
+	public void setReturnLoc(ReturnLoc returnLoc) {
+		this.returnLoc = returnLoc;
+	}
+	public ReturnDt getReturnDt() {
+		return returnDt;
+	}
+	public void setReturnDt(ReturnDt returnDt) {
+		this.returnDt = returnDt;
+	}
+	public ReturnTime getReturnTime() {
+		return returnTime;
+	}
+	public void setReturnTime(ReturnTime returnTime) {
+		this.returnTime = returnTime;
+	}
+	public CSPhoneNum getcSPhoneNum() {
+		return cSPhoneNum;
+	}
+	public void setcSPhoneNum(CSPhoneNum cSPhoneNum) {
+		this.cSPhoneNum = cSPhoneNum;
+	}
+	public RentalRateDuration getRentalRateDuration() {
+		return rentalRateDuration;
+	}
+	public void setRentalRateDuration(RentalRateDuration rentalRateDuration) {
+		this.rentalRateDuration = rentalRateDuration;
+	}
+	public TotalDistance getTotalDistance() {
+		return totalDistance;
+	}
+	public void setTotalDistance(TotalDistance totalDistance) {
+		this.totalDistance = totalDistance;
+	}
+	public MaxFreeDistance getMaxFreeDistance() {
+		return maxFreeDistance;
+	}
+	public void setMaxFreeDistance(MaxFreeDistance maxFreeDistance) {
+		this.maxFreeDistance = maxFreeDistance;
+	}
+	public DistanceUnit getDistanceUnit() {
+		return distanceUnit;
+	}
+	public void setDistanceUnit(DistanceUnit distanceUnit) {
+		this.distanceUnit = distanceUnit;
+	}
+	public VehicleInsuranceInd getVehicleInsuranceInd() {
+		return vehicleInsuranceInd;
+	}
+	public void setVehicleInsuranceInd(VehicleInsuranceInd vehicleInsuranceInd) {
+		this.vehicleInsuranceInd = vehicleInsuranceInd;
+	}
+	public RentalAuditAdjInd getRentalAuditAdjInd() {
+		return rentalAuditAdjInd;
+	}
+	public void setRentalAuditAdjInd(RentalAuditAdjInd rentalAuditAdjInd) {
+		this.rentalAuditAdjInd = rentalAuditAdjInd;
+	}
+	public RentalProgram getRentalProgram() {
+		return rentalProgram;
+	}
+	public void setRentalProgram(RentalProgram rentalProgram) {
+		this.rentalProgram = rentalProgram;
+	}
+	public TotalTaxCollectedInd getTotalTaxCollectedInd() {
+		return totalTaxCollectedInd;
+	}
+	public void setTotalTaxCollectedInd(TotalTaxCollectedInd totalTaxCollectedInd) {
+		this.totalTaxCollectedInd = totalTaxCollectedInd;
+	}
+	public CommodityCategory getCommodityCategory() {
+		return commodityCategory;
+	}
+	public void setCommodityCategory(CommodityCategory commodityCategory) {
+		this.commodityCategory = commodityCategory;
+	}
+	public TaxExemptInd getTaxExemptInd() {
+		return taxExemptInd;
+	}
+	public void setTaxExemptInd(TaxExemptInd taxExemptInd) {
+		this.taxExemptInd = taxExemptInd;
+	}
+	public CorporateIdent getCorporateIdent() {
+		return corporateIdent;
+	}
+	public void setCorporateIdent(CorporateIdent corporateIdent) {
+		this.corporateIdent = corporateIdent;
+	}
+	public DaysRented getDaysRented() {
+		return daysRented;
+	}
+	public void setDaysRented(DaysRented daysRented) {
+		this.daysRented = daysRented;
+	}
+	public NoShowInd getNoShowInd() {
+		return noShowInd;
+	}
+	public void setNoShowInd(NoShowInd noShowInd) {
+		this.noShowInd = noShowInd;
+	}
+	public RentalClass getRentalClass() {
+		return rentalClass;
+	}
+	public void setRentalClass(RentalClass rentalClass) {
+		this.rentalClass = rentalClass;
+	}
+	public RentalCharge getRentalCharge() {
+		return rentalCharge;
+	}
+	public void setRentalCharge(RentalCharge rentalCharge) {
+		this.rentalCharge = rentalCharge;
+	}
+
+}

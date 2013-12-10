@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtAuthModRq extends PmtAuthModRq_Type{
+
+}

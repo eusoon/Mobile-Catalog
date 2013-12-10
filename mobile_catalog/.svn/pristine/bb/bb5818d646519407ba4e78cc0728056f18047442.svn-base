@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class ChkOrdStatusCode_Type extends IFXString {
+
+}

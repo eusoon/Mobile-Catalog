@@ -1,0 +1,44 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtRemitChksum_Type extends IFXObject {
+	public final native void setAckType(AckType ackType)/*-{
+		this.ackType = ackType;
+	}-*/;
+
+	public final native AckType getAckType()/*-{
+		return $wnd.cleanObject(this.ackType);
+	}-*/;
+
+	public final native void setCount(Count count)/*-{
+		this.count = count;
+	}-*/;
+
+	public final native Count getCount()/*-{
+		return $wnd.cleanObject(this.count);
+	}-*/;
+
+	public final native void setTotalCurAmt(TotalCurAmt totalCurAmt)/*-{
+		this.totalCurAmt = totalCurAmt;
+	}-*/;
+
+	public final native TotalCurAmt getTotalCurAmt()/*-{
+		return $wnd.cleanObject(this.totalCurAmt);
+	}-*/;
+
+	public final native void setMemo(Memo memo) /*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo getMemo() /*-{
+		return $wnd.cleanObject(this.memo);
+	}-*/;
+
+	public final native void setCompositeContactInfo(
+			CompositeContactInfo compositeContactInfo)/*-{
+		this.compositeContactInfo = compositeContactInfo;
+	}-*/;
+
+	public final native CompositeContactInfo getCompositeContactInfo()/*-{
+		return $wnd.cleanObject(this.compositeContactInfo);
+	}-*/;
+}

@@ -1,0 +1,37 @@
+package my.com.infopro.ifx.client.model;
+
+public class ChkImg_Type extends IFXObject {
+
+	public final native void setCryptType(CryptType cryptType)/*-{
+		this.cryptType = cryptType;
+	}-*/;
+
+	public final native CryptType getCryptType()/*-{
+		return $wnd.cleanObject(this.cryptType);
+	}-*/;
+
+	public final native void setSecObjId(SecObjId secObjId)/*-{
+		this.secObjId = secObjId;
+	}-*/;
+
+	public final native SecObjId getSecObjId()/*-{
+		return $wnd.cleanObject(this.secObjId);
+	}-*/;
+
+	public final native void setChkImgFront(ChkImgFront chkImgFront)/*-{
+		this.chkImgFront = chkImgFront;
+	}-*/;
+
+	public final native ChkImgFront getChkImgFront()/*-{
+		return $wnd.cleanObject(this.chkImgFront);
+	}-*/;
+
+	public final native void setChkImgBack(ChkImgBack chkImgBack)/*-{
+		this.chkImgBack = chkImgBack;
+	}-*/;
+
+	public final native ChkImgBack getChkImgBack()/*-{
+		return $wnd.cleanObject(this.chkImgBack);
+	}-*/;
+
+}

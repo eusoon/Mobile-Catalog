@@ -1,0 +1,12 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillerMsgRqInfo_Type extends IFXObject {
+
+	public final native void setBillerInqRq(BillerInqRq billerInqRq)/*-{
+		this.billerInqRq = billerInqRq;
+	}-*/;
+
+	public final native BillerInqRq getBillerInqRq()/*-{
+		return $wnd.cleanObject(this.billerInqRq);
+	}-*/;
+}

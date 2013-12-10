@@ -1,0 +1,37 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class ExceptionRpt extends IFXObject {
+
+	public final native  ExceptionResponse getExceptionResponse()/*-{
+		return $wnd.cleanObject(this.exceptionResponse);
+	}-*/;
+	public final native  void setExceptionResponse(ExceptionResponse exceptionResponse)/*-{
+		this.exceptionResponse = exceptionResponse;
+	}-*/;
+	public final native  PurgeDt getPurgeDt()/*-{
+		return $wnd.cleanObject(this.purgeDt);
+	}-*/;
+	public final native  void setPurgeDt(PurgeDt purgeDt)/*-{
+		this.purgeDt = purgeDt;
+	}-*/;
+	public final native  LimitAmt getLimitAmt()/*-{
+		return $wnd.cleanObject(this.limitAmt);
+	}-*/;
+	public final native  void setLimitAmt(LimitAmt limitAmt)/*-{
+		this.limitAmt = limitAmt;
+	}-*/;
+	public final native  ExceptionRegion[] getExceptionRegion()/*-{
+		return $wnd.cleanObject(this.exceptionRegion);
+	}-*/;
+	public final native  void setExceptionRegion(ExceptionRegion[] exceptionRegion)/*-{
+		this.exceptionRegion = exceptionRegion;
+	}-*/;
+	public final native  RegionPurgeDt[] getRegionPurgeDt()/*-{
+		return $wnd.cleanObject(this.regionPurgeDt);
+	}-*/;
+	public final native  void setRegionPurgeDt(RegionPurgeDt[] regionPurgeDt)/*-{
+		this.regionPurgeDt = regionPurgeDt;
+	}-*/;
+}

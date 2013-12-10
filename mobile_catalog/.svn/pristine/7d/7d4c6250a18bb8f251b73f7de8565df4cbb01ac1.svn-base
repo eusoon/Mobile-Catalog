@@ -1,0 +1,6 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum SubjectRole {
+	Anonymous, CSR, Party, PartyRep, Supervisor, System; 
+
+}

@@ -1,0 +1,49 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class PmtLegalRpt extends IFXObject {
+	OrgPartyInfo orgPartyInfo;	 //	Aggregate	 Required	 Organization variant of PartyInfo
+	OrgIdent orgIdent;	 //	Aggregate	 Optional	 Organization Identification
+	PayeeCountry payeeCountry;	 //	NC-3	 Required	 ISO code of the residual country of the payee.
+	CurAmt curAmt;	 //	Aggregate	 Optional	 Payment Currency Amount. Total amount being paid to Payee.
+	PrcDt prcDt;	 //	Date	 Optional	 Payment Processing Date. The customer enters this date as the original requested processing date.
+	PmtLegalRptData[] pmtLegalRptData;	 //	Aggregate	 Required Repeating	 Detail information for legal reporting.
+	
+	public OrgPartyInfo getOrgPartyInfo() {
+		return orgPartyInfo;
+	}
+	public void setOrgPartyInfo(OrgPartyInfo orgPartyInfo) {
+		this.orgPartyInfo = orgPartyInfo;
+	}
+	public OrgIdent getOrgIdent() {
+		return orgIdent;
+	}
+	public void setOrgIdent(OrgIdent orgIdent) {
+		this.orgIdent = orgIdent;
+	}
+	public PayeeCountry getPayeeCountry() {
+		return payeeCountry;
+	}
+	public void setPayeeCountry(PayeeCountry payeeCountry) {
+		this.payeeCountry = payeeCountry;
+	}
+	public CurAmt getCurAmt() {
+		return curAmt;
+	}
+	public void setCurAmt(CurAmt curAmt) {
+		this.curAmt = curAmt;
+	}
+	public PrcDt getPrcDt() {
+		return prcDt;
+	}
+	public void setPrcDt(PrcDt prcDt) {
+		this.prcDt = prcDt;
+	}
+	public PmtLegalRptData[] getPmtLegalRptData() {
+		return pmtLegalRptData;
+	}
+	public void setPmtLegalRptData(PmtLegalRptData[] pmtLegalRptData) {
+		this.pmtLegalRptData = pmtLegalRptData;
+	}
+}

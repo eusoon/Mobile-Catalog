@@ -1,0 +1,59 @@
+package my.com.infopro.ifx.passbk;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.DocCtrlIn;
+import my.com.infopro.ifx.element.MsgRqHdr;
+import my.com.infopro.ifx.element.PassbkSel;
+import my.com.infopro.ifx.element.RecCtrlIn;
+import my.com.infopro.ifx.element.RecSelect;
+import my.com.infopro.ifx.element.RqUID;
+
+public class PassbkInqRq extends IFXObject{
+
+	RqUID rqUID; //UUID	Required	Request Identifier
+	MsgRqHdr msgRqHdr; //Aggregate	Optional	Message Request Header
+	DocCtrlIn docCtrlIn; //Aggregate	Optional	Document Control Input
+	RecCtrlIn recCtrlIn; //Aggregate	Optional	Records Control Input
+	//begin-xor	Optional Repeating
+	PassbkSel[] passbkSel; //Aggregate	Required	Passbook Selection Aggregate
+	RecSelect[] recSelect; //IfxPath	Required	Record Select
+	//end-xor
+	
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRqHdr getMsgRqHdr() {
+		return msgRqHdr;
+	}
+	public void setMsgRqHdr(MsgRqHdr msgRqHdr) {
+		this.msgRqHdr = msgRqHdr;
+	}
+	public DocCtrlIn getDocCtrlIn() {
+		return docCtrlIn;
+	}
+	public void setDocCtrlIn(DocCtrlIn docCtrlIn) {
+		this.docCtrlIn = docCtrlIn;
+	}
+	public RecCtrlIn getRecCtrlIn() {
+		return recCtrlIn;
+	}
+	public void setRecCtrlIn(RecCtrlIn recCtrlIn) {
+		this.recCtrlIn = recCtrlIn;
+	}
+	public PassbkSel[] getPassbkSel() {
+		return passbkSel;
+	}
+	public void setPassbkSel(PassbkSel[] passbkSel) {
+		this.passbkSel = passbkSel;
+	}
+	public RecSelect[] getRecSelect() {
+		return recSelect;
+	}
+	public void setRecSelect(RecSelect[] recSelect) {
+		this.recSelect = recSelect;
+	}
+	
+}

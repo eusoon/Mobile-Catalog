@@ -1,0 +1,62 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class CCMotoAcct_Type extends IFXObject {
+
+	public native void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+
+	public final native ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+
+	public native void setCardVrfyData(CardVrfyData cardVrfyData)/*-{
+		this.cardVrfyData = cardVrfyData;
+	}-*/;
+
+	public final native CardVrfyData getCardVrfyData()/*-{
+		return $wnd.cleanObject(this.cardVrfyData);
+	}-*/;
+
+	public native void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setPostAddr(PostAddr postAddr) /*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native PostAddr getPostAddr() /*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+
+	public final native void setPostalCode(PostalCode postalCode) /*-{
+		this.postalCode = postalCode;
+	}-*/;
+
+	public final native PostalCode getPostalCode()/*-{
+		return $wnd.cleanObject(this.postalCode);
+	}-*/;
+
+	public final native Phone getPhone()/*-{
+		return $wnd.cleanObject(this.phone);
+	}-*/;
+
+	public final native void setPhone(Phone phone) /*-{
+		this.phone = phone;
+	}-*/;
+
+	public final native void setBrand(Brand brand) /*-{
+		this.brand = brand;
+	}-*/;
+
+	public final native Brand getBrand() /*-{
+		return $wnd.cleanObject(this.brand);
+	}-*/;
+
+}

@@ -1,0 +1,68 @@
+package my.com.infopro.ifx.client.model;
+
+public class CreditMediaChkInfo_Type extends IFXObject {
+
+	public final native void setChkEnteredAmt(ChkEnteredAmt chkEnteredAmt)/*-{
+	this.chkEnteredAmt = chkEnteredAmt;
+	}-*/;
+	
+	public final native ChkEnteredAmt getChkEnteredAmt()/*-{
+	return $wnd.cleanObject(this.chkEnteredAmt);
+	}-*/;
+	
+	public final native void setChkCourtesyAmt(ChkCourtesyAmt chkCourtesyAmt)/*-{
+	this.chkCourtesyAmt = chkCourtesyAmt;
+	}-*/;
+	
+	public final native ChkCourtesyAmt getChkCourtesyAmt()/*-{
+	return $wnd.cleanObject(this.chkCourtesyAmt);
+	}-*/;
+	
+	public final native void setMicrReadIntegrity(MicrReadIntegrity micrReadIntegrity)/*-{
+	this.micrReadIntegrity = micrReadIntegrity;
+	}-*/;
+	
+	public final native MicrReadIntegrity getMicrReadIntegrity()/*-{
+	return $wnd.cleanObject(this.micrReadIntegrity);
+	}-*/;
+	
+	public final native void setMicrUnformatted(MicrUnformatted micrUnformatted)/*-{
+	this.micrUnformatted = micrUnformatted;
+	}-*/;
+	
+	public final native MicrUnformatted getMicrUnformatted()/*-{
+	return $wnd.cleanObject(this.micrUnformatted);
+	}-*/;
+	
+	public final native void setChkImg(ChkImg chkImg)/*-{
+	this.chkImg = chkImg;
+	}-*/;
+	
+	public final native ChkImg getChkImg()/*-{
+	return $wnd.cleanObject(this.chkImg);
+	}-*/;
+	
+	public final native void setChkDetail(ChkDetail chkDetail)/*-{
+	this.chkDetail = chkDetail;
+	}-*/;
+	
+	public final native ChkDetail getChkDetail()/*-{
+	return $wnd.cleanObject(this.chkDetail);
+	}-*/;
+	
+	public final native void setPersonInfo(PersonInfo personInfo)/*-{
+	this.personInfo = personInfo;
+	}-*/;
+	
+	public final native PersonInfo getPersonInfo()/*-{
+	return $wnd.cleanObject(this.personInfo);
+	}-*/;
+	
+	public final native void setChkAcceptId(ChkAcceptId chkAcceptId)/*-{
+	this.chkAcceptId = chkAcceptId;
+	}-*/;
+	
+	public final native ChkAcceptId getChkAcceptId()/*-{
+	return $wnd.cleanObject(this.chkAcceptId);
+	}-*/;
+}

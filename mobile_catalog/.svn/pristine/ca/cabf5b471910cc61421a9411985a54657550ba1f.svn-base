@@ -1,0 +1,108 @@
+package my.com.infopro.ifx.client.model;
+
+public class DepAcctTrnRec_Type extends IFXObject {
+
+	public final native void setBankAcctTrnRec(BankAcctTrnRec bankAcctTrnRec)/*-{
+		this.bankAcctTrnRec = bankAcctTrnRec;
+	}-*/;
+
+	public final native BankAcctTrnRec getBankAcctTrnRec()/*-{
+		return $wnd.cleanObject(this.bankAcctTrnRec);
+	}-*/;
+
+	public final native void setStmtRunningBal(StmtRunningBal stmtRunningBal)/*-{
+		this.stmtRunningBal = stmtRunningBal;
+	}-*/;
+
+	public final native StmtRunningBal getStmtRunningBal()/*-{
+		return $wnd.cleanObject(this.stmtRunningBal);
+	}-*/;
+
+	public final native void setAvailDt(AvailDt availDt)/*-{
+		this.availDt = availDt;
+	}-*/;
+
+	public final native AvailDt getAvailDt()/*-{
+		return $wnd.cleanObject(this.availDt);
+	}-*/;
+
+	public final native void setCompositeCurAmt(CompositeCurAmt[] compositeCurAmt)/*-{
+		this.compositeCurAmt = compositeCurAmt;
+	}-*/;
+
+	public final native CompositeCurAmt[] getCompositeCurAmt()/*-{
+		return $wnd.cleanObject(this.compositeCurAmt);
+	}-*/;
+
+	public final native void setChkNum(ChkNum[] chkNum)/*-{
+		this.chkNum = chkNum;
+	}-*/;
+
+	public final native ChkNum[] getChkNum()/*-{
+		return $wnd.cleanObject(this.chkNum);
+	}-*/;
+
+	public final native void setXferId(XferId[] xferId)/*-{
+		this.xferId = xferId;
+	}-*/;
+
+	public final native XferId[] getXferId()/*-{
+		return $wnd.cleanObject(this.xferId);
+	}-*/;
+
+	public final native void setPmtId(PmtId[] pmtId)/*-{
+		this.pmtId = pmtId;
+	}-*/;
+
+	public final native PmtId[] getPmtId()/*-{
+		return $wnd.cleanObject(this.pmtId);
+	}-*/;
+
+	public final native void setDepAcctIdTo(DepAcctIdTo[] depAcctIdTo)/*-{
+		this.depAcctIdTo = depAcctIdTo;
+	}-*/;
+
+	public final native DepAcctIdTo[] getDepAcctIdTo()/*-{
+		return $wnd.cleanObject(this.depAcctIdTo);
+	}-*/;
+
+	public final native void setCardAcctIdTo(CardAcctIdTo[] cardAcctIdTo)/*-{
+		this.cardAcctIdTo = cardAcctIdTo;
+	}-*/;
+
+	public final native CardAcctIdTo[] getCardAcctIdTo()/*-{
+		return $wnd.cleanObject(this.cardAcctIdTo);
+	}-*/;
+
+	public final native void setLoanAcctIdTo(LoanAcctIdTo[] loanAcctIdTo)/*-{
+		this.loanAcctIdTo = loanAcctIdTo;
+	}-*/;
+
+	public final native LoanAcctIdTo[] getLoanAcctIdTo()/*-{
+		return $wnd.cleanObject(this.loanAcctIdTo);
+	}-*/;
+
+	public final native void setNetworkTrnInfo(NetworkTrnInfo[] networkTrnInfo)/*-{
+		this.networkTrnInfo = networkTrnInfo;
+	}-*/;
+
+	public final native NetworkTrnInfo[] getNetworkTrnInfo()/*-{
+		return $wnd.cleanObject(this.networkTrnInfo);
+	}-*/;
+
+	public final native void setATMTrnInfo(ATMTrnInfo[] aTMTrnInfo)/*-{
+		this.aTMTrnInfo = aTMTrnInfo;
+	}-*/;
+
+	public final native ATMTrnInfo[] getATMTrnInfo()/*-{
+		return $wnd.cleanObject(this.aTMTrnInfo);
+	}-*/;
+
+	public final native void setUSA_ACHTrnInfo(USA_ACHTrnInfo[] uSA_ACHTrnInfo)/*-{
+		this.uSA_ACHTrnInfo = uSA_ACHTrnInfo;
+	}-*/;
+
+	public final native USA_ACHTrnInfo[] getUSA_ACHTrnInfo()/*-{
+		return $wnd.cleanObject(this.uSA_ACHTrnInfo);
+	}-*/;
+}

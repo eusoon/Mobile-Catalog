@@ -1,0 +1,38 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class XferStatus extends IFXObject {
+
+	public final native  XferStatusCode getXferStatusCode()/*-{
+		return $wnd.cleanObject(this.xferStatusCode);
+	}-*/;
+	public final native  void setXferStatusCode(XferStatusCode xferStatusCode)/*-{
+		this.xferStatusCode = xferStatusCode;
+	}-*/;
+	public final native  StatusDesc getStatusDesc()/*-{
+		return $wnd.cleanObject(this.statusDesc);
+	}-*/;
+	public final native  void setStatusDesc(StatusDesc statusDesc)/*-{
+		this.statusDesc = statusDesc;
+	}-*/;
+	public final native  EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+	public final native  void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+	public final native  StatusModBy getStatusModBy()/*-{
+		return $wnd.cleanObject(this.statusModBy);
+	}-*/;
+	public final native  void setStatusModBy(StatusModBy statusModBy)/*-{
+		this.statusModBy = statusModBy;
+	}-*/;
+	public final native  StatusReason getStatusReason()/*-{
+		return $wnd.cleanObject(this.statusReason);
+	}-*/;
+	public final native  void setStatusReason(StatusReason statusReason)/*-{
+		this.statusReason = statusReason;
+	}-*/;
+
+}

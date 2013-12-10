@@ -1,0 +1,44 @@
+package my.com.infopro.ifx.client.model;
+
+public class ChkOrdMsgRqInfo_Type extends IFXObject {
+	public native void setChkOrdAddRq(ChkOrdAddRq chkOrdAddRq)/*-{
+		this.chkOrdAddRq = chkOrdAddRq;
+	}-*/;
+
+	public final native ChkOrdAddRq getChkOrdAddRq()/*-{
+		return $wnd.cleanObject(this.chkOrdAddRq);
+	}-*/;
+
+	public native void setChkOrdModRq(ChkOrdModRq chkOrdModRq)/*-{
+		this.chkOrdModRq = chkOrdModRq;
+	}-*/;
+
+	public final native ChkOrdModRq getChkOrdModRq()/*-{
+		return $wnd.cleanObject(this.chkOrdModRq);
+	}-*/;
+
+	public native void setChkOrdCanRq(ChkOrdCanRq chkOrdCanRq)/*-{
+		this.chkOrdCanRq = chkOrdCanRq;
+	}-*/;
+
+	public final native ChkOrdCanRq getChkOrdCanRq()/*-{
+		return $wnd.cleanObject(this.chkOrdCanRq);
+	}-*/;
+
+	public native void setChkOrdInqRq(ChkOrdInqRq chkOrdInqRq)/*-{
+		this.chkOrdInqRq = chkOrdInqRq;
+	}-*/;
+
+	public final native ChkOrdInqRq getChkOrdInqRq()/*-{
+		return $wnd.cleanObject(this.chkOrdInqRq);
+	}-*/;
+
+	public native void setChkOrdSyncRq(ChkOrdSyncRq chkOrdSyncRq)/*-{
+		this.chkOrdSyncRq = chkOrdSyncRq;
+	}-*/;
+
+	public final native ChkOrdSyncRq getChkOrdSyncRq()/*-{
+		return $wnd.cleanObject(this.chkOrdSyncRq);
+	}-*/;
+
+}

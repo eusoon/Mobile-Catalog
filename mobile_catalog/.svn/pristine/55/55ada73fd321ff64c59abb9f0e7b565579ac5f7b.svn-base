@@ -1,0 +1,42 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class MsgRqHdr extends IFXObject {
+	AsyncRqUID asyncRqUID;	 //	UUID	 Optional	 Asynchronous Request Identifier
+	SvcIdent svcIdent;	 //	Aggregate	 Optional	 Svc Identifier for message routing
+	CredentialsRqHdr[] credentialsRqHdr;	 //	Aggregate	 Optional Repeating	 Credentials Request Header
+	ContextRqHdr contextRqHdr;	 //	Aggregate	 Optional	 Context Request Header
+	FeeRqHdr[] feeRqHdr;	 //	Aggregate	 Optional Repeating	 Fee Request Header
+	
+	public AsyncRqUID getAsyncRqUID() {
+		return asyncRqUID;
+	}
+	public void setAsyncRqUID(AsyncRqUID asyncRqUID) {
+		this.asyncRqUID = asyncRqUID;
+	}
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public CredentialsRqHdr[] getCredentialsRqHdr() {
+		return credentialsRqHdr;
+	}
+	public void setCredentialsRqHdr(CredentialsRqHdr[] credentialsRqHdr) {
+		this.credentialsRqHdr = credentialsRqHdr;
+	}
+	public ContextRqHdr getContextRqHdr() {
+		return contextRqHdr;
+	}
+	public void setContextRqHdr(ContextRqHdr contextRqHdr) {
+		this.contextRqHdr = contextRqHdr;
+	}
+	public FeeRqHdr[] getFeeRqHdr() {
+		return feeRqHdr;
+	}
+	public void setFeeRqHdr(FeeRqHdr[] feeRqHdr) {
+		this.feeRqHdr = feeRqHdr;
+	}
+}

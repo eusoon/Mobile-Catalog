@@ -1,0 +1,39 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PartyAuthInqRq extends IFXObject {
+
+	public final native RqUID getRqUID() /*-{
+		return $wnd.cleanObject(rqUID);
+	}-*/;
+	public final native void setRqUID(RqUID rqUID) /*-{
+		this.rqUID = rqUID;
+	}-*/;
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(msgRqHdr);
+	}-*/;
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+	public final native RecCtrlIn getRecCtrlIn() /*-{
+		return $wnd.cleanObject(recCtrlIn);
+	}-*/;
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn) /*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+	public final native JsArray<PartySel> getPartySel() /*-{
+		return $wnd.cleanObject(partySel);
+	}-*/;
+	public final native void setPartySel(JsArray<PartySel> partySel) /*-{
+		this.partySel = partySel;
+	}-*/;
+	public final native JsArray<RecSelect> getRecSelect() /*-{
+		return $wnd.cleanObject(recSelect);
+	}-*/;
+	public final native void setRecSelect(JsArray<RecSelect> recSelect) /*-{
+		this.recSelect = recSelect;
+	}-*/;	
+}

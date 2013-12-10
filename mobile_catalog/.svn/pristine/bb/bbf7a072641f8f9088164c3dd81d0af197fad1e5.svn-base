@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum SvcStatusCode {
+	Active, Deleted, Inactive, Valid
+}

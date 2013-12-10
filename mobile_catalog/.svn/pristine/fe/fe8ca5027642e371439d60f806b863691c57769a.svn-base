@@ -1,0 +1,14 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class CardUpdateRsHdr extends IFXObject {
+
+	public final native  CardUpdateRec getCardUpdateRec()/*-{
+		return $wnd.cleanObject(this.cardUpdateRec);
+	}-*/;
+
+	public final native  void setCardUpdateRec(CardUpdateRec cardUpdateRec)/*-{
+		this.cardUpdateRec = cardUpdateRec;
+	}-*/;
+}

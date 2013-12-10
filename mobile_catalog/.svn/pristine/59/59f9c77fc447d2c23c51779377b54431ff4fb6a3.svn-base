@@ -1,0 +1,65 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class ForExRateSheetKeys extends IFXObject {
+
+	
+	public final native  SvcIdent getSvcIdent()/*-{
+		return $wnd.cleanObject(this.svcIdent);
+	}-*/;
+	public final native  void setSvcIdent(SvcIdent svcIdent)/*-{
+		this.svcIdent = svcIdent;
+	}-*/;
+	public final native  ForExRateSheetId getForExRateSheetId()/*-{
+		return $wnd.cleanObject(this.forExRateSheetId);
+	}-*/;
+	public final native  void setForExRateSheetId(ForExRateSheetId forExRateSheetId)/*-{
+		this.forExRateSheetId = forExRateSheetId;
+	}-*/;
+	public final native  JsArray<ForExRateType> getForExRateType()/*-{
+		return $wnd.cleanObject(this.forExRateType);
+	}-*/;
+	public final native  void setForExRateType(JsArray<ForExRateType> forExRateType)/*-{
+		this.forExRateType = forExRateType;
+	}-*/;
+	public final native  FixingDateStartDt getFixingDateStartDt()/*-{
+		return $wnd.cleanObject(this.fixingDateStartDt);
+	}-*/;
+	public final native  void setFixingDateStartDt(FixingDateStartDt fixingDateStartDt)/*-{
+		this.fixingDateStartDt = fixingDateStartDt;
+	}-*/;
+	public final native  FixingDateEndDt getFixingDateEndDt()/*-{
+		return $wnd.cleanObject(this.fixingDateEndDt);
+	}-*/;
+	public final native  void setFixingDateEndDt(FixingDateEndDt fixingDateEndDt)/*-{
+		this.fixingDateEndDt = fixingDateEndDt;
+	}-*/;
+	public final native  JsArray<ReceivingMethod> getReceivingMethod()/*-{
+		return $wnd.cleanObject(this.receivingMethod);
+	}-*/;
+	public final native  void setReceivingMethod(JsArray<ReceivingMethod> receivingMethod)/*-{
+		this.receivingMethod = receivingMethod;
+	}-*/;
+	public final native  ForExValDtType getForExValDtType()/*-{
+		return $wnd.cleanObject(this.forExValDtType);
+	}-*/;
+	public final native  void setForExValDtType(ForExValDtType forExValDtType)/*-{
+		this.forExValDtType = forExValDtType;
+	}-*/;
+	public final native  ForExValDt getForExValDt()/*-{
+		return $wnd.cleanObject(this.forExValDt);
+	}-*/;
+	public final native  void setForExValDt(ForExValDt forExValDt)/*-{
+		this.forExValDt = forExValDt;
+	}-*/;
+	public final native  ForExRateSheetIdent getForExRateSheetIdent()/*-{
+		return $wnd.cleanObject(this.forExRateSheetIdent);
+	}-*/;
+	public final native  void setForExRateSheetIdent(ForExRateSheetIdent forExRateSheetIdent)/*-{
+		this.forExRateSheetIdent = forExRateSheetIdent;
+	}-*/;
+
+}

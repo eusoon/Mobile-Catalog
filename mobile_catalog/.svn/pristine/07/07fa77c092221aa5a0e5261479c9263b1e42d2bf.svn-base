@@ -1,0 +1,15 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class CardUpdateRsHdr extends IFXObject {
+	CardUpdateRec cardUpdateRec;  //Aggregate	Optiona	Card Update Record
+
+	public CardUpdateRec getCardUpdateRec() {
+		return cardUpdateRec;
+	}
+
+	public void setCardUpdateRec(CardUpdateRec cardUpdateRec) {
+		this.cardUpdateRec = cardUpdateRec;
+	}
+}

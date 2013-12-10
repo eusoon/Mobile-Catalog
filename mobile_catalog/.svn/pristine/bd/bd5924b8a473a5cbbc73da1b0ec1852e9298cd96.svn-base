@@ -1,0 +1,21 @@
+package my.com.infopro.ifx.client.model;
+
+public class MediaAcctAdjRec_Type extends IFXObject {
+
+	public final native void setMediaAcctAdjId(MediaAcctAdjId mediaAcctAdjId)/*-{
+		this.mediaAcctAdjId = mediaAcctAdjId;
+	}-*/;
+
+	public final native MediaAcctAdjId getMediaAcctAdjId()/*-{
+		return $wnd.cleanObject(this.mediaAcctAdjId);
+	}-*/;
+
+	public final native void setMediaAcctAdjInfo(MediaAcctAdjInfo mediaAcctAdjInfo)/*-{
+		this.mediaAcctAdjInfo = mediaAcctAdjInfo;
+	}-*/;
+
+	public final native MediaAcctAdjInfo getMediaAcctAdjInfo()/*-{
+		return $wnd.cleanObject(this.mediaAcctAdjInfo);
+	}-*/;
+
+}

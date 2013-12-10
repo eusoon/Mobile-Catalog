@@ -1,0 +1,28 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtAuthRec_Type extends IFXObject {
+	public final native void setPmtAuthId(PmtAuthId pmtAuthId)/*-{
+		this.pmtAuthId = pmtAuthId;
+	}-*/;
+
+	public final native PmtAuthId getPmtAuthId()/*-{
+		return $wnd.cleanObject(this.pmtAuthId);
+	}-*/;
+
+	public final native void setPmtAuthInfo(PmtAuthInfo pmtAuthInfo)/*-{
+		this.pmtAuthInfo = pmtAuthInfo;
+	}-*/;
+
+	public final native PmtAuthInfo getPmtAuthInfo() /*-{
+		return $wnd.cleanObject(this.pmtAuthInfo);
+	}-*/;
+
+	public final native void setPmtAuthStatus(PmtAuthStatus pmtAuthStatus)/*-{
+		this.pmtAuthStatus = pmtAuthStatus;
+	}-*/;
+
+	public final native PmtAuthStatus getPmtAuthStatus()/*-{
+		return $wnd.cleanObject(this.pmtAuthStatus);
+	}-*/;
+
+}

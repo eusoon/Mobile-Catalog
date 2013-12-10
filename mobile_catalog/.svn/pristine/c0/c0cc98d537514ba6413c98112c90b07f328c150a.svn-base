@@ -1,0 +1,61 @@
+package my.com.infopro.ifx.client.model;
+
+public class ChksumAdviseRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setSvcRqUID(SvcRqUID svcRqUID)/*-{
+		this.svcRqUID = svcRqUID;
+	}-*/;
+
+	public final native SvcRqUID getSvcRqUID()/*-{
+		return $wnd.cleanObject(this.svcRqUID);
+	}-*/;
+
+	public final native void setChksumRec(ChksumRec chksumRec)/*-{
+		this.chksumRec = chksumRec;
+	}-*/;
+
+	public final native ChksumRec getChksumRec()/*-{
+		return $wnd.cleanObject(this.chksumRec);
+	}-*/;
+
+	public final native void setChksumId(ChksumId chksumId)/*-{
+		this.chksumId = chksumId;
+	}-*/;
+
+	public final native ChksumId getChksumId()/*-{
+		return $wnd.cleanObject(this.chksumId);
+	}-*/;
+
+	public final native void setChksumStatus(ChksumStatus chksumStatus)/*-{
+		this.chksumStatus = chksumStatus;
+	}-*/;
+
+	public final native ChksumStatus getChksumStatus()/*-{
+		return $wnd.cleanObject(this.chksumStatus);
+	}-*/;
+
+}

@@ -1,0 +1,43 @@
+package my.com.infopro.ifx.rate;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.ForExQuoteRec;
+import my.com.infopro.ifx.element.ForExQuoteStatusRec;
+import my.com.infopro.ifx.element.MsgRqHdr;
+import my.com.infopro.ifx.element.RqUID;
+
+public class ForExQuoteAdviseRq extends IFXObject{
+
+	RqUID rqUID; //UUID	Required	Request Identifier
+	MsgRqHdr msgRqHdr; //Aggregate	Optional	Message Request Header
+	//begin-xor	Required
+	ForExQuoteRec forExQuoteRec; //Aggregate	Required	Foreign Exchange Quote Record
+	ForExQuoteStatusRec forExQuoteStatusRec; //Aggregate	Required	Foreign Exchange Quote Status Record
+	//end-xor
+	
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRqHdr getMsgRqHdr() {
+		return msgRqHdr;
+	}
+	public void setMsgRqHdr(MsgRqHdr msgRqHdr) {
+		this.msgRqHdr = msgRqHdr;
+	}
+	public ForExQuoteRec getForExQuoteRec() {
+		return forExQuoteRec;
+	}
+	public void setForExQuoteRec(ForExQuoteRec forExQuoteRec) {
+		this.forExQuoteRec = forExQuoteRec;
+	}
+	public ForExQuoteStatusRec getForExQuoteStatusRec() {
+		return forExQuoteStatusRec;
+	}
+	public void setForExQuoteStatusRec(ForExQuoteStatusRec forExQuoteStatusRec) {
+		this.forExQuoteStatusRec = forExQuoteStatusRec;
+	}
+
+}

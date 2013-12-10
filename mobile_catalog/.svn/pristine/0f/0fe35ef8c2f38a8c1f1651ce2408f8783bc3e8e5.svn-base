@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class DepAcctStmtId extends DepAcctStmtId_Type {
+
+}

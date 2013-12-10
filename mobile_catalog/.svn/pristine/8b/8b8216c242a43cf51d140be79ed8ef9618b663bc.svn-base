@@ -1,0 +1,19 @@
+package my.com.infopro.ifx.client.model;
+
+public class RefInfo_Type extends IFXObject {
+	public final native void setRefType(RefType refType)/*-{
+		this.refType = refType;
+	}-*/;
+
+	public final native RefType getRefType()/*-{
+		return $wnd.cleanObject(this.refType);
+	}-*/;
+
+	public final native void setRefId(RefId refId)/*-{
+		this.refId = refId;
+	}-*/;
+
+	public final native RefId getRefId()/*-{
+		return $wnd.cleanObject(this.refId);
+	}-*/;
+}

@@ -1,0 +1,61 @@
+package my.com.infopro.ifx.client.model;
+
+public class OrgInfo_Type extends IFXObject {
+	
+	public final native void setIndustId(IndustId industId)/*-{
+		this.industId = industId;
+	}-*/;
+
+	public final native IndustId getIndustId()/*-{
+		return $wnd.cleanObject(this.industId);
+	}-*/;
+
+	public final native void setName(Name[] name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name[] getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setLegalName(LegalName[] legalName)/*-{
+		this.legalName = legalName;
+	}-*/;
+
+	public final native LegalName[] getLegalName()/*-{
+		return $wnd.cleanObject(this.legalName);
+	}-*/;
+
+	public final native void setCompositeContactInfo(
+			CompositeContactInfo[] compositeContactInfo)/*-{
+		this.compositeContactInfo = compositeContactInfo;
+	}-*/;
+
+	public final native CompositeContactInfo[] getCompositeContactInfo()/*-{
+		return $wnd.cleanObject(this.compositeContactInfo);
+	}-*/;
+
+	public final native void setTINInfo(TINInfo tINInfo)/*-{
+		this.tINInfo = tINInfo;
+	}-*/;
+
+	public final native TINInfo getTINInfo()/*-{
+		return $wnd.cleanObject(this.tINInfo);
+	}-*/;
+
+	public final native void setEstablishDt(EstablishDt[] establishDt)/*-{
+		this.establishDt = establishDt;
+	}-*/;
+
+	public final native EstablishDt[] getEstablishDt()/*-{
+		return $wnd.cleanObject(this.establishDt);
+	}-*/;
+
+	public final native void setNumEmployees(NumEmployees[] numEmployees)/*-{
+		this.numEmployees = numEmployees;
+	}-*/;
+
+	public final native NumEmployees[] getNumEmployees()/*-{
+		return $wnd.cleanObject(this.numEmployees);
+	}-*/;
+}

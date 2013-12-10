@@ -1,0 +1,21 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class DelinqAging extends IFXObject {
+
+	public final native  JsArray<Aging> getAging()/*-{
+		return aging;
+	}-*/;
+	public final native  void setAging(JsArray<Aging> aging)/*-{
+		this.aging = aging;
+	}-*/;
+	public final native  JsArray<CurAmt> getCurAmt()/*-{
+		return curAmt;
+	}-*/;
+	public final native  void setCurAmt(JsArray<CurAmt> curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+}

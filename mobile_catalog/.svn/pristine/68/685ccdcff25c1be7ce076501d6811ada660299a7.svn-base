@@ -1,0 +1,36 @@
+package my.com.infopro.ifx.client.model;
+
+public class TerminalObjInfo_Type extends IFXObject {
+
+	public final native void setPostAddr(PostAddr postAddr)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native PostAddr getPostAddr()/*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+
+	public final native void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+
+	public final native Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+	}-*/;
+
+	public final native void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setUTCOffset(UTCOffset uTCOffset)/*-{
+		this.uTCOffset = uTCOffset;
+	}-*/;
+
+	public final native UTCOffset getUTCOffset()/*-{
+		return $wnd.cleanObject(this.uTCOffset);
+	}-*/;
+}

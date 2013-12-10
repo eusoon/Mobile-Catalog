@@ -1,0 +1,114 @@
+package my.com.infopro.mobile.client.transfer;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import com.google.gwt.user.client.ui.Widget;
+
+import my.com.infopro.mobile.client.IFX;
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.model.AccountStatus;
+import my.com.infopro.mobile.client.model.InitialData;
+import my.com.infopro.mobile.client.model.PaymentData;
+import my.com.infopro.mobile.client.model.TransferTypeDetailed;
+import my.com.infopro.mobile.client.ui.Page;
+import my.com.infopro.mobile.client.ui.panels.SquarePanel;
+import my.com.infopro.mobile.client.ui.widgets.CustomFieldForm;
+import my.com.infopro.mobile.client.ui.widgets.FormField;
+import my.com.infopro.mobile.client.ui.widgets.NumberField;
+import my.com.infopro.mobile.client.ui.widgets.SelectionField;
+import my.com.infopro.mobile.client.ui.widgets.TextAreaField;
+
+public class SwiftTransferPage extends Page {
+ 	private InitialData data; 
+    private FormField fields;
+    private CustomFieldForm customFields;
+	private SquarePanel container;
+	private PaymentData paymentData;
+	private NumberField amount;
+	private TextAreaField description;
+	private SelectionField<TransferTypeDetailed> transferTypes;
+	private boolean isSystem;
+
+
+	@Override
+	public String getHeading() {
+		return messages.fundTransferHeading();
+	}
+
+	@Override
+	public Widget initialize() {
+		container = new SquarePanel();
+		container.setVisible(false);
+
+		data = LoggedUser.get().getInitialData();
+
+		fields = new FormField();
+
+		transferTypes = new SelectionField<TransferTypeDetailed>() {
+			@Override
+			protected String getDisplayName(TransferTypeDetailed item) {
+				return item.getName();
+			}
+
+			@Override
+			protected void onItemSelected(TransferTypeDetailed item) {
+				renderData(item);
+			}
+		};
+
+		amount = new NumberField(data.getDecimalCount(),
+				data.getDecimalSeparator(), messages.amount());
+		amount.setOnlyPositive(true);
+
+		description = new TextAreaField(messages.description());
+
+		customFields = new CustomFieldForm();
+
+		container.add(fields);
+		container.add(transferTypes);
+		container.add(amount);
+		container.add(description);
+		container.add(customFields);
+
+		getPaymentData();
+
+		return container;
+	}
+
+	private void getPaymentData() {
+
+	}
+
+	/**
+	 * Renders page data according to the given transfer type
+	 */
+	private void renderData(TransferTypeDetailed item) {
+		 Map<String, String> formData = new LinkedHashMap<String, String>();
+         
+	        AccountStatus status = paymentData.get(item.getFrom().getId());
+	        
+	        // Display account from and balance
+	        String html = item.getFrom().getName() + "<br><i>" + 
+	                      messages.balance() + ": " +
+	                      status.getFormattedBalance() + "</i>";
+	        
+	        formData.put(messages.from(), html);
+	        
+	        // If it is system show account name, otherwise display member name
+	        if(isSystem) {
+	            formData.put(messages.to(), item.getTo().getName());
+	        } else {
+	            formData.put(messages.to(), paymentData.getMemberTo().getName());
+	        }  
+	        
+	        fields.setData(formData);
+	        
+	        // Update amount place holder with currency name
+	        amount.setPlaceHolder(messages.amountIn(item.getTo().getCurrency().getName()));
+	        
+	        // Add custom fields
+	        customFields.setCustomFields(item.getCustomFields()); 
+	}
+
+}

@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class DebitAuthRevRs extends DebitAuthRevRs_Type {
+
+}

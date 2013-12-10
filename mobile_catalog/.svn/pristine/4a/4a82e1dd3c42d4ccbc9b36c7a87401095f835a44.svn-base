@@ -1,0 +1,22 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class InvoicePremium extends IFXObject {
+
+	Amt amt; //Decimal	Optional	Amount
+	CurCode curCode; //Aggregate	Optional	Currency Code
+	
+	public Amt getAmt() {
+		return amt;
+	}
+	public void setAmt(Amt amt) {
+		this.amt = amt;
+	}
+	public CurCode getCurCode() {
+		return curCode;
+	}
+	public void setCurCode(CurCode curCode) {
+		this.curCode = curCode;
+	}
+}

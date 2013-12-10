@@ -1,0 +1,61 @@
+package my.com.infopro.ifx.party;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.MsgRsHdr;
+import my.com.infopro.ifx.element.PartyAuthRec;
+import my.com.infopro.ifx.element.PartyRec;
+import my.com.infopro.ifx.element.PartyStatusRec;
+import my.com.infopro.ifx.element.RqUID;
+import my.com.infopro.ifx.element.Status;
+
+public class PartyAdviseRs extends IFXObject {
+	//begin-block	Required
+	Status status;	 //	Aggregate	 Optional	 Response Status
+	RqUID rqUID;	 //	UUID	 Required	 Request Identifier
+	MsgRsHdr msgRsHdr;	 //	Aggregate	 Optional	 Message Response Header
+	//end-block
+	//begin-block	Optional	required if message is successful
+	//begin-xor	Required
+	PartyRec partyRec;	 //	Aggregate	 Required	 Party Record Aggregate
+	PartyStatusRec partyStatusRec;	 //	Aggregate	 Required	 Party Status Record Aggregate
+	PartyAuthRec partyAuthRec;	 //	Aggregate	 Required	 Party Authorization Record
+	//end-xor
+	//end-block
+	
+	public Status getStatus() {
+		return status;
+	}
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRsHdr getMsgRsHdr() {
+		return msgRsHdr;
+	}
+	public void setMsgRsHdr(MsgRsHdr msgRsHdr) {
+		this.msgRsHdr = msgRsHdr;
+	}
+	public PartyRec getPartyRec() {
+		return partyRec;
+	}
+	public void setPartyRec(PartyRec partyRec) {
+		this.partyRec = partyRec;
+	}
+	public PartyStatusRec getPartyStatusRec() {
+		return partyStatusRec;
+	}
+	public void setPartyStatusRec(PartyStatusRec partyStatusRec) {
+		this.partyStatusRec = partyStatusRec;
+	}
+	public PartyAuthRec getPartyAuthRec() {
+		return partyAuthRec;
+	}
+	public void setPartyAuthRec(PartyAuthRec partyAuthRec) {
+		this.partyAuthRec = partyAuthRec;
+	}
+}

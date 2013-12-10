@@ -1,0 +1,60 @@
+package my.com.infopro.ifx.client.model;
+
+public class PersonName_Type extends IFXObject {
+	public final native void setLastName(LastName[] lastName)/*-{
+		this.lastName = lastName;
+	}-*/;
+
+	public final native LastName[] getLastName()/*-{
+		return $wnd.cleanObject(this.lastName);
+	}-*/;
+
+	public final native void setFirstName(FirstName[] firstName)/*-{
+		this.firstName = firstName;
+	}-*/;
+
+	public final native FirstName[] getFirstName()/*-{
+		return $wnd.cleanObject(this.firstName);
+	}-*/;
+
+	public final native void setMiddleName(MiddleName[] middleName)/*-{
+		this.middleName = middleName;
+	}-*/;
+
+	public final native MiddleName[] getMiddleName()/*-{
+		return $wnd.cleanObject(this.middleName);
+	}-*/;
+
+	public final native void setTitlePrefix(TitlePrefix[] titlePrefix)/*-{
+		this.titlePrefix = titlePrefix;
+	}-*/;
+
+	public final native TitlePrefix[] getTitlePrefix()/*-{
+		return $wnd.cleanObject(this.titlePrefix);
+	}-*/;
+
+	public final native void setNameSuffix(NameSuffix[] nameSuffix)/*-{
+		this.nameSuffix = nameSuffix;
+	}-*/;
+
+	public final native NameSuffix[] getNameSuffix()/*-{
+		return $wnd.cleanObject(this.nameSuffix);
+	}-*/;
+
+	public final native void setNickname(Nickname[] nickname)/*-{
+		this.nickname = nickname;
+	}-*/;
+
+	public final native Nickname[] getNickname()/*-{
+		return $wnd.cleanObject(this.nickname);
+	}-*/;
+
+	public final native void setLegalName(LegalName[] legalName)/*-{
+		this.legalName = legalName;
+	}-*/;
+
+	public final native LegalName[] getLegalName()/*-{
+		return $wnd.cleanObject(this.legalName);
+	}-*/;
+
+}

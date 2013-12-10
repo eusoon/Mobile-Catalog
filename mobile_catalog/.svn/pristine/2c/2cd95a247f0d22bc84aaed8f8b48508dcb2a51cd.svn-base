@@ -1,0 +1,6 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+
+public class PmtEnvr extends BaseEnvr {
+
+}

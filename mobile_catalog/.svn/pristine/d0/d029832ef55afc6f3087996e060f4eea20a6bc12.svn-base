@@ -1,0 +1,14 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PmtSel extends IFXObject {
+
+	public final native PmtKeys[] getPmtKeys() /*-{
+		return $wnd.cleanObject(pmtKeys);
+	}-*/;
+
+	public final native void setPmtKeys(PmtKeys[] pmtKeys) /*-{
+		this.pmtKeys = pmtKeys;
+	}-*/;
+}

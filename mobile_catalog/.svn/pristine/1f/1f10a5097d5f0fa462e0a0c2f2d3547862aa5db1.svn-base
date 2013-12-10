@@ -1,0 +1,57 @@
+package my.com.infopro.ifx.client.model;
+
+public class CreditStatusModRq_Type extends IFXObject {
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setCreditId(CreditId creditId)/*-{
+		this.creditId = creditId;
+	}-*/;
+
+	public final native CreditId getCreditId() /*-{
+		return $wnd.cleanObject(this.creditId);
+
+	}-*/;
+
+	public native void setCreditStatus(CreditStatus creditStatus)/*-{
+		this.creditStatus = creditStatus;
+	}-*/;
+
+	public final native CreditStatus getCreditStatus() /*-{
+		return $wnd.cleanObject(this.creditStatus);
+
+	}-*/;
+
+}

@@ -1,0 +1,28 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class EquivCurAmt extends IFXObject {
+
+	protected EquivCurAmt(){
+	}
+	
+	public final native  EquivCurAmtType getEquivCurAmtType()/*-{
+		return $wnd.cleanObject(this.equivCurAmtType);
+	}-*/;
+	public final native  void setEquivCurAmtType(EquivCurAmtType equivCurAmtType)/*-{
+		this.equivCurAmtType = equivCurAmtType;
+	}-*/;
+	public final native  CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+	public final native  void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+	public final native  ExchangeRate getExchangeRate()/*-{
+		return $wnd.cleanObject(this.exchangeRate);
+	}-*/;
+	public final native  void setExchangeRate(ExchangeRate exchangeRate)/*-{
+		this.exchangeRate = exchangeRate;
+	}-*/;
+}

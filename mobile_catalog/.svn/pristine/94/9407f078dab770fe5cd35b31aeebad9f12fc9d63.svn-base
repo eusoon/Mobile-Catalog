@@ -1,0 +1,30 @@
+package my.com.infopro.ifx.client.model;
+
+public class USA_ACHProf_Type extends IFXObject {
+	public final native void setDaysWith(DaysWith daysWith)/*-{
+		this.daysWith = daysWith;
+	}-*/;
+
+	public final native DaysWith getDaysWith()/*-{
+		return $wnd.cleanObject(this.daysWith);
+
+	}-*/;
+
+	public final native void setDfltDaysToPay(DfltDaysToPay dfltDaysToPay)/*-{
+		this.dfltDaysToPay = dfltDaysToPay;
+	}-*/;
+
+	public final native DfltDaysToPay getDfltDaysToPay()/*-{
+		return $wnd.cleanObject(this.dfltDaysToPay);
+
+	}-*/;
+
+	public final native void setCanWind(CanWind canWind)/*-{
+		this.canWind = canWind;
+	}-*/;
+
+	public final native CanWind getCanWind()/*-{
+		return $wnd.cleanObject(this.canWind);
+
+	}-*/;
+}

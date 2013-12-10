@@ -1,0 +1,32 @@
+package ong.eu.soon.ifx.element;
+
+public class SecTokenMagCard extends SecToken {
+	CardMagData cardMagData; //Aggregate	Required Card Magnetic Stripe Data
+	PINBlock pINBlock;//NC-32	RequiredPIN Block
+	CryptType cryptType;//Open Enum	Required Encryption Type. Valid values include: ACBC, ACFB, ACM, AECB, AOFB, CBC, CFB, ECB, None, OFB, PKCS#1, PKCS#10, PKCS#7, RSA#1, TCBC, TCBC-I, TCFB, TCFB-P, TECB, TOFB, TOFB-I, TR-31
+	SecObjId secObjId;//Identifier	Required Security Object Identifier
+	public CardMagData getCardMagData() {
+		return cardMagData;
+	}
+	public void setCardMagData(CardMagData cardMagData) {
+		this.cardMagData = cardMagData;
+	}
+	public PINBlock getpINBlock() {
+		return pINBlock;
+	}
+	public void setpINBlock(PINBlock pINBlock) {
+		this.pINBlock = pINBlock;
+	}
+	public CryptType getCryptType() {
+		return cryptType;
+	}
+	public void setCryptType(CryptType cryptType) {
+		this.cryptType = cryptType;
+	}
+	public SecObjId getSecObjId() {
+		return secObjId;
+	}
+	public void setSecObjId(SecObjId secObjId) {
+		this.secObjId = secObjId;
+	}
+}

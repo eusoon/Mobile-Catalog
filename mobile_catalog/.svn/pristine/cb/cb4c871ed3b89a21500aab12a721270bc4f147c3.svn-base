@@ -1,0 +1,84 @@
+package my.com.infopro.ifx.client.model;
+
+public class SignonInfo_Type extends IFXObject {
+	public final native void setAuthSupt(AuthSupt[] authSupt)/*-{
+		this.authSupt = authSupt;
+	}-*/;
+
+	public final native AuthSupt[] getAuthSupt()/*-{
+		return $wnd.cleanObject(this.authSupt);
+
+	}-*/;
+
+	public final native void setCryptType(CryptType[] cryptType)/*-{
+		this.cryptType = cryptType;
+	}-*/;
+
+	public final native CryptType[] getCryptType()/*-{
+		return $wnd.cleanObject(this.cryptType);
+
+	}-*/;
+
+	public final native void setModPswdFirst(ModPswdFirst[] modPswdFirst)/*-{
+		this.modPswdFirst = modPswdFirst;
+	}-*/;
+
+	public final native ModPswdFirst[] getModPswdFirst()/*-{
+		return $wnd.cleanObject(this.modPswdFirst);
+
+	}-*/;
+
+	public final native void setMin(Min[] min)/*-{
+		this.min = min;
+	}-*/;
+
+	public final native Min[] getMin()/*-{
+		return $wnd.cleanObject(this.min);
+
+	}-*/;
+
+	public final native void setMax(Max[] max)/*-{
+		this.max = max;
+	}-*/;
+
+	public final native Max[] getMax()/*-{
+		return $wnd.cleanObject(this.max);
+
+	}-*/;
+
+	public final native void setCharType(CharType[] charType)/*-{
+		this.charType = charType;
+	}-*/;
+
+	public final native CharType[] getCharType()/*-{
+		return $wnd.cleanObject(this.charType);
+
+	}-*/;
+
+	public final native void setCaseSen(CaseSen[] caseSen)/*-{
+		this.caseSen = caseSen;
+	}-*/;
+
+	public final native CaseSen[] getCaseSen()/*-{
+		return $wnd.cleanObject(this.caseSen);
+
+	}-*/;
+
+	public final native void setSpaceAlwd(SpaceAlwd[] spaceAlwd)/*-{
+		this.spaceAlwd = spaceAlwd;
+	}-*/;
+
+	public final native SpaceAlwd[] getSpaceAlwd()/*-{
+		return $wnd.cleanObject(this.spaceAlwd);
+
+	}-*/;
+
+	public final native void setMemo(Memo[] memo)/*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo[] getMemo()/*-{
+		return $wnd.cleanObject(this.memo);
+
+	}-*/;
+}

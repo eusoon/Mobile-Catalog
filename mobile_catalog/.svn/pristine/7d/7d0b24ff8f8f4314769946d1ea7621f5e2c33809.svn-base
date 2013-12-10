@@ -1,0 +1,85 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+public class AirlineAddenda extends CardAddenda {
+
+	public final native  ElectronicTicketInd getElectronicTicketInd()/*-{
+		return $wnd.cleanObject(this.electronicTicketInd);
+	}-*/;
+	public final native  void setElectronicTicketInd(ElectronicTicketInd electronicTicketInd)/*-{
+		this.electronicTicketInd = electronicTicketInd;
+	}-*/;
+	public final native  Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+	public final native  void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+	public final native  TicketNumber getTicketNumber()/*-{
+		return $wnd.cleanObject(this.ticketNumber);
+	}-*/;
+	public final native  void setTicketNumber(TicketNumber ticketNumber)/*-{
+		this.ticketNumber = ticketNumber;
+	}-*/;
+	public final native  IssueDt getIssueDt()/*-{
+		return $wnd.cleanObject(this.issueDt);
+	}-*/;
+	public final native  void setIssueDt(IssueDt issueDt)/*-{
+		this.issueDt = issueDt;
+	}-*/;
+	public final native  DepartureDt getDepartureDt()/*-{
+		return $wnd.cleanObject(this.departureDt);
+	}-*/;
+	public final native  void setDepartureDt(DepartureDt departureDt)/*-{
+		this.departureDt = departureDt;
+	}-*/;
+	public final native  TravelAgencyIdent getTravelAgencyIdent()/*-{
+		return $wnd.cleanObject(this.travelAgencyIdent);
+	}-*/;
+	public final native  void setTravelAgencyIdent(TravelAgencyIdent travelAgencyIdent)/*-{
+		this.travelAgencyIdent = travelAgencyIdent;
+	}-*/;
+	public final native  TravelAgencyName getTravelAgencyName()/*-{
+		return $wnd.cleanObject(this.travelAgencyName);
+	}-*/;
+	public final native  void setTravelAgencyName(TravelAgencyName travelAgencyName)/*-{
+		this.travelAgencyName = travelAgencyName;
+	}-*/;
+	public final native  RestrictedTicketInd getRestrictedTicketInd()/*-{
+		return $wnd.cleanObject(this.restrictedTicketInd);
+	}-*/;
+	public final native  void setRestrictedTicketInd(RestrictedTicketInd restrictedTicketInd)/*-{
+		this.restrictedTicketInd = restrictedTicketInd;
+	}-*/;
+	public final native  ReservationSystem getReservationSystem()/*-{
+		return $wnd.cleanObject(this.reservationSystem);
+	}-*/;
+	public final native  void setReservationSystem(ReservationSystem reservationSystem)/*-{
+		this.reservationSystem = reservationSystem;
+	}-*/;
+	public final native  NumberInParty getNumberInParty()/*-{
+		return $wnd.cleanObject(this.numberInParty);
+	}-*/;
+	public final native  void setNumberInParty(NumberInParty numberInParty)/*-{
+		this.numberInParty = numberInParty;
+	}-*/;
+	public final native  City getCity()/*-{
+		return $wnd.cleanObject(this.city);
+	}-*/;
+	public final native  void setCity(City city)/*-{
+		this.city = city;
+	}-*/;
+	public final native  JsArray<TripLeg> getTripLeg()/*-{
+		return $wnd.cleanObject(this.TripLeg);
+	}-*/;
+	public final native  void setTripLeg(JsArray<TripLeg> tripLeg)/*-{
+		TripLeg = tripLeg;
+	}-*/;
+	public final native  JsArray<AirlineCharge> getAirlineCharge()/*-{
+		return $wnd.cleanObject(this.AirlineCharge);
+	}-*/;
+	public final native  void setAirlineCharge(JsArray<AirlineCharge> airlineCharge)/*-{
+		AirlineCharge = airlineCharge;
+	}-*/;
+}

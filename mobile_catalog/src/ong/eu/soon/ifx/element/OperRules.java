@@ -1,0 +1,30 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class OperRules extends IFXObject {
+	ProcessConcurrent processConcurrent;
+	OnWarning onWarning;
+	OnError onError;
+	public ProcessConcurrent getProcessConcurrent() {
+		return processConcurrent;
+	}
+	public void setProcessConcurrent(ProcessConcurrent processConcurrent) {
+		this.processConcurrent = processConcurrent;
+	}
+	public OnWarning getOnWarning() {
+		return onWarning;
+	}
+	public void setOnWarning(OnWarning onWarning) {
+		this.onWarning = onWarning;
+	}
+	public OnError getOnError() {
+		return onError;
+	}
+	public void setOnError(OnError onError) {
+		this.onError = onError;
+	}
+
+
+
+}

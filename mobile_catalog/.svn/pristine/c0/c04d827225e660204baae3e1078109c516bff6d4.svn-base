@@ -1,0 +1,123 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtStatusModRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr _msgRsHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setPmtId(PmtId pmtId)/*-{
+		this.pmtId = pmtId;
+	}-*/;
+
+	public final native PmtId getPmtId()/*-{
+		return $wnd.cleanObject(this.pmtId);
+
+	}-*/;
+
+	public final native void setPmtRefId(PmtRefId[] pmtRefId)/*-{
+		this.pmtRefId = pmtRefId;
+	}-*/;
+
+	public final native PmtRefId[] getPmtRefId()/*-{
+		return $wnd.cleanObject(this.pmtRefId);
+	}-*/;
+
+	public final native void setSvcRqUID(SvcRqUID svcRqUID)/*-{
+		this.svcRqUID = svcRqUID;
+	}-*/;
+
+	public final native SvcRqUID getSvcRqUID()/*-{
+		return $wnd.cleanObject(this.svcRqUID);
+
+	}-*/;
+
+	public final native void setPmtStatus(PmtStatus pmtStatus)/*-{
+		this.pmtStatus = pmtStatus;
+	}-*/;
+
+	public final native PmtStatus getPmtStatus()/*-{
+		return $wnd.cleanObject(this.pmtStatus);
+
+	}-*/;
+
+	public native void setNetworkTrnInfo(NetworkTrnInfo networkTrnInfo)/*-{
+		this.networkTrnInfo = networkTrnInfo;
+	}-*/;
+
+	public final native NetworkTrnInfo getNetworkTrnInfo()/*-{
+		return $wnd.cleanObject(this.networkTrnInfo);
+
+	}-*/;
+
+	public final native void setCompositeContactInfo(
+			CompositeContactInfo compositeContactInfo)/*-{
+		this.compositeContactInfo = compositeContactInfo;
+	}-*/;
+
+	public final native CompositeContactInfo getCompositeContactInfo()/*-{
+		return $wnd.cleanObject(this.compositeContactInfo);
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+
+	}-*/;
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+
+	}-*/;
+}

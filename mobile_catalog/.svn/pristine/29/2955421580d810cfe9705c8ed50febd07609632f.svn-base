@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class CDOL2 extends CDOL2_Type {
+
+}

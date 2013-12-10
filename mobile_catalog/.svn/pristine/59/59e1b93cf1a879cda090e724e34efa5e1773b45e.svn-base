@@ -1,0 +1,11 @@
+package my.com.infopro.ifx.client.model;
+
+public class MediaAcctInventoryMsgRqInfo_Type extends IFXObject {
+	public final native void setMediaAcctInventoryInqRq(MediaAcctInventoryInqRq mediaAcctInventoryInqRq)/*-{
+		this.mediaAcctInventoryInqRq = mediaAcctInventoryInqRq;
+	}-*/;
+
+	public final native MediaAcctInventoryInqRq getMediaAcctInventoryInqRq()/*-{
+		return $wnd.cleanObject(this.mediaAcctInventoryInqRq);
+	}-*/;
+}

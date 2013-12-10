@@ -1,0 +1,117 @@
+package my.com.infopro.ifx.client.model;
+
+public class ChkIssueInqRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn)/*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+
+	public final native RecCtrlIn getRecCtrlIn()/*-{
+		return $wnd.cleanObject(this.recCtrlIn);
+	}-*/;
+
+	public final native void setChkIssueId(ChkIssueId chkIssueId)/*-{
+		this.chkIssueId = chkIssueId;
+	}-*/;
+
+	public final native ChkIssueId getChkIssueId()/*-{
+		return $wnd.cleanObject(this.chkIssueId);
+	}-*/;
+
+	public final native void setDepAcctIdFrom(DepAcctIdFrom[] depAcctIdFrom)/*-{
+		this.depAcctIdFrom = depAcctIdFrom;
+	}-*/;
+
+	public final native DepAcctIdFrom[] getDepAcctIdFrom()/*-{
+		return $wnd.cleanObject(this.depAcctIdFrom);
+	}-*/;
+
+	public final native void setChkNum(ChkNum[] chkNum)/*-{
+		this.chkNum = chkNum;
+	}-*/;
+
+	public final native ChkNum[] getChkNum()/*-{
+		return $wnd.cleanObject(this.chkNum);
+	}-*/;
+
+	public final native void setChkIssueStatusCode(
+			ChkIssueStatusCode[] chkIssueStatusCode)/*-{
+		this.chkIssueStatusCode = chkIssueStatusCode;
+	}-*/;
+
+	public final native ChkIssueStatusCode[] getChkIssueStatusCode()/*-{
+		return $wnd.cleanObject(this.chkIssueStatusCode);
+	}-*/;
+
+	public final native void setSelRangeDueDt(SelRangeDueDt[] selRangeDueDt)/*-{
+		this.selRangeDueDt = selRangeDueDt;
+	}-*/;
+
+	public final native SelRangeDueDt[] getSelRangeDueDt()/*-{
+		return $wnd.cleanObject(this.selRangeDueDt);
+	}-*/;
+
+	public final native void setSelRangePaidDt(SelRangePaidDt[] selRangePaidDt)/*-{
+		this.selRangePaidDt = selRangePaidDt;
+	}-*/;
+
+	public final native SelRangePaidDt[] getSelRangePaidDt()/*-{
+		return $wnd.cleanObject(this.selRangePaidDt);
+	}-*/;
+
+	public final native void setSelRangeCurAmt(SelRangeCurAmt[] selRangeCurAmt)/*-{
+		this.selRangeCurAmt = selRangeCurAmt;
+	}-*/;
+
+	public final native SelRangeCurAmt[] getSelRangeCurAmt()/*-{
+		return $wnd.cleanObject(this.selRangeCurAmt);
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId[] cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId[] getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+	}-*/;
+
+	public final native void setSPRefId(SPRefId[] sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId[] getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+	}-*/;
+}

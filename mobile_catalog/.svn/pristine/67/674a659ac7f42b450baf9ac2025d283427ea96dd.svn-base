@@ -1,0 +1,17 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PmtSel extends IFXObject {
+	protected PmtSel(){	
+	}
+	public final native JsArray<PmtKeys> getPmtKeys() /*-{
+		return $wnd.cleanObject(pmtKeys);
+	}-*/;
+
+	public final native void setPmtKeys(JsArray<PmtKeys> pmtKeys) /*-{
+		this.pmtKeys = pmtKeys;
+	}-*/;
+}

@@ -1,0 +1,20 @@
+package my.com.infopro.ifx.client.model;
+
+public class StdPayeeRec_Type extends IFXObject {
+	
+	public final native void setStdPayeeId(StdPayeeId[] stdPayeeId)/*-{
+		this.stdPayeeId = stdPayeeId;
+	}-*/;
+
+	public final native StdPayeeId[] getStdPayeeId()/*-{
+		return $wnd.cleanObject(this.stdPayeeId);
+	}-*/;
+
+	public final native void setStdPayeeInfo(StdPayeeInfo stdPayeeInfo)/*-{
+		this.stdPayeeInfo = stdPayeeInfo;
+	}-*/;
+
+	public final native StdPayeeInfo getStdPayeeInfo()/*-{
+		return $wnd.cleanObject(this.stdPayeeInfo);
+	}-*/;
+}

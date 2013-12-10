@@ -1,0 +1,11 @@
+package com.bigoloo.gwt.jalaliwidget.server;
+
+import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import com.bigoloo.gwt.jalaliwidget.client.jalaliwidgetService;
+
+public class jalaliwidgetServiceImpl extends RemoteServiceServlet implements jalaliwidgetService {
+    // Implementation of sample interface method
+    public String getMessage(String msg) {
+        return "Client said: \"" + msg + "\"<br>Server answered: \"Hi!\"";
+    }
+}

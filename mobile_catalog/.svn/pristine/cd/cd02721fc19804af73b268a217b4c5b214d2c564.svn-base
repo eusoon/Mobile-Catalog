@@ -1,0 +1,43 @@
+package my.com.infopro.mobile.client.app;
+
+import com.google.gwt.user.client.ui.Widget;
+
+import my.com.infopro.mobile.client.tablet.MobileWebAppShellTablet;
+import my.com.infopro.mobile.client.tablet.SplashTablet;
+
+public class MobileWebAppShellTableImpl implements MobileWebAppShellClientFactory {
+
+	private MobileWebAppShell shell;
+	
+	private Widget splash;
+
+	@Override
+	public MobileWebAppShell getShell() {
+		 if (shell == null) {
+		      shell = createShell();
+		    }
+		    return shell;
+
+	}
+	@Override
+	public Widget getSplash() {
+		 if (splash == null) {
+			 splash = createSplash();
+		    }
+		    return splash;
+
+	}
+	 /**
+	   * Create the application UI shell.
+	   * 
+	   * @return the UI shell
+	   */
+	  protected MobileWebAppShell createShell() {
+	    
+	    return new MobileWebAppShellTablet();
+	  }
+	  protected Widget createSplash() {
+		    
+		    return new SplashTablet();
+	  }
+}

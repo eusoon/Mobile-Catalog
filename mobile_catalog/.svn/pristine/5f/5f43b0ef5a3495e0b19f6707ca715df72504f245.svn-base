@@ -1,0 +1,44 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class Status extends IFXObject {
+
+	public final native StatusCode getStatusCode() /*-{
+		return $wnd.cleanObject(statusCode);
+	}-*/;
+	public final native void setStatusCode(StatusCode statusCode) /*-{
+		this.statusCode = statusCode;
+	}-*/;
+	public final native ServerStatusCode getServerStatusCode() /*-{
+		return $wnd.cleanObject(serverStatusCode);
+	}-*/;
+	public final native void setServerStatusCode(ServerStatusCode serverStatusCode) /*-{
+		this.serverStatusCode = serverStatusCode;
+	}-*/;
+	public final native Severity getSeverity() /*-{
+		return $wnd.cleanObject(Severity);
+	}-*/;
+	public final native void setSeverity(Severity severity) /*-{
+		Severity = severity;
+	}-*/;
+	public final native StatusDesc getStatusDesc() /*-{
+		return $wnd.cleanObject(statusDesc);
+	}-*/;
+	public final native void setStatusDesc(StatusDesc statusDesc) /*-{
+		this.statusDesc = statusDesc;
+	}-*/;
+	public final native SubjectElement[] getSubjectElement() /*-{
+		return $wnd.cleanObject(subjectElement);
+	}-*/;
+	public final native void setSubjectElement(SubjectElement[] subjectElement) /*-{
+		this.subjectElement = subjectElement;
+	}-*/;
+	public final native AdditionalStatus getAdditionalStatus() /*-{
+		return $wnd.cleanObject(additionalStatus);
+	}-*/;
+	public final native void setAdditionalStatus(AdditionalStatus additionalStatus) /*-{
+		this.additionalStatus = additionalStatus;
+	}-*/;
+
+}

@@ -1,0 +1,22 @@
+package my.com.infopro.ifx.client.model;
+
+public class StdPayeeId_Type extends IFXObject {
+	
+	public native void setSPName(SPName sPName) /*-{
+		this.sPName = sPName;
+	}-*/;
+
+	public final native SPName getSPName()/*-{
+		return $wnd.cleanObject(this.sPName);
+
+	}-*/;
+
+	public final native void setBillerNum(BillerNum billerNum)/*-{
+		this.billerNum = billerNum;
+	}-*/;
+
+	public final native BillerNum getBillerNum()/*-{
+		return $wnd.cleanObject(this.billerNum);
+
+	}-*/;
+}

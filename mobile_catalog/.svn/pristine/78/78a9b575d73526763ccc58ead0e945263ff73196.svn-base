@@ -1,0 +1,8 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class StartSession extends Boolean {
+
+	protected StartSession(){
+	}
+	
+}

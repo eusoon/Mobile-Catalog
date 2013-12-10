@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public enum BalTypeValues {
+	Avail, AvailCredit, AvgLedger, ClosingLedger, ClosingOutstanding, CreditHeld, CreditLimit, Current, DebitHeld, Escrow, Ledger, MinLedger, OpeningLedger, OpeningOutstanding, Outstanding, PayoffAmt, Principal, RwdBonus, RwdReg, TotalHeld
+}

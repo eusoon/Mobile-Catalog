@@ -1,0 +1,57 @@
+package my.com.infopro.ifx.client.model;
+
+public class PostingSessionStatusModRq_Type extends IFXObject {
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setPostingSessionId(PostingSessionId postingSessionId)/*-{
+		this.postingSessionId = postingSessionId;
+	}-*/;
+
+	public final native PostingSessionId getPostingSessionId()/*-{
+		return $wnd.cleanObject(this.postingSessionId);
+
+	}-*/;
+
+	public native void setPostingSessionStatus(
+			PostingSessionStatus postingSessionStatus)/*-{
+		this.postingSessionStatus = postingSessionStatus;
+	}-*/;
+
+	public final native PostingSessionStatus getPostingSessionStatus()/*-{
+		return $wnd.cleanObject(this.postingSessionStatus);
+
+	}-*/;
+
+}

@@ -1,0 +1,22 @@
+package my.com.infopro.ifx.client.model;
+
+public class PhoneNum_Type extends IFXObject {
+	public final native void setPhoneType(PhoneType phoneType)/*-{
+		this.phoneType = phoneType;
+	}-*/;
+
+	public final native PhoneType getPhoneType()/*-{
+		return $wnd.cleanObject(this.phoneType);
+
+	}-*/;
+
+	public final native void setPhone(Phone phone)/*-{
+		this.phone = phone;
+	}-*/;
+
+	public final native Phone getPhone()/*-{
+		return $wnd.cleanObject(this.phone);
+
+	}-*/;
+
+}

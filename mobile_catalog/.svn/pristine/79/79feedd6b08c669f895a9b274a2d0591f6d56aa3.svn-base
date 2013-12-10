@@ -1,0 +1,99 @@
+package my.com.infopro.ifx.client.model;
+
+public class CustPayeeInqRq_Type extends IFXObject {
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn)/*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+
+	public final native RecCtrlIn getRecCtrlIn()/*-{
+		return $wnd.cleanObject(this.recCtrlIn);
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod getDeliveryMethod() /*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+	}-*/;
+
+	public final native void setCustPayeeId(CustPayeeId custPayeeId)/*-{
+		this.custPayeeId = custPayeeId;
+	}-*/;
+
+	public final native CustPayeeId getCustPayeeId()/*-{
+		return $wnd.cleanObject(this.custPayeeId);
+	}-*/;
+
+	
+
+	public final native void setPayeeType(PayeeType[] payeeType)/*-{
+		this.payeeType = payeeType;
+	}-*/;
+
+	public final native PayeeType[] getPayeeType()/*-{
+		return $wnd.cleanObject(this.payeeType);
+
+	}-*/;
+
+	public final native void setName(Name[] name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name[] getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setNickname(Nickname[] nickname)/*-{
+		this.nickname = nickname;
+	}-*/;
+
+	public final native Nickname[] getNickname()/*-{
+		return $wnd.cleanObject(this.nickname);
+	}-*/;
+
+	public final native void setIncToken(IncToken[] incToken)/*-{
+		this.incToken = incToken;
+	}-*/;
+
+	public final native IncToken[] getIncToken()/*-{
+		return $wnd.cleanObject(this.incToken);
+	}-*/;
+
+}

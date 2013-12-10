@@ -1,0 +1,30 @@
+package my.com.infopro.mobile.client.ifx.rate;
+
+import my.com.infopro.mobile.client.ifx.element.OperRqHdr;
+import my.com.infopro.mobile.client.ifx.element.RqUID;
+
+public class ForExDealAddOperRq {
+	
+	RqUID rqUID; //UUID	Required	Request Identifier
+	OperRqHdr operRqHdr; //Aggregate	Required	Operation Request Header
+	ForExDealAddRq[] forExDealAddRq; //Aggregate	Required Repeating	Foreign Exchange Deal Status Add Request
+	
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public OperRqHdr getOperRqHdr() {
+		return operRqHdr;
+	}
+	public void setOperRqHdr(OperRqHdr operRqHdr) {
+		this.operRqHdr = operRqHdr;
+	}
+	public ForExDealAddRq[] getForExDealAddRq() {
+		return forExDealAddRq;
+	}
+	public void setForExDealAddRq(ForExDealAddRq[] forExDealAddRq) {
+		this.forExDealAddRq = forExDealAddRq;
+	}
+}

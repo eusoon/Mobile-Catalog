@@ -1,0 +1,51 @@
+package my.com.infopro.ifx.card;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.CardAuthRec;
+import my.com.infopro.ifx.element.CardRec;
+import my.com.infopro.ifx.element.CardStatusRec;
+import my.com.infopro.ifx.element.MsgRqHdr;
+import my.com.infopro.ifx.element.RqUID;
+
+public class CardAdviseRq extends IFXObject {
+
+	RqUID rqUID;	 //	UUID	 Required	 Request Identifier
+	MsgRqHdr msgRqHdr;	 //	Aggregate	 Optional	 Message Request Header
+	//begin-xor	Required
+	CardRec cardRec;	 //	Aggregate	 Required	 Card Record
+	CardStatusRec cardStatusRec;	 //	Aggregate	 Required	 Card Status Record
+	CardAuthRec cardAuthRec;	 //	Aggregate	 Required	 Card Authentication Record
+	//end-xor
+	
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRqHdr getMsgRqHdr() {
+		return msgRqHdr;
+	}
+	public void setMsgRqHdr(MsgRqHdr msgRqHdr) {
+		this.msgRqHdr = msgRqHdr;
+	}
+	public CardRec getCardRec() {
+		return cardRec;
+	}
+	public void setCardRec(CardRec cardRec) {
+		this.cardRec = cardRec;
+	}
+	public CardStatusRec getCardStatusRec() {
+		return cardStatusRec;
+	}
+	public void setCardStatusRec(CardStatusRec cardStatusRec) {
+		this.cardStatusRec = cardStatusRec;
+	}
+	public CardAuthRec getCardAuthRec() {
+		return cardAuthRec;
+	}
+	public void setCardAuthRec(CardAuthRec cardAuthRec) {
+		this.cardAuthRec = cardAuthRec;
+	}
+	
+}

@@ -1,0 +1,39 @@
+<html>
+<head>
+
+    <!--                                           -->
+    <!-- Any title is fine                         -->
+    <!--                                           -->
+    <title>Wrapper HTML for App</title>
+
+    <link type="text/css" rel="stylesheet" href="css/jalaliwidget.css">
+
+    <!--                                            -->
+    <!-- This script is required bootstrap stuff.   -->
+    <!--                                            -->
+    <script type="text/javascript" language="javascript" src="jalaliwidget/jalaliwidget.nocache.js"></script>
+</head>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic ui         -->
+<!--                                           -->
+<body>
+
+<h1>Jalali Datebox And Date picker for GWT</h1>
+
+<p>
+    This is an example of a Shamsi DateBox and DatePicker in Gwt
+</p>
+<div id="datepicker"></div>
+<table align="center">
+    <tr>
+        <td id="slot1"></td>
+        <td id="slot2"></td>
+    </tr>
+</table>
+
+<div id="datebox"></div>
+</body>
+</html>

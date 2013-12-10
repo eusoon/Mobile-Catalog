@@ -1,0 +1,20 @@
+package my.com.infopro.mobile.json.ifx.basetypes;
+
+/**
+ * The IFXBoolean class models the xsd:boolean datatype.
+ * @author Ong Eu Soon (eusoon@gmail.com)
+ * @version $Revision: 2.3 $
+ */
+public class IFXBoolean extends IFXObject implements IBaseType {
+	protected IFXBoolean(){	
+	}
+	@Override
+	public final native  void setString(String s) /*-{
+		this.string = string;
+	}-*/;
+
+	@Override
+	public  final native String getString() /*-{
+    	return $wnd.cleanString(this.string);
+	}-*/;
+}

@@ -1,0 +1,225 @@
+/*
+    This file is part of Cyclos (www.cyclos.org).
+    A project of the Social Trade Organisation (www.socialtrade.org).
+
+    Cyclos is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    Cyclos is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Cyclos; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+ */
+package my.com.infopro.mobile.client.contacts;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
+
+import my.com.infopro.ifx.IFX;
+import my.com.infopro.ifx.element.AcctType;
+import my.com.infopro.ifx.element.AcctTypeValue;
+import my.com.infopro.ifx.element.RecSelect;
+import my.com.infopro.ifx.element.RqUID;
+import my.com.infopro.ifx.payee.CustPayeeInqRq;
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.Navigation;
+import my.com.infopro.mobile.client.Notification;
+import my.com.infopro.mobile.client.Notification.NotificationLayout;
+import my.com.infopro.mobile.client.model.Contact;
+import my.com.infopro.mobile.client.model.Parameters;
+import my.com.infopro.mobile.client.services.ContactService;
+import my.com.infopro.mobile.client.ui.Icon;
+import my.com.infopro.mobile.client.ui.Page;
+import my.com.infopro.mobile.client.ui.PageAnchor;
+import my.com.infopro.mobile.client.ui.widgets.SimpleDataList;
+import my.com.infopro.mobile.client.ui.widgets.UserRow;
+import my.com.infopro.mobile.client.utils.PageAction;
+import my.com.infopro.mobile.client.utils.ParameterKey;
+import my.com.infopro.mobile.clients.setting.LocalSettings;
+import my.com.infopro.mobile.json.ifx.element.CustPayeeInfo;
+import my.com.infopro.mobile.json.ifx.element.CustPayeeRec;
+import my.com.infopro.mobile.json.ifx.element.Email;
+import my.com.infopro.mobile.json.ifx.element.Locator;
+import my.com.infopro.mobile.json.ifx.payee.CustPayeeInqRs;
+
+import com.google.gwt.cell.client.Cell.Context;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JsArray;
+import com.google.gwt.json.client.JSONArray;
+import com.google.gwt.json.client.JSONNull;
+import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.json.client.JSONString;
+import com.google.gwt.json.client.JSONValue;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Widget;
+
+/**
+ * A {@link Page} used to display contacts. 
+ */
+public class ContactsPage extends Page {
+
+    private ContactService contactService = GWT.create(ContactService.class);
+    
+    @Override
+    public String getHeading() {
+        return messages.contactsHeading();
+    }
+
+    @Override
+    public boolean hasCustomScroll() {     
+        return true;
+    }
+    
+    @Override
+    public Widget initialize() {
+        
+        // List pages uses fixed notification layout
+        Notification.get().setLayout(NotificationLayout.FIXED);
+        
+        SimpleDataList<Contact> dataList = new SimpleDataList<Contact>() {
+            
+            @Override
+            protected Widget onRender(Context context, Contact data) {                
+                
+                // Value can be null
+                if (data == null) {
+                  return null;
+                }
+                
+                // Create row widget
+                UserRow row = new UserRow();
+                row.setImage(Icon.CONTACT.image());
+                row.setHeading(data.getMember().getUsername());
+                row.setSub(data.getMember().getName());               
+                
+                return row;
+            }
+
+            @Override
+            protected void onSearchData(final AsyncCallback<JsArray<Contact>> callback) {
+                // Fetch contacts
+               // contactService.list(callback);
+            	final LoggedUser loggerUser=LoggedUser.get();
+                Parameters params=new Parameters();
+                CustPayeeInqRq custPayeeInqRq=new CustPayeeInqRq();
+                RqUID rqUID=new RqUID();
+            	rqUID.setString(UUID.randomUUID().toString());
+            	custPayeeInqRq.setRqUID(rqUID);
+            	custPayeeInqRq.setMsgRqHdr(IFX.getMsgRqHdr(loggerUser));
+            	
+            	RecSelect[] recSelect=new RecSelect[2];
+            	recSelect[0].setString("$.custPayeeRec.custPayeeStatus[?(@.custPayeeStatusCode='Active')]");
+            	recSelect[1].setString("$.custPayeeRec.custPayeeEnvr.partyKeys.loginIdent[?(@.loginName='"+loggerUser.getPrincipal()+"')]");
+				custPayeeInqRq.setRecSelect(recSelect);
+				params.add("custPayeeInqRq", custPayeeInqRq);
+                AsyncCallback<CustPayeeInqRs> callback1=new AsyncCallback<CustPayeeInqRs> (){
+
+					@Override
+					public void onFailure(Throwable caught) {
+						callback.onFailure(caught);
+					}
+
+					@Override
+					public void onSuccess(CustPayeeInqRs result) {
+
+						CustPayeeRec[] custPayeeRecs = result.getCustPayeeRec();
+						JSONArray arr = new JSONArray();
+						int i = 0;
+						for (CustPayeeRec custPayeeRec : custPayeeRecs)
+						{
+							String loginName = custPayeeRec.getCustPayeeEnvr().getPartyKeys().getLoginIdent().getLoginName().getString();
+							if (loggerUser.getPrincipal().equalsIgnoreCase(loginName))
+							{
+								CustPayeeInfo custPayeeInfo =custPayeeRec.getCustPayeeInfo();
+								JSONObject contact = new JSONObject();
+											
+								JSONObject member=new JSONObject();
+								JsArray<my.com.infopro.mobile.json.ifx.element.Contact> contacts=custPayeeInfo.getStdPayeeRef().getStdPayeeInfo().getPartyData().getContact();
+								for(int x=0;x<contacts.length();x++){
+									my.com.infopro.mobile.json.ifx.element.Contact contact1=contacts.get(x);
+									Locator locator=contact1.getLocator();
+									if(locator instanceof Email){
+										Email email=(Email)locator;
+										String email1=email.getEmailAddr().getString();;
+										member.put("email", getAsJSONString(email1));
+									}
+								}
+								
+								String name=custPayeeRec.getCustPayeeInfo().getName().getString();
+								member.put("name",getAsJSONString(name));
+								String username=custPayeeRec.getCustPayeeEnvr().getPartyKeys().getLoginIdent().getLoginName().getString();
+								member.put("username", getAsJSONString(username));
+								contact.put("member", member);
+								String notes="";
+								contact.put("notes", getAsJSONString(notes));
+								arr.set(i++, contact);
+							}
+							else{
+								
+							}
+						}
+						JsArray<Contact> result1 = arr.getJavaScriptObject().cast();
+						callback.onSuccess(result1);
+					}
+                	
+                };
+                //Fetch contacts
+                contactService.list(params, callback1);
+            }
+            private JSONValue getAsJSONString(String value) {
+        		if (value == null) {
+        			return JSONNull.getInstance();
+        		}
+
+        		return new JSONString(value);
+        	}
+            
+            @Override
+            protected void onRowSelected(Contact value) {   
+                // Go to contact details page
+                navigateTo(value.getMember().getId());
+            }          
+        };
+
+        return dataList;
+    }
+        
+    /**
+     * Navigates to contact details sending according parameters     
+     */
+    protected void navigateTo(Long memberId) {
+        Parameters params = new Parameters();
+        params.add(ParameterKey.ID, memberId);   
+        Navigation.get().go(PageAnchor.CONTACT_DETAILS, params);    
+    }
+    
+    @Override
+    public List<PageAction> getPageActions() {
+        return Arrays.asList(getSearchAction());
+    }
+
+    /**
+     * Returns search action
+     */
+    private PageAction getSearchAction() {
+        return new PageAction() {
+            @Override
+            public void run() {
+                Navigation.get().go(PageAnchor.USER_SEARCH);
+            }
+            @Override
+            public String getLabel() {
+                return messages.addNewContact();
+            }            
+        };
+    }
+    
+}

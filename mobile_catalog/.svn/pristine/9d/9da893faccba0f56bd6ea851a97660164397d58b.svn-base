@@ -1,0 +1,204 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class VehicleRentalAddenda extends CardAddenda {
+
+	public final native RentalAgreement getRentalAgreement() /*-{
+		return $wnd.cleanObject(rentalAgreement);
+	}-*/;
+	public final native void setRentalAgreement(RentalAgreement rentalAgreement) /*-{
+		this.rentalAgreement = rentalAgreement;
+	}-*/;
+	public final native RenterName getRenterName() /*-{
+		return $wnd.cleanObject(renterName);
+	}-*/;
+	public final native void setRenterName(RenterName renterName) /*-{
+		this.renterName = renterName;
+	}-*/;
+	public final native RentalAgencyName getRentalAgencyName() /*-{
+		return $wnd.cleanObject(rentalAgencyName);
+	}-*/;
+	public final native void setRentalAgencyName(RentalAgencyName rentalAgencyName) /*-{
+		this.rentalAgencyName = rentalAgencyName;
+	}-*/;
+	public final native PickupCity getPickupCity() /*-{
+		return $wnd.cleanObject(pickupCity);
+	}-*/;
+	public final native void setPickupCity(PickupCity pickupCity) /*-{
+		this.pickupCity = pickupCity;
+	}-*/;
+	public final native PickupStateProv getPickupStateProv() /*-{
+		return $wnd.cleanObject(pickupStateProv);
+	}-*/;
+	public final native void setPickupStateProv(PickupStateProv pickupStateProv) /*-{
+		this.pickupStateProv = pickupStateProv;
+	}-*/;
+	public final native PickupRegion getPickupRegion() /*-{
+		return $wnd.cleanObject(pickupRegion);
+	}-*/;
+	public final native void setPickupRegion(PickupRegion pickupRegion) /*-{
+		this.pickupRegion = pickupRegion;
+	}-*/;
+	public final native PickupCountry getPickupCountry() /*-{
+		return $wnd.cleanObject(pickupCountry);
+	}-*/;
+	public final native void setPickupCountry(PickupCountry pickupCountry) /*-{
+		this.pickupCountry = pickupCountry;
+	}-*/;
+	public final native PickupLoc getPickupLoc() /*-{
+		return $wnd.cleanObject(pickupLoc);
+	}-*/;
+	public final native void setPickupLoc(PickupLoc pickupLoc) /*-{
+		this.pickupLoc = pickupLoc;
+	}-*/;
+	public final native PickupDt getPickupDt() /*-{
+		return $wnd.cleanObject(pickupDt);
+	}-*/;
+	public final native void setPickupDt(PickupDt pickupDt) /*-{
+		this.pickupDt = pickupDt;
+	}-*/;
+	public final native PickupTime getPickupTime() /*-{
+		return $wnd.cleanObject(pickupTime);
+	}-*/;
+	public final native void setPickupTime(PickupTime pickupTime) /*-{
+		this.pickupTime = pickupTime;
+	}-*/;
+	public final native ReturnCity getReturnCity() /*-{
+		return $wnd.cleanObject(returnCity);
+	}-*/;
+	public final native void setReturnCity(ReturnCity returnCity) /*-{
+		this.returnCity = returnCity;
+	}-*/;
+	public final native ReturnStateProv getReturnStateProv() /*-{
+		return $wnd.cleanObject(returnStateProv);
+	}-*/;
+	public final native void setReturnStateProv(ReturnStateProv returnStateProv) /*-{
+		this.returnStateProv = returnStateProv;
+	}-*/;
+	public final native ReturnRegion getReturnRegion() /*-{
+		return $wnd.cleanObject(returnRegion);
+	}-*/;
+	public final native void setReturnRegion(ReturnRegion returnRegion) /*-{
+		this.returnRegion = returnRegion;
+	}-*/;
+	public final native ReturnCountry getReturnCountry() /*-{
+		return $wnd.cleanObject(returnCountry);
+	}-*/;
+	public final native void setReturnCountry(ReturnCountry returnCountry) /*-{
+		this.returnCountry = returnCountry;
+	}-*/;
+	public final native ReturnLoc getReturnLoc() /*-{
+		return $wnd.cleanObject(returnLoc);
+	}-*/;
+	public final native void setReturnLoc(ReturnLoc returnLoc) /*-{
+		this.returnLoc = returnLoc;
+	}-*/;
+	public final native ReturnDt getReturnDt() /*-{
+		return $wnd.cleanObject(returnDt);
+	}-*/;
+	public final native void setReturnDt(ReturnDt returnDt) /*-{
+		this.returnDt = returnDt;
+	}-*/;
+	public final native ReturnTime getReturnTime() /*-{
+		return $wnd.cleanObject(returnTime);
+	}-*/;
+	public final native void setReturnTime(ReturnTime returnTime) /*-{
+		this.returnTime = returnTime;
+	}-*/;
+	public final native CSPhoneNum getcSPhoneNum() /*-{
+		return $wnd.cleanObject(cSPhoneNum);
+	}-*/;
+	public final native void setcSPhoneNum(CSPhoneNum cSPhoneNum) /*-{
+		this.cSPhoneNum = cSPhoneNum;
+	}-*/;
+	public final native RentalRateDuration getRentalRateDuration() /*-{
+		return $wnd.cleanObject(rentalRateDuration);
+	}-*/;
+	public final native void setRentalRateDuration(RentalRateDuration rentalRateDuration) /*-{
+		this.rentalRateDuration = rentalRateDuration;
+	}-*/;
+	public final native TotalDistance getTotalDistance() /*-{
+		return $wnd.cleanObject(totalDistance);
+	}-*/;
+	public final native void setTotalDistance(TotalDistance totalDistance) /*-{
+		this.totalDistance = totalDistance;
+	}-*/;
+	public final native MaxFreeDistance getMaxFreeDistance() /*-{
+		return $wnd.cleanObject(maxFreeDistance);
+	}-*/;
+	public final native void setMaxFreeDistance(MaxFreeDistance maxFreeDistance) /*-{
+		this.maxFreeDistance = maxFreeDistance;
+	}-*/;
+	public final native DistanceUnit getDistanceUnit() /*-{
+		return $wnd.cleanObject(distanceUnit);
+	}-*/;
+	public final native void setDistanceUnit(DistanceUnit distanceUnit) /*-{
+		this.distanceUnit = distanceUnit;
+	}-*/;
+	public final native VehicleInsuranceInd getVehicleInsuranceInd() /*-{
+		return $wnd.cleanObject(vehicleInsuranceInd);
+	}-*/;
+	public final native void setVehicleInsuranceInd(VehicleInsuranceInd vehicleInsuranceInd) /*-{
+		this.vehicleInsuranceInd = vehicleInsuranceInd;
+	}-*/;
+	public final native RentalAuditAdjInd getRentalAuditAdjInd() /*-{
+		return $wnd.cleanObject(rentalAuditAdjInd);
+	}-*/;
+	public final native void setRentalAuditAdjInd(RentalAuditAdjInd rentalAuditAdjInd) /*-{
+		this.rentalAuditAdjInd = rentalAuditAdjInd;
+	}-*/;
+	public final native RentalProgram getRentalProgram() /*-{
+		return $wnd.cleanObject(rentalProgram);
+	}-*/;
+	public final native void setRentalProgram(RentalProgram rentalProgram) /*-{
+		this.rentalProgram = rentalProgram;
+	}-*/;
+	public final native TotalTaxCollectedInd getTotalTaxCollectedInd() /*-{
+		return $wnd.cleanObject(totalTaxCollectedInd);
+	}-*/;
+	public final native void setTotalTaxCollectedInd(TotalTaxCollectedInd totalTaxCollectedInd) /*-{
+		this.totalTaxCollectedInd = totalTaxCollectedInd;
+	}-*/;
+	public final native CommodityCategory getCommodityCategory() /*-{
+		return $wnd.cleanObject(commodityCategory);
+	}-*/;
+	public final native void setCommodityCategory(CommodityCategory commodityCategory) /*-{
+		this.commodityCategory = commodityCategory;
+	}-*/;
+	public final native TaxExemptInd getTaxExemptInd() /*-{
+		return $wnd.cleanObject(taxExemptInd);
+	}-*/;
+	public final native void setTaxExemptInd(TaxExemptInd taxExemptInd) /*-{
+		this.taxExemptInd = taxExemptInd;
+	}-*/;
+	public final native CorporateIdent getCorporateIdent() /*-{
+		return $wnd.cleanObject(corporateIdent);
+	}-*/;
+	public final native void setCorporateIdent(CorporateIdent corporateIdent) /*-{
+		this.corporateIdent = corporateIdent;
+	}-*/;
+	public final native DaysRented getDaysRented() /*-{
+		return $wnd.cleanObject(daysRented);
+	}-*/;
+	public final native void setDaysRented(DaysRented daysRented) /*-{
+		this.daysRented = daysRented;
+	}-*/;
+	public final native NoShowInd getNoShowInd() /*-{
+		return $wnd.cleanObject(noShowInd);
+	}-*/;
+	public final native void setNoShowInd(NoShowInd noShowInd) /*-{
+		this.noShowInd = noShowInd;
+	}-*/;
+	public final native RentalClass getRentalClass() /*-{
+		return $wnd.cleanObject(rentalClass);
+	}-*/;
+	public final native void setRentalClass(RentalClass rentalClass) /*-{
+		this.rentalClass = rentalClass;
+	}-*/;
+	public final native RentalCharge getRentalCharge() /*-{
+		return $wnd.cleanObject(rentalCharge);
+	}-*/;
+	public final native void setRentalCharge(RentalCharge rentalCharge) /*-{
+		this.rentalCharge = rentalCharge;
+	}-*/;
+
+}

@@ -1,0 +1,14 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+public class OperRqHdr extends MsgRqHdr {
+	protected OperRqHdr(){	
+	}
+	public final native  OperRules getOperRules()/*-{
+		return $wnd.cleanObject(this.operRules);
+	}-*/;
+
+	public final native  void setOperRules(OperRules operRules)/*-{
+		this.operRules = operRules;
+	}-*/;
+	
+}

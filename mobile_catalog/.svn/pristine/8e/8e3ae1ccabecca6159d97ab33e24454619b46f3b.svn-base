@@ -1,0 +1,15 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class ForExQuoteSel extends IFXObject {
+
+	public final native  ForExQuoteKeys getForExQuoteKeys()/*-{
+		return $wnd.cleanObject(this.forExQuoteKeys);
+	}-*/;
+
+	public final native  void setForExQuoteKeys(ForExQuoteKeys forExQuoteKeys)/*-{
+		this.forExQuoteKeys = forExQuoteKeys;
+	}-*/;
+	
+}

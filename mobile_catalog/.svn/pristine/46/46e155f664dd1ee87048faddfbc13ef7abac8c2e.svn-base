@@ -1,0 +1,39 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class CardAcctId_Type extends IFXObject {
+
+	public final native void setAcctId(AcctId acctId) /*-{
+	this.acctId = acctId;
+}-*/;
+	
+	public final native AcctId getAcctId() /*-{
+		return $wnd.cleanObject(this.acctId);
+	}-*/;
+
+	public final native void setCardMagData(CardMagData cardMagData)/*-{
+		this.cardMagData = cardMagData;
+	}-*/;
+
+	public final native CardMagData getCardMagData()/*-{
+		return $wnd.cleanObject(this.cardMagData);
+	}-*/;
+	
+	public final native void setAcctType(AcctType acctType) /*-{
+		this.acctType = acctType;
+	}-*/;
+
+	public final native AcctType getAcctType() /*-{
+		return $wnd.cleanObject(this.acctType);
+	}-*/;
+
+	public final native void setCCMotoAcct(CCMotoAcct cCMotoAcct) /*-{
+	this.cCMotoAcct = cCMotoAcct;
+}-*/;
+
+	public final native CCMotoAcct getCCMotoAcct()/*-{
+		return $wnd.cleanObject(this.cCMotoAcct);
+	}-*/;
+
+	
+}

@@ -1,0 +1,19 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class PassbkSel extends IFXObject {
+
+	//begin-xor	Required Repeating
+	PassbkKeys passbkKeys; //Aggregate	Required	Passbook Keys Aggregate
+	//end-xor
+
+	public PassbkKeys getPassbkKeys() {
+		return passbkKeys;
+	}
+
+	public void setPassbkKeys(PassbkKeys passbkKeys) {
+		this.passbkKeys = passbkKeys;
+	}
+	
+}

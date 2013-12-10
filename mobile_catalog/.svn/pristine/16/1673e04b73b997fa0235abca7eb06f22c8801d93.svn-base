@@ -1,0 +1,114 @@
+package my.com.infopro.ifx.client.model;
+
+public class RecChkOrdModRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setRecChkOrdId(RecChkOrdId recChkOrdId)/*-{
+		this.recChkOrdId = recChkOrdId;
+	}-*/;
+
+	public final native RecChkOrdId getRecChkOrdId() /*-{
+		return $wnd.cleanObject(this.recChkOrdId);
+	}-*/;
+
+	public native void setChkOrdInfo(ChkOrdInfo chkOrdInfo)/*-{
+		this.chkOrdInfo = chkOrdInfo;
+	}-*/;
+
+	public final native ChkOrdInfo getChkOrdInfo() /*-{
+		return $wnd.cleanObject(this.chkOrdInfo);
+	}-*/;
+
+	public final native void setRecModelInfo(RecModelInfo recModelInfo)/*-{
+		this.recModelInfo = recModelInfo;
+	}-*/;
+
+	public final native RecModelInfo getRecModelInfo()/*-{
+		return $wnd.cleanObject(this.recModelInfo);
+	}-*/;
+
+	public final native void setModPending(ModPending modPending)/*-{
+		this.modPending = modPending;
+	}-*/;
+
+	public final native ModPending getModPending()/*-{
+		return $wnd.cleanObject(this.modPending);
+
+	}-*/;
+
+	public final native void setRecChkOrdRec(RecChkOrdRec recChkOrdRec)/*-{
+		this.recChkOrdRec = recChkOrdRec;
+	}-*/;
+
+	public final native RecChkOrdRec getRecChkOrdRec()/*-{
+		return $wnd.cleanObject(this.recChkOrdRec);
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+
+	}-*/;
+
+	public final native void setSPRefId(SPRefId sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+
+	}-*/;
+
+}

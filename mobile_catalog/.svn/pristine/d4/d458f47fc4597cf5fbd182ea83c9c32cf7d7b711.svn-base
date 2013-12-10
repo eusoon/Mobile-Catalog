@@ -1,0 +1,15 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public abstract class CardUpdateInfo extends IFXObject {
+	CardRef cardRef;		//Aggregate		Optional	Card Reference Aggregate
+
+	public CardRef getCardRef() {
+		return cardRef;
+	}
+
+	public void setCardRef(CardRef cardRef) {
+		this.cardRef = cardRef;
+	}
+}

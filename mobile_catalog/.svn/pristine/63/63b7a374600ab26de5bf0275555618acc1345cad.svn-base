@@ -1,0 +1,9 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class LastUpdateRqUID extends UUID {
+	protected LastUpdateRqUID(){	
+	}
+	protected LastUpdateRqUID(){
+	}
+	
+}

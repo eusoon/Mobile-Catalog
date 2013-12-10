@@ -1,0 +1,37 @@
+package my.com.infopro.ifx.client.model;
+
+public class TaxInfo_Type extends IFXObject {
+
+	public final native void setOrg(Org org)/*-{
+		this.org = org;
+	}-*/;
+
+	public final native Org getOrg()/*-{
+		return $wnd.cleanObject(this.org);
+	}-*/;
+
+	public final native void setTaxType(TaxType taxType)/*-{
+		this.taxType = taxType;
+	}-*/;
+
+	public final native TaxType getTaxType()/*-{
+		return $wnd.cleanObject(this.taxType);
+	}-*/;
+
+	public final native void setCurAmt(CurAmt curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+
+	public final native CurAmt getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+
+	public final native void setRate(Rate rate)/*-{
+		this.rate = rate;
+	}-*/;
+
+	public final native Rate getRate()/*-{
+		return $wnd.cleanObject(this.rate);
+	}-*/;
+
+}

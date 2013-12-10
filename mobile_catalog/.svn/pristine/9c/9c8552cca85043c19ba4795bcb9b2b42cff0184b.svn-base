@@ -1,0 +1,100 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class IdentCharacterData extends IFXObject {
+	IdentType identType;	 //	Open Enum	 Required	 The type of identification presented or inferred by the customer.Unknown, MagStripeCard, ICCCard
+	ExpDt expDt;	 //	DateTime	 Optional	 The date/time that the identification device will expire or otherwise become ineffective. Use of the identification device after this date/time will normally not be allowed.
+	StartDt startDt;	 //	DateTime	 Optional	 The date/time that the identification device became or will become effective. Use of the identification device before this date/time will normally not be allowed.
+	OrigIssueDt origIssueDt;	 //	DateTime	 Optional	 The date/time that identification was first issued to the customer that is presenting this device. This will normally represent a "customer since" or similar concept.
+	IdentProgram identProgram;	 //	Identifier	 Optional	 The identifier of the program that the identification device belongs to. This is a detailed classification of the identification by line of business. It is intended to support special processing of specific customer classes. Servers should ignore this field unless they have a specific agreement with the identification device acceptor that specifies special processing.
+	IdentReadMethod[] identReadMethod;	 //	Open Enum	 Optional Repeating	 The actual method used to read the customer's identification device.Valid values: Manual, BarCode, MagStripe, OCR, ICC, Customer.
+	IdentPrevReadMethod[] identPrevReadMethod;	 //	Open Enum	 Optional Repeating	 The actual method used by the device to read the previously used customer's identification device (card).The IFX client should be able to keep track of the previous "read method" in order to support this functionality.Valid values: Manual, BarCode, MagStripe, OCR, ICC, Customer.
+	IdentServiceCode identServiceCode;	 //	C-3	 Optional	 The Service Code read from the customer's identification device, as defined by ISO 7813.This Service Code comes from the "chip" (Integrated Circuit - IC) on the card, if the chip is present on the card and it could be successfully read; otherwise, this Service Code will come from the magnetic stripe present on the card.
+	IdentPrevServiceCode identPrevServiceCode;	 //	C-3	 Optional	 The Service Code read from the previously used customer's identification device, as defined by ISO 7813.The IFX client should be able to keep track of the previous "service code" in order to support this functionality.This Service Code comes from the "chip" (Integrated Circuit - IC) on the card, if the chip is present on the card and it could be successfully read; otherwise, this Service Code will come from the magnetic stripe present on the card.
+	IdentVerifyMethod[] identVerifyMethod;	 //	Open Enum	 Optional Repeating	 The actual method used to verify the customer's authority to use the presented identification device.Valid values: Unknown, None, Signature, PictureID, OnlinePIN, OfflinePIN, DigitizedSignature, Biometrics, ICCSignature, Certificate, AddressVerification, TelephoneNumberVerification, PersonalInfoVerification.
+	IdentVerifyEntity[] identVerifyEntity;	 //	Open Enum	 Optional Repeating	 The entity that verified the customer's authority to use the presented identification device.Valid values: Unknown, NotAuthenticated, Acceptor, Intermediary, Authorizer, ICC, CAD
+	IdentConditions[] identConditions;	 //	Open Enum	 Optional Repeating	 Any identified conditions detected by the transaction acquirer related to the customer's presentation of the identification device.Valid values: None, CustomerNotPresent, CardNotPresent, PreauthorizedTransaction, Telephone, MailOrder, IdentVerifyUnavailable, SecurityAlert, MerchantSuspicious, SuspectedFraud
+	IdentVerifyResults[] identVerifyResults;	 //	Open Enum	 Optional Repeating	 The results of the application of the identity verify method(s). Valid values: CVVValid, CVVInvalid, PINValid, PINInvalid, SignatureValid, SignatureInvalid
+	public IdentType getIdentType() {
+		return identType;
+	}
+	public void setIdentType(IdentType identType) {
+		this.identType = identType;
+	}
+	public ExpDt getExpDt() {
+		return expDt;
+	}
+	public void setExpDt(ExpDt expDt) {
+		this.expDt = expDt;
+	}
+	public StartDt getStartDt() {
+		return startDt;
+	}
+	public void setStartDt(StartDt startDt) {
+		this.startDt = startDt;
+	}
+	public OrigIssueDt getOrigIssueDt() {
+		return origIssueDt;
+	}
+	public void setOrigIssueDt(OrigIssueDt origIssueDt) {
+		this.origIssueDt = origIssueDt;
+	}
+	public IdentProgram getIdentProgram() {
+		return identProgram;
+	}
+	public void setIdentProgram(IdentProgram identProgram) {
+		this.identProgram = identProgram;
+	}
+	public IdentReadMethod[] getIdentReadMethod() {
+		return identReadMethod;
+	}
+	public void setIdentReadMethod(IdentReadMethod[] identReadMethod) {
+		this.identReadMethod = identReadMethod;
+	}
+	public IdentPrevReadMethod[] getIdentPrevReadMethod() {
+		return identPrevReadMethod;
+	}
+	public void setIdentPrevReadMethod(IdentPrevReadMethod[] identPrevReadMethod) {
+		this.identPrevReadMethod = identPrevReadMethod;
+	}
+	public IdentServiceCode getIdentServiceCode() {
+		return identServiceCode;
+	}
+	public void setIdentServiceCode(IdentServiceCode identServiceCode) {
+		this.identServiceCode = identServiceCode;
+	}
+	public IdentPrevServiceCode getIdentPrevServiceCode() {
+		return identPrevServiceCode;
+	}
+	public void setIdentPrevServiceCode(IdentPrevServiceCode identPrevServiceCode) {
+		this.identPrevServiceCode = identPrevServiceCode;
+	}
+	public IdentVerifyMethod[] getIdentVerifyMethod() {
+		return identVerifyMethod;
+	}
+	public void setIdentVerifyMethod(IdentVerifyMethod[] identVerifyMethod) {
+		this.identVerifyMethod = identVerifyMethod;
+	}
+	public IdentVerifyEntity[] getIdentVerifyEntity() {
+		return identVerifyEntity;
+	}
+	public void setIdentVerifyEntity(IdentVerifyEntity[] identVerifyEntity) {
+		this.identVerifyEntity = identVerifyEntity;
+	}
+	public IdentConditions[] getIdentConditions() {
+		return identConditions;
+	}
+	public void setIdentConditions(IdentConditions[] identConditions) {
+		this.identConditions = identConditions;
+	}
+	public IdentVerifyResults[] getIdentVerifyResults() {
+		return identVerifyResults;
+	}
+	public void setIdentVerifyResults(IdentVerifyResults[] identVerifyResults) {
+		this.identVerifyResults = identVerifyResults;
+	}
+	
+	
+	
+}

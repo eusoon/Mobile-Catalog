@@ -1,0 +1,29 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class CardOrderStatusRec extends IFXObject {
+
+	SvcIdent svcIdent; //Aggregate	Optional	Service Identifier
+	CardOrderId cardOrderId; //Identifier	Required	Card Order Identifier
+	CardOrderStatus cardOrderStatus; //Aggregate	Required	Card Order Status Aggregate
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public CardOrderId getCardOrderId() {
+		return cardOrderId;
+	}
+	public void setCardOrderId(CardOrderId cardOrderId) {
+		this.cardOrderId = cardOrderId;
+	}
+	public CardOrderStatus getCardOrderStatus() {
+		return cardOrderStatus;
+	}
+	public void setCardOrderStatus(CardOrderStatus cardOrderStatus) {
+		this.cardOrderStatus = cardOrderStatus;
+	}
+	
+}

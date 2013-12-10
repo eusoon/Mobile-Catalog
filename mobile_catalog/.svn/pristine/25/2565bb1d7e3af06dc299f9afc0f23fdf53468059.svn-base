@@ -1,0 +1,28 @@
+package my.com.infopro.ifx.client.model;
+
+public class DriversLicense_Type extends IFXObject {
+	public final native void setLicenseNum(LicenseNum licenseNum)/*-{
+		this.licenseNum = licenseNum;
+	}-*/;
+
+	public final native LicenseNum getLicenseNum()/*-{
+		return $wnd.cleanObject(this.licenseNum);
+	}-*/;
+
+	public final native void setStateProv(StateProv stateProv)/*-{
+		this.stateProv = stateProv;
+	}-*/;
+
+	public final native StateProv getStateProv()/*-{
+		return $wnd.cleanObject(this.stateProv);
+	}-*/;
+
+	public final native void setCountry(Country country)/*-{
+		this.country = country;
+	}-*/;
+
+	public final native Country getCountry()/*-{
+		return $wnd.cleanObject(this.country);
+	}-*/;
+
+}

@@ -1,0 +1,7 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXString;
+
+public class MagData1 extends IFXString {
+
+}

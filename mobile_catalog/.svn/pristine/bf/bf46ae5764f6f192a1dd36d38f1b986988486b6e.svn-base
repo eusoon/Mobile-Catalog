@@ -1,0 +1,97 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public class AirlineAddenda extends CardAddenda {
+
+	ElectronicTicketInd electronicTicketInd;//Boolean	Optional Electronic Ticket Indicator
+	Name name;//C-40	Optional Name
+	TicketNumber ticketNumber;//C-15	Optional Ticket Number
+	IssueDt issueDt;//DateTime	Optional Issue Date
+	DepartureDt departureDt;//Date	Optional Departure Date
+	TravelAgencyIdent travelAgencyIdent;//C-36	OptionalTravel Agency Identifier
+	TravelAgencyName travelAgencyName;//C-40	OptionalTravel Agency Name
+	RestrictedTicketInd restrictedTicketInd;//Boolean	OptionalRestricted Ticket Indicator 
+	ReservationSystem reservationSystem;//C-4	Optional Reservation System
+	NumberInParty numberInParty;//Long	Optional Number In Party
+	City city;//C-32	Optional City
+	TripLeg[] TripLeg;//Aggregate	Optional Repeating Trip Leg
+	AirlineCharge[] AirlineCharge;//Aggregate	Optional Repeating Airline Charge
+	public ElectronicTicketInd getElectronicTicketInd() {
+		return electronicTicketInd;
+	}
+	public void setElectronicTicketInd(ElectronicTicketInd electronicTicketInd) {
+		this.electronicTicketInd = electronicTicketInd;
+	}
+	public Name getName() {
+		return name;
+	}
+	public void setName(Name name) {
+		this.name = name;
+	}
+	public TicketNumber getTicketNumber() {
+		return ticketNumber;
+	}
+	public void setTicketNumber(TicketNumber ticketNumber) {
+		this.ticketNumber = ticketNumber;
+	}
+	public IssueDt getIssueDt() {
+		return issueDt;
+	}
+	public void setIssueDt(IssueDt issueDt) {
+		this.issueDt = issueDt;
+	}
+	public DepartureDt getDepartureDt() {
+		return departureDt;
+	}
+	public void setDepartureDt(DepartureDt departureDt) {
+		this.departureDt = departureDt;
+	}
+	public TravelAgencyIdent getTravelAgencyIdent() {
+		return travelAgencyIdent;
+	}
+	public void setTravelAgencyIdent(TravelAgencyIdent travelAgencyIdent) {
+		this.travelAgencyIdent = travelAgencyIdent;
+	}
+	public TravelAgencyName getTravelAgencyName() {
+		return travelAgencyName;
+	}
+	public void setTravelAgencyName(TravelAgencyName travelAgencyName) {
+		this.travelAgencyName = travelAgencyName;
+	}
+	public RestrictedTicketInd getRestrictedTicketInd() {
+		return restrictedTicketInd;
+	}
+	public void setRestrictedTicketInd(RestrictedTicketInd restrictedTicketInd) {
+		this.restrictedTicketInd = restrictedTicketInd;
+	}
+	public ReservationSystem getReservationSystem() {
+		return reservationSystem;
+	}
+	public void setReservationSystem(ReservationSystem reservationSystem) {
+		this.reservationSystem = reservationSystem;
+	}
+	public NumberInParty getNumberInParty() {
+		return numberInParty;
+	}
+	public void setNumberInParty(NumberInParty numberInParty) {
+		this.numberInParty = numberInParty;
+	}
+	public City getCity() {
+		return city;
+	}
+	public void setCity(City city) {
+		this.city = city;
+	}
+	public TripLeg[] getTripLeg() {
+		return TripLeg;
+	}
+	public void setTripLeg(TripLeg[] tripLeg) {
+		TripLeg = tripLeg;
+	}
+	public AirlineCharge[] getAirlineCharge() {
+		return AirlineCharge;
+	}
+	public void setAirlineCharge(AirlineCharge[] airlineCharge) {
+		AirlineCharge = airlineCharge;
+	}
+
+}

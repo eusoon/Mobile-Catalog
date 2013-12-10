@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class BaseSvcProfInfo extends BaseSvcProfInfo_Type {
+
+}

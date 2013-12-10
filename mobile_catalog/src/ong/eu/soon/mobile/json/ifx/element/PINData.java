@@ -1,0 +1,33 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class PINData extends IFXObject {
+	protected PINData(){	
+	}
+	public final native CryptType getCryptType() /*-{
+		return $wnd.cleanObject(cryptType);
+	}-*/;
+	public final native void setCryptType(CryptType cryptType) /*-{
+		this.cryptType = cryptType;
+	}-*/;
+	public final native SecObjId getSecObjId() /*-{
+		return $wnd.cleanObject(secObjId);
+	}-*/;
+	public final native void setSecObjId(SecObjId secObjId) /*-{
+		this.secObjId = secObjId;
+	}-*/;
+	public final native PIN getpIN() /*-{
+		return $wnd.cleanObject(pIN);
+	}-*/;
+	public final native void setpIN(PIN pIN) /*-{
+		this.pIN = pIN;
+	}-*/;
+	public final native CryptPIN getCryptPIN() /*-{
+		return $wnd.cleanObject(cryptPIN);
+	}-*/;
+	public final native void setCryptPIN(CryptPIN cryptPIN) /*-{
+		this.cryptPIN = cryptPIN;
+	}-*/;
+
+}

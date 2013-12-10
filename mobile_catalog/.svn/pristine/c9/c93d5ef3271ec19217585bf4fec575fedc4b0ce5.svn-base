@@ -1,0 +1,102 @@
+package my.com.infopro.ifx.client.model;
+
+public class NetworkTrnInfo_Type extends IFXObject {
+	public native void setNetworkOwner(NetworkOwner networkOwner)/*-{
+		this.networkOwner = networkOwner;
+	}-*/;
+
+	public final native NetworkOwner getNetworkOwner()/*-{
+		return $wnd.cleanObject(this.networkOwner);
+
+	}-*/;
+
+	public native void setOriginatorName(OriginatorName originatorName)/*-{
+		this.originatorName = originatorName;
+	}-*/;
+
+	public final native OriginatorName getOriginatorName()/*-{
+		return $wnd.cleanObject(this.originatorName);
+
+	}-*/;
+
+	public native void setOriginatorType(OriginatorType originatorType)/*-{
+		this.originatorType = originatorType;
+	}-*/;
+
+	public final native OriginatorType getOriginatorType()/*-{
+		return $wnd.cleanObject(this.originatorType);
+
+	}-*/;
+
+	public native void setTerminalId(TerminalId terminalId)/*-{
+		this.terminalId = terminalId;
+	}-*/;
+
+	public final native TerminalId getTerminalId()/*-{
+		return $wnd.cleanObject(this.terminalId);
+
+	}-*/;
+
+	public native void setTerminalType(TerminalType terminalType)/*-{
+		this.terminalType = terminalType;
+	}-*/;
+
+	public final native TerminalType getTerminalType()/*-{
+		return $wnd.cleanObject(this.terminalType);
+
+	}-*/;
+
+	public native void setPostAddr(PostAddr postAddr)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native PostAddr getPostAddr()/*-{
+		return $wnd.cleanObject(this.postAddr);
+
+	}-*/;
+
+	public native void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+
+	public final native Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+
+	}-*/;
+
+	public native void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+
+	}-*/;
+
+	public native void setBankIdType(BankIdType bankIdType)/*-{
+		this.bankIdType = bankIdType;
+	}-*/;
+
+	public final native BankIdType getBankIdType()/*-{
+		return $wnd.cleanObject(this.bankIdType);
+
+	}-*/;
+
+	public native void setBankId(BankId bankId)/*-{
+		this.bankId = bankId;
+	}-*/;
+
+	public final native BankId getBankId()/*-{
+		return $wnd.cleanObject(this.bankId);
+
+	}-*/;
+
+	public native void setNetworkRefId(NetworkRefId networkRefId)/*-{
+		this.networkRefId = networkRefId;
+	}-*/;
+
+	public final native NetworkRefId getNetworkRefId()/*-{
+		return $wnd.cleanObject(this.networkRefId);
+
+	}-*/;
+}

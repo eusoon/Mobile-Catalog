@@ -1,0 +1,44 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class CompRemitStmtRec extends IFXObject {
+
+	SvcIdent svcIdent; //Aggregate	Optional	Service Identifier
+	CompRemitStmtId compRemitStmtId; //Identifier	Required	Comprehensible Remittance Statement Identifier
+	CompRemitStmtInfo compRemitStmtInfo; //Aggregate	Required	Comprehensible Remittance Statement Information Aggregate
+	CompRemitStmtEnvr compRemitStmtEnvr; //Aggregate	Optional	Comprehensible Remittance Statement Environment Aggregate
+	CompRemitStmtStatus compRemitStmtStatus; //Aggregate	Required	Comprehensible Remittance Statement Status Aggregate
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public CompRemitStmtId getCompRemitStmtId() {
+		return compRemitStmtId;
+	}
+	public void setCompRemitStmtId(CompRemitStmtId compRemitStmtId) {
+		this.compRemitStmtId = compRemitStmtId;
+	}
+	public CompRemitStmtInfo getCompRemitStmtInfo() {
+		return compRemitStmtInfo;
+	}
+	public void setCompRemitStmtInfo(CompRemitStmtInfo compRemitStmtInfo) {
+		this.compRemitStmtInfo = compRemitStmtInfo;
+	}
+	public CompRemitStmtEnvr getCompRemitStmtEnvr() {
+		return compRemitStmtEnvr;
+	}
+	public void setCompRemitStmtEnvr(CompRemitStmtEnvr compRemitStmtEnvr) {
+		this.compRemitStmtEnvr = compRemitStmtEnvr;
+	}
+	public CompRemitStmtStatus getCompRemitStmtStatus() {
+		return compRemitStmtStatus;
+	}
+	public void setCompRemitStmtStatus(CompRemitStmtStatus compRemitStmtStatus) {
+		this.compRemitStmtStatus = compRemitStmtStatus;
+	}
+	
+}

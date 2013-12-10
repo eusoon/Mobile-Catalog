@@ -1,0 +1,96 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.AcctKeys;
+import my.com.infopro.ifx.element.DtRange;
+import my.com.infopro.ifx.element.Name;
+import my.com.infopro.ifx.element.TrnSrc;
+import my.com.infopro.ifx.element.TrnSubType;
+import my.com.infopro.ifx.element.TrnType;
+
+public class AcctTrnSel extends IFXObject {
+
+	//begin-xor	Required Repeating
+	AcctTrnKeys acctTrnKeys; //Aggregate	Required	Account Transaction Keys Aggregate
+	//begin-block	Required
+	AcctKeys acctKeys; //Aggregate	Optional	Account Keys Aggregate
+	DtRange dtRange; //Aggregate	Optional	Date Range
+	CurAmtRange curAmtRange; //Aggregate	Optional	Currency Amount Range
+	RecordCountLimit recordCountLimit; //Aggregate	Optional	Record Count Limit
+	TrnType trnType; //Aggregate	Optional	Transaction Type
+	TrnSubType trnSubType; //C-15	Optional	Transaction Sub-Type
+	TrnSrc trnSrc; //Open Enum	Optional	Transaction Source	Valid values include: ACH, All, ATM, HomeBank, POS, Teller, VRU	Default Value: All
+	Name name; //C-40	Optional	Name
+	ChkNumRange chkNumRange; //Aggregate	Optional	Check Number Range
+	RefIdentRange refIdentRange; //Aggregate	Optional	Reference Identifier Range
+	//end-block
+	//end-xor
+	
+	public AcctTrnKeys getAcctTrnKeys() {
+		return acctTrnKeys;
+	}
+	public void setAcctTrnKeys(AcctTrnKeys acctTrnKeys) {
+		this.acctTrnKeys = acctTrnKeys;
+	}
+	public AcctKeys getAcctKeys() {
+		return acctKeys;
+	}
+	public void setAcctKeys(AcctKeys acctKeys) {
+		this.acctKeys = acctKeys;
+	}
+	public DtRange getDtRange() {
+		return dtRange;
+	}
+	public void setDtRange(DtRange dtRange) {
+		this.dtRange = dtRange;
+	}
+	public CurAmtRange getCurAmtRange() {
+		return curAmtRange;
+	}
+	public void setCurAmtRange(CurAmtRange curAmtRange) {
+		this.curAmtRange = curAmtRange;
+	}
+	public RecordCountLimit getRecordCountLimit() {
+		return recordCountLimit;
+	}
+	public void setRecordCountLimit(RecordCountLimit recordCountLimit) {
+		this.recordCountLimit = recordCountLimit;
+	}
+	public TrnType getTrnType() {
+		return trnType;
+	}
+	public void setTrnType(TrnType trnType) {
+		this.trnType = trnType;
+	}
+	public TrnSubType getTrnSubType() {
+		return trnSubType;
+	}
+	public void setTrnSubType(TrnSubType trnSubType) {
+		this.trnSubType = trnSubType;
+	}
+	public TrnSrc getTrnSrc() {
+		return trnSrc;
+	}
+	public void setTrnSrc(TrnSrc trnSrc) {
+		this.trnSrc = trnSrc;
+	}
+	public Name getName() {
+		return name;
+	}
+	public void setName(Name name) {
+		this.name = name;
+	}
+	public ChkNumRange getChkNumRange() {
+		return chkNumRange;
+	}
+	public void setChkNumRange(ChkNumRange chkNumRange) {
+		this.chkNumRange = chkNumRange;
+	}
+	public RefIdentRange getRefIdentRange() {
+		return refIdentRange;
+	}
+	public void setRefIdentRange(RefIdentRange refIdentRange) {
+		this.refIdentRange = refIdentRange;
+	}
+	
+}

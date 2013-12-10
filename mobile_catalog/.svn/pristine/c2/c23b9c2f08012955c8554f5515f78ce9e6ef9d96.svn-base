@@ -1,0 +1,45 @@
+package my.com.infopro.ifx.client.model;
+
+public class FSPayee_Type extends IFXObject {
+
+	public final native void setPostAddr(PostAddr postAddr)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native PostAddr getPostAddr()/*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+
+	public final native void setOrgContact(OrgContact orgContact)/*-{
+		this.orgContact = orgContact;
+	}-*/;
+
+	public final native OrgContact getOrgContact()/*-{
+		return $wnd.cleanObject(this.orgContact);
+
+	}-*/;
+
+	public final native void setContactInfo(ContactInfo contactInfo)/*-{
+		this.contactInfo = contactInfo;
+	}-*/;
+
+	public final native ContactInfo getContactInfo()/*-{
+		return $wnd.cleanObject(this.contactInfo);
+	}-*/;
+
+	public final native void setLegalName(LegalName legalName)/*-{
+		this.legalName = legalName;
+	}-*/;
+
+	public final native LegalName getLegalName()/*-{
+		return $wnd.cleanObject(this.legalName);
+	}-*/;
+
+	public final native void setOrgId(OrgId[] orgId)/*-{
+		this.orgId = orgId;
+	}-*/;
+
+	public final native OrgId[] getOrgId()/*-{
+		return $wnd.cleanObject(this.orgId);
+	}-*/;
+}

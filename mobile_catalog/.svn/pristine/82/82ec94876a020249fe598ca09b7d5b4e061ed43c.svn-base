@@ -1,0 +1,19 @@
+package my.com.infopro.ifx.client.model;
+
+public class SelRangeCurAmt_Type extends IFXObject {
+	public final native void setLowCurAmt(LowCurAmt lowCurAmt)/*-{
+		this.lowCurAmt = lowCurAmt;
+	}-*/;
+
+	public final native LowCurAmt getLowCurAmt()/*-{
+		return $wnd.cleanObject(this.lowCurAmt);
+	}-*/;
+
+	public final native void setHighCurAmt(HighCurAmt highCurAmt)/*-{
+		this.highCurAmt = highCurAmt;
+	}-*/;
+
+	public final native HighCurAmt getHighCurAmt()/*-{
+		return $wnd.cleanObject(this.highCurAmt);
+	}-*/;
+}

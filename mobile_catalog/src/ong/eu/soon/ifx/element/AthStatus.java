@@ -1,0 +1,65 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class AthStatus extends IFXObject {
+
+	AthStatusCode athStatusCode;	 //	Open Enum	 Required	 Authorization Status CodeValid values include: Active, Delete, Inactive, PendDelete, Pending
+	StatusDesc statusDesc;	 //	C-255	 Optional	 Status Description
+	EffDt effDt;	 //	DateTime	 Optional	 Effective Date Time
+	ApprovalIdent approvalIdent;	 //	NC-36	 Optional	 Approval Identifier
+	StatusModBy statusModBy;	 //	Open Enum	 Optional	 Status Modified ByValid values include: BPP, BPPSR, BSP, BSPSR, CPP, CPPSR, CSP, CSPSR, Customer, FI, PSP
+	AthResponse athResponse;	 //	Open Enum	 Optional	 Authorization ResponseValid values include: Approve, Decline, PickUp, Refer
+	DeclineReason[] declineReason;	 //	C-40	 Optional Repeating	 Decline Reason
+	AthClearingStat athClearingStat;	 //	C-40	 Optional	 Authorization Clearing Status
+	
+	public AthStatusCode getAthStatusCode() {
+		return athStatusCode;
+	}
+	public void setAthStatusCode(AthStatusCode athStatusCode) {
+		this.athStatusCode = athStatusCode;
+	}
+	public StatusDesc getStatusDesc() {
+		return statusDesc;
+	}
+	public void setStatusDesc(StatusDesc statusDesc) {
+		this.statusDesc = statusDesc;
+	}
+	public EffDt getEffDt() {
+		return effDt;
+	}
+	public void setEffDt(EffDt effDt) {
+		this.effDt = effDt;
+	}
+	public ApprovalIdent getApprovalIdent() {
+		return approvalIdent;
+	}
+	public void setApprovalIdent(ApprovalIdent approvalIdent) {
+		this.approvalIdent = approvalIdent;
+	}
+	public StatusModBy getStatusModBy() {
+		return statusModBy;
+	}
+	public void setStatusModBy(StatusModBy statusModBy) {
+		this.statusModBy = statusModBy;
+	}
+	public AthResponse getAthResponse() {
+		return athResponse;
+	}
+	public void setAthResponse(AthResponse athResponse) {
+		this.athResponse = athResponse;
+	}
+	public DeclineReason[] getDeclineReason() {
+		return declineReason;
+	}
+	public void setDeclineReason(DeclineReason[] declineReason) {
+		this.declineReason = declineReason;
+	}
+	public AthClearingStat getAthClearingStat() {
+		return athClearingStat;
+	}
+	public void setAthClearingStat(AthClearingStat athClearingStat) {
+		this.athClearingStat = athClearingStat;
+	}
+	
+}

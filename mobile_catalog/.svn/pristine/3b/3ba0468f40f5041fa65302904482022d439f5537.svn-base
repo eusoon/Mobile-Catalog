@@ -1,0 +1,113 @@
+package my.com.infopro.ifx.client.model;
+
+public class CustInqRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setCardMagData(CardMagData cardMagData)/*-{
+		this.cardMagData = cardMagData;
+	}-*/;
+
+	public final native CardMagData getCardMagData()/*-{
+		return $wnd.cleanObject(this.cardMagData);
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod getDeliveryMethod() /*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+	}-*/;
+
+	public final native void setUpDt(UpDt upDt)/*-{
+		this.upDt = upDt;
+	}-*/;
+
+	public final native UpDt getUpDt()/*-{
+		return $wnd.cleanObject(this.upDt);
+
+	}-*/;
+
+	public final native void setIncToken(IncToken[] incToken)/*-{
+		this.incToken = incToken;
+	}-*/;
+
+	public final native IncToken[] getIncToken()/*-{
+		return $wnd.cleanObject(this.incToken);
+	}-*/;
+
+	public final native void setNewUpDt(NewUpDt newUpDt)/*-{
+		this.newUpDt = newUpDt;
+	}-*/;
+
+	public final native NewUpDt getNewUpDt()/*-{
+		return $wnd.cleanObject(this.newUpDt);
+
+	}-*/;
+
+	public native void setCustRec(CustRec custRec)/*-{
+		this.custRec = custRec;
+	}-*/;
+
+	public final native CustRec getCustRec() /*-{
+		return $wnd.cleanObject(this.custRec);
+
+	}-*/;
+
+	public final native void setToken(Token token)/*-{
+		this.token = token;
+	}-*/;
+
+	public final native Token getToken()/*-{
+		return $wnd.cleanObject(this.token);
+
+	}-*/;
+
+}

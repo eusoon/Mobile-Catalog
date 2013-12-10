@@ -1,0 +1,52 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtAuthMsgRqInfo_Type extends IFXObject {
+
+	public final native void setPmtAuthAddRq(PmtAuthAddRq pmtAuthAddRq)/*-{
+		this.pmtAuthAddRq = pmtAuthAddRq;
+	}-*/;
+
+	public final native PmtAuthAddRq getPmtAuthAddRq()/*-{
+		return $wnd.cleanObject(this.pmtAuthAddRq);
+	}-*/;
+
+	public final native void setPmtAuthModRq(PmtAuthModRq pmtAuthModRq)/*-{
+		this.pmtAuthModRq = pmtAuthModRq;
+	}-*/;
+
+	public final native PmtAuthModRq getPmtAuthModRq()/*-{
+		return $wnd.cleanObject(this.pmtAuthModRq);
+	}-*/;
+
+	public final native void setPmtAuthCanRq(PmtAuthCanRq pmtAuthCanRq)/*-{
+		this.pmtAuthCanRq = pmtAuthCanRq;
+	}-*/;
+
+	public final native PmtAuthCanRq getPmtAuthCanRq()/*-{
+		return $wnd.cleanObject(this.pmtAuthCanRq);
+	}-*/;
+
+	public final native void setPmtAuthInqRq(PmtAuthInqRq pmtAuthInqRq)/*-{
+		this.pmtAuthInqRq = pmtAuthInqRq;
+	}-*/;
+
+	public final native PmtAuthInqRq getPmtAuthInqRq()/*-{
+		return $wnd.cleanObject(this.pmtAuthInqRq);
+	}-*/;
+
+	public final native void setPmtAuthAudRq(PmtAuthAudRq pmtAuthAudRq)/*-{
+		this.pmtAuthAudRq = pmtAuthAudRq;
+	}-*/;
+
+	public final native PmtAuthAudRq getPmtAuthAudRq()/*-{
+		return $wnd.cleanObject(this.pmtAuthAudRq);
+	}-*/;
+
+	public final native void setPmtAuthSyncRq(PmtAuthSyncRq pmtAuthSyncRq)/*-{
+		this.pmtAuthSyncRq = pmtAuthSyncRq;
+	}-*/;
+
+	public final native PmtAuthSyncRq getPmtAuthSyncRq()/*-{
+		return $wnd.cleanObject(this.pmtAuthSyncRq);
+	}-*/;
+}

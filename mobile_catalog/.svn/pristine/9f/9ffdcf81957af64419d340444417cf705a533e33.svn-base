@@ -1,0 +1,30 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PrcSched extends IFXObject {
+	public final native PrcDaysOff[] getPrcDaysOff() /*-{
+		return $wnd.cleanObject(prcDaysOff);
+	}-*/;
+	public final native void setPrcDaysOff(PrcDaysOff[] prcDaysOff) /*-{
+		this.prcDaysOff = prcDaysOff;
+	}-*/;
+	public final native CutoffTm getCutoffTm() /*-{
+		return $wnd.cleanObject(cutoffTm);
+	}-*/;
+	public final native void setCutoffTm(CutoffTm cutoffTm) /*-{
+		this.cutoffTm = cutoffTm;
+	}-*/;
+	public final native PrcDtAdj getPrcDtAdj() /*-{
+		return $wnd.cleanObject(prcDtAdj);
+	}-*/;
+	public final native void setPrcDtAdj(PrcDtAdj prcDtAdj) /*-{
+		this.prcDtAdj = prcDtAdj;
+	}-*/;
+	public final native HolidayData[] getHolidayData() /*-{
+		return $wnd.cleanObject(HolidayData);
+	}-*/;
+	public final native void setHolidayData(HolidayData[] holidayData) /*-{
+		HolidayData = holidayData;
+	}-*/;
+}

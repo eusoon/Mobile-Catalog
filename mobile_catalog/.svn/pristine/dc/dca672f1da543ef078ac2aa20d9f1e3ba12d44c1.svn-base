@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.element;
+
+public enum AcctPeriodType {
+	CTD, LTD, MTD, PriorCycle, PriorMth, PriorYr, YTD
+}

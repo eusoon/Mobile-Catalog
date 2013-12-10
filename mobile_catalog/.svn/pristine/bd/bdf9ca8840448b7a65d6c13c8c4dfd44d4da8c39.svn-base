@@ -1,0 +1,34 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class BankruptcyData extends IFXObject {
+	
+	protected BankruptcyData(){	
+	}
+	
+	public final native  EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public final native  void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native  BankruptcyType getBankruptcyType()/*-{
+		return $wnd.cleanObject(this.bankruptcyType);
+	}-*/;
+
+	public final native  void setBankruptcyType(BankruptcyType bankruptcyType)/*-{
+		this.bankruptcyType = bankruptcyType;
+	}-*/;
+
+	public final native  BankruptcyStat getBankruptcyStat()/*-{
+		return $wnd.cleanObject(this.bankruptcyStat);
+	}-*/;
+
+	public final native  void setBankruptcyStat(BankruptcyStat bankruptcyStat)/*-{
+		this.bankruptcyStat = bankruptcyStat;
+	}-*/;
+
+}

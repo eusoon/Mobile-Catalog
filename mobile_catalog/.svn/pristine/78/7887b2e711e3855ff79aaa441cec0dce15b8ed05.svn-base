@@ -1,0 +1,41 @@
+package my.com.infopro.ifx.client.model;
+
+public class CurrencyAmount extends IFXObject {
+
+	public native void setAmt(Amt amt)/*-{
+		this.amt = amt;
+	}-*/;
+
+	public final native Amt getAmt()/*-{
+		return $wnd.cleanObject(this.amt);
+
+	}-*/;
+
+	public native void setCurCode(CurCode curCode)/*-{
+		this.curCode = curCode;
+	}-*/;
+
+	public final native CurCode getCurCode()/*-{
+		return $wnd.cleanObject(this.curCode);
+
+	}-*/;
+
+	public native void setCurRate(CurRate curRate)/*-{
+		this.curRate = curRate;
+	}-*/;
+
+	public final native CurRate getCurRate()/*-{
+		return $wnd.cleanObject(this.curRate);
+
+	}-*/;
+
+	public native void setCurConvertRule(CurConvertRule curConvertRule)/*-{
+		this.curConvertRule = curConvertRule;
+	}-*/;
+
+	public final native CurConvertRule getCurConvertRule()/*-{
+		return $wnd.cleanObject(this.curConvertRule);
+
+	}-*/;
+
+}

@@ -1,0 +1,34 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class GovIssuedIdent extends IFXObject {
+	CountryCode countryCode;//Aggregate	Required Country Code
+	GovLevel govLevel;//Open Enum	Optional Government LevelValid values include: City, Commonwealth, Country, District, Dominion, Federation, Land, Municipal, Nation, Parish, Protectorate, Province, Region, Republic, Sovereignty, State, Territory, Union
+	GovOrgName govOrgName;//C-80	Optional Government Organization Name
+	StateProv stateProv;//C-32	Optional State or Province
+	public CountryCode getCountryCode() {
+		return countryCode;
+	}
+	public void setCountryCode(CountryCode countryCode) {
+		this.countryCode = countryCode;
+	}
+	public GovLevel getGovLevel() {
+		return govLevel;
+	}
+	public void setGovLevel(GovLevel govLevel) {
+		this.govLevel = govLevel;
+	}
+	public GovOrgName getGovOrgName() {
+		return govOrgName;
+	}
+	public void setGovOrgName(GovOrgName govOrgName) {
+		this.govOrgName = govOrgName;
+	}
+	public StateProv getStateProv() {
+		return stateProv;
+	}
+	public void setStateProv(StateProv stateProv) {
+		this.stateProv = stateProv;
+	}
+}

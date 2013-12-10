@@ -1,0 +1,20 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+public class OrgData extends PartyData {
+	protected OrgData(){	
+	}
+	public final native JsArray<OrgName> getOrgName() /*-{
+		return $wnd.cleanObject(orgName);
+	}-*/;
+	public final native void setOrgName(JsArray<OrgName> orgName) /*-{
+		this.orgName = orgName;
+	}-*/;
+	public final native OrgCategory getOrgCategory() /*-{
+		return $wnd.cleanObject(orgCategory);
+	}-*/;
+	public final native void setOrgCategory(OrgCategory orgCategory) /*-{
+		this.orgCategory = orgCategory;
+	}-*/;
+}

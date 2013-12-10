@@ -1,0 +1,19 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public class SecTokenParty extends SecToken {
+	IdentVerifyMethod identVerifyMethod;//Open Enum	Optional Identification Verify Method Valid values include: AddressVerification, Biometrics, CardVerificationValue, Certificate, DigitizedSignature, ICCSignature, None, OfflinePIN, OnlinePIN, PersonalInfoVerification, PictureID, Signature, TelephoneNumberVerification, Unknown
+	PersonData personData; //Aggregate	Optional Person Data
+	public IdentVerifyMethod getIdentVerifyMethod() {
+		return identVerifyMethod;
+	}
+	public void setIdentVerifyMethod(IdentVerifyMethod identVerifyMethod) {
+		this.identVerifyMethod = identVerifyMethod;
+	}
+	public PersonData getPersonData() {
+		return personData;
+	}
+	public void setPersonData(PersonData personData) {
+		this.personData = personData;
+	}
+
+}

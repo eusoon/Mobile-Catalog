@@ -1,0 +1,12 @@
+package my.com.infopro.mobile.client.model;
+
+import my.com.infopro.mobile.client.model.Entity;
+
+
+
+public class ServiceProviderStatus extends Entity {
+
+	protected ServiceProviderStatus(){
+		
+	}
+}

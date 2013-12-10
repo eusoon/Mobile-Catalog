@@ -1,0 +1,158 @@
+package my.com.infopro.ifx.client.model;
+
+public class BankAcctStmtImgInqRs_Type extends IFXObject {
+
+	public final native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+	}-*/;
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setMsgRsHdr(MsgRsHdr msgRsHdr)/*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr()/*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setRecCtrlOut(RecCtrlOut recCtrlOut)/*-{
+		this.recCtrlOut = recCtrlOut;
+	}-*/;
+
+	public final native RecCtrlOut getRecCtrlOut()/*-{
+		return $wnd.cleanObject(this.recCtrlOut);
+	}-*/;
+
+	public final native void setDepAcctId(DepAcctId depAcctId)/*-{
+		this.depAcctId = depAcctId;
+	}-*/;
+
+	public final native DepAcctId getDepAcctId()/*-{
+		return $wnd.cleanObject(this.depAcctId);
+	}-*/;
+
+	public final native void setCardAcctId(CardAcctId cardAcctId)/*-{
+		this.cardAcctId = cardAcctId;
+	}-*/;
+
+	public final native CardAcctId getCardAcctId()/*-{
+		return $wnd.cleanObject(this.cardAcctId);
+	}-*/;
+
+	public final native void setLoanAcctId(LoanAcctId loanAcctId)/*-{
+		this.loanAcctId = loanAcctId;
+	}-*/;
+
+	public final native LoanAcctId getLoanAcctId()/*-{
+		return $wnd.cleanObject(this.loanAcctId);
+	}-*/;
+
+	public final native void setSelRangeDt(SelRangeDt selRangeDt)/*-{
+		this.selRangeDt = selRangeDt;
+	}-*/;
+
+	public final native SelRangeDt getSelRangeDt()/*-{
+		return $wnd.cleanObject(this.selRangeDt);
+	}-*/;
+
+	public final native void setIncDetail(IncDetail incDetail)/*-{
+		this.incDetail = incDetail;
+	}-*/;
+
+	public final native IncDetail getIncDetail()/*-{
+		return $wnd.cleanObject(this.incDetail);
+	}-*/;
+
+	public final native void setStmtType(StmtType stmtType)/*-{
+		this.stmtType = stmtType;
+	}-*/;
+
+	public final native StmtType getStmtType()/*-{
+		return $wnd.cleanObject(this.stmtType);
+	}-*/;
+
+	public final native void setDeliveryMethod(DeliveryMethod deliveryMethod)/*-{
+		this.deliveryMethod = deliveryMethod;
+	}-*/;
+
+	public final native DeliveryMethod getDeliveryMethod()/*-{
+		return $wnd.cleanObject(this.deliveryMethod);
+	}-*/;
+
+	public final native void setDeliveryMedia(DeliveryMedia deliveryMedia)/*-{
+		this.deliveryMedia = deliveryMedia;
+	}-*/;
+
+	public final native DeliveryMedia getDeliveryMedia()/*-{
+		return $wnd.cleanObject(this.deliveryMedia);
+	}-*/;
+
+	public final native void setContactInfo(ContactInfo contactInfo)/*-{
+		this.contactInfo = contactInfo;
+	}-*/;
+
+	public final native ContactInfo getContactInfo()/*-{
+		return $wnd.cleanObject(this.contactInfo);
+	}-*/;
+
+	public final native void setBankAcctStmtImgInqRec(
+			BankAcctStmtImgInqRec[] bankAcctStmtImgInqRec)/*-{
+		this.bankAcctStmtImgInqRec = bankAcctStmtImgInqRec;
+	}-*/;
+
+	public final native BankAcctStmtImgInqRec[] getBankAcctStmtImgInqRec()/*-{
+		return $wnd.cleanObject(this.bankAcctStmtImgInqRec);
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId[] cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId[] getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+	}-*/;
+
+	public final native void setSPRefId(SPRefId[] sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId[] getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+	}-*/;
+
+}

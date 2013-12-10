@@ -1,0 +1,26 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+public class RelPartyRef extends PartyRef {
+	RelPartyRole[] relPartyRole;	 //	C-40	 Optional Repeating	 Releated-Party Role
+	RelEstablishDt relEstablishDt;	 //	DateTime	 Optional	 Relationship Established Date
+	TimeFrame timeFrame;	 //	Aggregate	 Optional	 Time Frame
+	
+	public RelPartyRole[] getRelPartyRole() {
+		return relPartyRole;
+	}
+	public void setRelPartyRole(RelPartyRole[] relPartyRole) {
+		this.relPartyRole = relPartyRole;
+	}
+	public RelEstablishDt getRelEstablishDt() {
+		return relEstablishDt;
+	}
+	public void setRelEstablishDt(RelEstablishDt relEstablishDt) {
+		this.relEstablishDt = relEstablishDt;
+	}
+	public TimeFrame getTimeFrame() {
+		return timeFrame;
+	}
+	public void setTimeFrame(TimeFrame timeFrame) {
+		this.timeFrame = timeFrame;
+	}
+}

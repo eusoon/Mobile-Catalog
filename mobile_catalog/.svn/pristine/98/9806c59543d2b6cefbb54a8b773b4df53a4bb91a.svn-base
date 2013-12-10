@@ -1,0 +1,157 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public abstract class PartyInfo extends IFXObject {
+
+	public final native PartyPref getPartyPref() /*-{
+		return $wnd.cleanObject(partyPref);
+	}-*/;
+	public final native void setPartyPref(PartyPref partyPref) /*-{
+		this.partyPref = partyPref;
+	}-*/;
+	public final native FinancialData[] getFinancialData() /*-{
+		return $wnd.cleanObject(FinancialData);
+	}-*/;
+	public final native void setFinancialData(FinancialData[] financialData) /*-{
+		FinancialData = financialData;
+	}-*/;
+	public final native EstablishedDt getEstablishedDt() /*-{
+		return $wnd.cleanObject(establishedDt);
+	}-*/;
+	public final native void setEstablishedDt(EstablishedDt establishedDt) /*-{
+		this.establishedDt = establishedDt;
+	}-*/;
+	public final native ServiceLevel getServiceLevel() /*-{
+		return $wnd.cleanObject(serviceLevel);
+	}-*/;
+	public final native void setServiceLevel(ServiceLevel serviceLevel) /*-{
+		this.serviceLevel = serviceLevel;
+	}-*/;
+	public final native OriginatingBranch getOriginatingBranch() /*-{
+		return $wnd.cleanObject(originatingBranch);
+	}-*/;
+	public final native void setOriginatingBranch(OriginatingBranch originatingBranch) /*-{
+		this.originatingBranch = originatingBranch;
+	}-*/;
+	public final native OriginatingBank getOriginatingBank() /*-{
+		return $wnd.cleanObject(originatingBank);
+	}-*/;
+	public final native void setOriginatingBank(OriginatingBank originatingBank) /*-{
+		this.originatingBank = originatingBank;
+	}-*/;
+	public final native PreferredBranch getPreferredBranch() /*-{
+		return $wnd.cleanObject(preferredBranch);
+	}-*/;
+	public final native void setPreferredBranch(PreferredBranch preferredBranch) /*-{
+		this.preferredBranch = preferredBranch;
+	}-*/;
+	public final native PreferredBank getPreferredBank() /*-{
+		return $wnd.cleanObject(preferredBank);
+	}-*/;
+	public final native void setPreferredBank(PreferredBank preferredBank) /*-{
+		this.preferredBank = preferredBank;
+	}-*/;
+	public final native ResponsibleBranch getResponsibleBranch() /*-{
+		return $wnd.cleanObject(responsibleBranch);
+	}-*/;
+	public final native void setResponsibleBranch(ResponsibleBranch responsibleBranch) /*-{
+		this.responsibleBranch = responsibleBranch;
+	}-*/;
+	public final native ResponsibleBank getResponsibleBank() /*-{
+		return $wnd.cleanObject(responsibleBank);
+	}-*/;
+	public final native void setResponsibleBank(ResponsibleBank responsibleBank) /*-{
+		this.responsibleBank = responsibleBank;
+	}-*/;
+	public final native ResidenceCountry getResidenceCountry() /*-{
+		return $wnd.cleanObject(residenceCountry);
+	}-*/;
+	public final native void setResidenceCountry(ResidenceCountry residenceCountry) /*-{
+		this.residenceCountry = residenceCountry;
+	}-*/;
+	public final native TaxResidenceCountry getTaxResidenceCountry() /*-{
+		return $wnd.cleanObject(taxResidenceCountry);
+	}-*/;
+	public final native void setTaxResidenceCountry(TaxResidenceCountry taxResidenceCountry) /*-{
+		this.taxResidenceCountry = taxResidenceCountry;
+	}-*/;
+	public final native LastContactDt getLastContactDt() /*-{
+		return $wnd.cleanObject(lastContactDt);
+	}-*/;
+	public final native void setLastContactDt(LastContactDt lastContactDt) /*-{
+		this.lastContactDt = lastContactDt;
+	}-*/;
+	public final native LastPrivacyNoteDt getLastPrivacyNoteDt() /*-{
+		return $wnd.cleanObject(lastPrivacyNoteDt);
+	}-*/;
+	public final native void setLastPrivacyNoteDt(LastPrivacyNoteDt lastPrivacyNoteDt) /*-{
+		this.lastPrivacyNoteDt = lastPrivacyNoteDt;
+	}-*/;
+	public final native ClosedDt getClosedDt() /*-{
+		return $wnd.cleanObject(closedDt);
+	}-*/;
+	public final native void setClosedDt(ClosedDt closedDt) /*-{
+		this.closedDt = closedDt;
+	}-*/;
+	public final native CloseReason getCloseReason() /*-{
+		return $wnd.cleanObject(closeReason);
+	}-*/;
+	public final native void setCloseReason(CloseReason closeReason) /*-{
+		this.closeReason = closeReason;
+	}-*/;
+	public final native PartyAffiliateData[] getPartyAffiliateData() /*-{
+		return $wnd.cleanObject(partyAffiliateData);
+	}-*/;
+	public final native void setPartyAffiliateData(PartyAffiliateData[] partyAffiliateData) /*-{
+		this.partyAffiliateData = partyAffiliateData;
+	}-*/;
+	public final native CreditRisk[] getCreditRisk() /*-{
+		return $wnd.cleanObject(creditRisk);
+	}-*/;
+	public final native void setCreditRisk(CreditRisk[] creditRisk) /*-{
+		this.creditRisk = creditRisk;
+	}-*/;
+	public final native CreditReviewTimeFrame getCreditReviewTimeFrame() /*-{
+		return $wnd.cleanObject(creditReviewTimeFrame);
+	}-*/;
+	public final native void setCreditReviewTimeFrame(CreditReviewTimeFrame creditReviewTimeFrame) /*-{
+		this.creditReviewTimeFrame = creditReviewTimeFrame;
+	}-*/;
+	public final native Correspondence[] getCorrespondence() /*-{
+		return $wnd.cleanObject(correspondence);
+	}-*/;
+	public final native void setCorrespondence(Correspondence[] correspondence) /*-{
+		this.correspondence = correspondence;
+	}-*/;
+	public final native RelationshipMgr[] getRelationshipMgr() /*-{
+		return $wnd.cleanObject(relationshipMgr);
+	}-*/;
+	public final native void setRelationshipMgr(RelationshipMgr[] relationshipMgr) /*-{
+		this.relationshipMgr = relationshipMgr;
+	}-*/;
+	public final native ServicesProvided getServicesProvided() /*-{
+		return $wnd.cleanObject(servicesProvided);
+	}-*/;
+	public final native void setServicesProvided(ServicesProvided servicesProvided) /*-{
+		this.servicesProvided = servicesProvided;
+	}-*/;
+	public final native HouseHoldAddr getHouseHoldAddr() /*-{
+		return $wnd.cleanObject(houseHoldAddr);
+	}-*/;
+	public final native void setHouseHoldAddr(HouseHoldAddr houseHoldAddr) /*-{
+		this.houseHoldAddr = houseHoldAddr;
+	}-*/;
+	public final native BankruptcyInd getBankruptcyInd() /*-{
+		return $wnd.cleanObject(bankruptcyInd);
+	}-*/;
+	public final native void setBankruptcyInd(BankruptcyInd bankruptcyInd) /*-{
+		this.bankruptcyInd = bankruptcyInd;
+	}-*/;
+	public final native BankruptcyData[] getBankruptcyData() /*-{
+		return $wnd.cleanObject(BankruptcyData);
+	}-*/;
+	public final native void setBankruptcyData(BankruptcyData[] bankruptcyData) /*-{
+		BankruptcyData = bankruptcyData;
+	}-*/;
+}

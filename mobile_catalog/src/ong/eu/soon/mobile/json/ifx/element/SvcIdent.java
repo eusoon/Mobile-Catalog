@@ -1,0 +1,21 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+
+public class SvcIdent extends IFXObject {
+	protected SvcIdent(){	
+	}
+	public final native SvcProviderName getSvcProviderName() /*-{
+		return $wnd.cleanObject(svcProviderName);
+	}-*/;
+	public final native void setSvcProviderName(SvcProviderName svcProviderName) /*-{
+		this.svcProviderName = svcProviderName;
+	}-*/;
+	public final native SvcName getSvcName() /*-{
+		return $wnd.cleanObject(svcName);
+	}-*/;
+	public final native void setSvcName(SvcName svcName) /*-{
+		this.svcName = svcName;
+	}-*/;
+
+}

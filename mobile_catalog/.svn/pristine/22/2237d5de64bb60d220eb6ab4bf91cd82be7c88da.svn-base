@@ -1,0 +1,23 @@
+package my.com.infopro.ifx.client.model;
+
+public class IssScriptData extends IFXObject {
+	public final native void setIssPreScriptData(
+			IssPreScriptData[] issPreScriptData)/*-{
+		this.issPreScriptData = issPreScriptData;
+	}-*/;
+
+	public final native IssPreScriptData[] getIssPreScriptData()/*-{
+		return $wnd.cleanObject(this.issPreScriptData);
+
+	}-*/;
+
+	public final native void setIssPostScriptData(
+			IssPostScriptData[] issPostScriptData)/*-{
+		this.issPostScriptData = issPostScriptData;
+	}-*/;
+
+	public final native IssPostScriptData[] getIssPostScriptData()/*-{
+		return $wnd.cleanObject(this.issPostScriptData);
+
+	}-*/;
+}

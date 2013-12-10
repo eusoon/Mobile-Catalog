@@ -1,0 +1,93 @@
+package my.com.infopro.ifx.client.model;
+
+public class PostAddr_Type extends IFXObject {
+
+	public native void setAddr1(Addr1 addr1)/*-{
+		this.addr1 = addr1;
+	}-*/;
+
+	public final native Addr1 getAddr1() /*-{
+		return $wnd.cleanObject(this.addr1);
+	}-*/;
+
+	public native void setAddr2(Addr2 addr2)/*-{
+		this.addr2 = addr2;
+	}-*/;
+
+	public final native Addr2 getAddr2() /*-{
+		return $wnd.cleanObject(this.addr2);
+	}-*/;
+
+	public native void setAddr3(Addr3 addr3)/*-{
+		this.addr3 = addr3;
+	}-*/;
+
+	public final native Addr3 getAddr3() /*-{
+		return $wnd.cleanObject(this.addr3);
+	}-*/;
+
+	public native void setAddr4(Addr4 addr4)/*-{
+		this.addr4 = addr4;
+	}-*/;
+
+	public final native Addr4 getAddr4() /*-{
+		return $wnd.cleanObject(this.addr4);
+	}-*/;
+
+	public native void setCity(City city)/*-{
+		this.city = city;
+	}-*/;
+
+	public final native City getCity() /*-{
+		return $wnd.cleanObject(this.city);
+	}-*/;
+
+	public native void setStateProv(StateProv stateProv)/*-{
+		this.stateProv = stateProv;
+	}-*/;
+
+	public final native StateProv getStateProv() /*-{
+		return $wnd.cleanObject(this.stateProv);
+	}-*/;
+
+	public native void setPostalCode(PostalCode postalCode)/*-{
+		this.postalCode = postalCode;
+	}-*/;
+
+	public final native PostalCode getPostalCode() /*-{
+		return $wnd.cleanObject(this.postalCode);
+	}-*/;
+
+	public native void setCountry(Country country)/*-{
+		this.country = country;
+	}-*/;
+
+	public final native Country getCountry() /*-{
+		return $wnd.cleanObject(this.country);
+	}-*/;
+
+	public native void setAddrType(AddrType addrType)/*-{
+		this.addrType = addrType;
+	}-*/;
+
+	public final native AddrType getAddrType() /*-{
+		return $wnd.cleanObject(this.addrType);
+	}-*/;
+
+	public native void setStartDt(StartDt startDt)/*-{
+		this.startDt = startDt;
+	}-*/;
+
+	public final native StartDt getStartDt() /*-{
+		return $wnd.cleanObject(this.startDt);
+	}-*/;
+
+	public native void setEndDt(EndDt endDt)/*-{
+		this.endDt = endDt;
+	}-*/;
+
+	public final native EndDt getEndDt() /*-{
+		return $wnd.cleanObject(this.endDt);
+	}-*/;
+
+}

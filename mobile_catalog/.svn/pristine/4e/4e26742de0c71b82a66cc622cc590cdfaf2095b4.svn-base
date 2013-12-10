@@ -1,0 +1,49 @@
+package my.com.infopro.ifx.client.model;
+
+public class DepAcctRec_Type extends IFXObject {
+	public final native void setStopCount(StopCount stopCount)/*-{
+		this.stopCount = stopCount;
+	}-*/;
+
+	public final native StopCount getStopCount()/*-{
+		return $wnd.cleanObject(this.stopCount);
+
+	}-*/;
+
+	public final native void setHoldCount(HoldCount holdCount)/*-{
+		this.holdCount = holdCount;
+	}-*/;
+
+	public final native HoldCount getHoldCount()/*-{
+		return $wnd.cleanObject(this.holdCount);
+
+	}-*/;
+
+	public final native void setLastDepDt(LastDepDt lastDepDt)/*-{
+		this.lastDepDt = lastDepDt;
+	}-*/;
+
+	public final native LastDepDt getLastDepDt()/*-{
+		return $wnd.cleanObject(this.lastDepDt);
+
+	}-*/;
+
+	public final native void setLastDepCurAmt(LastDepCurAmt lastDepCurAmt)/*-{
+		this.lastDepCurAmt = lastDepCurAmt;
+	}-*/;
+
+	public final native LastDepCurAmt getLastDepCurAmt()/*-{
+		return $wnd.cleanObject(this.lastDepCurAmt);
+
+	}-*/;
+
+	public final native void setDepMatureDt(DepMatureDt depMatureDt)/*-{
+		this.depMatureDt = depMatureDt;
+	}-*/;
+
+	public final native DepMatureDt getDepMatureDt()/*-{
+		return $wnd.cleanObject(this.depMatureDt);
+
+	}-*/;
+
+}

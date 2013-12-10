@@ -1,0 +1,91 @@
+package my.com.infopro.ifx.client.model;
+
+public class SessionTotalsInqRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public native void setSessionType(SessionType sessionType)/*-{
+		this.sessionType = sessionType;
+	}-*/;
+
+	public final native SessionType getSessionType() /*-{
+		return $wnd.cleanObject(this.sessionType);
+
+	}-*/;
+
+	public native void setSessionId(SessionId sessionId)/*-{
+		this.sessionId = sessionId;
+	}-*/;
+
+	public final native SessionId getSessionId() /*-{
+		return $wnd.cleanObject(this.sessionId);
+
+	}-*/;
+
+	public native void setNetSessionTotals(NetSessionTotals netSessionTotals)/*-{
+		this.netSessionTotals = netSessionTotals;
+	}-*/;
+
+	public final native NetSessionTotals getNetSessionTotals() /*-{
+		return $wnd.cleanObject(this.netSessionTotals);
+
+	}-*/;
+
+	public native void setSessionTotalsRec(SessionTotalsRec sessionTotalsRec)/*-{
+		this.sessionTotalsRec = sessionTotalsRec;
+	}-*/;
+
+	public final native SessionTotalsRec getSessionTotalsRec() /*-{
+		return $wnd.cleanObject(this.sessionTotalsRec);
+
+	}-*/;
+
+}

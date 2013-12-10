@@ -1,0 +1,16 @@
+package ong.eu.soon.mobile.json.ifx.basetypes;
+
+
+/**
+ * This class provides a wrapper for the xpath datatype.
+ * @author Ong Eu Soon (eusoob@gmail.com)
+ * @version $Revision: 2.3 $
+ */
+public class IFXPath extends IFXString {
+	protected IFXPath(){	
+	}
+	
+}
+
+
+

@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class BalRevRs extends BalRevRs_Type {
+
+}

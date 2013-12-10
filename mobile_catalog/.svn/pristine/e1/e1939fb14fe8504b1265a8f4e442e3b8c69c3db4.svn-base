@@ -1,0 +1,11 @@
+package my.com.infopro.ifx.element;
+
+public enum CountryCodeSource {
+	
+	FIPS("FIPS-10"), Alpha2("ISO3166-Alpha-2"), Alpha3("ISO3166-Alpha-3"),Numeric("ISO3166-Numeric"), ITU("ITU-E.164"), STANAG("STANAG-1059");
+	private String value;
+	private CountryCodeSource(String value){
+		this.value=value;
+	}
+	
+}

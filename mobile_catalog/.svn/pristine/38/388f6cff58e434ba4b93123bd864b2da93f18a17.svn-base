@@ -1,0 +1,12 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum CompositeCurAmtType {
+	
+	
+	 Immediate("Immediate"), oneDayFloat("1DayFloat"), TwoDayFloat("2DayFloat"), ThreeDayFloat("3DayFloat"),FourDayFloat("4DayFloat"), FiveDayFloat("5DayFloat"), SixDayFloat("6DayFloat"), OnePlusDay("OnePlusDay"), TwoPlusDay("TwoPlusDay"), ThreePlusDay("ThreePlusDay"), Standard("Standard"), Debit("Debit"), Credit("Credit"), ForExFee("ForExFee"), StopChkFee("StopChkFee"), LateFee("LateFee"), TransactionFee("TransactionFee"), InterchangeFee("InterchangeFee"), Surcharge("Surcharge"), StatementFee("StatementFee"), Tax("Tax"), MerchandisePurchase("MerchandisePurchase"), MerchandiseReturn("MerchandiseReturn"), CheckFee("CheckFee"), PmtEnclosed("PmtEnclosed"), CashBack("CashBack"), CreditHeld("CreditHeld"), Bonus("Bonus"), Freight("Freight"), PurchaseItemTotal("PurchaseItemTotal");
+	 
+	 String value;
+	 private CompositeCurAmtType(String value){
+		 this.value=value;
+	 }
+}

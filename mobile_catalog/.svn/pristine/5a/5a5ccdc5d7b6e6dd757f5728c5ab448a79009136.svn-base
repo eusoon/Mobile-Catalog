@@ -1,0 +1,79 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class PassbkInfo extends IFXObject {
+
+	AcctRef acctRef; //Aggregate	Optional	Account Reference Aggregate
+	Name name; //C-40	Optional	A short customer-provided name (or identifier) that differentiates one passbook from another. It would be assumed that this name could be entered or selected by an account holder, and is used to identify which passbook is being updated. This would likely only be necessary in an environment where multiple passbooks could be attached to the same account.
+	PassbkLastItemPrinted passbkLastItemPrinted; //Identifier		Optional	The Id of the last successful PassbkItem that has been printed in the Passbook media.
+	PassbkLastBalPrinted passbkLastBalPrinted; //Aggregate	Optional	The last balance printed in the passbook media. Typical usage would only consider the <Amt> field in the currency amount type. If this value is unknown, the field is omitted.
+	PassbkNextLine passbkNextLine; //Long	Optional	The line number on which to start printing. This should always be updated to the last line number printed+1 or reset to 1 if the next line to print is on a new page. This number is one-based, so a value of 1 means to print at the top of the page. A value of zero or negative values are reserved, and should not be used. If this value is unknown, the field is omitted.
+	PassbkNextPage passbkNextPage; //Long	Optional	The page number on which to start printing. This number is one-based, so a value of 1 means to print on the first page of the Passbook. A value of zero or negative values are reserved, and should not be used. If this value is unknown, the field is omitted.
+	PassbkFormat passbkFormat; //C-40	Optional	Information on the format or layout of the associated passbook. This value is implementation specific (for example in an XFS implementation, could refer to the form to use when printing the passbook). If this field is blank or not present, this indicates to use the "default format" configured at the client.
+	PassbkLinesPerPage passbkLinesPerPage; //Long	Optional	The number of lines on each passbook page for the physical media associated to this Passbook object.
+	PassbkPagesPerBook passbkPagesPerBook; //Long	Optional	The number of pages in the passbook in the physical media associated to this Passbook object.
+	ClientChgCode clientChgCode; //Open Enum	Optional	Client Change Code. The reason the Passbook information was modified due to an unexpected situation. This field is not used when updating the server in the case where the lines have printed correctly.	Defined Values: None, ConsumerCancelled, TerminalExceptionAmountKnown,  ConsumerExceptionAmountKnown, ConsumerDeclined, ConsumerTimeout
+	
+	public AcctRef getAcctRef() {
+		return acctRef;
+	}
+	public void setAcctRef(AcctRef acctRef) {
+		this.acctRef = acctRef;
+	}
+	public Name getName() {
+		return name;
+	}
+	public void setName(Name name) {
+		this.name = name;
+	}
+	public PassbkLastItemPrinted getPassbkLastItemPrinted() {
+		return passbkLastItemPrinted;
+	}
+	public void setPassbkLastItemPrinted(PassbkLastItemPrinted passbkLastItemPrinted) {
+		this.passbkLastItemPrinted = passbkLastItemPrinted;
+	}
+	public PassbkLastBalPrinted getPassbkLastBalPrinted() {
+		return passbkLastBalPrinted;
+	}
+	public void setPassbkLastBalPrinted(PassbkLastBalPrinted passbkLastBalPrinted) {
+		this.passbkLastBalPrinted = passbkLastBalPrinted;
+	}
+	public PassbkNextLine getPassbkNextLine() {
+		return passbkNextLine;
+	}
+	public void setPassbkNextLine(PassbkNextLine passbkNextLine) {
+		this.passbkNextLine = passbkNextLine;
+	}
+	public PassbkNextPage getPassbkNextPage() {
+		return passbkNextPage;
+	}
+	public void setPassbkNextPage(PassbkNextPage passbkNextPage) {
+		this.passbkNextPage = passbkNextPage;
+	}
+	public PassbkFormat getPassbkFormat() {
+		return passbkFormat;
+	}
+	public void setPassbkFormat(PassbkFormat passbkFormat) {
+		this.passbkFormat = passbkFormat;
+	}
+	public PassbkLinesPerPage getPassbkLinesPerPage() {
+		return passbkLinesPerPage;
+	}
+	public void setPassbkLinesPerPage(PassbkLinesPerPage passbkLinesPerPage) {
+		this.passbkLinesPerPage = passbkLinesPerPage;
+	}
+	public PassbkPagesPerBook getPassbkPagesPerBook() {
+		return passbkPagesPerBook;
+	}
+	public void setPassbkPagesPerBook(PassbkPagesPerBook passbkPagesPerBook) {
+		this.passbkPagesPerBook = passbkPagesPerBook;
+	}
+	public ClientChgCode getClientChgCode() {
+		return clientChgCode;
+	}
+	public void setClientChgCode(ClientChgCode clientChgCode) {
+		this.clientChgCode = clientChgCode;
+	}
+	
+}

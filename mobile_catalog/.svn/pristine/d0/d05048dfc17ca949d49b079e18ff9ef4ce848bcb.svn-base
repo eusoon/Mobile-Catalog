@@ -1,0 +1,10 @@
+package my.com.infopro.ifx.client.model;
+
+import com.google.gwt.core.client.JavaScriptObject;
+
+public class IFXString extends IFXObject {
+
+	public final native void setString(JavaScriptObject s) /*-{
+		this.string = s;
+	}-*/;
+}

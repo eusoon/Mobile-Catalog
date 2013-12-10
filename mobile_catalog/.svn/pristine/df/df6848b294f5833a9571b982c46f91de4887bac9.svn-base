@@ -1,0 +1,37 @@
+package my.com.infopro.ifx.client.model;
+
+public class CustPayeeRec_Type extends IFXObject {
+	public final native void setCustPayeeId(CustPayeeId custPayeeId)/*-{
+		this.custPayeeId = custPayeeId;
+	}-*/;
+
+	public final native CustPayeeId getCustPayeeId()/*-{
+		return $wnd.cleanObject(this.custPayeeId);
+	}-*/;
+
+	public final native void setCustPayeeInfo(CustPayeeInfo custPayeeInfo)/*-{
+		this.custPayeeInfo = custPayeeInfo;
+	}-*/;
+
+	public final native CustPayeeInfo getCustPayeeInfo()/*-{
+		return $wnd.cleanObject(this.custPayeeInfo);
+
+	}-*/;
+
+	public final native void setBillerContact(BillerContact billerContact)/*-{
+		this.billerContact = billerContact;
+	}-*/;
+
+	public final native BillerContact getBillerContact()/*-{
+		return $wnd.cleanObject(this.billerContact);
+
+	}-*/;
+
+	public final native void setDaysToPay(DaysToPay _daysToPay)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native DaysToPay getDaysToPay()/*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+}

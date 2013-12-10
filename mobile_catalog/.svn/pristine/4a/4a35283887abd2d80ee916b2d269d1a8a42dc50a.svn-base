@@ -1,0 +1,36 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class EMVRqData extends IFXObject {
+	EMVRqRawData eMVRqRawData;	 //	HexBin-unbound	 Optional	 Contains all EMV request data (including data also provided in other IFX elements below) in TLV format as specified by EMVCo.
+	Trk2EquivData trk2EquivData;	 //	HexBin-20	 Optional	 Track 2 Equivalent Data. Indicates the Track 2 Data as read from the Integrated Circuit Card (ICC). The format of this data is according to ISO/IEC 7813 standards, excluding start sentinel, end sentinel, and LRC. It includes the following data elements: Primary account Number (PAN), a variable length numeric character string of up to 19 characters; Field Separator (hex "D" value); Expiration Date in YYMM format, a 4-character numeric string; Service Code, a 3-character string; Discretionary Data (define by individual payment systems), a variable length character string of up to 12 characters; and the last character is "padded" with hex. 'F', if needed to ensure whole bytes.The data associated with this element is not needed if the Track 2 data already contains this information elsewhere in the transaction message.
+	AppPan appPan;	 //	HexBin-20	 Optional	 Application Primary Account Number (PAN). Indicates the valid cardholder account number, padded to the right with hex 'F' values. The data value contained by this element is in hexadecimal characters.The data associated with this element is not needed if the already contains this information and is equivalent.
+	IssuerScriptResultData[] issuerScriptResultData;	 //	Aggregate	 Optional Repeating	 Issuer Script Result. Contains the results of executing Issuer Scripts received in a previous EMVRsData aggregate.Required if the previous aggregate contained .
+	
+	public EMVRqRawData geteMVRqRawData() {
+		return eMVRqRawData;
+	}
+	public void seteMVRqRawData(EMVRqRawData eMVRqRawData) {
+		this.eMVRqRawData = eMVRqRawData;
+	}
+	public Trk2EquivData getTrk2EquivData() {
+		return trk2EquivData;
+	}
+	public void setTrk2EquivData(Trk2EquivData trk2EquivData) {
+		this.trk2EquivData = trk2EquivData;
+	}
+	public AppPan getAppPan() {
+		return appPan;
+	}
+	public void setAppPan(AppPan appPan) {
+		this.appPan = appPan;
+	}
+	public IssuerScriptResultData[] getIssuerScriptResultData() {
+		return issuerScriptResultData;
+	}
+	public void setIssuerScriptResultData(
+			IssuerScriptResultData[] issuerScriptResultData) {
+		this.issuerScriptResultData = issuerScriptResultData;
+	}
+}

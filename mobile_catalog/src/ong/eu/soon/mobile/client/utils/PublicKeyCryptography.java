@@ -1,0 +1,146 @@
+package ong.eu.soon.mobile.client.utils;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
+
+import ong.eu.soon.mobile.client.InfoproMobile;
+
+
+
+import com.googlecode.gwt.crypto.bouncycastle.AsymmetricBlockCipher;
+import com.googlecode.gwt.crypto.bouncycastle.DataLengthException;
+import com.googlecode.gwt.crypto.bouncycastle.InvalidCipherTextException;
+import com.googlecode.gwt.crypto.bouncycastle.engines.RSAEngine;
+import com.googlecode.gwt.crypto.bouncycastle.params.RSAKeyParameters;
+import com.googlecode.gwt.crypto.client.TripleDesCipher;
+import com.googlecode.gwt.crypto.client.TripleDesKeyGenerator;
+
+public class PublicKeyCryptography {
+	public static byte[] generateSecretKey(){
+		TripleDesKeyGenerator tripleDesKeyGenerator =new TripleDesKeyGenerator ();
+    	// Step 1. Generate a DES key using KeyGenerator 
+    	byte[] GWT_DES_KEY = tripleDesKeyGenerator.generateNewKey();
+    	return GWT_DES_KEY;
+	}
+	public static String generateEncodedSecretKey(){
+		TripleDesKeyGenerator tripleDesKeyGenerator =new TripleDesKeyGenerator ();
+    	// Step 1. Generate a DES key using KeyGenerator 
+    	byte[] GWT_DES_KEY = tripleDesKeyGenerator.generateNewKey();
+    	return tripleDesKeyGenerator.encodeKey(GWT_DES_KEY);
+	}
+	public static String encryptData(byte[] byteDataToTransmit,
+			byte[] senderSecretKey) {
+		// Step2. Create a Cipher 
+    	TripleDesCipher cipher = new TripleDesCipher();
+    	//Step 3. Initialize the Cipher for Encryption
+    	cipher.setKey(senderSecretKey);
+    	String strCipherText = null;
+    	try {
+    		//Step 4. Encrypt the Data
+    		strCipherText = cipher.encrypt(String.valueOf(byteDataToTransmit));
+    	} catch (DataLengthException e1) {
+    	  e1.printStackTrace();
+    	} catch (IllegalStateException e1) {
+    	  e1.printStackTrace();
+    	} catch (InvalidCipherTextException e1) {
+    	  e1.printStackTrace();
+    	}
+		return strCipherText;
+	}
+	public static String getMessageToSign(byte[] senderSecretKey,
+			byte[] byteDataToTransmit,
+			String algorithm, String keySerial) {
+		return getMessageToSign(senderSecretKey,byteDataToTransmit, algorithm)+"|"+keySerial;
+	}
+	public static String getMessageToSign(byte[] senderSecretKey,
+			byte[] byteDataToTransmit,
+			String algorithm) {
+		return encryptSecretKey(senderSecretKey) + "|"
+				+ createHashValue(byteDataToTransmit, algorithm);
+	}
+	public static String createHashValue(byte[] byteDataToTransmit,
+			String algorithm) {
+		MessageDigest md;
+		try {
+			// algorithm="MD5"
+			md = MessageDigest.getInstance(algorithm);
+			md.update(byteDataToTransmit);
+			byte byteMDofDataToTransmit[] = md.digest();
+
+			String strMDofDataToTransmit = new String();
+			for (byte element : byteMDofDataToTransmit) {
+				strMDofDataToTransmit = strMDofDataToTransmit
+						+ Integer.toHexString(element & 0xFF);
+			}
+			return strMDofDataToTransmit;
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public static String encryptSecretKey(byte[] senderSecretKey) {
+		//Get Modulus of RSA Key Pair
+		String modulus=InfoproMobile.get().getGeneralData().getModulus();
+		//Get Public Exponent of RSA Key Pair
+		String pubExp = InfoproMobile.get().getGeneralData().getPublicExponent();
+		
+		BigInteger modProd=new BigInteger(modulus.getBytes());
+		BigInteger pubExpProd=new BigInteger(pubExp.getBytes());
+		RSAKeyParameters pubParametersProd = new RSAKeyParameters(false, modProd, pubExpProd);
+		AsymmetricBlockCipher   eng = new RSAEngine();
+		eng.init(true, pubParametersProd);
+		byte[] byteEncryptWithPublicKey;
+		try {
+			byteEncryptWithPublicKey = eng.processBlock(senderSecretKey, 0, senderSecretKey.length);
+			String strSenbyteEncryptWithPublicKey = Base64.encode(
+					byteEncryptWithPublicKey.toString());
+			return strSenbyteEncryptWithPublicKey;
+		} catch (InvalidCipherTextException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	public static String getEncryptedSecretKey(String strMsgToSign) {
+		int intindexofsep = strMsgToSign.indexOf("|");
+		String strEncryptWithPublicKey = strMsgToSign.substring(0,
+				intindexofsep);
+		return strEncryptWithPublicKey;
+	}
+	public static String getHashOfData(String strMsgToSign) {
+		int intindexofsep = strMsgToSign.indexOf("|");
+		String strHashOfData = strMsgToSign.substring(intindexofsep + 1);
+		return strHashOfData;
+	}
+	public static void computeDataMessageDigest(byte[] byteDecryptText,
+			String strMsgToSign, String algorithm) {
+		int intindexofsep = strMsgToSign.indexOf("|");
+		String strHashOfData = strMsgToSign.substring(intindexofsep + 1);
+		MessageDigest recvmd;
+		try {
+			//algorithm="MD5"
+			recvmd = MessageDigest.getInstance(algorithm);
+			recvmd.update(byteDecryptText);
+			byte byteHashOfRecvSignedData[] = recvmd.digest();
+
+			String strHashOfRecvSignedData = new String();
+
+			for (byte element : byteHashOfRecvSignedData) {
+				strHashOfRecvSignedData = strHashOfRecvSignedData
+						+ Integer.toHexString(element & 0xFF);
+			}
+			// 10. Validate if the Message Digest of the Decrypted Text matches
+			// the Message Digest of the Original Message
+			if (!strHashOfRecvSignedData.equals(strHashOfData)) {
+				System.out.println(" Message has been tampered ");
+			}
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}

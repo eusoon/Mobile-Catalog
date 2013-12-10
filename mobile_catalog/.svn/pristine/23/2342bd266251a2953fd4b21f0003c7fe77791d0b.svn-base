@@ -1,0 +1,20 @@
+package my.com.infopro.ifx.client.model;
+
+public class BillMsgRqInfo_Type extends IFXObject {
+
+	public final native void setBillInqRq(BillInqRq billInqRq)/*-{
+		this.billInqRq = billInqRq;
+	}-*/;
+
+	public final native BillInqRq getBillInqRq()/*-{
+		return $wnd.cleanObject(this.billInqRq);
+	}-*/;
+
+	public final native void setBillStatusModRq(BillStatusModRq billStatusModRq)/*-{
+		this.billStatusModRq = billStatusModRq;
+	}-*/;
+
+	public final native BillStatusModRq getBillStatusModRq()/*-{
+		return $wnd.cleanObject(this.billStatusModRq);
+	}-*/;
+}

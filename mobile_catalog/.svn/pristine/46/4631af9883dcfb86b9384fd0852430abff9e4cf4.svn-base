@@ -1,0 +1,15 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class AcctSel extends IFXObject {
+	AcctKeys acctKeys; //Aggregate	Required Account Keys Aggregate
+
+	public AcctKeys getAcctKeys() {
+		return acctKeys;
+	}
+
+	public void setAcctKeys(AcctKeys acctKeys) {
+		this.acctKeys = acctKeys;
+	}
+}

@@ -1,0 +1,35 @@
+package my.com.infopro.ifx.client.model;
+
+public class LOCAcctRec_Type extends IFXObject {
+	public final native void setLOCLimit(LOCLimit lOCLimit)/*-{
+		this.lOCLimit = lOCLimit;
+	}-*/;
+
+	public final native LOCLimit getLOCLimit()/*-{
+		return $wnd.cleanObject(this.lOCLimit);
+	}-*/;
+
+	public final native void setMinPmtCurAmt(MinPmtCurAmt minPmtCurAmt)/*-{
+		this.minPmtCurAmt = minPmtCurAmt;
+	}-*/;
+
+	public final native MinPmtCurAmt getMinPmtCurAmt()/*-{
+		return $wnd.cleanObject(this.minPmtCurAmt);
+	}-*/;
+
+	public native void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+
+	public final native ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+
+	public final native void setLoanInfoCommon(LoanInfoCommon loanInfoCommon)/*-{
+		this.loanInfoCommon = loanInfoCommon;
+	}-*/;
+
+	public final native LoanInfoCommon getLoanInfoCommon()/*-{
+		return $wnd.cleanObject(this.loanInfoCommon);
+	}-*/;
+}

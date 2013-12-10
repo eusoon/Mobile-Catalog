@@ -1,0 +1,31 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public  class Discount extends IFXObject {
+
+	public final native  Rate[] getRate()/*-{
+		return $wnd.cleanObject(this.rate);
+	}-*/;
+	public final native  void setRate(Rate[] rate)/*-{
+		this.rate = rate;
+	}-*/;
+	public final native  CurAmt[] getCurAmt()/*-{
+		return $wnd.cleanObject(this.curAmt);
+	}-*/;
+	public final native  void setCurAmt(CurAmt[] curAmt)/*-{
+		this.curAmt = curAmt;
+	}-*/;
+	public final native  EffDt getEffDt()/*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+	public final native  void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+	public final native  Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+	}-*/;
+	public final native  void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+}

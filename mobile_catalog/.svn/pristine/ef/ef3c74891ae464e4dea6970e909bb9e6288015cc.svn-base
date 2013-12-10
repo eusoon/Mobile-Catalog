@@ -1,0 +1,95 @@
+package my.com.infopro.ifx.client.model;
+
+public class DevInqRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+
+	}-*/;
+
+	public final native void setRecCtrlIn(RecCtrlIn recCtrlIn)/*-{
+		this.recCtrlIn = recCtrlIn;
+	}-*/;
+
+	public final native RecCtrlIn getRecCtrlIn()/*-{
+		return $wnd.cleanObject(this.recCtrlIn);
+
+	}-*/;
+
+	public final native void setDevId(DevId[] devId)/*-{
+		this.devId = devId;
+	}-*/;
+
+	public final native DevId[] getDevId()/*-{
+		return $wnd.cleanObject(this.devId);
+
+	}-*/;
+
+	public final native void setDevName(DevName[] devName)/*-{
+		this.devName = devName;
+	}-*/;
+
+	public final native DevName[] getDevName()/*-{
+		return $wnd.cleanObject(this.devName);
+
+	}-*/;
+
+	public final native void setDevType(DevType[] devType)/*-{
+		this.devType = devType;
+	}-*/;
+
+	public final native DevType[] getDevType()/*-{
+		return $wnd.cleanObject(this.devType);
+
+	}-*/;
+
+	public final native void setDevStatusCode(DevStatusCode[] devStatusCode)/*-{
+		this.devStatusCode = devStatusCode;
+	}-*/;
+
+	public final native DevStatusCode[] getDevStatusCode()/*-{
+		return $wnd.cleanObject(this.devStatusCode);
+
+	}-*/;
+
+	public final native void setCSPRefId(CSPRefId[] cSPRefId)/*-{
+		this.cSPRefId = cSPRefId;
+	}-*/;
+
+	public final native CSPRefId[] getCSPRefId()/*-{
+		return $wnd.cleanObject(this.cSPRefId);
+
+	}-*/;
+
+	public final native void setSPRefId(SPRefId[] sPRefId)/*-{
+		this.sPRefId = sPRefId;
+	}-*/;
+
+	public final native SPRefId[] getSPRefId()/*-{
+		return $wnd.cleanObject(this.sPRefId);
+
+	}-*/;
+
+}

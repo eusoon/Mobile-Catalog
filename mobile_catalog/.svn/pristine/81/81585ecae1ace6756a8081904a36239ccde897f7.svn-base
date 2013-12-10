@@ -1,0 +1,69 @@
+package my.com.infopro.ifx.client.model;
+
+public class PointOfServiceData_Type extends IFXObject {
+
+	public native void setEnvironment(Environment environment)/*-{
+		this.environment = environment;
+	}-*/;
+
+	public final native Environment getEnvironment()/*-{
+		return $wnd.cleanObject(this.environment);
+
+	}-*/;
+
+	public native void setPOSCapabilities(POSCapabilities pOSCapabilities)/*-{
+		this.pOSCapabilities = pOSCapabilities;
+	}-*/;
+
+	public final native POSCapabilities getPOSCapabilities()/*-{
+		return $wnd.cleanObject(this.pOSCapabilities);
+
+	}-*/;
+
+	public native void setPOSSecurity(POSSecurity pOSSecurity)/*-{
+		this.pOSSecurity = pOSSecurity;
+	}-*/;
+
+	public final native POSSecurity getPOSSecurity()/*-{
+		return $wnd.cleanObject(this.pOSSecurity);
+
+	}-*/;
+
+	public native void setPOSAgent(POSAgent pOSAgent)/*-{
+		this.pOSAgent = pOSAgent;
+	}-*/;
+
+	public final native POSAgent getPOSAgent()/*-{
+		return $wnd.cleanObject(this.pOSAgent);
+
+	}-*/;
+
+	public native void setIdentCharacterData(
+			IdentCharacterData identCharacterData)/*-{
+		this.identCharacterData = identCharacterData;
+	}-*/;
+
+	public final native IdentCharacterData getIdentCharacterData()/*-{
+		return $wnd.cleanObject(this.identCharacterData);
+
+	}-*/;
+
+	public native void setPOSLocation(POSLocation pOSLocation)/*-{
+		this.pOSLocation = pOSLocation;
+	}-*/;
+
+	public final native POSLocation getPOSLocation()/*-{
+		return $wnd.cleanObject(this.pOSLocation);
+
+	}-*/;
+
+	public native void setPostingSessionId(PostingSessionId postingSessionId)/*-{
+		this.postingSessionId = postingSessionId;
+	}-*/;
+
+	public final native PostingSessionId getPostingSessionId()/*-{
+		return $wnd.cleanObject(this.postingSessionId);
+
+	}-*/;
+
+}

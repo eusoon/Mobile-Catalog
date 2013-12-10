@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum Unit {
+	Seconds, Minutes, Hours, Days, Weeks, Months, Years
+}

@@ -1,0 +1,85 @@
+package my.com.infopro.ifx.client.model;
+
+public class ChkDetail_Type extends IFXObject {
+
+	public final native void setManualMicr(ManualMicr manualMicr)/*-{
+		this.manualMicr = manualMicr;
+	}-*/;
+
+	public final native ManualMicr getManualMicr()/*-{
+		return $wnd.cleanObject(this.manualMicr);
+	}-*/;
+
+	public final native void setBankId(BankId bankId)/*-{
+		this.bankId = bankId;
+	}-*/;
+
+	public final native BankId getBankId()/*-{
+		return $wnd.cleanObject(this.bankId);
+	}-*/;
+
+	public final native void setAcctId(AcctId acctId)/*-{
+		this.acctId = acctId;
+	}-*/;
+
+	public final native AcctId getAcctId()/*-{
+		return $wnd.cleanObject(this.acctId);
+	}-*/;
+
+	public final native void setProcessControl(ProcessControl processControl)/*-{
+		this.processControl = processControl;
+	}-*/;
+
+	public final native ProcessControl getProcessControl()/*-{
+		return $wnd.cleanObject(this.processControl);
+	}-*/;
+
+	public final native void setChkNum(ChkNum chkNum)/*-{
+		this.chkNum = chkNum;
+	}-*/;
+
+	public final native ChkNum getChkNum()/*-{
+		return $wnd.cleanObject(this.chkNum);
+	}-*/;
+
+	public final native void setOrigDt(OrigDt origDt)/*-{
+		this.origDt = origDt;
+	}-*/;
+
+	public final native OrigDt getOrigDt()/*-{
+		return $wnd.cleanObject(this.origDt);
+	}-*/;
+
+	public final native void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public final native void setPostAddr(PostAddr postAddr)/*-{
+		this.postAddr = postAddr;
+	}-*/;
+
+	public final native PostAddr getPostAddr()/*-{
+		return $wnd.cleanObject(this.postAddr);
+	}-*/;
+
+	public final native void setOrgPhone(OrgPhone orgPhone)/*-{
+		this.orgPhone = orgPhone;
+	}-*/;
+
+	public final native OrgPhone getOrgPhone()/*-{
+		return $wnd.cleanObject(this.orgPhone);
+	}-*/;
+
+	public final native void setMemo(Memo memo)/*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo getMemo()/*-{
+		return $wnd.cleanObject(this.memo);
+	}-*/;
+
+}

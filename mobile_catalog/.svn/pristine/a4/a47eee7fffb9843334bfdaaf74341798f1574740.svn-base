@@ -1,0 +1,22 @@
+package my.com.infopro.ifx.client.model;
+
+public class RecXferProf_Type extends IFXObject {
+	public final native void setFreq(Freq[] freq)/*-{
+		this.freq = freq;
+	}-*/;
+
+	public final native Freq[] getFreq()/*-{
+		return $wnd.cleanObject(this.freq);
+
+	}-*/;
+
+	public final native void setModPendingType(ModPendingType[] modPendingType)/*-{
+		this.modPendingType = modPendingType;
+	}-*/;
+
+	public final native ModPendingType[] getModPendingType()/*-{
+		return $wnd.cleanObject(this.modPendingType);
+
+	}-*/;
+
+}

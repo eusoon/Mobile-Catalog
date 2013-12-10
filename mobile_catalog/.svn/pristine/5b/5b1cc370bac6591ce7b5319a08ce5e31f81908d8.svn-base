@@ -1,0 +1,11 @@
+package my.com.infopro.ifx.client.model;
+
+import com.google.gwt.core.client.JavaScriptObject;
+
+public class IFXObject extends JavaScriptObject {
+	
+	public final native String getString() /*-{
+		return $wnd.cleanString(this.string);
+	}-*/;
+
+}

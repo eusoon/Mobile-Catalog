@@ -1,0 +1,50 @@
+package my.com.infopro.ifx.client.model;
+
+public class MsgRqHdr_Type extends IFXObject {
+	public native void setEMVRqData(EMVRqData eMVRqData)/*-{
+		this.eMVRqData = eMVRqData;
+	}-*/;
+
+	public final native EMVRqData getEMVRqData()/*-{
+		return $wnd.cleanObject(this.eMVRqData);
+
+	}-*/;
+
+	public native void setNetworkTrnInfo(NetworkTrnInfo networkTrnInfo)/*-{
+		this.networkTrnInfo = networkTrnInfo;
+	}-*/;
+
+	public final native NetworkTrnInfo getNetworkTrnInfo()/*-{
+		return $wnd.cleanObject(this.networkTrnInfo);
+
+	}-*/;
+
+	public native void setClientTerminalSeqId(
+			ClientTerminalSeqId clientTerminalSeqId)/*-{
+		this.clientTerminalSeqId = clientTerminalSeqId;
+	}-*/;
+
+	public final native ClientTerminalSeqId getClientTerminalSeqId()/*-{
+		return $wnd.cleanObject(this.clientTerminalSeqId);
+
+	}-*/;
+
+	public native void setPointOfServiceData(
+			PointOfServiceData pointOfServiceData)/*-{
+		this.pointOfServiceData = pointOfServiceData;
+	}-*/;
+
+	public final native PointOfServiceData getPointOfServiceData()/*-{
+		return $wnd.cleanObject(this.pointOfServiceData);
+
+	}-*/;
+
+	public native void setMsgAuthCode(MsgAuthCode msgAuthCode)/*-{
+		this.msgAuthCode = msgAuthCode;
+	}-*/;
+
+	public final native MsgAuthCode getMsgAuthCode()/*-{
+		return $wnd.cleanObject(this.msgAuthCode);
+
+	}-*/;
+}

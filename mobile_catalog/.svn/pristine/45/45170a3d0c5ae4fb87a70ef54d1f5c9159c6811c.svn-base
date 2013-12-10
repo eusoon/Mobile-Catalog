@@ -1,0 +1,89 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PersonName extends IFXObject {
+
+	public final native Language getLanguage() /*-{
+		return $wnd.cleanObject(language);
+	}-*/;
+	public final native void setLanguage(Language language) /*-{
+		this.language = language;
+	}-*/;
+	public final native FullName getFullName() /*-{
+		return $wnd.cleanObject(fullName);
+	}-*/;
+	public final native void setFullName(FullName fullName) /*-{
+		this.fullName = fullName;
+	}-*/;
+	public final native JsArray<FamilyName> getFamilyName() /*-{
+		return $wnd.cleanObject(familyName);
+	}-*/;
+	public final native void setFamilyName(JsArray<FamilyName> familyName) /*-{
+		this.familyName = familyName;
+	}-*/;
+	public final native JsArray<GivenName> getGivenName() /*-{
+		return $wnd.cleanObject(givenName);
+	}-*/;
+	public final native void setGivenName(JsArray<GivenName> givenName) /*-{
+		this.givenName = givenName;
+	}-*/;
+	public final native JsArray<MiddleName> getMiddleName() /*-{
+		return $wnd.cleanObject(middleName);
+	}-*/;
+	public final native void setMiddleName(JsArray<MiddleName> middleName) /*-{
+		this.middleName = middleName;
+	}-*/;
+	public final native JsArray<NamePrefix> getNamePrefix() /*-{
+		return $wnd.cleanObject(namePrefix);
+	}-*/;
+	public final native void setNamePrefix(JsArray<NamePrefix> namePrefix) /*-{
+		this.namePrefix = namePrefix;
+	}-*/;
+	public final native JsArray<NameSuffix> getNameSuffix() /*-{
+		return $wnd.cleanObject(nameSuffix);
+	}-*/;
+	public final native void setNameSuffix(JsArray<NameSuffix> nameSuffix) /*-{
+		this.nameSuffix = nameSuffix;
+	}-*/;
+	public final native JsArray<MaternalName> getMaternalName() /*-{
+		return $wnd.cleanObject(maternalName);
+	}-*/;
+	public final native void setMaternalName(JsArray<MaternalName> maternalName) /*-{
+		this.maternalName = maternalName;
+	}-*/;
+	public final native JsArray<PaternalName> getPaternalName() /*-{
+		return $wnd.cleanObject(paternalName);
+	}-*/;
+	public final native void setPaternalName(JsArray<PaternalName> paternalName) /*-{
+		this.paternalName = paternalName;
+	}-*/;
+	public final native JsArray<MarriedName> getMarriedName() /*-{
+		return $wnd.cleanObject(marriedName);
+	}-*/;
+	public final native void setMarriedName(JsArray<MarriedName> marriedName) /*-{
+		this.marriedName = marriedName;
+	}-*/;
+	public final native PreferredName getPreferredName() /*-{
+		return $wnd.cleanObject(preferredName);
+	}-*/;
+	public final native void setPreferredName(PreferredName preferredName) /*-{
+		this.preferredName = preferredName;
+	}-*/;
+	public final native LegalNameInd getLegalNameInd() /*-{
+		return $wnd.cleanObject(legalNameInd);
+	}-*/;
+	public final native void setLegalNameInd(LegalNameInd legalNameInd) /*-{
+		this.legalNameInd = legalNameInd;
+	}-*/;
+	public final native PriorNameInd getPriorNameInd() /*-{
+		return $wnd.cleanObject(priorNameInd);
+	}-*/;
+	public final native void setPriorNameInd(PriorNameInd priorNameInd) /*-{
+		this.priorNameInd = priorNameInd;
+	}-*/;
+	
+
+}

@@ -1,0 +1,31 @@
+package my.com.infopro.ifx.client.model;
+
+public class StopChkProf_Type extends IFXObject {
+	public final native void setOptSupt(OptSupt[] optSupt)/*-{
+		this.optSupt = optSupt;
+	}-*/;
+
+	public final native OptSupt[] getOptSupt()/*-{
+		return $wnd.cleanObject(this.optSupt);
+
+	}-*/;
+
+	public final native void setPrcSched(PrcSched[] prcSched)/*-{
+		this.prcSched = prcSched;
+	}-*/;
+
+	public final native PrcSched[] getPrcSched()/*-{
+		return $wnd.cleanObject(this.prcSched);
+
+	}-*/;
+
+	public final native void setFee(Fee[] fee)/*-{
+		this.fee = fee;
+	}-*/;
+
+	public final native Fee[] getFee()/*-{
+		return $wnd.cleanObject(this.fee);
+
+	}-*/;
+
+}

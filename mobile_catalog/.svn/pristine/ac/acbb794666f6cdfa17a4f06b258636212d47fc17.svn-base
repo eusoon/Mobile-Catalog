@@ -1,0 +1,231 @@
+package my.com.infopro.mobile.client.transfer;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JsArray;
+import com.google.gwt.json.client.JSONNull;
+import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.json.client.JSONString;
+import com.google.gwt.json.client.JSONValue;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Widget;
+
+import my.com.infopro.ifx.element.RecSelect;
+import my.com.infopro.ifx.transfer.XferInqRq;
+import my.com.infopro.mobile.client.IFX;
+import my.com.infopro.mobile.client.LoggedUser;
+import my.com.infopro.mobile.client.model.AccountStatus;
+import my.com.infopro.mobile.client.model.InitialData;
+import my.com.infopro.mobile.client.model.Parameters;
+import my.com.infopro.mobile.client.model.PaymentData;
+import my.com.infopro.mobile.client.model.TransferTypeDetailed;
+import my.com.infopro.mobile.client.services.XferService;
+import my.com.infopro.mobile.client.ui.Page;
+import my.com.infopro.mobile.client.ui.panels.SquarePanel;
+import my.com.infopro.mobile.client.ui.widgets.CustomFieldForm;
+import my.com.infopro.mobile.client.ui.widgets.FormField;
+import my.com.infopro.mobile.client.ui.widgets.NumberField;
+import my.com.infopro.mobile.client.ui.widgets.SelectionField;
+import my.com.infopro.mobile.client.ui.widgets.TextAreaField;
+import my.com.infopro.mobile.client.utils.BaseAsyncCallback;
+import my.com.infopro.mobile.client.utils.ParameterKey;
+import my.com.infopro.mobile.json.ifx.element.AcctKeys;
+import my.com.infopro.mobile.json.ifx.element.CurAmt;
+import my.com.infopro.mobile.json.ifx.element.ToAcctRef;
+import my.com.infopro.mobile.json.ifx.element.XferInfo;
+import my.com.infopro.mobile.json.ifx.element.XferRec;
+import my.com.infopro.mobile.json.ifx.transfer.XferInqRs;
+
+public class FundTransferPage extends Page {
+	 	private InitialData data; 
+	    private FormField fields;
+	    private CustomFieldForm customFields;
+	    private SquarePanel container;
+	    private PaymentData paymentData;
+	    private NumberField amount;
+	    private TextAreaField description;
+	    private SelectionField<TransferTypeDetailed> transferTypes;
+	    private boolean isSystem;
+	    private IFX ifx=new IFX();
+		private XferService xferService= GWT.create(XferService.class);
+	@Override
+	public String getHeading() {
+		return messages.fundTransferHeading();
+	}
+
+	@Override
+	public Widget initialize() {
+		container = new SquarePanel();  
+        container.setVisible(false);
+        
+        data = LoggedUser.get().getInitialData();
+        
+        fields = new FormField();               
+
+        transferTypes = new SelectionField<TransferTypeDetailed>() {
+            @Override
+            protected String getDisplayName(TransferTypeDetailed item) {
+                return item.getName();
+            }
+            @Override
+            protected void onItemSelected(TransferTypeDetailed item) {
+                renderData(item);
+            }
+        };      
+        
+        amount = new NumberField(data.getDecimalCount(), data.getDecimalSeparator(), messages.amount());  
+        amount.setOnlyPositive(true);
+        
+        description = new TextAreaField(messages.description());               
+        
+        customFields = new CustomFieldForm();
+        
+        container.add(fields);
+        container.add(transferTypes);
+        container.add(amount);
+        container.add(description);   
+        container.add(customFields);
+        
+        getPaymentData();
+        
+        return container;
+	}
+	private void getPaymentData() {
+		 Parameters params = new Parameters();                 
+	        Boolean isSystem = getParameters().getBoolean(ParameterKey.IS_SYSTEM_ACCOUNT);
+	        LoggedUser loggedUser=LoggedUser.get();
+	        XferInqRq xferInqRq=new XferInqRq();
+	        xferInqRq.setRqUID(ifx.getRqUID("PAY"));
+	        xferInqRq.setMsgRqHdr(ifx.getMsgRqHdr(loggedUser));
+	        if(isSystem != null && isSystem) {
+	            this.isSystem = true;
+	            params.set(ParameterKey.DESTINATION, "SYSTEM");
+	            RecSelect[] recSelect=new RecSelect[1];
+	            recSelect[0].setString("$xferInqRs.xferRec.xferInfo.toAcctRef.acctKeys.acctIdent[acctIdentValue='"+"']");
+	            xferInqRq.setRecSelect(recSelect);
+	        } else {           
+	            this.isSystem = false;
+	            Long memberId = getParameters().getRequiredLong(ParameterKey.ID);     
+	            params.set(ParameterKey.DESTINATION, "MEMBER");
+	            params.set(ParameterKey.TO_MEMBER_ID, memberId);
+	            RecSelect[] recSelect=new RecSelect[1];
+	            recSelect[0].setString("$xferInqRs.xferRec.xferInfo.toAcctRef.acctKeys[acctId='"+memberId+"']");
+	            xferInqRq.setRecSelect(recSelect);
+	        }
+	        params.setObject(ParameterKey.XFERINQRQ, xferInqRq);
+	        final BaseAsyncCallback<PaymentData> callback=new BaseAsyncCallback<PaymentData>(){
+
+				@Override
+				public void onSuccess(PaymentData result) {
+					paymentData = result;                
+	                
+	                if(paymentData != null && paymentData.getTransferTypes() != null && paymentData.getTransferTypes().length() > 0) {            
+	                    
+	                    // Populate selection options and preselect the first item
+	                    transferTypes.setItems(paymentData.getTransferTypes());    
+	                    transferTypes.selectFirst();
+	                    
+	                    // If only exists a transfer type, hide selection field  
+	                    if(paymentData.getTransferTypes().length() == 1) {
+	                        transferTypes.setVisible(false);
+	                    }
+	                    
+	                    // Display data for the first transfer type retrieved
+	                    renderData(paymentData.getTransferTypes().get(0));
+	                    
+	                    // Display loaded data
+	                    container.setVisible(true);
+	                }   
+					
+				}
+				
+			};
+	        // Fetch payment data
+	        AsyncCallback<XferInqRs> callback1=new AsyncCallback<XferInqRs> (){
+
+				@Override
+				public void onFailure(Throwable caught) {
+					callback.onFailure(caught);
+					
+				}
+
+				@Override
+				public void onSuccess(XferInqRs xferInqRs) {
+					JsArray<XferRec> xferRecs=xferInqRs.getXferRec();
+					JSONObject paymentData= new JSONObject();
+					JSONObject transferTypes1= new JSONObject();
+					JSONObject from=new JSONObject();
+					JSONObject to=new JSONObject();
+					for(int i=0; i<xferRecs.length();i++){
+						XferRec xferRec=xferRecs.get(i);
+						XferInfo xferInfo=xferRec.getXferInfo();
+						ToAcctRef toAcctRef=xferInfo.getToAcctRef();
+					
+						String fromAccountName=xferInfo.getFromAcctRef().getAcctKeys().getAcctId().getString();
+						from.put("name", getAsJSONString(fromAccountName));
+						
+							CurAmt curAmt=xferInfo.getCurAmt();
+							String symbol=curAmt.getCurCode().getCurCodeValue().getString();
+							JSONObject currency=new JSONObject();;
+							currency.put("symbol", getAsJSONString(symbol));
+							AcctKeys acctKey=toAcctRef.getAcctKeys();
+							String toAccountName=acctKey.getAcctId().getString();
+							to.put("name", getAsJSONString(toAccountName));
+							to.put("currency", currency);	
+							symbol=xferInfo.getCurAmt().getCurCode().getCurCodeValue().getString();
+							currency.put("symbol", getAsJSONString(symbol));
+							from.put("currency", currency);	
+							transferTypes1.put("to", to);
+							transferTypes1.put("from", from);
+							
+							String name=xferInfo.getCategory().getString();
+							transferTypes1.put("name", getAsJSONString(name));
+							paymentData.put("transferTypes", transferTypes1);
+							PaymentData result=paymentData.getJavaScriptObject().cast();
+							callback.onSuccess(result);	
+							
+					}
+				}
+				 private JSONValue getAsJSONString(String value) {
+		        		if (value == null) {
+		        			return JSONNull.getInstance();
+		        		}
+
+		        		return new JSONString(value);
+		        	}
+	        };
+			xferService.doXferInq(params, callback1);
+	}
+	/**
+     * Renders page data according to the given transfer type
+     */
+    private void renderData(TransferTypeDetailed item) {
+    	 Map<String, String> formData = new LinkedHashMap<String, String>();
+         
+         AccountStatus status = paymentData.get(item.getFrom().getId());
+         
+         // Display account from and balance
+         String html = item.getFrom().getName() + "<br><i>" + 
+                       messages.balance() + ": " +
+                       status.getFormattedBalance() + "</i>";
+         
+         formData.put(messages.from(), html);
+         
+         // If it is system show account name, otherwise display member name
+         if(isSystem) {
+             formData.put(messages.to(), item.getTo().getName());
+         } else {
+             formData.put(messages.to(), paymentData.getMemberTo().getName());
+         }  
+         
+         fields.setData(formData);
+         
+         // Update amount place holder with currency name
+         amount.setPlaceHolder(messages.amountIn(item.getTo().getCurrency().getName()));
+         
+         // Add custom fields
+         customFields.setCustomFields(item.getCustomFields()); 
+    }
+}

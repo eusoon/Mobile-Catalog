@@ -1,0 +1,8 @@
+package my.com.infopro.ifx.client.model;
+
+public class CashSerialNum_Type extends IFXObject {
+
+	public CashSerialNum_Type() {
+	}
+	
+}

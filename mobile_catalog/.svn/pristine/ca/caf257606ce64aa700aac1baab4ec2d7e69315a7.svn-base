@@ -1,0 +1,133 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.element.ArrivalDt;
+import my.com.infopro.mobile.client.ifx.element.ArrivalTime;
+import my.com.infopro.mobile.client.ifx.element.BillingAdjustmentInd;
+import my.com.infopro.mobile.client.ifx.element.CSPhoneNum;
+import my.com.infopro.mobile.client.ifx.element.Carrier;
+import my.com.infopro.mobile.client.ifx.element.DepartureDt;
+import my.com.infopro.mobile.client.ifx.element.DepartureTime;
+import my.com.infopro.mobile.client.ifx.element.FlightNumber;
+import my.com.infopro.mobile.client.ifx.element.FolioNumber;
+import my.com.infopro.mobile.client.ifx.element.GuestNumber;
+import my.com.infopro.mobile.client.ifx.element.LodgingCharge;
+import my.com.infopro.mobile.client.ifx.element.Name;
+import my.com.infopro.mobile.client.ifx.element.NoShowInd;
+import my.com.infopro.mobile.client.ifx.element.PropertyPhoneNumber;
+import my.com.infopro.mobile.client.ifx.element.RoomNights;
+import my.com.infopro.mobile.client.ifx.element.TaxExemptInd;
+
+public class LodgingAddenda extends CardAddenda {
+	Carrier carrier;//C-3	Optional Carrier
+	FlightNumber flightNumber;//C-5	Optional Flight Number
+	CSPhoneNum cSPhoneNum;//Phone Number	Optional Card (customer) service phone number
+	Name name;//C-40	Optional Name
+	GuestNumber guestNumber;//C-25	Optional Guest Number
+	ArrivalDt arrivalDt;//Date	Optional Arrival Date
+	ArrivalTime arrivalTime;//Time	Optional Arrival Time
+	DepartureDt departureDt;//Date	Optional Departure Date
+	DepartureTime departureTime;//Time	Optional Departure Time
+	FolioNumber folioNumber;//C-25	Optional Folio Number
+	PropertyPhoneNumber propertyPhoneNumber;//Phone Number	Optional Property Phone Number
+	BillingAdjustmentInd billingAdjustmentInd;//Boolean	Optional Billing Adjustment Indicator
+	TaxExemptInd taxExemptInd;//Boolean	Optional Tax Exempt Indicator
+	NoShowInd noShowInd;//Boolean	Optional No Show Indicator
+	RoomNights roomNights;//Long	Optional Room Nights
+	LodgingCharge[] lodgingCharge;//Aggregate	Optional Repeating Lodging Charge
+	public Carrier getCarrier() {
+		return carrier;
+	}
+	public void setCarrier(Carrier carrier) {
+		this.carrier = carrier;
+	}
+	public FlightNumber getFlightNumber() {
+		return flightNumber;
+	}
+	public void setFlightNumber(FlightNumber flightNumber) {
+		this.flightNumber = flightNumber;
+	}
+	public CSPhoneNum getcSPhoneNum() {
+		return cSPhoneNum;
+	}
+	public void setcSPhoneNum(CSPhoneNum cSPhoneNum) {
+		this.cSPhoneNum = cSPhoneNum;
+	}
+	public Name getName() {
+		return name;
+	}
+	public void setName(Name name) {
+		this.name = name;
+	}
+	public GuestNumber getGuestNumber() {
+		return guestNumber;
+	}
+	public void setGuestNumber(GuestNumber guestNumber) {
+		this.guestNumber = guestNumber;
+	}
+	public ArrivalDt getArrivalDt() {
+		return arrivalDt;
+	}
+	public void setArrivalDt(ArrivalDt arrivalDt) {
+		this.arrivalDt = arrivalDt;
+	}
+	public ArrivalTime getArrivalTime() {
+		return arrivalTime;
+	}
+	public void setArrivalTime(ArrivalTime arrivalTime) {
+		this.arrivalTime = arrivalTime;
+	}
+	public DepartureDt getDepartureDt() {
+		return departureDt;
+	}
+	public void setDepartureDt(DepartureDt departureDt) {
+		this.departureDt = departureDt;
+	}
+	public DepartureTime getDepartureTime() {
+		return departureTime;
+	}
+	public void setDepartureTime(DepartureTime departureTime) {
+		this.departureTime = departureTime;
+	}
+	public FolioNumber getFolioNumber() {
+		return folioNumber;
+	}
+	public void setFolioNumber(FolioNumber folioNumber) {
+		this.folioNumber = folioNumber;
+	}
+	public PropertyPhoneNumber getPropertyPhoneNumber() {
+		return propertyPhoneNumber;
+	}
+	public void setPropertyPhoneNumber(PropertyPhoneNumber propertyPhoneNumber) {
+		this.propertyPhoneNumber = propertyPhoneNumber;
+	}
+	public BillingAdjustmentInd getBillingAdjustmentInd() {
+		return billingAdjustmentInd;
+	}
+	public void setBillingAdjustmentInd(BillingAdjustmentInd billingAdjustmentInd) {
+		this.billingAdjustmentInd = billingAdjustmentInd;
+	}
+	public TaxExemptInd getTaxExemptInd() {
+		return taxExemptInd;
+	}
+	public void setTaxExemptInd(TaxExemptInd taxExemptInd) {
+		this.taxExemptInd = taxExemptInd;
+	}
+	public NoShowInd getNoShowInd() {
+		return noShowInd;
+	}
+	public void setNoShowInd(NoShowInd noShowInd) {
+		this.noShowInd = noShowInd;
+	}
+	public RoomNights getRoomNights() {
+		return roomNights;
+	}
+	public void setRoomNights(RoomNights roomNights) {
+		this.roomNights = roomNights;
+	}
+	public LodgingCharge[] getLodgingCharge() {
+		return lodgingCharge;
+	}
+	public void setLodgingCharge(LodgingCharge[] lodgingCharge) {
+		this.lodgingCharge = lodgingCharge;
+	}
+}

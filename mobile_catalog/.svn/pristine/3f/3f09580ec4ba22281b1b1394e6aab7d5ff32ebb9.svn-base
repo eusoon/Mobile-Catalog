@@ -1,0 +1,11 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXString;
+
+public class IntRateCategory extends IFXString {
+	protected IntRateCategory(){	
+	}
+	protected IntRateCategory(){
+	}
+	
+}

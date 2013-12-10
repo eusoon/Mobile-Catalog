@@ -1,0 +1,14 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public class PartyAuth extends IFXObject {
+
+	public final native SecToken[] getSecToken() /*-{
+		return $wnd.cleanObject(secToken);
+	}-*/;
+
+	public final native void setSecToken(SecToken[] secToken) /*-{
+		this.secToken = secToken;
+	}-*/;
+}

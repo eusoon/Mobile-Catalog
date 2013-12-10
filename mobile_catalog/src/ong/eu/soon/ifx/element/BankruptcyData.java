@@ -1,0 +1,38 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class BankruptcyData extends IFXObject {
+	EffDt effDt; // DateTime Optional Effective Date Time
+	BankruptcyType bankruptcyType; // Open Enum Optional Bankruptcy Type Valid
+									// values include: Chapter11, Chapter12,
+									// Chapter13, Chapter7
+	BankruptcyStat bankruptcyStat; // Open Enum Optional Bankruptcy Status Valid
+									// values include: Discharge, Dismissed,
+									// Petition
+
+	public EffDt getEffDt() {
+		return effDt;
+	}
+
+	public void setEffDt(EffDt effDt) {
+		this.effDt = effDt;
+	}
+
+	public BankruptcyType getBankruptcyType() {
+		return bankruptcyType;
+	}
+
+	public void setBankruptcyType(BankruptcyType bankruptcyType) {
+		this.bankruptcyType = bankruptcyType;
+	}
+
+	public BankruptcyStat getBankruptcyStat() {
+		return bankruptcyStat;
+	}
+
+	public void setBankruptcyStat(BankruptcyStat bankruptcyStat) {
+		this.bankruptcyStat = bankruptcyStat;
+	}
+
+}

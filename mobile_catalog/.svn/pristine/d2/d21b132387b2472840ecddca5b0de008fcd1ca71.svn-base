@@ -1,0 +1,9 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class LastTrnAmt extends CurAmt {
+	protected LastTrnAmt(){	
+	}
+	protected LastTrnAmt(){
+	}
+	
+}

@@ -1,0 +1,66 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public class PostAddr extends Locator {
+
+	public final native AddressIdent getAddressIdent() /*-{
+		return $wnd.cleanObject(addressIdent);
+	}-*/;
+	public final native void setAddressIdent(AddressIdent addressIdent) /*-{
+		this.addressIdent = addressIdent;
+	}-*/;
+	public final native Addr1 getAddr1() /*-{
+		return $wnd.cleanObject(addr1);
+	}-*/;
+	public final native void setAddr1(Addr1 addr1) /*-{
+		this.addr1 = addr1;
+	}-*/;
+	public final native Addr2 getAddr2() /*-{
+		return $wnd.cleanObject(addr2);
+	}-*/;
+	public final native void setAddr2(Addr2 addr2) /*-{
+		this.addr2 = addr2;
+	}-*/;
+	public final native Addr3 getAddr3() /*-{
+		return $wnd.cleanObject(addr3);
+	}-*/;
+	public final native void setAddr3(Addr3 addr3) /*-{
+		this.addr3 = addr3;
+	}-*/;
+	public final native Addr4 getAddr4() /*-{
+		return $wnd.cleanObject(addr4);
+	}-*/;
+	public final native void setAddr4(Addr4 addr4) /*-{
+		this.addr4 = addr4;
+	}-*/;
+	public final native City getCity() /*-{
+		return $wnd.cleanObject(city);
+	}-*/;
+	public final native void setCity(City city) /*-{
+		this.city = city;
+	}-*/;
+	public final native CountyDistrict getCountyDistrict() /*-{
+		return $wnd.cleanObject(countyDistrict);
+	}-*/;
+	public final native void setCountyDistrict(CountyDistrict countyDistrict) /*-{
+		this.countyDistrict = countyDistrict;
+	}-*/;
+	public final native StateProv getStateProv() /*-{
+		return $wnd.cleanObject(stateProv);
+	}-*/;
+	public final native void setStateProv(StateProv stateProv) /*-{
+		this.stateProv = stateProv;
+	}-*/;
+	public final native PostalCode getPostalCode() /*-{
+		return $wnd.cleanObject(postalCode);
+	}-*/;
+	public final native void setPostalCode(PostalCode postalCode) /*-{
+		this.postalCode = postalCode;
+	}-*/;
+	public final native CountryCode getCountryCode() /*-{
+		return $wnd.cleanObject(countryCode);
+	}-*/;
+	public final native void setCountryCode(CountryCode countryCode) /*-{
+		this.countryCode = countryCode;
+	}-*/;
+
+}

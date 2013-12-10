@@ -1,0 +1,93 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtStatus_Type extends IFXObject {
+
+	public final native void setPmtStatusCode(PmtStatusCode pmtStatusCode) /*-{
+		this.pmtStatusCode = pmtStatusCode;
+	}-*/;
+
+	public final native PmtStatusCode getPmtStatusCode()/*-{
+		return $wnd.cleanObject(this.pmtStatusCode);
+	}-*/;
+
+	public final native void setStatusDesc(StatusDesc statusDesc) /*-{
+		this.statusDesc = statusDesc;
+	}-*/;
+
+	public final native StatusDesc getStatusDesc() /*-{
+		return $wnd.cleanObject(this.statusDesc);
+	}-*/;
+
+	public final native void setEffDt(EffDt effDt)/*-{
+		this.effDt = effDt;
+	}-*/;
+
+	public final native EffDt getEffDt() /*-{
+		return $wnd.cleanObject(this.effDt);
+	}-*/;
+
+	public final native void setStatusModBy(StatusModBy statusModBy) /*-{
+		this.statusModBy = statusModBy;
+	}-*/;
+
+	public final native StatusModBy getStatusModBy() /*-{
+		return $wnd.cleanObject(this.statusModBy);
+	}-*/;
+
+	public final native void setPmtAuthId(PmtAuthId pmtAuthId) /*-{
+		this.pmtAuthId = pmtAuthId;
+	}-*/;
+
+	public final native PmtAuthId getPmtAuthId() /*-{
+		return $wnd.cleanObject(this.pmtAuthId);
+	}-*/;
+
+	public final native void setRemitId(RemitId remitId)/*-{
+		this.remitId = remitId;
+	}-*/;
+
+	public final native RemitId getRemitId() /*-{
+		return $wnd.cleanObject(this.remitId);
+	}-*/;
+
+	public final native void setRecPmtMod(RecPmtMod recPmtMod) /*-{
+		this.recPmtMod = recPmtMod;
+	}-*/;
+
+	public final native RecPmtMod getRecPmtMod() /*-{
+		return $wnd.cleanObject(this.recPmtMod);
+	}-*/;
+
+	public final native void setPmtAuthCount(PmtAuthCount pmtAuthCount)/*-{
+		this.pmtAuthCount = pmtAuthCount;
+	}-*/;
+
+	public final native PmtAuthCount getPmtAuthCount() /*-{
+		return $wnd.cleanObject(this.pmtAuthCount);
+	}-*/;
+
+	public final native void setPmtMethod(PmtMethod pmtMethod) /*-{
+		this.pmtMethod = pmtMethod;
+	}-*/;
+
+	public final native PmtMethod getPmtMethod() /*-{
+		return $wnd.cleanObject(this.pmtMethod);
+	}-*/;
+
+	public final native void setChkNum(ChkNum chkNum) /*-{
+		this.chkNum = chkNum;
+	}-*/;
+
+	public final native ChkNum getChkNum() /*-{
+		return $wnd.cleanObject(this.chkNum);
+	}-*/;
+
+	public final native void setMemo(Memo memo) /*-{
+		this.memo = memo;
+	}-*/;
+
+	public final native Memo getMemo() /*-{
+		return $wnd.cleanObject(this.memo);
+	}-*/;
+
+}

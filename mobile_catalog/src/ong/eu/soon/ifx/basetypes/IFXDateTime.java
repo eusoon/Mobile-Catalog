@@ -1,0 +1,93 @@
+/*
+ * $Id: IFXDateTime.java,v 1.1 2004/02/23 03:36:46 spal Exp $
+ * $Source: /cvsroot/ifx-framework/code/src/org/sourceforge/ifx/basetypes/IFXDateTime.java,v $
+ * IFX-Framework - IFX XML to JavaBean application framework.
+ * Copyright (C) 2003  The IFX-Framework Team
+ * 
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+package ong.eu.soon.ifx.basetypes;
+import com.google.gwt.i18n.shared.DateTimeFormat;
+import java.util.Date;
+
+
+/**
+ * The IFXDateTime class provides an abstraction of the xsd:dateTime datatype.
+ * @author Sujit Pal (spal@users.sourceforge.net)
+ * @version $Revision: 1.1 $
+ */
+public class IFXDateTime extends IFXObject implements IBaseType {
+	
+
+
+    // can be yyyy-MM-dd(THH:mm:ss(.SSSSSS(-ZZ:ZZ)))
+    private final static DateTimeFormat[] sdf = {
+		DateTimeFormat.getFormat("yyyy-MM-dd"),
+		DateTimeFormat.getFormat("yyyy-MM-dd'T'HH:mm:ss"),
+		DateTimeFormat.getFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS"),
+		DateTimeFormat.getFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS-ZZ:ZZ")
+    };
+    private Date _date;
+
+    public IFXDateTime() {
+        this._date = new Date();
+    }
+
+    // implementation of IBaseType methods
+
+    /**
+     * Returns the String representation of this object.
+     * @return a String.
+     */
+    public String getString() {
+        return sdf[3].format(this._date);
+    }
+
+    /**
+     * Sets the object value from a String.
+     * @param s a String
+     */
+    public void setString(String s) {
+        String[] tokens = s.split("[-T:.]");
+   
+            switch (tokens.length) {
+                case 3: // yyyy-MM-dd
+                    this._date.setTime(sdf[0].parse(s).getTime());
+                    break;
+                case 6: // yyyy-MM-ddTHH:mm:ss
+                    this._date.setTime(sdf[1].parse(s).getTime());
+                    break;
+                case 7: // yyyy-MM-ddTHH:mm:ss.SSSSSS
+                    this._date.setTime(sdf[2].parse(s).getTime());
+                    break;
+                case 9: // yyyy-MM-ddTHH:mm:ss.SSSSSS-ZZ:ZZ
+                    this._date.setTime(sdf[3].parse(s).getTime());
+                    break;
+                default:
+            }
+      
+    }
+
+    /**
+     * Compares two IFXDateTime objects for equality.
+     * @param obj the object to compare against.
+     * @return true or false.
+     */
+    public boolean equals(Object obj) {
+        if (!(obj instanceof IFXDateTime)) return false;
+        IFXDateTime that = (IFXDateTime) obj;
+        return (this.getString().equals(that.getString()));
+    }
+}

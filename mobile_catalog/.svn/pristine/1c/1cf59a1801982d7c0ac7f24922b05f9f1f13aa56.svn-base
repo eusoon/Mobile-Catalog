@@ -1,0 +1,14 @@
+package my.com.infopro.ifx.client.model;
+
+public class StdPayeeMsgRqInfo_Type extends IFXObject {
+	
+	public final native void setStdPayeeInqRq(StdPayeeInqRq stdPayeeInqRq)/*-{
+		this.stdPayeeInqRq = stdPayeeInqRq;
+	}-*/;
+
+	public final native StdPayeeInqRq getStdPayeeInqRq()/*-{
+		return $wnd.cleanObject(this.stdPayeeInqRq);
+
+	}-*/;
+
+}

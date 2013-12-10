@@ -1,0 +1,62 @@
+package my.com.infopro.ifx.client.model;
+
+public class BankSvcChkSumInqRq_Type extends IFXObject {
+
+	public final native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public final native void setMsgRqHdr(MsgRqHdr msgRqHdr)/*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr()/*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public final native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID()/*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setSvcRqUID(SvcRqUID svcRqUID)/*-{
+		this.svcRqUID = svcRqUID;
+	}-*/;
+
+	public final native SvcRqUID getSvcRqUID()/*-{
+		return $wnd.cleanObject(this.svcRqUID);
+	}-*/;
+
+	public final native void setBankSvcChkSumId(BankSvcChkSumId bankSvcChkSumId)/*-{
+		this.bankSvcChkSumId = bankSvcChkSumId;
+	}-*/;
+
+	public final native BankSvcChkSumId getBankSvcChkSumId()/*-{
+		return $wnd.cleanObject(this.bankSvcChkSumId);
+	}-*/;
+
+	public final native void setBankSvcChkSumStatus(
+			BankSvcChkSumStatus bankSvcChkSumStatus)/*-{
+		this.bankSvcChkSumStatus = bankSvcChkSumStatus;
+	}-*/;
+
+	public final native BankSvcChkSumStatus getBankSvcChkSumStatus()/*-{
+		return $wnd.cleanObject(this.bankSvcChkSumStatus);
+	}-*/;
+
+}

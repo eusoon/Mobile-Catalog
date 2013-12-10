@@ -1,0 +1,95 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+import com.google.gwt.core.client.JsArray;
+
+import my.com.infopro.mobile.json.ifx.basetypes.IFXObject;
+
+public  class InvoiceData extends IFXObject {
+	protected InvoiceData(){	
+	}
+	public final native  InvoiceType getInvoiceType()/*-{
+		return $wnd.cleanObject(this.invoiceType);
+	}-*/;
+	public final native  void setInvoiceType(InvoiceType invoiceType)/*-{
+		this.invoiceType = invoiceType;
+	}-*/;
+	public final native  InvoiceNum getInvoiceNum()/*-{
+		return $wnd.cleanObject(this.invoiceNum);
+	}-*/;
+	public final native  void setInvoiceNum(InvoiceNum invoiceNum)/*-{
+		this.invoiceNum = invoiceNum;
+	}-*/;
+	public final native  JsArray<RefData> getRefData()/*-{
+		return $wnd.cleanObject(this.refData);
+	}-*/;
+	public final native  void setRefData(JsArray<RefData> refData)/*-{
+		this.refData = refData;
+	}-*/;
+	public final native  TotalCurAmt getTotalCurAmt()/*-{
+		return $wnd.cleanObject(this.totalCurAmt);
+	}-*/;
+	public final native  void setTotalCurAmt(TotalCurAmt totalCurAmt)/*-{
+		this.totalCurAmt = totalCurAmt;
+	}-*/;
+	public final native  PaidCurAmt getPaidCurAmt()/*-{
+		return $wnd.cleanObject(this.paidCurAmt);
+	}-*/;
+	public final native  void setPaidCurAmt(PaidCurAmt paidCurAmt)/*-{
+		this.paidCurAmt = paidCurAmt;
+	}-*/;
+	public final native  BillInvoiceDt getBillInvoiceDt()/*-{
+		return $wnd.cleanObject(this.billInvoiceDt);
+	}-*/;
+	public final native  void setBillInvoiceDt(BillInvoiceDt billInvoiceDt)/*-{
+		this.billInvoiceDt = billInvoiceDt;
+	}-*/;
+	public final native  Desc getDesc()/*-{
+		return $wnd.cleanObject(this.desc);
+	}-*/;
+	public final native  void setDesc(Desc desc)/*-{
+		this.desc = desc;
+	}-*/;
+	public final native  InvoiceVouchNum getInvoiceVouchNum()/*-{
+		return $wnd.cleanObject(this.invoiceVouchNum);
+	}-*/;
+	public final native  void setInvoiceVouchNum(InvoiceVouchNum invoiceVouchNum)/*-{
+		this.invoiceVouchNum = invoiceVouchNum;
+	}-*/;
+	public final native  JsArray<Fee> getFee()/*-{
+		return $wnd.cleanObject(this.fee);
+	}-*/;
+	public final native  void setFee(JsArray<Fee> fee)/*-{
+		this.fee = fee;
+	}-*/;
+	public final native  InvoicePremium getInvoicePremium()/*-{
+		return $wnd.cleanObject(this.invoicePremium);
+	}-*/;
+	public final native  void setInvoicePremium(InvoicePremium invoicePremium)/*-{
+		this.invoicePremium = invoicePremium;
+	}-*/;
+	public final native  Discount getDiscount()/*-{
+		return $wnd.cleanObject(this.discount);
+	}-*/;
+	public final native  void setDiscount(Discount discount)/*-{
+		this.discount = discount;
+	}-*/;
+	public final native  TaxData getTaxData()/*-{
+		return $wnd.cleanObject(this.taxData);
+	}-*/;
+	public final native  void setTaxData(TaxData taxData)/*-{
+		this.taxData = taxData;
+	}-*/;
+	public final native  InvoiceAdj getInvoiceAdj()/*-{
+		return $wnd.cleanObject(this.invoiceAdj);
+	}-*/;
+	public final native  void setInvoiceAdj(InvoiceAdj invoiceAdj)/*-{
+		this.invoiceAdj = invoiceAdj;
+	}-*/;
+	public final native  JsArray<InvoiceLineItem> getInvoiceLineItem()/*-{
+		return $wnd.cleanObject(this.invoiceLineItem);
+	}-*/;
+	public final native  void setInvoiceLineItem(JsArray<InvoiceLineItem> invoiceLineItem)/*-{
+		this.invoiceLineItem = invoiceLineItem;
+	}-*/;
+	
+}

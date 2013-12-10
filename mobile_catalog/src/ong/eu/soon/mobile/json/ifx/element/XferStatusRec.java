@@ -1,0 +1,28 @@
+package ong.eu.soon.mobile.json.ifx.element;
+
+import ong.eu.soon.mobile.json.ifx.basetypes.IFXObject;
+import ong.eu.soon.mobile.json.ifx.element.SvcIdent;
+
+
+public  class XferStatusRec extends IFXObject {
+	protected XferStatusRec(){	
+	}
+	public final native  SvcIdent getSvcIdent()/*-{
+		return $wnd.cleanObject(this.svcIdent);
+	}-*/;
+	public final native  void setSvcIdent(SvcIdent svcIdent)/*-{
+		this.svcIdent = svcIdent;
+	}-*/;
+	public final native  XferId getXferId()/*-{
+		return $wnd.cleanObject(this.xferId);
+	}-*/;
+	public final native  void setXferId(XferId xferId)/*-{
+		this.xferId = xferId;
+	}-*/;
+	public final native  XferStatus getXferStatus()/*-{
+		return $wnd.cleanObject(this.xferStatus);
+	}-*/;
+	public final native  void setXferStatus(XferStatus xferStatus)/*-{
+		this.xferStatus = xferStatus;
+	}-*/;
+}

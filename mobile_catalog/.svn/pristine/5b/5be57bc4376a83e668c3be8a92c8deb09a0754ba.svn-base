@@ -1,0 +1,5 @@
+package my.com.infopro.mobile.json.ifx.element;
+
+public enum LodgingChargeType {
+	 AudioVisual, Banquet, BillingAdjustment, BusinessCenter, CashAdvance, ChargedOnCard, ConferenceRoom, EarlyDeparture, GiftShop, Gratuity, HealthClub, InternetAccess, Laundry, LoungeBar, MiniBar, Movie, NonRoom, NonRoomTax, Other, Phone, PrepaidExpense, Restaurant, RoomRate1, RoomRate2, RoomRate3, RoomService, Tax, Transaction, Transportation, Valet
+}

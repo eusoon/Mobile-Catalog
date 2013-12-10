@@ -1,0 +1,30 @@
+package my.com.infopro.mobile.client.ifx.element;
+
+import my.com.infopro.mobile.client.ifx.basetypes.IFXObject;
+
+public class LodgingCharge extends IFXObject {
+
+	LodgingChargeType lodgingChargeType;//Open Enum	Required Lodging Charge Type
+	//Valid values include: AudioVisual, Banquet, BillingAdjustment, BusinessCenter, CashAdvance, ChargedOnCard, ConferenceRoom, EarlyDeparture, GiftShop, Gratuity, HealthClub, InternetAccess, Laundry, LoungeBar, MiniBar, Movie, NonRoom, NonRoomTax, Other, Phone, PrepaidExpense, Restaurant, RoomRate1, RoomRate2, RoomRate3, RoomService, Tax, Transaction, Transportation, Valet
+	CurAmt curAmt;//Aggregate	Required Currency Amount
+	LodgingNights lodgingNights;//Long	Optional Lodging Nights
+	public LodgingChargeType getLodgingChargeType() {
+		return lodgingChargeType;
+	}
+	public void setLodgingChargeType(LodgingChargeType lodgingChargeType) {
+		this.lodgingChargeType = lodgingChargeType;
+	}
+	public CurAmt getCurAmt() {
+		return curAmt;
+	}
+	public void setCurAmt(CurAmt curAmt) {
+		this.curAmt = curAmt;
+	}
+	public LodgingNights getLodgingNights() {
+		return lodgingNights;
+	}
+	public void setLodgingNights(LodgingNights lodgingNights) {
+		this.lodgingNights = lodgingNights;
+	}
+
+}

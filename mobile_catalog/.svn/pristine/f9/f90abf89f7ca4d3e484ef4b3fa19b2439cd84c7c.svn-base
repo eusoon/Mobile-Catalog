@@ -1,0 +1,96 @@
+package my.com.infopro.ifx.client.model;
+
+public class ChkOrdSyncRs_Type extends IFXObject {
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setMsgRsHdr(MsgRsHdr msgRsHdr) /*-{
+		this.msgRsHdr = msgRsHdr;
+	}-*/;
+
+	public final native MsgRsHdr getMsgRsHdr() /*-{
+		return $wnd.cleanObject(this.msgRsHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setRecCtrlOut(RecCtrlOut recCtrlOut)/*-{
+		this.recCtrlOut = recCtrlOut;
+	}-*/;
+
+	public final native RecCtrlOut getRecCtrlOut()/*-{
+		return $wnd.cleanObject(this.recCtrlOut);
+	}-*/;
+
+	public final native void setToken(Token token)/*-{
+		this.token = token;
+	}-*/;
+
+	public final native Token getToken()/*-{
+		return $wnd.cleanObject(this.token);
+
+	}-*/;
+
+	public native void setChkOrdId(ChkOrdId chkOrdId)/*-{
+		this.chkOrdId = chkOrdId;
+	}-*/;
+
+	public final native ChkOrdId getChkOrdId() /*-{
+		return $wnd.cleanObject(this.chkOrdId);
+	}-*/;
+
+	public final native void setNewToken(NewToken newToken)/*-{
+		this.newToken = newToken;
+	}-*/;
+
+	public final native NewToken getNewToken()/*-{
+		return $wnd.cleanObject(this.newToken);
+	}-*/;
+
+	public native void setChkOrdMsgRec(ChkOrdMsgRec chkOrdMsgRec)/*-{
+		this.chkOrdMsgRec = chkOrdMsgRec;
+	}-*/;
+
+	public final native ChkOrdMsgRec getChkOrdMsgRec() /*-{
+		return $wnd.cleanObject(this.chkOrdMsgRec);
+	}-*/;
+
+}

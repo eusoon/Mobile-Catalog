@@ -1,0 +1,91 @@
+package my.com.infopro.ifx.element;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+
+public class CreditAcctData extends IFXObject {
+	OriginationDt originationDt; //Date	Optional Origination Date
+	Freq freq; //Open Enum	Optional Frequency Valid values include: Annually, BiMonthly, Biweekly, Daily, EndOfMonth, FourWeeks, Monthly, Quarterly, SemiAnnually, TwiceMonthly, Weekly
+	TotalPmtCount totalPmtCount; //Long	Optional Number of payments due when loan is added.
+	PurposeDesc purposeDesc; //C-80	Optional Purpose Description
+	CollateralDesc collateralDesc; //C-80	Optional Collateral Description.
+	RegPmt regPmt; //Aggregate	Optional Regular Payment
+	DueDt dueDt; //Date	Optional Due Date
+	NextPmt nextPmt; //Aggregate	Optional Next Payment
+	PrepayPenalty prepayPenalty; //Aggregate	Optional Prepay Penalty
+	LOCLoanData LOCLoanData;//Aggregate	Optional Line of Credit Loan Data Aggregate
+	WriteOffReason writeOffReason; //C-80	Optional Account WriteOff Reason
+	WriteOffRespParty writeOffRespParty;//C-80	Optional Account WriteOff Responsible Party
+	public OriginationDt getOriginationDt() {
+		return originationDt;
+	}
+	public void setOriginationDt(OriginationDt originationDt) {
+		this.originationDt = originationDt;
+	}
+	public Freq getFreq() {
+		return freq;
+	}
+	public void setFreq(Freq freq) {
+		this.freq = freq;
+	}
+	public TotalPmtCount getTotalPmtCount() {
+		return totalPmtCount;
+	}
+	public void setTotalPmtCount(TotalPmtCount totalPmtCount) {
+		this.totalPmtCount = totalPmtCount;
+	}
+	public PurposeDesc getPurposeDesc() {
+		return purposeDesc;
+	}
+	public void setPurposeDesc(PurposeDesc purposeDesc) {
+		this.purposeDesc = purposeDesc;
+	}
+	public CollateralDesc getCollateralDesc() {
+		return collateralDesc;
+	}
+	public void setCollateralDesc(CollateralDesc collateralDesc) {
+		this.collateralDesc = collateralDesc;
+	}
+	public RegPmt getRegPmt() {
+		return regPmt;
+	}
+	public void setRegPmt(RegPmt regPmt) {
+		this.regPmt = regPmt;
+	}
+	public DueDt getDueDt() {
+		return dueDt;
+	}
+	public void setDueDt(DueDt dueDt) {
+		this.dueDt = dueDt;
+	}
+	public NextPmt getNextPmt() {
+		return nextPmt;
+	}
+	public void setNextPmt(NextPmt nextPmt) {
+		this.nextPmt = nextPmt;
+	}
+	public PrepayPenalty getPrepayPenalty() {
+		return prepayPenalty;
+	}
+	public void setPrepayPenalty(PrepayPenalty prepayPenalty) {
+		this.prepayPenalty = prepayPenalty;
+	}
+	public LOCLoanData getLOCLoanData() {
+		return LOCLoanData;
+	}
+	public void setLOCLoanData(LOCLoanData lOCLoanData) {
+		LOCLoanData = lOCLoanData;
+	}
+	public WriteOffReason getWriteOffReason() {
+		return writeOffReason;
+	}
+	public void setWriteOffReason(WriteOffReason writeOffReason) {
+		this.writeOffReason = writeOffReason;
+	}
+	public WriteOffRespParty getWriteOffRespParty() {
+		return writeOffRespParty;
+	}
+	public void setWriteOffRespParty(WriteOffRespParty writeOffRespParty) {
+		this.writeOffRespParty = writeOffRespParty;
+	}
+
+}

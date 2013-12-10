@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class CryptType extends CryptType_Type {
+
+}

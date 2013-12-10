@@ -1,0 +1,30 @@
+package my.com.infopro.ifx.client.model;
+
+public class SignonTransport_Type extends IFXObject {
+	public final native void setSignonRole(SignonRole signonRole)/*-{
+		this.signonRole = signonRole;
+	}-*/;
+
+	public final native SignonRole getSignonRole()/*-{
+		return $wnd.cleanObject(this.signonRole);
+
+	}-*/;
+
+	public final native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId()/*-{
+		return $wnd.cleanObject(this.custId);
+
+	}-*/;
+
+	public final native void setGenSessKey(GenSessKey genSessKey)/*-{
+		this.genSessKey = genSessKey;
+	}-*/;
+
+	public final native GenSessKey getGenSessKey()/*-{
+		return $wnd.cleanObject(this.genSessKey);
+
+	}-*/;
+}

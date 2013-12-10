@@ -1,0 +1,5 @@
+package my.com.infopro.ifx.client.model;
+
+public class AppPan extends AppPan_Type {
+
+}

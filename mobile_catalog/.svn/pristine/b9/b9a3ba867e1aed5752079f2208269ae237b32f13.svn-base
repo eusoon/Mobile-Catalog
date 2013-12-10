@@ -1,0 +1,68 @@
+package my.com.infopro.ifx.client.model;
+
+public class CardLogicalData_Type extends IFXObject {
+
+	public native void setCardEmbossNum(CardEmbossNum cardEmbossNum)/*-{
+		this.cardEmbossNum = cardEmbossNum;
+	}-*/;
+
+	public final native CardEmbossNum getCardEmbossNum()/*-{
+		return $wnd.cleanObject(this.cardEmbossNum);
+	}-*/;
+
+	public native void setCardSeqNum(CardSeqNum cardSeqNum)/*-{
+		this.cardSeqNum = cardSeqNum;
+	}-*/;
+
+	public final native CardSeqNum getCardSeqNum()/*-{
+		return $wnd.cleanObject(this.cardSeqNum);
+	}-*/;
+
+	public native void setBrand(Brand brand)/*-{
+		this.brand = brand;
+	}-*/;
+
+	public final native Brand getBrand()/*-{
+		return $wnd.cleanObject(this.brand);
+	}-*/;
+
+	public native void setTechnology(Technology technology)/*-{
+		this.technology = technology;
+	}-*/;
+
+	public final native Technology getTechnology()/*-{
+		return $wnd.cleanObject(this.technology);
+	}-*/;
+
+	public native void setExpDt(ExpDt expDt)/*-{
+		this.expDt = expDt;
+	}-*/;
+
+	public final native ExpDt getExpDt()/*-{
+		return $wnd.cleanObject(this.expDt);
+	}-*/;
+
+	public native void setCardVrfyData(CardVrfyData cardVrfyData)/*-{
+		this.cardVrfyData = cardVrfyData;
+	}-*/;
+
+	public final native CardVrfyData getCardVrfyData()/*-{
+		return $wnd.cleanObject(this.cardVrfyData);
+	}-*/;
+
+	public native void setName(Name name)/*-{
+		this.name = name;
+	}-*/;
+
+	public final native Name getName()/*-{
+		return $wnd.cleanObject(this.name);
+	}-*/;
+
+	public native void setCSPhoneNum(CSPhoneNum cSPhoneNum)/*-{
+		this.cSPhoneNum = cSPhoneNum;
+	}-*/;
+
+	public final native CSPhoneNum getCSPhoneNum()/*-{
+		return $wnd.cleanObject(this.cSPhoneNum);
+	}-*/;
+}

@@ -1,0 +1,39 @@
+package my.com.infopro.mobile.client.tablet;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.resources.client.ClientBundle;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiTemplate;
+import com.google.gwt.user.client.ui.Widget;
+
+public class DefaultMobileWebAppShellAppearance implements MobileWebAppShellAppearance {
+	
+	private static MobileWebAppShellUiBinder uiBinder = GWT.create(MobileWebAppShellUiBinder.class);
+
+	@UiTemplate("DefaultMobileWebAppShell.ui.xml")
+	  interface MobileWebAppShellUiBinder extends UiBinder<Widget, MobileWebAppShellTablet> {
+	  }
+
+	  public interface Resource extends ClientBundle {
+
+	    public static Resource INSTANCE = GWT.create(Resource.class);
+
+	    @Source("mobileWebAppShell.css")
+	    public MobileWebAppShellCss css();
+	  }
+	  
+	  static {
+		    Resource.INSTANCE.css().ensureInjected();
+		  }
+	  
+	@Override
+	public UiBinder<Widget, MobileWebAppShellTablet> uiBinder() {
+		return uiBinder;
+	}
+
+	@Override
+	public MobileWebAppShellCss css() {
+		return Resource.INSTANCE.css();
+	}
+
+}

@@ -1,0 +1,61 @@
+package my.com.infopro.ifx.client.model;
+
+public class PmtAuthCanRs_Type extends IFXObject {
+
+	public native void setStatus(Status status)/*-{
+		this.status = status;
+	}-*/;
+
+	public final native Status getStatus()/*-{
+		return $wnd.cleanObject(this.status);
+
+	}-*/;
+
+	public native void setRqUID(RqUID rqUID)/*-{
+		this.rqUID = rqUID;
+	}-*/;
+
+	public final native RqUID getRqUID()/*-{
+		return $wnd.cleanObject(this.rqUID);
+	}-*/;
+
+	public native void setMsgRqHdr(MsgRqHdr msgRqHdr) /*-{
+		this.msgRqHdr = msgRqHdr;
+	}-*/;
+
+	public final native MsgRqHdr getMsgRqHdr() /*-{
+		return $wnd.cleanObject(this.msgRqHdr);
+	}-*/;
+
+	public native void setAsyncRqUID(AsyncRqUID asyncRqUID)/*-{
+		this.asyncRqUID = asyncRqUID;
+	}-*/;
+
+	public final native AsyncRqUID getAsyncRqUID() /*-{
+		return $wnd.cleanObject(this.asyncRqUID);
+	}-*/;
+
+	public native void setCustId(CustId custId)/*-{
+		this.custId = custId;
+	}-*/;
+
+	public final native CustId getCustId() /*-{
+		return $wnd.cleanObject(this.custId);
+	}-*/;
+
+	public final native void setPmtAuthId(PmtAuthId pmtAuthId)/*-{
+		this.pmtAuthId = pmtAuthId;
+	}-*/;
+
+	public final native PmtAuthId getPmtAuthId()/*-{
+		return $wnd.cleanObject(this.pmtAuthId);
+	}-*/;
+
+	public final native void setPmtAuthRec(PmtAuthRec pmtAuthRec)/*-{
+		this.pmtAuthRec = pmtAuthRec;
+	}-*/;
+
+	public final native PmtAuthRec getPmtAuthRec()/*-{
+		return $wnd.cleanObject(this.pmtAuthRec);
+	}-*/;
+}

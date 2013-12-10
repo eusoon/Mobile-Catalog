@@ -1,0 +1,70 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class CardPeriodData extends IFXObject {
+	CardAmtType cardAmtType;	 //	Open Enum	 Optional	 Card Amount TypeValid values include: CashAdv, Credit, Debit, Deposit, HiPurch, Purchase, Withdrawal
+	CardAmtSource cardAmtSource;	 //	Open Enum	 Optional	 Card Amount SourceValid values include: ATM, OTC, POS
+	CardPeriodType cardPeriodType;	 //	Open Enum	 Optional	 Card Period TypeValid values include: CTD, Daily, LTD, MTD, PriorCycle, PriorMth, PriorYr, Weekly, YTD
+	LastOccurInd lastOccurInd;	 //	Boolean	 Optional	 Last Occurance Indicator
+	EffDt effDt;	 //	DateTime	 Optional	 Effective Date Time
+	ExpDt expDt;	 //	DateTime	 Optional	 Expiration Date
+	Amt amt;	 //	Decimal	 Optional	 Amount
+	Count count;	 //	Long	 Optional	 Count
+	LastOccuranceDt lastOccuranceDt;	 //	DateTime	 Optional	 Last Occurance Date
+	
+	public CardAmtType getCardAmtType() {
+		return cardAmtType;
+	}
+	public void setCardAmtType(CardAmtType cardAmtType) {
+		this.cardAmtType = cardAmtType;
+	}
+	public CardAmtSource getCardAmtSource() {
+		return cardAmtSource;
+	}
+	public void setCardAmtSource(CardAmtSource cardAmtSource) {
+		this.cardAmtSource = cardAmtSource;
+	}
+	public CardPeriodType getCardPeriodType() {
+		return cardPeriodType;
+	}
+	public void setCardPeriodType(CardPeriodType cardPeriodType) {
+		this.cardPeriodType = cardPeriodType;
+	}
+	public LastOccurInd getLastOccurInd() {
+		return lastOccurInd;
+	}
+	public void setLastOccurInd(LastOccurInd lastOccurInd) {
+		this.lastOccurInd = lastOccurInd;
+	}
+	public EffDt getEffDt() {
+		return effDt;
+	}
+	public void setEffDt(EffDt effDt) {
+		this.effDt = effDt;
+	}
+	public ExpDt getExpDt() {
+		return expDt;
+	}
+	public void setExpDt(ExpDt expDt) {
+		this.expDt = expDt;
+	}
+	public Amt getAmt() {
+		return amt;
+	}
+	public void setAmt(Amt amt) {
+		this.amt = amt;
+	}
+	public Count getCount() {
+		return count;
+	}
+	public void setCount(Count count) {
+		this.count = count;
+	}
+	public LastOccuranceDt getLastOccuranceDt() {
+		return lastOccuranceDt;
+	}
+	public void setLastOccuranceDt(LastOccuranceDt lastOccuranceDt) {
+		this.lastOccuranceDt = lastOccuranceDt;
+	}
+}

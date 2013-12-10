@@ -1,0 +1,21 @@
+package my.com.infopro.mobile.client.login;
+
+import com.google.gwt.user.client.ui.Widget;
+
+import my.com.infopro.mobile.client.ui.Page;
+import my.com.infopro.mobile.client.ui.widgets.PasswordField;
+
+public class OTPPage extends Page {
+	 private PasswordField otp;
+	@Override
+	public String getHeading() {
+		return messages.otpHeading();
+	}
+
+	@Override
+	public Widget initialize() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

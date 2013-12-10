@@ -1,0 +1,94 @@
+package my.com.infopro.ifx.client.model;
+
+public class MortAcctRec_Type extends IFXObject {
+	public final native void setOrigDt(OrigDt origDt)/*-{
+		this.origDt = origDt;
+	}-*/;
+
+	public final native OrigDt getOrigDt()/*-{
+		return $wnd.cleanObject(this.origDt);
+	}-*/;
+
+	public final native void setLoanInfoCommon(LoanInfoCommon loanInfoCommon)/*-{
+		this.loanInfoCommon = loanInfoCommon;
+	}-*/;
+
+	public final native LoanInfoCommon getLoanInfoCommon()/*-{
+		return $wnd.cleanObject(this.loanInfoCommon);
+	}-*/;
+
+	public final native void setLastPmtDt(LastPmtDt lastPmtDt)/*-{
+		this.lastPmtDt = lastPmtDt;
+	}-*/;
+
+	public final native LastPmtDt getLastPmtDt()/*-{
+		return $wnd.cleanObject(this.lastPmtDt);
+	}-*/;
+
+	public final native void setTaxPaidDt(TaxPaidDt taxPaidDt)/*-{
+		this.taxPaidDt = taxPaidDt;
+	}-*/;
+
+	public final native TaxPaidDt getTaxPaidDt()/*-{
+		return $wnd.cleanObject(this.taxPaidDt);
+	}-*/;
+
+	public final native void setTaxPaidCurAmt(TaxPaidCurAmt taxPaidCurAmt)/*-{
+		this.taxPaidCurAmt = taxPaidCurAmt;
+	}-*/;
+
+	public final native TaxPaidCurAmt getTaxPaidCurAmt()/*-{
+		return $wnd.cleanObject(this.taxPaidCurAmt);
+	}-*/;
+
+	public final native void setLastYrTaxPaidDt(LastYrTaxPaidDt lastYrTaxPaidDt)/*-{
+		this.lastYrTaxPaidDt = lastYrTaxPaidDt;
+	}-*/;
+
+	public final native LastYrTaxPaidDt getLastYrTaxPaidDt()/*-{
+		return $wnd.cleanObject(this.lastYrTaxPaidDt);
+	}-*/;
+
+	public final native void setLastYrTaxPaidCurAmt(
+			LastYrTaxPaidCurAmt lastYrTaxPaidCurAmt)/*-{
+		this.lastYrTaxPaidCurAmt = lastYrTaxPaidCurAmt;
+	}-*/;
+
+	public final native LastYrTaxPaidCurAmt getLastYrTaxPaidCurAmt()/*-{
+		return $wnd.cleanObject(this.lastYrTaxPaidCurAmt);
+	}-*/;
+
+	public final native void setInsPaidDt(InsPaidDt insPaidDt)/*-{
+		this.insPaidDt = insPaidDt;
+	}-*/;
+
+	public final native InsPaidDt getInsPaidDt()/*-{
+		return $wnd.cleanObject(this.insPaidDt);
+	}-*/;
+
+	public final native void setInsPaidCurAmt(InsPaidCurAmt insPaidCurAmt)/*-{
+		this.insPaidCurAmt = insPaidCurAmt;
+	}-*/;
+
+	public final native InsPaidCurAmt getInsPaidCurAmt()/*-{
+		return $wnd.cleanObject(this.insPaidCurAmt);
+	}-*/;
+
+	public final native void setLastYrInsPaidDt(LastYrInsPaidDt lastYrInsPaidDt)/*-{
+		this.lastYrInsPaidDt = lastYrInsPaidDt;
+	}-*/;
+
+	public final native LastYrInsPaidDt getLastYrInsPaidDt()/*-{
+		return $wnd.cleanObject(this.lastYrInsPaidDt);
+	}-*/;
+
+	public final native void setLastYrInsPaidCurAmt(
+			LastYrInsPaidCurAmt lastYrInsPaidCurAmt)/*-{
+		this.lastYrInsPaidCurAmt = lastYrInsPaidCurAmt;
+	}-*/;
+
+	public final native LastYrInsPaidCurAmt getLastYrInsPaidCurAmt()/*-{
+		return $wnd.cleanObject(this.lastYrInsPaidCurAmt);
+	}-*/;
+
+}

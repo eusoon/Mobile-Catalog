@@ -1,0 +1,43 @@
+package my.com.infopro.ifx.passbk;
+
+import my.com.infopro.ifx.basetypes.IFXObject;
+import my.com.infopro.ifx.element.MsgRqHdr;
+import my.com.infopro.ifx.element.PassbkKeys;
+import my.com.infopro.ifx.element.PassbkStatus;
+import my.com.infopro.ifx.element.RqUID;
+
+public class PassbkStatusModRq extends IFXObject{
+
+	//begin Aggregate
+	RqUID rqUID;	 //	UUID	 Required	 Request Identifier
+	MsgRqHdr msgRqHdr;	 //	Aggregate	 Optional	 Message Request Header
+	PassbkKeys passbkKeys;	 //	Aggregate	 Required	 Passbook Keys Aggregate
+	PassbkStatus passbkStatus;	 //	Aggregate	 Required	 Passbook Status Aggregate
+	//end Aggregate
+	
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRqHdr getMsgRqHdr() {
+		return msgRqHdr;
+	}
+	public void setMsgRqHdr(MsgRqHdr msgRqHdr) {
+		this.msgRqHdr = msgRqHdr;
+	}
+	public PassbkKeys getPassbkKeys() {
+		return passbkKeys;
+	}
+	public void setPassbkKeys(PassbkKeys passbkKeys) {
+		this.passbkKeys = passbkKeys;
+	}
+	public PassbkStatus getPassbkStatus() {
+		return passbkStatus;
+	}
+	public void setPassbkStatus(PassbkStatus passbkStatus) {
+		this.passbkStatus = passbkStatus;
+	}
+	
+}

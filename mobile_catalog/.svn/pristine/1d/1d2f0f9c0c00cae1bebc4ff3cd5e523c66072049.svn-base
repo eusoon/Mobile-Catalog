@@ -1,0 +1,6 @@
+package my.com.infopro.ifx.client.model;
+
+
+public class Language extends Language_Type {
+
+}

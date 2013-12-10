@@ -1,0 +1,55 @@
+package my.com.infopro.mobile.client.ifx.rate;
+
+import my.com.infopro.mobile.client.ifx.element.ForExRateSheetRec;
+import my.com.infopro.mobile.client.ifx.element.ForExRateSheetStatusRec;
+import my.com.infopro.mobile.client.ifx.element.MsgRsHdr;
+import my.com.infopro.mobile.client.ifx.element.RqUID;
+import my.com.infopro.mobile.client.ifx.element.Status;
+
+public class ForExRateSheetAdviseRs {
+
+	//begin-block	Required
+	Status status; //Aggregate	Optional	Response Status
+	RqUID rqUID; //UUID	Required	Request Identifier
+	MsgRsHdr msgRsHdr; //Aggregate	Optional	Message Response Header
+	//end-block
+	//begin-block	Optional	required if message is successful
+	//begin-xor	Required
+	ForExRateSheetRec forExRateSheetRec; //Aggregate	Required	Foreign Exchange Rate Sheet Record
+	ForExRateSheetStatusRec forExRateSheetStatusRec; //Aggregate	Required	Foreign Exchange Rate Sheet Status Record
+	//end-xor
+	//end-block
+	
+	public Status getStatus() {
+		return status;
+	}
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+	public RqUID getRqUID() {
+		return rqUID;
+	}
+	public void setRqUID(RqUID rqUID) {
+		this.rqUID = rqUID;
+	}
+	public MsgRsHdr getMsgRsHdr() {
+		return msgRsHdr;
+	}
+	public void setMsgRsHdr(MsgRsHdr msgRsHdr) {
+		this.msgRsHdr = msgRsHdr;
+	}
+	public ForExRateSheetRec getForExRateSheetRec() {
+		return forExRateSheetRec;
+	}
+	public void setForExRateSheetRec(ForExRateSheetRec forExRateSheetRec) {
+		this.forExRateSheetRec = forExRateSheetRec;
+	}
+	public ForExRateSheetStatusRec getForExRateSheetStatusRec() {
+		return forExRateSheetStatusRec;
+	}
+	public void setForExRateSheetStatusRec(
+			ForExRateSheetStatusRec forExRateSheetStatusRec) {
+		this.forExRateSheetStatusRec = forExRateSheetStatusRec;
+	}
+	
+}

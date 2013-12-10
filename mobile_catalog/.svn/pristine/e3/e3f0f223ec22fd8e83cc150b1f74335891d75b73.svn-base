@@ -1,0 +1,27 @@
+package my.com.infopro.ifx.client.model;
+
+public class LoanAcctRec_Type extends IFXObject {
+	public final native void setTerm(Term term)/*-{
+		this.term = term;
+	}-*/;
+
+	public final native Term getTerm()/*-{
+		return $wnd.cleanObject(this.term);
+	}-*/;
+
+	public final native void setMatDt(MatDt matDt)/*-{
+		this.matDt = matDt;
+	}-*/;
+
+	public final native MatDt getMatDt()/*-{
+		return $wnd.cleanObject(this.matDt);
+	}-*/;
+
+	public final native void setLoanInfoCommon(LoanInfoCommon loanInfoCommon)/*-{
+		this.loanInfoCommon = loanInfoCommon;
+	}-*/;
+
+	public final native LoanInfoCommon getLoanInfoCommon()/*-{
+		return $wnd.cleanObject(this.loanInfoCommon);
+	}-*/;
+}
