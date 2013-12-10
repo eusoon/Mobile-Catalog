@@ -1,0 +1,32 @@
+package ong.eu.soon.ifx.element;
+
+public enum IssuedIdentType {
+	DrvrsLicNb	//Drivers Licence Number	N
+	,BirthCertificate	// Birth Certificate	N
+	,HealthCard	 	//Health Card N
+	,Military	 	//Military N
+	,PermanentResidence	 	// Permanent Residence N
+	,AlnRegnNb	//Alien Registration Number	N
+	,Retirement	 //Retirement	N
+	,IdntyCardNb	//Identity Card Number	N
+	,VoterRegistration	 //Voter Registration	N
+	,PsptNb	//Passport Number	N
+	,Passbook	 //Passbook 	N
+	,MplyrIdNb	//Employer Identification Number	N
+	,TaxIdNb	//Tax Identification Number	N
+	,SclSctyNb	//Social Security Number	N
+	,NRAPersonal	//Non Resident Alien Personal	N
+	,NINO	//National Insurance Number (UK)	N
+	,MerchantId	//Id of merchant as is typical of payment systems N
+	,BIC	//Bank Identifier Code (Code allocated to financial institutions as defined in ISO 9362)	N
+	,IBEI	//International Business Entity Identifier	N
+	,BEI	//Business Entity Identifier	N
+	,EANGLN	//European Association for Numbering	N
+	,USCHU	//Clearing House Interbank Payments System (CHIPS) Universal Identification	N
+	,DUNS	//Data Universal Numbering System	N
+	,BkPtyId	//Bank Party Identification (Unique and unambiguous assignment made by a specific bank to identify a relationship as defined between the bank and its client)	N
+	,PrtryId	//Proprietary Identification (Unique and unambiguous identifier for an organisation that is allocated by an institution. Contains Identification number and issuer of identification)	N
+	,NRABusiness	//Non Resident Alien Business	N
+	,Other
+	,GroupId;
+}

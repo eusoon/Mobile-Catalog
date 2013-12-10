@@ -1,0 +1,13 @@
+package ong.eu.soon.ifx.element;
+
+public enum NetworkOwner {
+	ATM	//Automated Teller Machine	N
+	,Branch	//Branch network	N
+	,POS	//Point of Sale Terminal or other Retail Source	N
+	,CallCenter	//Call center network	N
+	,ACH	//Automated Clearing House	N
+	,FedNet	//Federal Reserve Network	N
+	,SWIFT	//Society Worldwide International Funds Transfer	N
+	,Other	//Other transaction origination organization	N
+
+}

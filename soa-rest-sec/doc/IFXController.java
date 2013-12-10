@@ -1,17 +1,17 @@
 package ong.eu.soon.rest.sec.web.controller;
 
-import my.com.infopro.ifx.acct.AcctInqRq;
-import my.com.infopro.ifx.acct.AcctInqRs;
-import my.com.infopro.ifx.payee.CustPayeeAddRq;
-import my.com.infopro.ifx.payee.CustPayeeAddRs;
-import my.com.infopro.ifx.payee.CustPayeeDelRq;
-import my.com.infopro.ifx.payee.CustPayeeDelRs;
-import my.com.infopro.ifx.payee.CustPayeeInqRq;
-import my.com.infopro.ifx.payee.CustPayeeInqRs;
-import my.com.infopro.ifx.payment.PmtAddRq;
-import my.com.infopro.ifx.payment.PmtAddRs;
-import my.com.infopro.ifx.payment.PmtInqRq;
-import my.com.infopro.ifx.payment.PmtInqRs;
+import ong.eu.soon.ifx.acct.AcctInqRq;
+import ong.eu.soon.ifx.acct.AcctInqRs;
+import ong.eu.soon.ifx.payee.CustPayeeAddRq;
+import ong.eu.soon.ifx.payee.CustPayeeAddRs;
+import ong.eu.soon.ifx.payee.CustPayeeDelRq;
+import ong.eu.soon.ifx.payee.CustPayeeDelRs;
+import ong.eu.soon.ifx.payee.CustPayeeInqRq;
+import ong.eu.soon.ifx.payee.CustPayeeInqRs;
+import ong.eu.soon.ifx.payment.PmtAddRq;
+import ong.eu.soon.ifx.payment.PmtAddRs;
+import ong.eu.soon.ifx.payment.PmtInqRq;
+import ong.eu.soon.ifx.payment.PmtInqRs;
 import ong.eu.soon.rest.sec.web.common.UriMappingConstants;
 import ong.eu.soon.rest.sec.web.controller.exception.NotImplementedException;
 

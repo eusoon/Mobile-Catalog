@@ -1,0 +1,51 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class PmtEnclStatus extends IFXObject {
+
+	PmtEnclStatusCode pmtEnclStatusCode;	 //	Open Enum	 Required	 Payment Enclosed Status CodeValid values include: AcceptedToVerify, Deleted, Failed, Held, Rejected, Valid, Verified
+	StatusDesc statusDesc;	 //	C-255	 Optional	 Status Description
+	EffDt effDt;	 //	DateTime	 Optional	 Effective Date Time
+	ApprovalIdent approvalIdent;	 //	NC-36	 Optional	 Approval Identifier
+	StatusModBy statusModBy;	 //	Open Enum	 Optional	 Status Modified ByValid values include: BPP, BPPSR, BSP, BSPSR, CPP, CPPSR, CSP, CSPSR, Customer, FI, PSP
+	StatusReason statusReason;	 //	C-80	 Optional	 Status Reason
+	
+	public PmtEnclStatusCode getPmtEnclStatusCode() {
+		return pmtEnclStatusCode;
+	}
+	public void setPmtEnclStatusCode(PmtEnclStatusCode pmtEnclStatusCode) {
+		this.pmtEnclStatusCode = pmtEnclStatusCode;
+	}
+	public StatusDesc getStatusDesc() {
+		return statusDesc;
+	}
+	public void setStatusDesc(StatusDesc statusDesc) {
+		this.statusDesc = statusDesc;
+	}
+	public EffDt getEffDt() {
+		return effDt;
+	}
+	public void setEffDt(EffDt effDt) {
+		this.effDt = effDt;
+	}
+	public ApprovalIdent getApprovalIdent() {
+		return approvalIdent;
+	}
+	public void setApprovalIdent(ApprovalIdent approvalIdent) {
+		this.approvalIdent = approvalIdent;
+	}
+	public StatusModBy getStatusModBy() {
+		return statusModBy;
+	}
+	public void setStatusModBy(StatusModBy statusModBy) {
+		this.statusModBy = statusModBy;
+	}
+	public StatusReason getStatusReason() {
+		return statusReason;
+	}
+	public void setStatusReason(StatusReason statusReason) {
+		this.statusReason = statusReason;
+	}
+	
+}

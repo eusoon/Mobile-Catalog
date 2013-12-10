@@ -1,0 +1,22 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class FeeWaiver extends IFXObject {
+	WaiverReason waiverReason; //C-40	Optional Waiver Reason
+	TimeFrame TimeFrame;//	Aggregate	Optional The timeframe to waive the fee for the account. If not specified the fee is waived permanently.
+	public WaiverReason getWaiverReason() {
+		return waiverReason;
+	}
+	public void setWaiverReason(WaiverReason waiverReason) {
+		this.waiverReason = waiverReason;
+	}
+	public TimeFrame getTimeFrame() {
+		return TimeFrame;
+	}
+	public void setTimeFrame(TimeFrame timeFrame) {
+		TimeFrame = timeFrame;
+	}
+
+
+}

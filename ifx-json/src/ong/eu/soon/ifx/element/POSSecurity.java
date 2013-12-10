@@ -1,0 +1,36 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class POSSecurity extends IFXObject {
+	
+	PSSNetworkType pSSNetworkType;	 //	Open Enum	 Optional	 The type of network that the document passed through between the transaction initiator and the account owner. When a document passes through several networks this field should reflect the most exposed (least private) communication segment.Valid values: Unknown, Private, VirtualPrivate, SemiPublic, PublicDefault value: Private
+	PSSMsgMAC[] pSSMsgMAC;	 //	Open Enum	 Optional Repeating	 The type of MAC processing performed on the document.Valid values: None, Channel, PassThrough
+	PSSMsgEncryption[] pSSMsgEncryption;	 //	Open Enum	 Optional Repeating	 The type of encryption performed on the document.Valid values: None, Channel, EndToEnd
+	PSSCATSecLevel pSSCATSecLevel;	 //	Open Enum	 Optional	 The CAT security level defines the security level of a CAT (cardholder activated terminal) device.Valid values: PIN, SST, LMT, IFC
+	
+	public PSSNetworkType getpSSNetworkType() {
+		return pSSNetworkType;
+	}
+	public void setpSSNetworkType(PSSNetworkType pSSNetworkType) {
+		this.pSSNetworkType = pSSNetworkType;
+	}
+	public PSSMsgMAC[] getpSSMsgMAC() {
+		return pSSMsgMAC;
+	}
+	public void setpSSMsgMAC(PSSMsgMAC[] pSSMsgMAC) {
+		this.pSSMsgMAC = pSSMsgMAC;
+	}
+	public PSSMsgEncryption[] getpSSMsgEncryption() {
+		return pSSMsgEncryption;
+	}
+	public void setpSSMsgEncryption(PSSMsgEncryption[] pSSMsgEncryption) {
+		this.pSSMsgEncryption = pSSMsgEncryption;
+	}
+	public PSSCATSecLevel getpSSCATSecLevel() {
+		return pSSCATSecLevel;
+	}
+	public void setpSSCATSecLevel(PSSCATSecLevel pSSCATSecLevel) {
+		this.pSSCATSecLevel = pSSCATSecLevel;
+	}
+}

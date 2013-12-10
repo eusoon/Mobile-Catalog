@@ -1,0 +1,30 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class AcctStmtStatusRec extends IFXObject {
+
+	SvcIdent svcIdent; //Aggregate	Optional	Service Identifier
+	AcctStmtId acctStmtId; //Identifier		Required	Account Statement Identifier
+	AcctStmtStatus acctStmtStatus; //Aggregate	Required	Account Statement Status Aggregate
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public AcctStmtId getAcctStmtId() {
+		return acctStmtId;
+	}
+	public void setAcctStmtId(AcctStmtId acctStmtId) {
+		this.acctStmtId = acctStmtId;
+	}
+	public AcctStmtStatus getAcctStmtStatus() {
+		return acctStmtStatus;
+	}
+	public void setAcctStmtStatus(AcctStmtStatus acctStmtStatus) {
+		this.acctStmtStatus = acctStmtStatus;
+	}
+	
+}

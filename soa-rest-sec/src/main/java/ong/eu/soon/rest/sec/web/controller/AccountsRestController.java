@@ -32,13 +32,13 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
-import my.com.infopro.ifx.acct.AcctInqRq;
-import my.com.infopro.ifx.acct.AcctInqRs;
-import my.com.infopro.ifx.acct.AcctTrnInqRq;
-import my.com.infopro.ifx.acct.AcctTrnInqRs;
-import my.com.infopro.ifx.element.*;
 
 import ong.eu.soon.entities.settings.LocalSettings;
+import ong.eu.soon.ifx.acct.AcctInqRq;
+import ong.eu.soon.ifx.acct.AcctInqRs;
+import ong.eu.soon.ifx.acct.AcctTrnInqRq;
+import ong.eu.soon.ifx.acct.AcctTrnInqRs;
+import ong.eu.soon.ifx.element.*;
 import ong.eu.soon.rest.sec.web.common.UriMappingConstants;
 import ong.eu.soon.utils.Amount;
 import ong.eu.soon.utils.Amount.Type;

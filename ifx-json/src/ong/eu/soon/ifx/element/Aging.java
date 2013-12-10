@@ -1,0 +1,11 @@
+package ong.eu.soon.ifx.element;
+
+public enum Aging {
+	
+	below30("0-30"), below60("31-60"), below90("61-90"),below120("91-120"), Over121("Over121");
+	String value;
+	
+	private Aging(String value){
+		this.value=value;
+	}
+}

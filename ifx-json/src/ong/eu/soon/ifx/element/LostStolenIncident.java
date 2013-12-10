@@ -1,0 +1,261 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class LostStolenIncident extends IFXObject {
+	LossCd lossCd;	 //	C-20	 Optional	 Loss Code
+	Circumstance circumstance;	 //	C-20	 Optional	 Circumstance
+	Source source;	 //	C-32	 Optional	 Source
+	City city;	 //	C-32	 Optional	 City
+	StateProv stateProv;	 //	C-32	 Optional	 State or Province
+	CountryCode countryCode;	 //	Aggregate	 Optional	 Country Code
+	LossDtTm lossDtTm;	 //	DateTime	 Optional	 Loss Date Time
+	PostingControlDt postingControlDt;	 //	DateTime	 Optional	 Posting Control Date
+	ReportedByName reportedByName;	 //	C-40	 Optional	 Reported By Name
+	ReportByRelationship reportByRelationship;	 //	C-32	 Optional	 Report By Relationship
+	ReportedDtTm reportedDtTm;	 //	DateTime	 Optional	 Reported Date Time
+	Situation situation;	 //	C-20	 Optional	 Situation
+	Arrest arrest;	 //	Boolean	 Optional	 Arrest
+	PoliceReportNumber policeReportNumber;	 //	C-20	 Optional	 Police Report Number
+	PoliceReportStat policeReportStat;	 //	Open Enum	 Optional	 Police Report StatusValid values include: NoInformationWasProvided, Received, Request, Sent
+	DeclarationStat declarationStat;	 //	Open Enum	 Optional	 Declaration StatusValid values include: NoInformationRequired, Received, Requested
+	BinICA binICA;	 //	C-12	 Optional	 Bin/ICA
+	LastTrnAmt lastTrnAmt;	 //	Aggregate	 Optional	 Last Transaction Amount
+	LastTrnDt lastTrnDt;	 //	Date	 Optional	 Last Transaction Date
+	LastTrnMerchName lastTrnMerchName;	 //	C-40	 Optional	 Last Transaction Merchant Name
+	LastTrnMerchCity lastTrnMerchCity;	 //	C-32	 Optional	 Last Transaction Merchant City
+	CreateFraudAcct createFraudAcct;	 //	Boolean	 Optional	 Create Fraud Account
+	ReplaceCardRequest replaceCardRequest;	 //	Boolean	 Optional	 Replace Card Request
+	EmergencyCardRequest emergencyCardRequest;	 //	Boolean	 Optional	 Emergency Card Request
+	RepCardNum repCardNum;	 //	NC-32	 Optional	 Replacement Card Number
+	CardType cardType;	 //	Open Enum	 Optional	 Card TypeValid values include: ATM, Credit, Debit, Identification, Loyalty, Multifunction, PrepaidDefault Value: Debit
+	CardDesign cardDesign;	 //	NC-16	 Optional	 Card Design
+	RetainPin retainPin;	 //	Boolean	 Optional	 Retain Pin
+	FeeOvrd feeOvrd;	 //	Boolean	 Optional	 Fee Overide
+	FeeOvrdAmt feeOvrdAmt;	 //	Aggregate	 Optional	 Fee Override Amount
+	SpecialHandling specialHandling;	 //	Open Enum	 Optional	 Special HandlingValid values include: ClientOverride
+	CardSigned cardSigned;	 //	Boolean	 Optional	 Card Signed
+	TaxIDLost taxIDLost;	 //	Boolean	 Optional	 Tax ID Lost
+	DriversLicenseLost driversLicenseLost;	 //	Boolean	 Optional	 Drivers License Lost
+	FirstFraudTrnDt firstFraudTrnDt;	 //	DateTime	 Optional	 First Fraud Transaction Date
+	FraudAcctIdent fraudAcctIdent;	 //	NC-36	 Optional	 Fraud Account Identification
+	
+	public LossCd getLossCd() {
+		return lossCd;
+	}
+	public void setLossCd(LossCd lossCd) {
+		this.lossCd = lossCd;
+	}
+	public Circumstance getCircumstance() {
+		return circumstance;
+	}
+	public void setCircumstance(Circumstance circumstance) {
+		this.circumstance = circumstance;
+	}
+	public Source getSource() {
+		return source;
+	}
+	public void setSource(Source source) {
+		this.source = source;
+	}
+	public City getCity() {
+		return city;
+	}
+	public void setCity(City city) {
+		this.city = city;
+	}
+	public StateProv getStateProv() {
+		return stateProv;
+	}
+	public void setStateProv(StateProv stateProv) {
+		this.stateProv = stateProv;
+	}
+	public CountryCode getCountryCode() {
+		return countryCode;
+	}
+	public void setCountryCode(CountryCode countryCode) {
+		this.countryCode = countryCode;
+	}
+	public LossDtTm getLossDtTm() {
+		return lossDtTm;
+	}
+	public void setLossDtTm(LossDtTm lossDtTm) {
+		this.lossDtTm = lossDtTm;
+	}
+	public PostingControlDt getPostingControlDt() {
+		return postingControlDt;
+	}
+	public void setPostingControlDt(PostingControlDt postingControlDt) {
+		this.postingControlDt = postingControlDt;
+	}
+	public ReportedByName getReportedByName() {
+		return reportedByName;
+	}
+	public void setReportedByName(ReportedByName reportedByName) {
+		this.reportedByName = reportedByName;
+	}
+	public ReportByRelationship getReportByRelationship() {
+		return reportByRelationship;
+	}
+	public void setReportByRelationship(ReportByRelationship reportByRelationship) {
+		this.reportByRelationship = reportByRelationship;
+	}
+	public ReportedDtTm getReportedDtTm() {
+		return reportedDtTm;
+	}
+	public void setReportedDtTm(ReportedDtTm reportedDtTm) {
+		this.reportedDtTm = reportedDtTm;
+	}
+	public Situation getSituation() {
+		return situation;
+	}
+	public void setSituation(Situation situation) {
+		this.situation = situation;
+	}
+	public Arrest getArrest() {
+		return arrest;
+	}
+	public void setArrest(Arrest arrest) {
+		this.arrest = arrest;
+	}
+	public PoliceReportNumber getPoliceReportNumber() {
+		return policeReportNumber;
+	}
+	public void setPoliceReportNumber(PoliceReportNumber policeReportNumber) {
+		this.policeReportNumber = policeReportNumber;
+	}
+	public PoliceReportStat getPoliceReportStat() {
+		return policeReportStat;
+	}
+	public void setPoliceReportStat(PoliceReportStat policeReportStat) {
+		this.policeReportStat = policeReportStat;
+	}
+	public DeclarationStat getDeclarationStat() {
+		return declarationStat;
+	}
+	public void setDeclarationStat(DeclarationStat declarationStat) {
+		this.declarationStat = declarationStat;
+	}
+	public BinICA getBinICA() {
+		return binICA;
+	}
+	public void setBinICA(BinICA binICA) {
+		this.binICA = binICA;
+	}
+	public LastTrnAmt getLastTrnAmt() {
+		return lastTrnAmt;
+	}
+	public void setLastTrnAmt(LastTrnAmt lastTrnAmt) {
+		this.lastTrnAmt = lastTrnAmt;
+	}
+	public LastTrnDt getLastTrnDt() {
+		return lastTrnDt;
+	}
+	public void setLastTrnDt(LastTrnDt lastTrnDt) {
+		this.lastTrnDt = lastTrnDt;
+	}
+	public LastTrnMerchName getLastTrnMerchName() {
+		return lastTrnMerchName;
+	}
+	public void setLastTrnMerchName(LastTrnMerchName lastTrnMerchName) {
+		this.lastTrnMerchName = lastTrnMerchName;
+	}
+	public LastTrnMerchCity getLastTrnMerchCity() {
+		return lastTrnMerchCity;
+	}
+	public void setLastTrnMerchCity(LastTrnMerchCity lastTrnMerchCity) {
+		this.lastTrnMerchCity = lastTrnMerchCity;
+	}
+	public CreateFraudAcct getCreateFraudAcct() {
+		return createFraudAcct;
+	}
+	public void setCreateFraudAcct(CreateFraudAcct createFraudAcct) {
+		this.createFraudAcct = createFraudAcct;
+	}
+	public ReplaceCardRequest getReplaceCardRequest() {
+		return replaceCardRequest;
+	}
+	public void setReplaceCardRequest(ReplaceCardRequest replaceCardRequest) {
+		this.replaceCardRequest = replaceCardRequest;
+	}
+	public EmergencyCardRequest getEmergencyCardRequest() {
+		return emergencyCardRequest;
+	}
+	public void setEmergencyCardRequest(EmergencyCardRequest emergencyCardRequest) {
+		this.emergencyCardRequest = emergencyCardRequest;
+	}
+	public RepCardNum getRepCardNum() {
+		return repCardNum;
+	}
+	public void setRepCardNum(RepCardNum repCardNum) {
+		this.repCardNum = repCardNum;
+	}
+	public CardType getCardType() {
+		return cardType;
+	}
+	public void setCardType(CardType cardType) {
+		this.cardType = cardType;
+	}
+	public CardDesign getCardDesign() {
+		return cardDesign;
+	}
+	public void setCardDesign(CardDesign cardDesign) {
+		this.cardDesign = cardDesign;
+	}
+	public RetainPin getRetainPin() {
+		return retainPin;
+	}
+	public void setRetainPin(RetainPin retainPin) {
+		this.retainPin = retainPin;
+	}
+	public FeeOvrd getFeeOvrd() {
+		return feeOvrd;
+	}
+	public void setFeeOvrd(FeeOvrd feeOvrd) {
+		this.feeOvrd = feeOvrd;
+	}
+	public FeeOvrdAmt getFeeOvrdAmt() {
+		return feeOvrdAmt;
+	}
+	public void setFeeOvrdAmt(FeeOvrdAmt feeOvrdAmt) {
+		this.feeOvrdAmt = feeOvrdAmt;
+	}
+	public SpecialHandling getSpecialHandling() {
+		return specialHandling;
+	}
+	public void setSpecialHandling(SpecialHandling specialHandling) {
+		this.specialHandling = specialHandling;
+	}
+	public CardSigned getCardSigned() {
+		return cardSigned;
+	}
+	public void setCardSigned(CardSigned cardSigned) {
+		this.cardSigned = cardSigned;
+	}
+	public TaxIDLost getTaxIDLost() {
+		return taxIDLost;
+	}
+	public void setTaxIDLost(TaxIDLost taxIDLost) {
+		this.taxIDLost = taxIDLost;
+	}
+	public DriversLicenseLost getDriversLicenseLost() {
+		return driversLicenseLost;
+	}
+	public void setDriversLicenseLost(DriversLicenseLost driversLicenseLost) {
+		this.driversLicenseLost = driversLicenseLost;
+	}
+	public FirstFraudTrnDt getFirstFraudTrnDt() {
+		return firstFraudTrnDt;
+	}
+	public void setFirstFraudTrnDt(FirstFraudTrnDt firstFraudTrnDt) {
+		this.firstFraudTrnDt = firstFraudTrnDt;
+	}
+	public FraudAcctIdent getFraudAcctIdent() {
+		return fraudAcctIdent;
+	}
+	public void setFraudAcctIdent(FraudAcctIdent fraudAcctIdent) {
+		this.fraudAcctIdent = fraudAcctIdent;
+	}
+	
+	
+}

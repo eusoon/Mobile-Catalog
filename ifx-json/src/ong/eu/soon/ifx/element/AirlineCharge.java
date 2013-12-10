@@ -1,0 +1,21 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class AirlineCharge extends IFXObject {
+	AirlineChargeType airlineChargeType;//Open Enum	RequiredAirline Charge TypeValid values include: Fee, Tax, Transaction
+	CurAmt curAmt;//Aggregate	Required Currency Amount
+	public AirlineChargeType getAirlineChargeType() {
+		return airlineChargeType;
+	}
+	public void setAirlineChargeType(AirlineChargeType airlineChargeType) {
+		this.airlineChargeType = airlineChargeType;
+	}
+	public CurAmt getCurAmt() {
+		return curAmt;
+	}
+	public void setCurAmt(CurAmt curAmt) {
+		this.curAmt = curAmt;
+	}
+
+}

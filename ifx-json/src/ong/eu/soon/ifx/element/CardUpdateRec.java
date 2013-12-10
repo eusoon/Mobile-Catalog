@@ -1,0 +1,45 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class CardUpdateRec extends IFXObject {
+	SvcIdent svcIdent;	 //	Aggregate	 Optional	 Service Identifier
+	CardUpdateId cardUpdateId;	 //	Identifier	 Required	 Card Update Identifier
+	CardUpdateInfo cardUpdateInfo;	 //	Abstract Aggregate	 Required	 Card Update Info Aggregate	Valid Aggregates are:ICCUpdateInfoMagCardUpdateInfo
+	CardUpdateEnvr cardUpdateEnvr;	 //	Aggregate	 Optional
+	CardUpdateStatus cardUpdateStatus;	 //	Abstract Aggregate	 Required	 Card Update Status Aggregate	Valid Aggregates are:ICCUpdateStatusMagCardUpdateStatus
+	
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public CardUpdateId getCardUpdateId() {
+		return cardUpdateId;
+	}
+	public void setCardUpdateId(CardUpdateId cardUpdateId) {
+		this.cardUpdateId = cardUpdateId;
+	}
+	public CardUpdateInfo getCardUpdateInfo() {
+		return cardUpdateInfo;
+	}
+	public void setCardUpdateInfo(CardUpdateInfo cardUpdateInfo) {
+		this.cardUpdateInfo = cardUpdateInfo;
+	}
+	public CardUpdateEnvr getCardUpdateEnvr() {
+		return cardUpdateEnvr;
+	}
+	public void setCardUpdateEnvr(CardUpdateEnvr cardUpdateEnvr) {
+		this.cardUpdateEnvr = cardUpdateEnvr;
+	}
+	public CardUpdateStatus getCardUpdateStatus() {
+		return cardUpdateStatus;
+	}
+	public void setCardUpdateStatus(CardUpdateStatus cardUpdateStatus) {
+		this.cardUpdateStatus = cardUpdateStatus;
+	}
+	
+	
+	
+}

@@ -1,0 +1,39 @@
+package ong.eu.soon.ifx.basetypes;
+
+public class IFXPath extends IFXObject implements IBaseType {
+
+    private String _string;
+
+    /** default constructor */
+    public IFXPath() {;}
+
+    /**
+     * Returns the object as a String.
+     * @return a String object.
+     */
+    public String getString() {
+        return this._string;
+    }
+
+    /**
+     * Sets the object from a String.
+     * @param s a String to set.
+     */
+    public void setString(String s) {
+        this._string = s;
+    }
+
+    /**
+     * Compares two Base64Binary objects for equality.
+     * @param obj the object to compare against.
+     * @return true or false.
+     */
+    public boolean equals(Object obj) {
+        if (!(obj instanceof IFXString)) return false;
+        IFXString that = (IFXString) obj;
+        return (this.getString().equals(that.getString()));
+    }
+}
+
+
+

@@ -1,0 +1,80 @@
+package ong.eu.soon.ifx.element;
+
+
+
+public class PostAddr extends Locator {
+	AddressIdent addressIdent;
+	Addr1 addr1;
+	Addr2 addr2;
+	Addr3 addr3;
+	Addr4 addr4;
+	City city;
+	CountyDistrict countyDistrict;
+	StateProv stateProv;
+	PostalCode postalCode;
+	CountryCode countryCode;
+	AddrType addrType;
+	TimeFrame timeFrame;
+
+	public AddressIdent getAddressIdent() {
+		return addressIdent;
+	}
+	public void setAddressIdent(AddressIdent addressIdent) {
+		this.addressIdent = addressIdent;
+	}
+	public Addr1 getAddr1() {
+		return addr1;
+	}
+	public void setAddr1(Addr1 addr1) {
+		this.addr1 = addr1;
+	}
+	public Addr2 getAddr2() {
+		return addr2;
+	}
+	public void setAddr2(Addr2 addr2) {
+		this.addr2 = addr2;
+	}
+	public Addr3 getAddr3() {
+		return addr3;
+	}
+	public void setAddr3(Addr3 addr3) {
+		this.addr3 = addr3;
+	}
+	public Addr4 getAddr4() {
+		return addr4;
+	}
+	public void setAddr4(Addr4 addr4) {
+		this.addr4 = addr4;
+	}
+	public City getCity() {
+		return city;
+	}
+	public void setCity(City city) {
+		this.city = city;
+	}
+	public CountyDistrict getCountyDistrict() {
+		return countyDistrict;
+	}
+	public void setCountyDistrict(CountyDistrict countyDistrict) {
+		this.countyDistrict = countyDistrict;
+	}
+	public StateProv getStateProv() {
+		return stateProv;
+	}
+	public void setStateProv(StateProv stateProv) {
+		this.stateProv = stateProv;
+	}
+	public PostalCode getPostalCode() {
+		return postalCode;
+	}
+	public void setPostalCode(PostalCode postalCode) {
+		this.postalCode = postalCode;
+	}
+	public CountryCode getCountryCode() {
+		return countryCode;
+	}
+	public void setCountryCode(CountryCode countryCode) {
+		this.countryCode = countryCode;
+	}
+
+}

@@ -26,9 +26,9 @@ import my.com.infopro.ibank.app.dto.KeyDto;
 import my.com.infopro.ibank.app.ejb.SecretKeyServiceRemote;
 import my.com.infopro.ibank.app.utility.ServiceLocator;
 import my.com.infopro.ibank.exception.ServiceLocatorException;
-import my.com.infopro.ifx.element.CryptType;
 
 import ong.eu.soon.entities.settings.LocalSettings;
+import ong.eu.soon.ifx.element.CryptType;
 import ong.eu.soon.rest.sec.web.common.UriMappingConstants;
 import ong.eu.soon.services.settings.SettingsService;
 import ong.eu.soon.webservices.model.AccountTypeVO;

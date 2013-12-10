@@ -1,0 +1,21 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class Segmentation extends IFXObject {
+	SegmentType segmentType; //Open Enum	Optional Segmentation Type Valid values include: CorpCostCenter, CostCenter, Division, GeneralLedger, OrgLvl1, OrgLvl2, OrgLvl3, Portfolio, Region
+	SegmentValue segmentValue;//C-40	Optional Segmentation Value
+	public SegmentType getSegmentType() {
+		return segmentType;
+	}
+	public void setSegmentType(SegmentType segmentType) {
+		this.segmentType = segmentType;
+	}
+	public SegmentValue getSegmentValue() {
+		return segmentValue;
+	}
+	public void setSegmentValue(SegmentValue segmentValue) {
+		this.segmentValue = segmentValue;
+	}
+
+}

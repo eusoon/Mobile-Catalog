@@ -1,0 +1,36 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class AcctTrnStatus extends IFXObject {
+
+	AcctTrnStatusCode[] acctTrnStatusCode; //Open Enum	Required	Account Transaction Status Code.	Valid values include: Deleted, Valid
+	StatusDesc statusDesc; //C-255	Optional	Status Description
+	EffDt effDt; //DateTime	Optional	Effective Date Time
+	StatusModBy statusModBy; //Open Enum	Optional	Status Modified By. 	Valid values include: BPP, BPPSR, BSP, BSPSR, CPP, CPPSR, CSP, CSPSR, Customer, FI, PSP
+	
+	public AcctTrnStatusCode[] getAcctTrnStatusCode() {
+		return acctTrnStatusCode;
+	}
+	public void setAcctTrnStatusCode(AcctTrnStatusCode[] acctTrnStatusCode) {
+		this.acctTrnStatusCode = acctTrnStatusCode;
+	}
+	public StatusDesc getStatusDesc() {
+		return statusDesc;
+	}
+	public void setStatusDesc(StatusDesc statusDesc) {
+		this.statusDesc = statusDesc;
+	}
+	public EffDt getEffDt() {
+		return effDt;
+	}
+	public void setEffDt(EffDt effDt) {
+		this.effDt = effDt;
+	}
+	public StatusModBy getStatusModBy() {
+		return statusModBy;
+	}
+	public void setStatusModBy(StatusModBy statusModBy) {
+		this.statusModBy = statusModBy;
+	}
+}

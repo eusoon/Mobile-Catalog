@@ -1,12 +1,12 @@
 package ong.eu.soon.rest.sec.web.controller;
 
-import my.com.infopro.ifx.bill.BillAddRq;
-import my.com.infopro.ifx.bill.BillAddRs;
-import my.com.infopro.ifx.bill.BillInqRq;
-import my.com.infopro.ifx.bill.BillInqRs;
-import my.com.infopro.ifx.bill.BillRevRq;
-import my.com.infopro.ifx.bill.BillRevRs;
 
+import ong.eu.soon.ifx.bill.BillAddRq;
+import ong.eu.soon.ifx.bill.BillAddRs;
+import ong.eu.soon.ifx.bill.BillInqRq;
+import ong.eu.soon.ifx.bill.BillInqRs;
+import ong.eu.soon.ifx.bill.BillRevRq;
+import ong.eu.soon.ifx.bill.BillRevRs;
 import ong.eu.soon.rest.sec.web.common.UriMappingConstants;
 
 import org.springframework.stereotype.Controller;

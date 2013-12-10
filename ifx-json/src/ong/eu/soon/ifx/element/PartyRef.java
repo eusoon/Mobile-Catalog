@@ -1,0 +1,31 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class PartyRef extends IFXObject {
+	//begin -xor
+	PartyKeys partyKeys;	 //	Aggregate	 Required	 Party Keys Aggregate
+	PartyRec partyRec;	 //	Aggregate	 Required	 Party Record Aggregate
+	PartyInfo partyInfo;	 //	Abstract Aggregate	 Required	 Party Information Aggregate	Valid Aggregates are:OrgPartyInfo,PersonPartyInfo
+	//end -xor
+	public PartyKeys getPartyKeys() {
+		return partyKeys;
+	}
+	public void setPartyKeys(PartyKeys partyKeys) {
+		this.partyKeys = partyKeys;
+	}
+	public PartyRec getPartyRec() {
+		return partyRec;
+	}
+	public void setPartyRec(PartyRec partyRec) {
+		this.partyRec = partyRec;
+	}
+	public PartyInfo getPartyInfo() {
+		return partyInfo;
+	}
+	public void setPartyInfo(PartyInfo partyInfo) {
+		this.partyInfo = partyInfo;
+	}
+
+	
+}

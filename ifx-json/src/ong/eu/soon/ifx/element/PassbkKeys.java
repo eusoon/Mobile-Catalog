@@ -1,0 +1,29 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class PassbkKeys extends IFXObject {
+	SvcIdent svcIdent;
+	PassbkId passbkId;
+	AcctKeys acctKeys;
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public PassbkId getPassbkId() {
+		return passbkId;
+	}
+	public void setPassbkId(PassbkId passbkId) {
+		this.passbkId = passbkId;
+	}
+	public AcctKeys getAcctKeys() {
+		return acctKeys;
+	}
+	public void setAcctKeys(AcctKeys acctKeys) {
+		this.acctKeys = acctKeys;
+	}
+
+
+}

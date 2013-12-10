@@ -1,0 +1,63 @@
+package ong.eu.soon.ifx.element;
+
+import ong.eu.soon.ifx.basetypes.IFXObject;
+
+public class BillSummAmt extends IFXObject {
+	BillSummAmtIdent billSummAmtIdent;	 //	NC-36	 Optional	 Bill Summary Amount Identifier. Biller's identifier for this currency amount. This may be returned in the payment message to identify the type of amount being paid by the consumer. This value needs to be provided by the Biller if the intent is to allow the consumer to designate the particular amount being paid (using in aggregate).
+	BillSummAmtCode billSummAmtCode;	 //	Open Enum	 Optional	 Bill Summary Amount Code. Indicates the type of amount being specified in , using a standard list of billing amounts that are machine-readable by the client and may be used for internal processing. The short description should be used to describe the amount in a display to the consumer.Defined values: TotalAmtDue, MinAmtDue, MaxAmtDue, LateAmtDue, DiscAmtDue, MonthlyAmt, QuarterlyAmt, SemiAnnualAmt, AnnualAmt, ExtdAmt, PrevBal, Charges, Credits, StmtBal, LateChg, FinanceChg, Tip, Principal, Interest, Escrow, PMI, Donation
+	ShortDesc shortDesc;	 //	C-15	 Required	 Short Description. A short description of the amount specified in within this aggregate. To be used for display to the consumer.
+	Desc desc;	 //	C-80	 Optional	 Description. A longer description of the amount specified in . To be used when the short description may be insufficient to clearly describe the amount.
+	Memo memo;	 //	C-255	 Optional	 Memo. Additional information about the amount specified in . This may be used to further describe terms or instructions that may apply to the amount specified.
+	CurAmt curAmt;	 //	Aggregate	 Required	 Currency Amount. The amount being specified as described by the short description. This amount may be a zero or negative value.
+	BillSummAmtType billSummAmtType;	 //	Closed Enum	 Required	 Bill Summary Amount Type. Indicates the type of amount specified in . Note that the client must treat amounts that are Payable as mutually exclusive (i.e., the consumer may select only one). Amounts that are Supplemental are not mutually exclusive (i.e., the consumer may select more than one for indicating breakdown of an additional payment).Valid values: Payable, Supplemental, InfoOnly.
+	BillSummSubAmt[] billSummSubAmt;	 //	Aggregate	 Optional Repeating	 Bill Summary Sub-Amount. Allows for the specification of a breakdown of an amount specified in within the higher level aggregate .
+	
+	public BillSummAmtIdent getBillSummAmtIdent() {
+		return billSummAmtIdent;
+	}
+	public void setBillSummAmtIdent(BillSummAmtIdent billSummAmtIdent) {
+		this.billSummAmtIdent = billSummAmtIdent;
+	}
+	public BillSummAmtCode getBillSummAmtCode() {
+		return billSummAmtCode;
+	}
+	public void setBillSummAmtCode(BillSummAmtCode billSummAmtCode) {
+		this.billSummAmtCode = billSummAmtCode;
+	}
+	public ShortDesc getShortDesc() {
+		return shortDesc;
+	}
+	public void setShortDesc(ShortDesc shortDesc) {
+		this.shortDesc = shortDesc;
+	}
+	public Desc getDesc() {
+		return desc;
+	}
+	public void setDesc(Desc desc) {
+		this.desc = desc;
+	}
+	public Memo getMemo() {
+		return memo;
+	}
+	public void setMemo(Memo memo) {
+		this.memo = memo;
+	}
+	public CurAmt getCurAmt() {
+		return curAmt;
+	}
+	public void setCurAmt(CurAmt curAmt) {
+		this.curAmt = curAmt;
+	}
+	public BillSummAmtType getBillSummAmtType() {
+		return billSummAmtType;
+	}
+	public void setBillSummAmtType(BillSummAmtType billSummAmtType) {
+		this.billSummAmtType = billSummAmtType;
+	}
+	public BillSummSubAmt[] getBillSummSubAmt() {
+		return billSummSubAmt;
+	}
+	public void setBillSummSubAmt(BillSummSubAmt[] billSummSubAmt) {
+		this.billSummSubAmt = billSummSubAmt;
+	}
+}

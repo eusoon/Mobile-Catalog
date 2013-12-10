@@ -1,0 +1,37 @@
+package ong.eu.soon.ifx.element;
+
+
+
+public class CardKeys extends BaseKeys {
+	SvcIdent svcIdent;//Aggregate	Optional Service Identifier
+	CardId cardId;//Identifier	Required Card Identifier
+	CardNum cardNum;//NC-32	Required Card Number
+	CardSeqNum cardSeqNum;//NC-3	Optional Card Sequence Number
+	public SvcIdent getSvcIdent() {
+		return svcIdent;
+	}
+	public void setSvcIdent(SvcIdent svcIdent) {
+		this.svcIdent = svcIdent;
+	}
+	public CardId getCardId() {
+		return cardId;
+	}
+	public void setCardId(CardId cardId) {
+		this.cardId = cardId;
+	}
+	public CardNum getCardNum() {
+		return cardNum;
+	}
+	public void setCardNum(CardNum cardNum) {
+		this.cardNum = cardNum;
+	}
+	public CardSeqNum getCardSeqNum() {
+		return cardSeqNum;
+	}
+	public void setCardSeqNum(CardSeqNum cardSeqNum) {
+		this.cardSeqNum = cardSeqNum;
+	}
+
+
+ 
+}
