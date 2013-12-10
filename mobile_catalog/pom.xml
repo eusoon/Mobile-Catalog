@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ong.eu.soon</groupId>
-	<artifactId>infopro_mobile</artifactId>
+	<artifactId>mobile_catalog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<description>INFOPRO Mobile Banking Platform using gwt and mgwt to write mobile (native) apps</description>
 	<repositories>
