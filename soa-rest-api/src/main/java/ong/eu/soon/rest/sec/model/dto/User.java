@@ -4,8 +4,8 @@ import java.util.Set;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-import my.com.infopro.rest.common.persistence.model.INameableEntity;
 
+import ong.eu.soon.rest.common.persistence.model.INameableEntity;
 import ong.eu.soon.rest.sec.model.Principal;
 import ong.eu.soon.rest.sec.model.Role;
 

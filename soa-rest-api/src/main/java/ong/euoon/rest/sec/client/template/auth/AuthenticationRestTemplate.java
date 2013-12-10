@@ -1,8 +1,8 @@
 package ong.euoon.rest.sec.client.template.auth;
 
-import my.com.infopro.rest.common.client.marshall.IMarshaller;
-import my.com.infopro.rest.common.client.web.HeaderUtil;
 
+import ong.eu.soon.rest.common.client.marshall.IMarshaller;
+import ong.eu.soon.rest.common.client.web.HeaderUtil;
 import ong.eu.soon.rest.sec.model.dto.User;
 import ong.euoon.rest.sec.client.SecBusinessPaths;
 

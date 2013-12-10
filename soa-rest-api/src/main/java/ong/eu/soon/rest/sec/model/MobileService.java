@@ -13,7 +13,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-import my.com.infopro.rest.common.persistence.model.INameableEntity;
+import ong.eu.soon.rest.common.persistence.model.INameableEntity;
+
 
 /**
  * 

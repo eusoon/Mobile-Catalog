@@ -16,7 +16,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import my.com.infopro.rest.common.persistence.model.INameableEntity;
+import ong.eu.soon.rest.common.persistence.model.INameableEntity;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;

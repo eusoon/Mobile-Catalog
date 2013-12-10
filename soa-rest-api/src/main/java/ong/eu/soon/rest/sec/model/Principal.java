@@ -15,7 +15,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import my.com.infopro.rest.common.persistence.model.INameableEntity;
+
+import ong.eu.soon.rest.common.persistence.model.INameableEntity;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 

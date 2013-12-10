@@ -3,8 +3,8 @@ package ong.eu.soon.rest.sec.security;
 import java.util.List;
 import java.util.Set;
 
-import my.com.infopro.rest.common.security.SpringSecurityPrincipal;
 
+import ong.eu.soon.rest.common.security.SpringSecurityPrincipal;
 import ong.eu.soon.rest.sec.model.Role;
 import ong.eu.soon.rest.sec.model.dto.User;
 import ong.euoon.rest.sec.client.template.auth.AuthenticationRestTemplate;

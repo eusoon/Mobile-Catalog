@@ -1,7 +1,8 @@
 package ong.eu.soon.rest.sec.common;
 
-import my.com.infopro.rest.common.persistence.model.IEntity;
-import my.com.infopro.rest.common.web.IUriMapper;
+
+import ong.eu.soon.rest.common.persistence.model.IEntity;
+import ong.eu.soon.rest.common.web.IUriMapper;
 
 import org.springframework.stereotype.Component;
 

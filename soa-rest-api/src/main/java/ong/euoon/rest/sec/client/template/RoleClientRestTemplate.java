@@ -1,7 +1,7 @@
 package ong.euoon.rest.sec.client.template;
 
-import my.com.infopro.rest.common.client.template.AbstractNamedClientRestTemplate;
 
+import ong.eu.soon.rest.common.client.template.AbstractNamedClientRestTemplate;
 import ong.eu.soon.rest.sec.model.Role;
 import ong.eu.soon.rest.sec.util.SecurityConstants;
 import ong.euoon.rest.sec.client.SecBusinessPaths;

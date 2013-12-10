@@ -1,8 +1,8 @@
 package ong.euoon.rest.sec.client;
 
-import my.com.infopro.rest.common.client.template.CommonPaths;
-import my.com.infopro.rest.common.web.IUriMapper;
 
+import ong.eu.soon.rest.common.client.template.CommonPaths;
+import ong.eu.soon.rest.common.web.IUriMapper;
 import ong.eu.soon.rest.sec.model.MobileService;
 import ong.eu.soon.rest.sec.model.Privilege;
 import ong.eu.soon.rest.sec.model.Role;

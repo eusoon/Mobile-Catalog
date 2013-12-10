@@ -8,7 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import my.com.infopro.rest.common.persistence.model.INameableEntity;
+import ong.eu.soon.rest.common.persistence.model.INameableEntity;
+
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
