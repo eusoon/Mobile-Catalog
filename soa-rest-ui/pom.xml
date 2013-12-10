@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>infopro-rest-ui</artifactId>
+	<packaging>war</packaging>
+	<name>infopro-rest-ui</name>
+
+	<parent>
+		<groupId>my.com.infopro</groupId>
+		<artifactId>infopro-rest-parent</artifactId>
+		<version>0.11-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+
+		<!-- internal -->
+
+		<dependency>
+			<groupId>my.com.infopro</groupId>
+			<artifactId>infopro-rest-common</artifactId>
+			<version>0.11-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>my.com.infopro</groupId>
+			<artifactId>infopro-rest-test</artifactId>
+			<version>0.11-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- web 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		-->
+		<dependency>
+			<groupId>org.jboss.as</groupId>
+			<artifactId>jboss-as-spec-api</artifactId>
+			<version>7.1.1.Final</version>
+			<scope>provided</scope>
+			<type>pom</type>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>rest-ui</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+
+		<plugins>
+			
+			<!-- placeholder -->
+
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.3</version>
+					<configuration>
+						<failOnMissingWebXml>false</failOnMissingWebXml>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+
+	</build>
+
+	<properties>
+		<!--  -->
+	</properties>
+
+</project>
