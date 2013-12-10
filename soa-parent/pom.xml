@@ -1,0 +1,177 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>my.com.infopro</groupId>
+	<artifactId>infopro-rest-parent</artifactId>
+	<version>0.11-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>rest-security</name>
+	<url>https://github.com/eugenp/REST</url>
+	<description>REST Security is a Proof of Concept implementation of a RESTful Service with Spring</description>
+
+	<build>
+
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven-surefire-plugin.version}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+						<compilerArgument>-proc:none</compilerArgument>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${maven-resources-plugin.version}</version>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+
+	</build>
+
+	<properties>
+
+		<!-- Spring related -->
+		<spring.version>3.2.2.RELEASE</spring.version>
+		<spring-security.version>3.2.0.M1</spring-security.version> <!-- 3.2.0.M1 -->
+		<javassist.version>3.17.1-GA</javassist.version>
+		<cglib.version>2.2.2</cglib.version>
+		<aspectjweaver.version>1.7.1</aspectjweaver.version>
+
+		<!-- web -->
+		<javax.servlet-api.version>3.0.1</javax.servlet-api.version>
+
+		<!-- marshalling -->
+		<jackson.version>2.1.2</jackson.version>
+		<jaxb-api.version>2.2.7</jaxb-api.version>
+		<xstream.version>1.4.3</xstream.version>
+
+		<!-- commons and utils -->
+		<commons-lang3.version>3.2-SNAPSHOT</commons-lang3.version>
+		<guava.version>13.0.1</guava.version>
+
+		<!-- UNSORTED -->
+		<commons-codec.version>1.7</commons-codec.version>
+
+		<!-- persistence -->
+		<mysql-connector-java.version>5.1.22</mysql-connector-java.version> <!-- latest version on: 06.12.2011 - http://dev.mysql.com/downloads/connector/j/ -->
+		<hibernate.version>4.1.9.Final</hibernate.version>
+		<hibernate-jpamodelgen.version>1.2.0.Final</hibernate-jpamodelgen.version>
+		<commons-dbcp.version>1.4</commons-dbcp.version>
+		<querydsl.version>2.9.0</querydsl.version>
+		<spring-data-jpa.version>1.2.0.RELEASE</spring-data-jpa.version>
+
+		<h2.version>1.3.170</h2.version>
+		<hsqldb.version>2.2.9</hsqldb.version>
+
+		<validation-api.version>1.0.0.GA</validation-api.version>
+		<hibernate-validator.version>4.3.1.Final</hibernate-validator.version>
+
+		<!-- logging -->
+		<org.slf4j.version>1.6.1</org.slf4j.version>
+		<logback.version>1.0.7</logback.version>
+
+		<!-- testing -->
+		<org.hamcrest.version>1.3</org.hamcrest.version>
+		<junit.version>4.11</junit.version>
+		<mockito.version>1.9.5</mockito.version>
+
+		<httpcore.version>4.2.3</httpcore.version>
+		<httpclient.version>4.2.3</httpclient.version>
+
+		<rest-assured.version>1.7.1</rest-assured.version>
+		<groovy.version>1.8.8</groovy.version>
+
+		<!-- maven plugins -->
+		<maven-surefire-plugin.version>2.12.4</maven-surefire-plugin.version>
+		<maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
+		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
+		<jrebel-maven-plugin.version>1.1.3</jrebel-maven-plugin.version>
+		<cargo-maven2-plugin.version>1.3.1</cargo-maven2-plugin.version>
+
+	</properties>
+
+	<repositories>
+
+		<repository>
+			<id>apache-snapshot</id>
+			<name>Apache Maven Snapshot Repository</name>
+			<url>https://repository.apache.org/content/groups/snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repository.springsource.milestone</id>
+			<name>SpringSource Milestone Repository</name>
+			<url>http://repo.springsource.org/milestone</url>
+		</repository>
+		<repository>
+			<id>codelds</id>
+			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
+		</repository>
+	</repositories>
+
+	<modules>
+
+		<module>../infopro-rest-api</module>
+		<module>../infopro-rest-common</module>
+		<module>../infopro-rest-sec</module>
+		<module>../infopro-rest-test</module>
+		<!-- 
+		<module>../infopro-gallery-api</module>
+		<module>../infopro-rest-gallery</module>
+		<module>../infopro-rest-ui</module>
+		 -->
+		
+	</modules>
+
+
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<email>esong@infopro.com.my</email>
+			<name>Ong Eu Soon</name>
+			<id>esong</id>
+		</developer>
+	</developers>
+
+
+
+</project>
